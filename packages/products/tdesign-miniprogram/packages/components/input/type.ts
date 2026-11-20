@@ -54,20 +54,20 @@ export interface TdInputProps {
     value?: boolean;
   };
   /**
-   * 清空图标触发方式，仅在输入框有值时有效
-   * @default always
-   */
-  clearTrigger?: {
-    type: StringConstructor;
-    value?: 'always' | 'focus';
-  };
-  /**
    * 是否可清空，默认不启动。值为 `true` 表示使用默认清空按钮，值为 `Object` 表示透传至 `icon`
    * @default false
    */
   clearable?: {
     type: null;
     value?: boolean | object;
+  };
+  /**
+   * 清空图标触发方式，仅在输入框有值时有效
+   * @default always
+   */
+  clearTrigger?: {
+    type: StringConstructor;
+    value?: 'always' | 'focus';
   };
   /**
    * 点击键盘右下角按钮时是否保持键盘不收起

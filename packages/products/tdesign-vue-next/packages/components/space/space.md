@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Space Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 align | String | - | 对齐方式。可选项：start/end/center/baseline | N
 breakLine | Boolean | false | 是否自动换行，仅在 horizontal 时有效	 | N

@@ -32,7 +32,7 @@ resize-start | `(sizes: number[])` | 开始拖拽时的回调
 -- | -- | -- | --
 getSizes | \- | `number[]` | 获取当前各面板的像素尺寸
 reset | \- | \- | 重置为初始尺寸
-setSizes | `(sizes: (number \| string \| 'auto')[]) ` | \- | 程序化设置尺寸
+setSizes | `(sizes: (number \| string \| 'auto')[])` | \- | 程序化设置尺寸
 
 
 ### SplitPanel Props

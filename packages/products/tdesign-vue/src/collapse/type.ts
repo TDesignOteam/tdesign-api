@@ -4,11 +4,11 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
+import type { TNode } from '../common';
 
 export interface TdCollapseProps {
   /**
-   * 是否为无边框模式
+   * 无边框模式
    * @default false
    */
   borderless?: boolean;

@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdGridProps } from './type';
+import type { TdGridProps } from './type';
 const props: TdGridProps = {
   /** 内容对齐方式 */
   align: {

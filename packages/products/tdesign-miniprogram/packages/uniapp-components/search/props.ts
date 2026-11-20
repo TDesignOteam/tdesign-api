@@ -20,6 +20,11 @@ export default {
   alwaysEmbed: Boolean,
   /** 是否居中 */
   center: Boolean,
+  /** 是否启用清除控件 */
+  clearable: {
+    type: Boolean,
+    default: true,
+  },
   /** 清空图标触发方式，仅在输入框有值时有效 */
   clearTrigger: {
     type: String,
@@ -28,11 +33,6 @@ export default {
       if (!val) return true;
       return ['always', 'focus'].includes(val);
     },
-  },
-  /** 是否启用清除控件 */
-  clearable: {
-    type: Boolean,
-    default: true,
   },
   /** 点击键盘右下角按钮时是否保持键盘不收起 */
   confirmHold: Boolean,

@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdInputProps } from './type';
+import type { TdInputProps } from './type';
 const props: TdInputProps = {
   /** 键盘弹起时，是否自动上推页面 */
   adjustPosition: {
@@ -36,15 +36,15 @@ const props: TdInputProps = {
     type: Boolean,
     value: false,
   },
-  /** 清空图标触发方式，仅在输入框有值时有效 */
-  clearTrigger: {
-    type: String,
-    value: 'always',
-  },
   /** 是否可清空，默认不启动。值为 `true` 表示使用默认清空按钮，值为 `Object` 表示透传至 `icon` */
   clearable: {
     type: null,
     value: false,
+  },
+  /** 清空图标触发方式，仅在输入框有值时有效 */
+  clearTrigger: {
+    type: String,
+    value: 'always',
   },
   /** 点击键盘右下角按钮时是否保持键盘不收起 */
   confirmHold: {

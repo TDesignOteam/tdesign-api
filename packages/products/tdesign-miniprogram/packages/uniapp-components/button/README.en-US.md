@@ -18,21 +18,21 @@ hover-start-time | Number | 20 | \- | N
 hover-stay-time | Number | 70 | \- | N
 hover-stop-propagation | Boolean | false | \- | N
 icon | String / Object | - | icon name | N
-lang | String | - | message language。options: en/zh_CN/zh_TW | N
+lang | String | - | message language. options: en/zh_CN/zh_TW | N
 loading | Boolean | false | set button to be loading state | N
-open-type | String | - | open type of button, [Miniprogram Button](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)。options: contact/liveActivity/share/getPhoneNumber/getRealtimePhoneNumber/getUserInfo/launchApp/openSetting/feedback/chooseAvatar/agreePrivacyAuthorization/phoneOneClickLogin | N
+open-type | String | - | open type of button, [Miniprogram Button](https://developers.weixin.qq.com/miniprogram/dev/component/button.html). options: contact/liveActivity/share/getPhoneNumber/getRealtimePhoneNumber/getUserInfo/launchApp/openSetting/feedback/chooseAvatar/agreePrivacyAuthorization/phoneOneClickLogin | N
 phone-number-no-quota-toast | Boolean | true | \- | N
 send-message-img | String | 截图 | \- | N
 send-message-path | String | 当前分享路径 | \- | N
 send-message-title | String | 当前标题 | \- | N
 session-from | String | - | \- | N
-shape | String | rectangle | button shape。options: rectangle/square/round/circle | N
+shape | String | rectangle | button shape. options: rectangle/square/round/circle | N
 show-message-card | Boolean | false | \- | N
-size | String | medium | a button has four size。options: extra-small/small/medium/large | N
+size | String | medium | a button has four size. options: extra-small/small/medium/large | N
+theme | String | default | button theme. options: default/primary/danger/light | N
 t-id | String | - | id | N
-theme | String | default | button theme。options: default/primary/danger/light | N
-type | String | - | type of button element, same as formType of Miniprogram。options: submit/reset | N
-variant | String | base | variant of button。options: base/outline/dashed/text | N
+type | String | - | type of button element, same as formType of Miniprogram. options: submit/reset | N
+variant | String | base | variant of button. options: base/outline/dashed/text | N
 
 ### Button Events
 

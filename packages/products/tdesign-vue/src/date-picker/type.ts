@@ -4,12 +4,12 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { InputProps } from '../input';
-import { PopupProps } from '../popup';
-import { SelectInputProps } from '../select-input';
-import { TimePickerProps } from '../time-picker';
-import { Dayjs } from 'dayjs';
-import { RangeInputProps } from '../range-input';
+import type { InputProps } from '../input';
+import type { PopupProps } from '../popup';
+import type { SelectInputProps } from '../select-input';
+import type { TimePickerProps } from '../time-picker';
+import type { Dayjs } from 'dayjs';
+import type { RangeInputProps } from '../range-input';
 import type { TNode, SizeEnum } from '../common';
 
 export interface TdDatePickerProps {
@@ -38,6 +38,10 @@ export interface TdDatePickerProps {
    */
   defaultTime?: string;
   /**
+   * 是否禁用组件
+   */
+  disabled?: boolean;
+  /**
    * 禁用日期，示例：['A', 'B'] 表示日期 A 和日期 B 会被禁用。`{ from: 'A', to: 'B' }` 表示在 A 到 B 之间的日期会被禁用。`{ before: 'A', after: 'B' }` 表示在 A 之前和在 B 之后的日期都会被禁用。其中 A = '2021-01-01'，B = '2021-02-01'。值类型为 Function 则表示返回值为 true 的日期会被禁用
    */
   disableDate?: DisableDate;
@@ -47,10 +51,6 @@ export interface TdDatePickerProps {
   disableTime?: (
     time: Date,
   ) => Partial<{ hour: Array<number>; minute: Array<number>; second: Array<number>; millisecond: Array<number> }>;
-  /**
-   * 是否禁用组件
-   */
-  disabled?: boolean;
   /**
    * 是否显示时间选择
    * @default false
@@ -242,6 +242,10 @@ export interface TdDateRangePickerProps {
    */
   defaultTime?: string[];
   /**
+   * 是否禁用组件
+   */
+  disabled?: boolean | Array<boolean>;
+  /**
    * 禁用日期，示例：['A', 'B'] 表示日期 A 和日期 B 会被禁用。{ from: 'A', to: 'B' } 表示在 A 到 B 之间的日期会被禁用。{ before: 'A', after: 'B' } 表示在 A 之前和在 B 之后的日期都会被禁用。其中 A = '2021-01-01'，B = '2021-02-01'。值类型为 Function 则表示返回值为 true 的日期会被禁用
    */
   disableDate?: DisableRangeDate;
@@ -252,10 +256,6 @@ export interface TdDateRangePickerProps {
     times: Array<Date | null>,
     context: { partial: DateRangePickerPartial },
   ) => Partial<{ hour: Array<number>; minute: Array<number>; second: Array<number> }>;
-  /**
-   * 是否禁用组件
-   */
-  disabled?: boolean | Array<boolean>;
   /**
    * 是否显示时间选择, 默认不展示，设置为 true 时，默认模式为 parallel ，与日期面板并列展示，可以通过配置 mode 为 switch 调整展示方式
    * @default false
@@ -426,22 +426,21 @@ export interface TdDateRangePickerProps {
   }) => void;
 }
 
-export interface TdDatePickerPanelProps
-  extends Pick<
-    TdDatePickerProps,
-    | 'value'
-    | 'defaultValue'
-    | 'disableDate'
-    | 'disableTime'
-    | 'enableTimePicker'
-    | 'firstDayOfWeek'
-    | 'format'
-    | 'mode'
-    | 'presets'
-    | 'presetsPlacement'
-    | 'timePickerProps'
-    | 'needConfirm'
-  > {
+export interface TdDatePickerPanelProps extends Pick<
+  TdDatePickerProps,
+  | 'value'
+  | 'defaultValue'
+  | 'disableDate'
+  | 'disableTime'
+  | 'enableTimePicker'
+  | 'firstDayOfWeek'
+  | 'format'
+  | 'mode'
+  | 'presets'
+  | 'presetsPlacement'
+  | 'timePickerProps'
+  | 'needConfirm'
+> {
   /**
    * 时间选择器默认值，当 value/defaultValue 未设置值时有效
    * @default '00:00:00'
@@ -489,21 +488,20 @@ export interface TdDatePickerPanelProps
   onYearChange?: (context: { year: number; date: Date; trigger: DatePickerYearChangeTrigger; e?: MouseEvent }) => void;
 }
 
-export interface TdDateRangePickerPanelProps
-  extends Pick<
-    TdDateRangePickerProps,
-    | 'value'
-    | 'defaultValue'
-    | 'disableDate'
-    | 'enableTimePicker'
-    | 'firstDayOfWeek'
-    | 'format'
-    | 'mode'
-    | 'presets'
-    | 'presetsPlacement'
-    | 'panelPreselection'
-    | 'timePickerProps'
-  > {
+export interface TdDateRangePickerPanelProps extends Pick<
+  TdDateRangePickerProps,
+  | 'value'
+  | 'defaultValue'
+  | 'disableDate'
+  | 'enableTimePicker'
+  | 'firstDayOfWeek'
+  | 'format'
+  | 'mode'
+  | 'presets'
+  | 'presetsPlacement'
+  | 'panelPreselection'
+  | 'timePickerProps'
+> {
   /**
    * 时间选择器默认值，当 value/defaultValue 未设置值时有效
    * @default ["00:00:00", "23:59:59"]
@@ -613,9 +611,7 @@ export type DatePickerMonthChangeTrigger = 'month-select' | 'month-arrow-next' |
 export type DatePickerYearChangeTrigger = 'year-select' | 'year-arrow-next' | 'year-arrow-previous' | 'today';
 
 export type DisableRangeDate =
-  | Array<DateValue>
-  | DisableDateObj
-  | ((context: { date: DateRangeValue; partial: DateRangePickerPartial }) => boolean);
+  Array<DateValue> | DisableDateObj | ((context: { date: DateRangeValue; partial: DateRangePickerPartial }) => boolean);
 
 export type DateRangePickerPartial = 'start' | 'end';
 

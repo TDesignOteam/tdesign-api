@@ -4,12 +4,12 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { ButtonProps } from '../button';
-import { RadioGroupProps } from '../radio';
-import { CheckTagProps } from '../tag';
-import { SelectProps } from '../select';
-import { TNode } from '../common';
-import { MouseEvent } from 'react';
+import type { MouseEvent } from 'react';
+import type { ButtonProps } from '../button';
+import type { RadioGroupProps } from '../radio';
+import type { CheckTagProps } from '../tag';
+import type { SelectProps } from '../select';
+import type { TNode } from '../common';
 
 export interface TdCalendarProps {
   /**

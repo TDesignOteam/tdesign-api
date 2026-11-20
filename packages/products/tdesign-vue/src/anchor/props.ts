@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdAnchorProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdAnchorProps } from './type';
 export default {
   /** 透传 Affix 组件属性，即让 Anchor 组件支持所有 Affix 组件特性 */
   affixProps: {

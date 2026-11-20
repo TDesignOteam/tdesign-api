@@ -29,7 +29,7 @@ className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
 getSizes | \- | `number[]` | 获取当前各面板的像素尺寸
 reset | \- | \- | 重置为初始尺寸
-setSizes | `(sizes: (number \| string \| 'auto')[]) ` | \- | 程序化设置尺寸
+setSizes | `(sizes: (number \| string \| 'auto')[])` | \- | 程序化设置尺寸
 
 
 ### SplitPanel Props

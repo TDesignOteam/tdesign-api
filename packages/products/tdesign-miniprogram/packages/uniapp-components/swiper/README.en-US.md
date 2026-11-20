@@ -16,9 +16,9 @@ easing-function | String | default | options: default/linear/easeInCubic/easeOut
 height | String / Number | 192 | \- | N
 image-props | Object | {} | \- | N
 interval | Number | 5000 | \- | N
-list | Array | - | Typescript: `string[] \| SwiperList[]` `interface SwiperList { value: string, ariaLabel: string }`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/swiper/type.ts) | N
+list | Array | - | Typescript: `string[] \| SwiperList[]` `interface SwiperList { value: string, ariaLabel: string }`. [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/swiper/type.ts) | N
 loop | Boolean | true | \- | N
-navigation | Boolean / Object | true | Typescript: `SwiperNavProps \| boolean`，[SwiperNav API Documents](./swiper-nav?tab=api)。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/swiper/type.ts) | N
+navigation | Boolean / Object | true | Typescript: `SwiperNavProps \| boolean`，[SwiperNav API Documents](./swiper-nav?tab=api). [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/swiper/type.ts) | N
 next-margin | String / Number | 0 | \- | N
 pagination-position | String | bottom | options: top-left/top/top-right/bottom-left/bottom/bottom-right/left/right | N
 previous-margin | String / Number | 0 | \- | N
@@ -29,7 +29,7 @@ snap-to-edge | Boolean | false | \- | N
 name | params | description
 -- | -- | --
 animationfinish | `(current: number, source: SwiperChangeSource)` | 动画结束时会触发 animationfinish 事件
-change | `(current: number, source: SwiperChangeSource)` | [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/swiper/type.ts)。<br/>`type SwiperChangeSource = 'autoplay' \| 'touch' \| 'nav'`<br/>
+change | `(current: number, source: SwiperChangeSource)` | [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/swiper/type.ts). <br/>`type SwiperChangeSource = 'autoplay' \| 'touch' \| 'nav'`<br/>
 click | `(index: number)` | \-
 image-load | `(index: number)` | \-
 
@@ -49,14 +49,22 @@ t-class-nav | \-
 t-class-next-image | \-
 t-class-prev-image | \-
 
-### SwiperNavigation
+
+### SwiperNav Props
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+custom-style | Object | - | CSS(Cascading Style Sheets) | N
 current | Number | 0 | \- | N
 direction | String | horizontal | options: horizontal/vertical | N
-min-show-num | Number | - | \- | N
+min-show-num | Number | 2 | \- | N
 pagination-position | String | bottom | options: top-left/top/top-right/bottom-left/bottom/bottom-right/left/right | N
 show-controls | Boolean | false | \- | N
 total | Number | 0 | \- | N
-type | String | - | Typescript: `SwiperNavigationType` `type SwiperNavigationType = 'dots' \| 'dots-bar' \| 'fraction'`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/swiper/type.ts) | N
+type | String | dots | Typescript: `SwiperNavigationType` `type SwiperNavigationType = 'dots' \| 'dots-bar' \| 'fraction'`. [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/swiper-nav/type.ts) | N
+
+### SwiperNav External Classes
+
+className | Description
+-- | --
+t-class | \-

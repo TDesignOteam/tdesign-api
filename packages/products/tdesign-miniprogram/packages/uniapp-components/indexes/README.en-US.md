@@ -10,7 +10,7 @@ custom-style | Object | - | CSS(Cascading Style Sheets) | N
 current | String / Number | - | `v-model:current` is supported | N
 default-current | String / Number | - | uncontrolled property | N
 index-list | Array | - | Typescript: `Array<string \| number>` | N
-show-full-index | Boolean | false | `0.9.0`。Typescript: `Boolean` | N
+show-full-index | Boolean | false | `0.9.0`. Typescript: `Boolean` | N
 sticky | Boolean | true | Typescript: `Boolean` | N
 sticky-offset | Number | 0 | \- | N
 

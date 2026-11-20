@@ -8,13 +8,13 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 custom-style | Object | - | CSS(Cascading Style Sheets) | N
 adjust-position | Boolean | true | \- | N
-align | String | left | text align type。options: left/center/right | N
+align | String | left | text align type. options: left/center/right | N
 allow-input-over-max | Boolean | false | allow to continue input on value length is over `maxlength` or `maxcharacter` | N
 always-embed | Boolean | false | \- | N
 auto-focus | Boolean | false | \- | N
 borderless | Boolean | false | input without border | N
-clear-trigger | String | always | show clear icon, clicked to clear input value。options: always / focus | N
 clearable | Boolean / Object | false | show clear icon, clicked to clear input value | N
+clear-trigger | String | always | show clear icon, clicked to clear input value. options: always / focus | N
 confirm-hold | Boolean | false | \- | N
 confirm-type | String | done | options: send/search/next/go/done | N
 cursor | Number | -1 | \- | N
@@ -23,7 +23,7 @@ cursor-spacing | Number | 0 | \- | N
 disabled | Boolean | undefined | make input to be disabled | N
 error-message | String | - | `deprecated` | N
 focus | Boolean | false | \- | N
-format | Function | - | input value formatter, `type=number` does not work. if you need to format number, `InputNumber` Component might be better。Typescript: `InputFormatType` `type InputFormatType = (value: InputValue) => string`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/input/type.ts) | N
+format | Function | - | input value formatter, `type=number` does not work. if you need to format number, `InputNumber` Component might be better. Typescript: `InputFormatType` `type InputFormatType = (value: InputValue) => string`. [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/input/type.ts) | N
 hold-keyboard | Boolean | false | \- | N
 label | String | - | text on the left of input | N
 layout | String | horizontal | options: vertical/horizontal | N
@@ -43,14 +43,14 @@ safe-password-salt | String | - | \- | N
 safe-password-time-stamp | Number | - | \- | N
 selection-end | Number | -1 | \- | N
 selection-start | Number | -1 | \- | N
-size | String | medium | `deprecated`。options: small/medium。Typescript: `'medium' \| 'small'` | N
+size | String | medium | `deprecated`. options: small/medium. Typescript: `'medium' \| 'small'` | N
 status | String | default | options: default/success/warning/error | N
 suffix | String | - | suffix content before suffixIcon | N
 suffix-icon | String / Object | - | \- | N
 tips | String | - | tips on the bottom of input, different `status` can make tips to be different color | N
 type | String | text | options: text/number/idcard/digit/safe-password/password/nickname | N
-value | String / Number | - | input value。Typescript: `InputValue` `type InputValue = string \| number`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/input/type.ts) | N
-default-value | String / Number | - | input value。uncontrolled property。Typescript: `InputValue` `type InputValue = string \| number`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/input/type.ts) | N
+value | String / Number | - | input value. Typescript: `InputValue` `type InputValue = string \| number`. [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/input/type.ts) | N
+default-value | String / Number | - | input value. uncontrolled property. Typescript: `InputValue` `type InputValue = string \| number`. [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/input/type.ts) | N
 
 ### Input Events
 

@@ -4,9 +4,9 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { PopupProps } from '../popup';
-import { TooltipProps } from '../tooltip';
-import { TNode } from '../common';
+import type { PopupProps } from '../popup';
+import type { TooltipProps } from '../tooltip';
+import type { TNode } from '../common';
 
 export interface TdMenuProps {
   /**
@@ -14,16 +14,6 @@ export interface TdMenuProps {
    * @default false
    */
   collapsed?: boolean;
-  /**
-   * 同级别互斥展开
-   * @default false
-   */
-  expandMutex?: boolean;
-  /**
-   * 二级菜单展开方式，平铺展开和浮层展开
-   * @default normal
-   */
-  expandType?: 'normal' | 'popup';
   /**
    * 子菜单展开的导航集合
    * @default []
@@ -34,6 +24,16 @@ export interface TdMenuProps {
    * @default []
    */
   defaultExpanded?: Array<MenuValue>;
+  /**
+   * 同级别互斥展开
+   * @default false
+   */
+  expandMutex?: boolean;
+  /**
+   * 二级菜单展开方式，平铺展开和浮层展开
+   * @default normal
+   */
+  expandType?: 'normal' | 'popup';
   /**
    * 站点 LOGO
    */
@@ -76,11 +76,6 @@ export interface TdMenuProps {
 
 export interface TdHeadMenuProps {
   /**
-   * 二级菜单展开方式，平铺展开和浮层展开
-   * @default normal
-   */
-  expandType?: 'normal' | 'popup';
-  /**
    * 展开的子菜单集合
    * @default []
    */
@@ -91,6 +86,11 @@ export interface TdHeadMenuProps {
    */
   defaultExpanded?: Array<MenuValue>;
   /**
+   * 二级菜单展开方式，平铺展开和浮层展开
+   * @default normal
+   */
+  expandType?: 'normal' | 'popup';
+  /**
    * 站点 LOGO
    */
   logo?: TNode;
@@ -99,7 +99,7 @@ export interface TdHeadMenuProps {
    */
   operations?: TNode;
   /**
-   * null
+   * undefined
    * @default light
    */
   theme?: 'light' | 'dark';

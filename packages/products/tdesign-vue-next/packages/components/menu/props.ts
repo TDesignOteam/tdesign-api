@@ -4,12 +4,21 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdMenuProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdMenuProps } from './type';
 export default {
   /** 是否收起菜单 */
   collapsed: Boolean,
+  /** 子菜单展开的导航集合 */
+  expanded: {
+    type: Array as PropType<TdMenuProps['expanded']>,
+    default: undefined as TdMenuProps['expanded'],
+  },
+  /** 子菜单展开的导航集合，非受控属性 */
+  defaultExpanded: {
+    type: Array as PropType<TdMenuProps['defaultExpanded']>,
+    default: (): TdMenuProps['defaultExpanded'] => [],
+  },
   /** 同级别互斥展开 */
   expandMutex: Boolean,
   /** 二级菜单展开方式，平铺展开和浮层展开 */
@@ -20,16 +29,6 @@ export default {
       if (!val) return true;
       return ['normal', 'popup'].includes(val);
     },
-  },
-  /** 子菜单展开的导航集合 */
-  expanded: {
-    type: Array as PropType<TdMenuProps['expanded']>,
-    default: undefined as TdMenuProps['expanded'],
-  },
-  /** 子菜单展开的导航集合，非受控属性 */
-  defaultExpanded: {
-    type: Array as PropType<TdMenuProps['defaultExpanded']>,
-    default: (): TdMenuProps['defaultExpanded'] => [],
   },
   /** 站点 LOGO */
   logo: {

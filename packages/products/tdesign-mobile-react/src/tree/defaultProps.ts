@@ -2,20 +2,20 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdTreeProps } from './type';
+import type { TdTreeProps } from './type';
 
 export const treeDefaultProps: TdTreeProps = {
   allowFoldNodeOnFilter: false,
-  checkStrictly: false,
   checkable: false,
+  checkStrictly: false,
   data: [],
   empty: '',
   expandAll: false,
+  expanded: [],
   expandLevel: 0,
   expandMutex: false,
   expandOnClickNode: false,
   expandParent: false,
-  expanded: [],
   icon: true,
   label: true,
   lazy: true,

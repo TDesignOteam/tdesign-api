@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdTimePickerProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdTimePickerProps } from './type';
 export default {
   /** 是否允许直接输入时间 */
   allowInput: Boolean,
@@ -14,14 +13,14 @@ export default {
   borderless: Boolean,
   /** 是否允许清除选中值 */
   clearable: Boolean,
-  /** 禁用时间项的配置函数 */
-  disableTime: {
-    type: Function as PropType<TdTimePickerProps['disableTime']>,
-  },
   /** 是否禁用组件 */
   disabled: {
     type: Boolean,
     default: undefined,
+  },
+  /** 禁用时间项的配置函数 */
+  disableTime: {
+    type: Function as PropType<TdTimePickerProps['disableTime']>,
   },
   /** 用于格式化时间，[详细文档](https://day.js.org/docs/en/display/format) */
   format: {

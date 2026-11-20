@@ -17,8 +17,8 @@ confirm-type | String | return | 设置键盘右下角按钮的文字，仅在 t
 cursor | Number | -1 | 指定 focus 时的光标位置 | N
 cursor-color | String | #0052d9 | 【实验】光标颜色，仅在 Skyline 下有效 | N
 cursor-spacing | Number | 0 | 指定光标与键盘的距离。取textarea距离底部的距离和cursor-spacing指定的距离的最小值作为光标与键盘的距离 | N
-disable-default-padding | Boolean | false | 是否去掉 iOS 下的默认内边距 | N
 disabled | Boolean | undefined | 是否禁用文本框 | N
+disable-default-padding | Boolean | false | 是否去掉 iOS 下的默认内边距 | N
 fixed | Boolean | false | 如果 textarea 是在一个 `position:fixed` 的区域，需要显式指定属性 fixed 为 true | N
 focus | Boolean | false | 自动聚焦 | N
 hold-keyboard | Boolean | false | focus时，点击页面的时候不收起键盘 | N

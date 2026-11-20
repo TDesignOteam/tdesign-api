@@ -42,18 +42,18 @@ export interface TdTreeProps<T extends TreeOptionData = TreeOptionData> {
     value?: boolean;
   };
   /**
-   * 父子节点选中状态不再关联，可各自选中或取消
-   * @default false
-   */
-  checkStrictly?: {
-    type: BooleanConstructor;
-    value?: boolean;
-  };
-  /**
    * 隐藏节点复选框
    * @default false
    */
   checkable?: {
+    type: BooleanConstructor;
+    value?: boolean;
+  };
+  /**
+   * 父子节点选中状态不再关联，可各自选中或取消
+   * @default false
+   */
+  checkStrictly?: {
     type: BooleanConstructor;
     value?: boolean;
   };
@@ -89,6 +89,22 @@ export interface TdTreeProps<T extends TreeOptionData = TreeOptionData> {
     value?: boolean;
   };
   /**
+   * 展开的节点值
+   * @default []
+   */
+  expanded?: {
+    type: ArrayConstructor;
+    value?: Array<TreeNodeValue>;
+  };
+  /**
+   * 展开的节点值，非受控属性
+   * @default []
+   */
+  defaultExpanded?: {
+    type: ArrayConstructor;
+    value?: Array<TreeNodeValue>;
+  };
+  /**
    * 默认展开的级别，第一层为 0
    * @default 0
    */
@@ -119,22 +135,6 @@ export interface TdTreeProps<T extends TreeOptionData = TreeOptionData> {
   expandParent?: {
     type: BooleanConstructor;
     value?: boolean;
-  };
-  /**
-   * 展开的节点值
-   * @default []
-   */
-  expanded?: {
-    type: ArrayConstructor;
-    value?: Array<TreeNodeValue>;
-  };
-  /**
-   * 展开的节点值，非受控属性
-   * @default []
-   */
-  defaultExpanded?: {
-    type: ArrayConstructor;
-    value?: Array<TreeNodeValue>;
   };
   /**
    * 节点过滤方法，只呈现返回值为 true 的节点，泛型 `T` 表示树节点 TS 类型
@@ -362,15 +362,15 @@ export interface TreeNodeState {
    */
   draggable?: boolean;
   /**
-   * 子节点是否互斥展开
-   * @default false
-   */
-  expandMutex?: boolean;
-  /**
    * 节点是否已展开
    * @default false
    */
   expanded?: boolean;
+  /**
+   * 子节点是否互斥展开
+   * @default false
+   */
+  expandMutex?: boolean;
   /**
    * 节点是否为半选中状态
    * @default false

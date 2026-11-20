@@ -20,10 +20,10 @@ export default {
   },
   /** 是否允许在过滤时节点折叠节点 */
   allowFoldNodeOnFilter: Boolean,
-  /** 父子节点选中状态不再关联，可各自选中或取消 */
-  checkStrictly: Boolean,
   /** 隐藏节点复选框 */
   checkable: Boolean,
+  /** 父子节点选中状态不再关联，可各自选中或取消 */
+  checkStrictly: Boolean,
   /** 树数据，泛型 `T` 表示树节点 TS 类型 */
   data: {
     type: Array,
@@ -38,6 +38,16 @@ export default {
   },
   /** 是否展开全部节点 */
   expandAll: Boolean,
+  /** 展开的节点值 */
+  expanded: {
+    type: Array,
+    default: (): TdTreeProps['expanded'] => [],
+  },
+  /** 展开的节点值，非受控属性 */
+  defaultExpanded: {
+    type: Array,
+    default: (): TdTreeProps['defaultExpanded'] => [],
+  },
   /** 默认展开的级别，第一层为 0 */
   expandLevel: {
     type: Number,
@@ -49,16 +59,6 @@ export default {
   expandOnClickNode: Boolean,
   /** 展开子节点时是否自动展开父节点 */
   expandParent: Boolean,
-  /** 展开的节点值 */
-  expanded: {
-    type: Array,
-    default: (): TdTreeProps['expanded'] => [],
-  },
-  /** 展开的节点值，非受控属性 */
-  defaultExpanded: {
-    type: Array,
-    default: (): TdTreeProps['defaultExpanded'] => [],
-  },
   /** 节点过滤方法，只呈现返回值为 true 的节点，泛型 `T` 表示树节点 TS 类型 */
   filter: {
     type: Function,

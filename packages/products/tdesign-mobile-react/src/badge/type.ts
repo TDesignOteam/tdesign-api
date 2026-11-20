@@ -44,14 +44,7 @@ export interface TdBadgeProps {
    * @default circle
    */
   shape?:
-    | 'circle'
-    | 'square'
-    | 'bubble'
-    | 'ribbon'
-    | 'ribbon-right'
-    | 'ribbon-left'
-    | 'triangle-right'
-    | 'triangle-left';
+    'circle' | 'square' | 'bubble' | 'ribbon' | 'ribbon-right' | 'ribbon-left' | 'triangle-right' | 'triangle-left';
   /**
    * 当数值为 0 时，是否展示徽标
    * @default false

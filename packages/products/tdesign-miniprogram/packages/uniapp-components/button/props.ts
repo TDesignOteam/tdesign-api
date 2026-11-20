@@ -24,8 +24,8 @@ export default {
   },
   /** 禁用状态。优先级：Button.disabled > Form.disabled */
   disabled: {
-    type: Boolean,
-    default: undefined,
+    type: [Boolean, null],
+    default: null as TdButtonProps['disabled'],
   },
   /** 是否为幽灵按钮（镂空按钮） */
   ghost: Boolean,
@@ -113,11 +113,6 @@ export default {
       return ['extra-small', 'small', 'medium', 'large'].includes(val);
     },
   },
-  /** 按钮标签id */
-  tId: {
-    type: String,
-    default: '',
-  },
   /** 组件风格，依次为品牌色、危险色 */
   theme: {
     type: String,
@@ -126,6 +121,11 @@ export default {
       if (!val) return true;
       return ['default', 'primary', 'danger', 'light'].includes(val);
     },
+  },
+  /** 按钮标签id */
+  tId: {
+    type: String,
+    default: '',
   },
   /** 同小程序的 formType */
   type: {

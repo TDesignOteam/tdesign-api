@@ -48,13 +48,13 @@ export default {
     type: Number,
     default: 0,
   },
-  /** 是否去掉 iOS 下的默认内边距 */
-  disableDefaultPadding: Boolean,
   /** 是否禁用文本框 */
   disabled: {
-    type: Boolean,
-    default: undefined,
+    type: [Boolean, null],
+    default: null as TdTextareaProps['disabled'],
   },
+  /** 是否去掉 iOS 下的默认内边距 */
+  disableDefaultPadding: Boolean,
   /** 如果 textarea 是在一个 `position:fixed` 的区域，需要显式指定属性 fixed 为 true */
   fixed: Boolean,
   /** 自动聚焦 */
@@ -78,8 +78,8 @@ export default {
   },
   /** 占位符 */
   placeholder: {
-    type: String,
-    default: undefined,
+    type: [String, null],
+    default: null as TdTextareaProps['placeholder'],
   },
   /** 指定 placeholder 的样式类，目前仅支持color,font-size和font-weight */
   placeholderClass: {
@@ -93,8 +93,8 @@ export default {
   },
   /** 只读状态 */
   readonly: {
-    type: Boolean,
-    default: undefined,
+    type: [Boolean, null],
+    default: null as TdTextareaProps['readonly'],
   },
   /** 光标结束位置，自动聚集时有效，需与 selection-start 搭配使用 */
   selectionEnd: {

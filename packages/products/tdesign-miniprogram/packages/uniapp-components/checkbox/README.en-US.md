@@ -15,7 +15,7 @@ default-checked | Boolean | - | uncontrolled property | N
 content | String | - | \- | N
 content-disabled | Boolean | - | \- | N
 disabled | Boolean | undefined | \- | N
-icon | String / Array | 'circle' | Typescript: `CheckboxIconType` `type CheckboxIconType = 'circle' \| 'line' \| 'rectangle' \| string[];`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/checkbox/type.ts) | N
+icon | String / Array | 'circle' | Typescript: `CheckboxIconType` `type CheckboxIconType = 'circle' \| 'line' \| 'rectangle' \| string[];`. [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/checkbox/type.ts) | N
 indeterminate | Boolean | false | \- | N
 label | String | - | \- | N
 max-content-row | Number | 5 | \- | N
@@ -24,7 +24,7 @@ name | String | - | \- | N
 placement | String | left | options: left/right | N
 readonly | Boolean | undefined | \- | N
 relation-key | String | - | \- | N
-value | String / Number / Boolean | - | value of checkbox。Typescript: `string \| number \| boolean` | N
+value | String / Number / Boolean | - | value of checkbox. Typescript: `string \| number \| boolean` | N
 
 ### Checkbox Events
 
@@ -57,16 +57,16 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 custom-style | Object | - | CSS(Cascading Style Sheets) | N
 borderless | Boolean | false | \- | N
-direction | String | vertical | `1.0.0`。Radio option arrangement。options: vertical/horizontal | N
+direction | String | vertical | `1.0.0`. Radio option arrangement. options: vertical/horizontal | N
 disabled | Boolean | undefined | \- | N
-keys | Object | - | Typescript: `KeysType`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/common/common.ts) | N
+keys | Object | - | Typescript: `KeysType`. [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/common/common.ts) | N
 max | Number | undefined | \- | N
 name | String | - | \- | N
-options | Array | [] | Typescript: `Array<CheckboxOption>` `type CheckboxOption = string \| number \| CheckboxOptionObj` `interface CheckboxOptionObj { label?: string; value?: string \| number; disabled?: boolean; icon?: CheckboxIconType; checkAll?: true }`，[Checkbox API Documents](./checkbox?tab=api)。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/checkbox-group/type.ts) | N
+options | Array | [] | Typescript: `Array<CheckboxOption>` `type CheckboxOption = string \| number \| CheckboxOptionObj` `interface CheckboxOptionObj { label?: string; value?: string \| number; disabled?: boolean; icon?: CheckboxIconType; checkAll?: true }`，[Checkbox API Documents](./checkbox?tab=api). [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/checkbox-group/type.ts) | N
 readonly | Boolean | undefined | \- | N
 relation-key | String | - | \- | N
-value | Array | - | `v-model:value` is supported。Typescript: `T` `type CheckboxGroupValue = Array<string \| number \| boolean>`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/checkbox-group/type.ts) | N
-default-value | Array | - | uncontrolled property。Typescript: `T` `type CheckboxGroupValue = Array<string \| number \| boolean>`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/checkbox-group/type.ts) | N
+value | Array | - | `v-model:value` is supported. Typescript: `T` `type CheckboxGroupValue = Array<string \| number \| boolean>`. [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/checkbox-group/type.ts) | N
+default-value | Array | - | uncontrolled property. Typescript: `T` `type CheckboxGroupValue = Array<string \| number \| boolean>`. [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/checkbox-group/type.ts) | N
 
 ### CheckboxGroup Events
 

@@ -11,7 +11,7 @@ custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on v
 content | String / Array | - | \- | N
 direction | String | horizontal | options: horizontal/vertical | N
 interval | Number | 2000 | \- | N
-marquee | Boolean / Object | false | Typescript：`boolean \| NoticeBarMarquee` `interface NoticeBarMarquee { speed?: number; loop?: number; delay?: number }`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/notice-bar/type.ts) | N
+marquee | Boolean / Object | false | Typescript: `boolean \| NoticeBarMarquee` `interface NoticeBarMarquee { speed?: number; loop?: number; delay?: number }`. [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/notice-bar/type.ts) | N
 operation | String | - | \- | N
 prefix-icon | String / Boolean / Object | true | \- | N
 suffix-icon | String / Object | - | \- | N
@@ -24,7 +24,7 @@ default-visible | Boolean | undefined | uncontrolled property | N
 name | params | description
 -- | -- | --
 change | `(current: number, source: '' \| 'autoplay' \| 'touch')` | \-
-click | `(trigger: NoticeBarTrigger)` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/notice-bar/type.ts)。<br/>`type NoticeBarTrigger = 'prefix-icon' \| 'content' \| 'operation' \| 'suffix-icon';`<br/>
+click | `(trigger: NoticeBarTrigger)` | [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/notice-bar/type.ts). <br/>`type NoticeBarTrigger = 'prefix-icon' \| 'content' \| 'operation' \| 'suffix-icon';`<br/>
 
 ### NoticeBar Slots
 

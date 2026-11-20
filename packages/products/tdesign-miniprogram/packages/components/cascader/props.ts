@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdCascaderProps } from './type';
+import type { TdCascaderProps } from './type';
 const props: TdCascaderProps = {
   /** 父子节点选中状态不再关联，可各自选中或取消 */
   checkStrictly: {
@@ -20,15 +20,15 @@ const props: TdCascaderProps = {
   filter: {
     type: null,
   },
-  /** 搜索框占位符描述文本 */
-  filterPlaceholder: {
-    type: String,
-    value: '',
-  },
   /** 是否可搜索，开启后顶部会展示一个搜索框  */
   filterable: {
     type: Boolean,
     value: false,
+  },
+  /** 搜索框占位符描述文本 */
+  filterPlaceholder: {
+    type: String,
+    value: '',
   },
   /** 用来定义 value / label / children / disabled 在 `options` 中对应的字段别名 */
   keys: {

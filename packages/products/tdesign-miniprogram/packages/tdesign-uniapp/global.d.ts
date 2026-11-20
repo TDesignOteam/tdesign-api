@@ -23,6 +23,7 @@ declare module 'vue' {
     TCollapse: typeof import('tdesign-uniapp/collapse/collapse.vue').default;
     TCollapsePanel: typeof import('tdesign-uniapp/collapse-panel/collapse-panel.vue').default;
     TColorPicker: typeof import('tdesign-uniapp/color-picker/color-picker.vue').default;
+    TComment: typeof import('tdesign-uniapp/comment/comment.vue').default;
     TConfigProvider: typeof import('tdesign-uniapp/config-provider/config-provider.vue').default;
     TCountDown: typeof import('tdesign-uniapp/count-down/count-down.vue').default;
     TDateTimePicker: typeof import('tdesign-uniapp/date-time-picker/date-time-picker.vue').default;

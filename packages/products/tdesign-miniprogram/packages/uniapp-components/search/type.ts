@@ -26,15 +26,15 @@ export interface TdSearchProps {
    */
   center?: boolean;
   /**
-   * 清空图标触发方式，仅在输入框有值时有效
-   * @default always
-   */
-  clearTrigger?: 'always' | 'focus';
-  /**
    * 是否启用清除控件
    * @default true
    */
   clearable?: boolean;
+  /**
+   * 清空图标触发方式，仅在输入框有值时有效
+   * @default always
+   */
+  clearTrigger?: 'always' | 'focus';
   /**
    * 点击键盘右下角按钮时是否保持键盘不收起
    * @default false

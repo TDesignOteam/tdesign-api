@@ -7,27 +7,27 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 custom-style | Object | - | CSS(Cascading Style Sheets) | N
-global-config | Object | - | global config。Typescript: `GlobalConfigProvider` | N
+global-config | Object | - | global config. Typescript: `GlobalConfigProvider` | N
 theme-vars | Object | - | theme Variables | N
 
 ### GlobalConfigProvider
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-action-sheet | Object | - | ActionSheet global configs。Typescript: `ActionSheetConfig` | N
-calendar | Object | - | Calendar global configs。Typescript: `CalendarConfig` | N
-cascader | Object | - | Cascader global configs。Typescript: `CascaderConfig` | N
+action-sheet | Object | - | ActionSheet global configs. Typescript: `ActionSheetConfig` | N
+calendar | Object | - | Calendar global configs. Typescript: `CalendarConfig` | N
+cascader | Object | - | Cascader global configs. Typescript: `CascaderConfig` | N
 class-prefix | String | t | \- | N
-comment | Object | - | Comment global configs。Typescript: `CommentConfig` | N
-date-time-picker | Object | - | DateTimePicker global configs。Typescript: `DateTimePickerConfig` | N
-dropdown-menu | Object | - | DropdownMenu global configs。Typescript: `DropdownMenuConfig` | N
-guide | Object | - | Guide global configs。Typescript: `GuideConfig` | N
-picker | Object | - | Picker global configs。Typescript: `PickerConfig` | N
-pull-down-refresh | Object | - | PullDownRefresh global configs。Typescript: `PullDownRefreshConfig` | N
-qrcode | Object | - | QRCode global configs。Typescript: `QRCodeConfig` | N
-rate | Object | - | Rate global configs。Typescript: `RateConfig` | N
-tab-bar | Object | - | TabBar global configs。Typescript: `TabBarConfig` | N
-upload | Object | - | Upload global configs。Typescript: `UploadConfig` | N
+comment | Object | - | Comment global configs. Typescript: `CommentConfig` | N
+date-time-picker | Object | - | DateTimePicker global configs. Typescript: `DateTimePickerConfig` | N
+dropdown-menu | Object | - | DropdownMenu global configs. Typescript: `DropdownMenuConfig` | N
+guide | Object | - | Guide global configs. Typescript: `GuideConfig` | N
+picker | Object | - | Picker global configs. Typescript: `PickerConfig` | N
+pull-down-refresh | Object | - | PullDownRefresh global configs. Typescript: `PullDownRefreshConfig` | N
+qrcode | Object | - | QRCode global configs. Typescript: `QRCodeConfig` | N
+rate | Object | - | Rate global configs. Typescript: `RateConfig` | N
+tab-bar | Object | - | TabBar global configs. Typescript: `TabBarConfig` | N
+upload | Object | - | Upload global configs. Typescript: `UploadConfig` | N
 
 ### ActionSheetConfig
 
@@ -46,8 +46,8 @@ status | Object | - | Typescript: `{ pending: string; fail: string; }` | N
 name | type | default | description | required
 -- | -- | -- | -- | --
 confirm | String | - | confirm text | N
-month-title | String | - | \- | N
 months | Array | - | Typescript: `string[]` | N
+month-title | String | - | \- | N
 title | String | - | \- | N
 weekdays | Array | - | Typescript: `string[]` | N
 
@@ -55,6 +55,8 @@ weekdays | Array | - | Typescript: `string[]` | N
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+empty | String | - | \- | N
+filter-placeholder | String | - | \- | N
 placeholder | String | - | \- | N
 title | String | - | \- | N
 
@@ -82,8 +84,8 @@ status | Object | - | Typescript: `{ pending: string; complete: string; stop: st
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-collapse-text | String | - | \- | N
 collapsed-text | String | - | \- | N
+collapse-text | String | - | \- | N
 expand-more-text | String | - | \- | N
 
 ### DateTimePickerConfig
@@ -113,9 +115,9 @@ reset | String | - | reset text | N
 name | type | default | description | required
 -- | -- | -- | -- | --
 colon-text | String | - | colon on the right of label ":" | N
-error-message | Object | - | Typescript: `FormErrorMessage`，[Form API Documents](./form?tab=api)。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/config-provider/type.ts) | N
+error-message | Object | - | Typescript: `FormErrorMessage`，[Form API Documents](./form?tab=api). [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/config-provider/type.ts) | N
 required-mark | Boolean | true | \- | N
-required-mark-position | String | left | Display position of required symbols。options: left/right | N
+required-mark-position | String | left | Display position of required symbols. options: left/right | N
 
 ### GuideConfig
 
@@ -132,7 +134,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 error-text | String | - | loading text, default value is "Error" | N
 loading-text | String | - | loading text, default value is "loading" | N
-replace-image-src | Function | - | replace all `src` attribute of images。Typescript: `(params: ImageProps) => string`，[Image API Documents](./image?tab=api)。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/config-provider/type.ts) | N
+replace-image-src | Function | - | replace all `src` attribute of images. Typescript: `(params: ImageProps) => string`，[Image API Documents](./image?tab=api). [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/config-provider/type.ts) | N
 
 ### InputConfig
 

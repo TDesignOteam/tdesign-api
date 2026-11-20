@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdFabProps } from './type';
+import type { TdFabProps } from './type';
 const props: TdFabProps = {
   /** 透传至 Button 组件 */
   buttonProps: {

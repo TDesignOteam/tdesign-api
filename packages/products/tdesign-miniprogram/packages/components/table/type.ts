@@ -4,8 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { LoadingProps } from '../loading/index';
-import { PopupProps } from '../popup/index';
+import type { LoadingProps } from '../loading/index';
+import type { PopupProps } from '../popup/index';
 import type { ClassName } from '../common/common';
 
 export interface TdBaseTableProps<T extends TableRowData = TableRowData> {

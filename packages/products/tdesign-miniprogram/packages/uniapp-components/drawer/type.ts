@@ -51,8 +51,7 @@ export interface TdDrawerProps {
    */
   visible?: boolean;
   /**
-   * 抽屉层级，样式默认为 11500
-   * @default 11500
+   * 抽屉层级，Web 侧样式默认为 1500，移动端样式默认 1500，小程序样式默认为 11500
    */
   zIndex?: number;
   /**

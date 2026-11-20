@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdPopoverProps } from './type';
+import type { TdPopoverProps } from './type';
 const props: TdPopoverProps = {
   /** 是否在点击外部元素后关闭菜单  */
   closeOnClickOutside: {

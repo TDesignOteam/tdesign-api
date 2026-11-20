@@ -11,9 +11,9 @@ color | String / Object / Array | '' | Typescript: `string \| Array<string> \| R
 label | String / Boolean | true | \- | N
 percentage | Number | 0 | \- | N
 size | String / Number | 'default' | \- | N
-status | String | - | options: success/error/warning/active。Typescript: `ProgressStatus` `type ProgressStatus = 'success' \| 'error' \| 'warning' \| 'active'`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/progress/type.ts) | N
+status | String | - | options: success/error/warning/active. Typescript: `ProgressStatus` `type ProgressStatus = 'success' \| 'error' \| 'warning' \| 'active'`. [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/progress/type.ts) | N
 stroke-width | String / Number | - | \- | N
-theme | String | line | options: line/plump/circle。Typescript: `ProgressTheme` `type ProgressTheme = 'line' \| 'plump' \| 'circle'`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/progress/type.ts) | N
+theme | String | line | options: line/plump/circle. Typescript: `ProgressTheme` `type ProgressTheme = 'line' \| 'plump' \| 'circle'`. [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/progress/type.ts) | N
 track-color | String | '' | \- | N
 
 ### Progress Slots

@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdRateProps } from './type';
+import type { TdRateProps } from './type';
 const props: TdRateProps = {
   /** 是否允许半选 */
   allowHalf: {

@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdUploadProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdUploadProps } from './type';
 export default {
   /** 文件名过长时，需要省略中间的文本，保留首尾文本。示例：[10, 7]，表示首尾分别保留的文本长度 */
   abridgeName: {
@@ -39,7 +38,7 @@ export default {
   },
   /** 批量文件/图片上传，`autoUpload=false` 场景下，透传“取消上传”按钮属性 */
   cancelUploadButton: {
-    type: [Object, Function] as PropType<TdUploadProps['cancelUploadButton']>,
+    type: [Object, Function, null] as PropType<TdUploadProps['cancelUploadButton']>,
   },
   /** 上传请求所需的额外字段，默认字段有 `file`，表示文件信息。可以添加额外的文件名字段，如：`{file_name: "custom-file-name.txt"}`。`autoUpload=true` 时有效。也可以使用 `formatRequest` 完全自定义上传请求的字段 */
   data: {
@@ -194,7 +193,7 @@ export default {
   uploadAllFilesInOneRequest: Boolean,
   /** 批量文件/图片上传，`autoUpload=false` 场景下，透传“点击上传”按钮属性 */
   uploadButton: {
-    type: [Object, Function] as PropType<TdUploadProps['uploadButton']>,
+    type: [Object, Function, null] as PropType<TdUploadProps['uploadButton']>,
   },
   /** 是否允许粘贴上传剪贴板中的文件 */
   uploadPastedFiles: {

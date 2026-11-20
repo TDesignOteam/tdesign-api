@@ -31,7 +31,7 @@ change | `(targetValue: Array<TransferValue>, context: TargetParams)` | 数据�
 checked-change | `(options: CheckedOptions)` | 源数据列表或目标数据列表的选中项发生变化时触发，`context.type` 可以区分触发来源是目标列表，还是源列表。[详细类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/transfer/type.ts)。<br/>`interface CheckedOptions { checked: Array<TransferValue>; sourceChecked: Array<TransferValue>; targetChecked: Array<TransferValue>; type: TransferListType }`<br/>
 page-change | `(page: PageInfo, context: { type: TransferListType })` | 分页发生变化时触发
 scroll | `(options: { e: Event; bottomDistance: number; type: TransferListType })` | 列表滚动时触发，bottomDistance 表示元素滚动到底部的距离
-search | `(options: SearchContext)` | 搜索时触发，options.query 表示用户输入的内容。[详细类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/transfer/type.ts)。<br/>`interface SearchContext { query: string; type: TransferListType; trigger: 'input' \| 'enter';  e: InputEvent \| KeyboardEvent }`<br/>
+search | `(options: SearchContext)` | 搜索时触发，options.query 表示用户输入的内容。[详细类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/transfer/type.ts)。<br/>`interface SearchContext { query: string; type: TransferListType; trigger: 'input' \| 'enter'; e: InputEvent \| KeyboardEvent }`<br/>
 
 ### Transfer Slots
 
@@ -39,10 +39,10 @@ search | `(options: SearchContext)` | 搜索时触发，options.query 表示用�
 -- | --
 change | 数据列表发生变化时触发，`type` 值为 `source`，表示源列表移动到目标列表，值为 `target` 表示目标列表移动到源列表，movedValue 则表示被移动的选项。[详细类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/transfer/type.ts)。<br/>`interface TargetParams { type: TransferListType; movedValue: Array<TransferValue> }`<br/>
 checked-change | 源数据列表或目标数据列表的选中项发生变化时触发，`context.type` 可以区分触发来源是目标列表，还是源列表。[详细类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/transfer/type.ts)。<br/>`interface CheckedOptions { checked: Array<TransferValue>; sourceChecked: Array<TransferValue>; targetChecked: Array<TransferValue>; type: TransferListType }`<br/>
-empty | 自定义 `empty` 显示内容。[详细类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/transfer/type.ts)
+empty | 自定义 `empty` 显示内容
 footer | 自定义 `footer` 显示内容
 operation | 自定义 `operation` 显示内容
 scroll | 列表滚动时触发，bottomDistance 表示元素滚动到底部的距离
-search | 搜索时触发，options.query 表示用户输入的内容。[详细类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/transfer/type.ts)。<br/>`interface SearchContext { query: string; type: TransferListType; trigger: 'input' \| 'enter';  e: InputEvent \| KeyboardEvent }`<br/>
-title | 自定义 `title` 显示内容。[详细类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/transfer/type.ts)
-transfer-item | 自定义渲染节点。[详细类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/transfer/type.ts)
+search | 搜索时触发，options.query 表示用户输入的内容。[详细类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/transfer/type.ts)。<br/>`interface SearchContext { query: string; type: TransferListType; trigger: 'input' \| 'enter'; e: InputEvent \| KeyboardEvent }`<br/>
+title | 自定义 `title` 显示内容
+transfer-item | 自定义渲染节点

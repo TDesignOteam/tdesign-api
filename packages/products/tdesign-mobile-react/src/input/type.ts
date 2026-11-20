@@ -4,8 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import type { TNode, TElement } from '../common';
 import type { MouseEvent, FocusEvent, FormEvent, CompositionEvent, TouchEvent } from 'react';
+import type { TNode, TElement } from '../common';
 
 export interface TdInputProps {
   /**
@@ -33,15 +33,15 @@ export interface TdInputProps {
    */
   borderless?: boolean;
   /**
-   * 清空图标触发方式，仅在输入框有值时有效
-   * @default always
-   */
-  clearTrigger?: 'always' | 'focus';
-  /**
    * 是否可清空
    * @default false
    */
   clearable?: boolean;
+  /**
+   * 清空图标触发方式，仅在输入框有值时有效
+   * @default always
+   */
+  clearTrigger?: 'always' | 'focus';
   /**
    * 光标颜色
    * @default #0052d9

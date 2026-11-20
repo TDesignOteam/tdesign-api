@@ -2,7 +2,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdBaseTableProps, TdPrimaryTableProps } from './type';
+import type { TdBaseTableProps, TdPrimaryTableProps } from './type';
 
 export const baseTableDefaultProps: TdBaseTableProps = {
   bordered: false,
@@ -21,16 +21,16 @@ export const baseTableDefaultProps: TdBaseTableProps = {
 export const primaryTableDefaultProps: Pick<
   TdPrimaryTableProps,
   | 'columns'
-  | 'expandIcon'
   | 'defaultExpandedRowKeys'
+  | 'expandIcon'
   | 'multipleSort'
   | 'reserveSelectedRowOnPaginate'
   | 'defaultSelectedRowKeys'
   | 'showSortColumnBgColor'
 > = {
   columns: [],
-  expandIcon: true,
   defaultExpandedRowKeys: [],
+  expandIcon: true,
   multipleSort: false,
   reserveSelectedRowOnPaginate: true,
   defaultSelectedRowKeys: [],

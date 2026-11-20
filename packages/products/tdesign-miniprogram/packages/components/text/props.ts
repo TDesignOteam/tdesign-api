@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdTextProps } from './type';
+import type { TdTextProps } from './type';
 const props: TdTextProps = {
   /** 是否添加代码样式 */
   code: {

@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdInputProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdInputProps } from './type';
 export default {
   /** 文本内容位置，居左/居中/居右 */
   align: {
@@ -19,8 +18,6 @@ export default {
   },
   /** 超出 `maxlength` 或 `maxcharacter` 之后是否允许继续输入 */
   allowInputOverMax: Boolean,
-  /** 宽度随内容自适应 */
-  autoWidth: Boolean,
   /** 是否开启自动填充功能，HTML5 原生属性，[点击查看详情](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) */
   autocomplete: {
     type: String,
@@ -28,6 +25,8 @@ export default {
   },
   /** 自动聚焦 */
   autofocus: Boolean,
+  /** 宽度随内容自适应 */
+  autoWidth: Boolean,
   /** 是否开启无边框模式 */
   borderless: Boolean,
   /** 是否可清空 */

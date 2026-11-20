@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdTreeProps } from './type';
+import type { TdTreeProps } from './type';
 const props: TdTreeProps = {
   /** 高亮的节点值 */
   actived: {
@@ -24,13 +24,13 @@ const props: TdTreeProps = {
     type: Boolean,
     value: false,
   },
-  /** 父子节点选中状态不再关联，可各自选中或取消 */
-  checkStrictly: {
+  /** 隐藏节点复选框 */
+  checkable: {
     type: Boolean,
     value: false,
   },
-  /** 隐藏节点复选框 */
-  checkable: {
+  /** 父子节点选中状态不再关联，可各自选中或取消 */
+  checkStrictly: {
     type: Boolean,
     value: false,
   },
@@ -53,6 +53,16 @@ const props: TdTreeProps = {
     type: Boolean,
     value: false,
   },
+  /** 展开的节点值 */
+  expanded: {
+    type: Array,
+    value: null,
+  },
+  /** 展开的节点值，非受控属性 */
+  defaultExpanded: {
+    type: Array,
+    value: [],
+  },
   /** 默认展开的级别，第一层为 0 */
   expandLevel: {
     type: Number,
@@ -72,16 +82,6 @@ const props: TdTreeProps = {
   expandParent: {
     type: Boolean,
     value: false,
-  },
-  /** 展开的节点值 */
-  expanded: {
-    type: Array,
-    value: null,
-  },
-  /** 展开的节点值，非受控属性 */
-  defaultExpanded: {
-    type: Array,
-    value: [],
   },
   /** 节点过滤方法，只呈现返回值为 true 的节点，泛型 `T` 表示树节点 TS 类型 */
   filter: {

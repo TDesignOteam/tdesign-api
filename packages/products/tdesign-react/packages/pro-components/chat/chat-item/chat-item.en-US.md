@@ -1,0 +1,20 @@
+:: BASE_DOC ::
+
+## API
+
+### ChatItem Props
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+className | String | - | className of component | N
+style | Object | - | CSS(Cascading Style Sheets)，Typescript: `React.CSSProperties` | N
+actions | TNode | - | Typescript: `string \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+animation | String | skeleton | options: skeleton/moving/gradient | N
+avatar | TNode | - | Typescript: `String \| AvatarProps \| TNode `，[Avatar API Documents](./avatar?tab=api). [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts). [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/pro-components/chat/chat-item/type.ts) | N
+content | TNode | - | Typescript: `string \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+datetime | TNode | - | Typescript: `string \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+name | TNode | - | Typescript: `string \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+reasoning | String / Boolean / Object | false | Typescript: `boolean \| TdChatReasoning ` ` interface TdChatReasoning { expandIconPlacement?: 'left' \| 'right';onExpandChange?: (isExpand: boolean) => void; collapsePanelProps?: Object } `. [see more ts definition](https://github.com/Tencent/tdesign-react/blob/develop/packages/pro-components/chat/chat-item/type.ts) | N
+role | String | - | options: user/assistant/error/model-change/system | N
+textLoading | Boolean | false | \- | N
+variant | String | text | options: base/outline/text | N

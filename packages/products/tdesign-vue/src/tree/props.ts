@@ -4,14 +4,11 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdTreeProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdTreeProps } from './type';
 export default {
   /** 节点是否可高亮 */
   activable: Boolean,
-  /** 是否允许多个节点同时高亮 */
-  activeMultiple: Boolean,
   /** 高亮的节点值 */
   actived: {
     type: Array as PropType<TdTreeProps['actived']>,
@@ -20,29 +17,22 @@ export default {
   defaultActived: {
     type: Array as PropType<TdTreeProps['defaultActived']>,
   },
+  /** 是否允许多个节点同时高亮 */
+  activeMultiple: Boolean,
   /** 判断节点是否可以执行 drop 操作，泛型 `T` 表示树节点 TS 类型 */
   allowDrop: {
     type: Function as PropType<TdTreeProps['allowDrop']>,
   },
   /** 是否允许在过滤时节点折叠节点 */
   allowFoldNodeOnFilter: Boolean,
-  /** 参与父节点全选、半选状态判定的子节点范围。all 表示所有子节点参与判断，包括禁用子节点；onlyEnabled 表示仅未禁用的子节点参与判断，没有可用子节点时，不由子节点推导出全选或半选状态。仅影响父节点状态的判定，不改变禁用子节点自身的选中状态。checkStrictly 为 true 时不生效 */
-  checkAllAffectedBy: {
-    type: String as PropType<TdTreeProps['checkAllAffectedBy']>,
-    default: 'all' as TdTreeProps['checkAllAffectedBy'],
-    validator(val: TdTreeProps['checkAllAffectedBy']): boolean {
-      if (!val) return true;
-      return ['all', 'onlyEnabled'].includes(val);
-    },
-  },
+  /** 隐藏节点复选框 */
+  checkable: Boolean,
   /** 透传属性到 checkbox 组件。参考 checkbox 组件 API */
   checkProps: {
     type: [Object, Function] as PropType<TdTreeProps['checkProps']>,
   },
   /** 父子节点选中状态不再关联，可各自选中或取消 */
   checkStrictly: Boolean,
-  /** 隐藏节点复选框 */
-  checkable: Boolean,
   /** 树数据，泛型 `T` 表示树节点 TS 类型 */
   data: {
     type: Array as PropType<TdTreeProps['data']>,
@@ -64,6 +54,16 @@ export default {
   },
   /** 是否展开全部节点 */
   expandAll: Boolean,
+  /** 展开的节点值 */
+  expanded: {
+    type: Array as PropType<TdTreeProps['expanded']>,
+    default: (): TdTreeProps['expanded'] => [],
+  },
+  /** 展开的节点值，非受控属性 */
+  defaultExpanded: {
+    type: Array as PropType<TdTreeProps['defaultExpanded']>,
+    default: (): TdTreeProps['defaultExpanded'] => [],
+  },
   /** 默认展开的级别，第一层为 0 */
   expandLevel: {
     type: Number,
@@ -75,16 +75,6 @@ export default {
   expandOnClickNode: Boolean,
   /** 展开子节点时是否自动展开父节点 */
   expandParent: Boolean,
-  /** 展开的节点值 */
-  expanded: {
-    type: Array as PropType<TdTreeProps['expanded']>,
-    default: (): TdTreeProps['expanded'] => [],
-  },
-  /** 展开的节点值，非受控属性 */
-  defaultExpanded: {
-    type: Array as PropType<TdTreeProps['defaultExpanded']>,
-    default: (): TdTreeProps['defaultExpanded'] => [],
-  },
   /** 节点过滤方法，只呈现返回值为 true 的节点，泛型 `T` 表示树节点 TS 类型 */
   filter: {
     type: Function as PropType<TdTreeProps['filter']>,

@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { InputProps } from '../input';
+import type { InputProps } from '../input';
 import type { TNode } from '../common';
 
 export interface TdInputNumberProps<T = InputNumberValue> {
@@ -18,15 +18,15 @@ export interface TdInputNumberProps<T = InputNumberValue> {
    */
   allowInputOverLimit?: boolean;
   /**
-   * 宽度随内容自适应
-   * @default false
-   */
-  autoWidth?: boolean;
-  /**
    * 自动聚焦
    * @default false
    */
   autofocus?: boolean;
+  /**
+   * 宽度随内容自适应
+   * @default false
+   */
+  autoWidth?: boolean;
   /**
    * [小数位数](https://en.wiktionary.org/wiki/decimal_place)
    */

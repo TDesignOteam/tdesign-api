@@ -4,8 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { LoadingProps } from '../loading';
-import { TNode, SizeEnum } from '../common';
+import type { LoadingProps } from '../loading';
+import type { TNode, SizeEnum } from '../common';
 
 export interface TdButtonProps {
   /**
@@ -17,6 +17,10 @@ export interface TdButtonProps {
    * 按钮内容
    */
   content?: string | TNode;
+  /**
+   * 分割面板的内容节点，必须意思SplitPanel
+   */
+  content?: TNode;
   /**
    * 按钮内容
    */

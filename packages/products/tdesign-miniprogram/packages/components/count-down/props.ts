@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdCountDownProps } from './type';
+import type { TdCountDownProps } from './type';
 const props: TdCountDownProps = {
   /** 是否自动开始倒计时 */
   autoStart: {

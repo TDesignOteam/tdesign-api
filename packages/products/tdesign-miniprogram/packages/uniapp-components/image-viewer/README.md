@@ -17,8 +17,8 @@ lazy | Boolean | true | 是否开启图片懒加载。开启后会预加载当�
 max-zoom | Number | 3 | 图片最大放大比例 | N
 show-index | Boolean | false | 是否显示页码 | N
 using-custom-navbar | Boolean | false | 是否使用了自定义导航栏 | N
-visible | Boolean | false | 隐藏/显示预览。支持语法糖 `v-model:visible` | N
-default-visible | Boolean | false | 隐藏/显示预览。非受控属性 | N
+visible | Boolean | false | 隐藏/显示预览。支持语法糖 `v-model:visible`。TS 类型：`boolean \| null` | N
+default-visible | Boolean | false | 隐藏/显示预览。非受控属性。TS 类型：`boolean \| null` | N
 
 ### ImageViewer Events
 

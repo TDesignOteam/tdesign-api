@@ -9,8 +9,8 @@
 allowInput | Boolean | false | 是否允许直接输入时间 | N
 borderless | Boolean | false | 无边框模式 | N
 clearable | Boolean | false | 是否允许清除选中值 | N
-disableTime | Function | - | 禁用时间项的配置函数。TS 类型：`(h: number, m: number, s: number, ms: number) => Partial<{ hour: Array<number>, minute: Array<number>, second: Array<number>, millisecond: Array<number>  }>` | N
 disabled | Boolean | undefined | 是否禁用组件 | N
+disableTime | Function | - | 禁用时间项的配置函数。TS 类型：`(h: number, m: number, s: number, ms: number) => Partial<{ hour: Array<number>, minute: Array<number>, second: Array<number>, millisecond: Array<number> }>` | N
 format | String | HH:mm:ss | 用于格式化时间，[详细文档](https://day.js.org/docs/en/display/format) | N
 hideDisabledTime | Boolean | true | 是否隐藏禁用状态的时间项 | N
 inputProps | Object | - | 透传给输入框（Input）组件的参数。TS 类型：`InputProps`，[Input API Documents](./input?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts) | N
@@ -62,8 +62,8 @@ allowInput | Boolean | false | 是否允许直接输入时间 | N
 autoSwap | Boolean | true | 是否自动调换左右区间的顺序，默认为 true；若需要支持跨天的场景，可以设置为 false | N
 borderless | Boolean | false | 无边框模式 | N
 clearable | Boolean | false | 是否允许清除选中值 | N
-disableTime | Function | - | 禁用时间项。TS 类型：`(h: number, m: number, s: number, ms: number, context: { partial: TimeRangePickerPartial }) =>Partial<{ hour: Array<number>, minute: Array<number>, second: Array<number> }>` `type TimeRangePickerPartial = 'start' \| 'end'`。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts) | N
 disabled | Boolean / Array | undefined | 是否禁用组件，值为数组表示可分别控制开始日期和结束日期是否禁用。TS 类型：`boolean \| Array<boolean>` | N
+disableTime | Function | - | 禁用时间项。TS 类型：`(h: number, m: number, s: number, ms: number, context: { partial: TimeRangePickerPartial }) =>Partial<{ hour: Array<number>, minute: Array<number>, second: Array<number> }>` `type TimeRangePickerPartial = 'start' \| 'end'`。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts) | N
 format | String | HH:mm:ss | 用于格式化时间，[详细文档](https://day.js.org/docs/en/display/format) | N
 hideDisabledTime | Boolean | true | 是否隐藏禁用状态的时间项 | N
 label | String / Slot / Function | - | 左侧文本。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
@@ -81,7 +81,7 @@ defaultValue | Array | - | 选中值。非受控属性。TS 类型：`TimeRangeV
 onBlur | Function |  | TS 类型：`(context: { value: TimeRangeValue; e?: FocusEvent; position?: TimeRangePickerPartial })  => void`<br/>当输入框失去焦点时触发。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts)。<br/>`type TimeRangePickerPartial = 'start' \| 'end'`<br/> | N
 onChange | Function |  | TS 类型：`(value: TimeRangeValue) => void`<br/>选中值发生变化时触发 | N
 onFocus | Function |  | TS 类型：`(context?: { value: TimeRangeValue; e?: FocusEvent; position?: TimeRangePickerPartial })  => void`<br/>范围输入框获得焦点时触发。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts)。<br/>`type TimeRangePickerPartial = 'start' \| 'end'`<br/> | N
-onInput | Function |  | TS 类型：`(context: { value: TimeRangeValue; e?: InputEvent; position?: TimeRangePickerPartial  })  => void`<br/>当输入框内容发生变化时触发，参数 input 表示输入内容，value 表示组件当前有效值。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts)。<br/>`type TimeRangePickerPartial = 'start' \| 'end'`<br/> | N
+onInput | Function |  | TS 类型：`(context: { value: TimeRangeValue; e?: InputEvent; position?: TimeRangePickerPartial })  => void`<br/>当输入框内容发生变化时触发，参数 input 表示输入内容，value 表示组件当前有效值。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts)。<br/>`type TimeRangePickerPartial = 'start' \| 'end'`<br/> | N
 onPick | Function |  | TS 类型：`(value: TimeRangeValue, context: { e: MouseEvent, position?: TimeRangePickerPartial }) => void`<br/>面板选中值后触发 | N
 
 ### TimeRangePicker Events
@@ -91,5 +91,5 @@ onPick | Function |  | TS 类型：`(value: TimeRangeValue, context: { e: MouseE
 blur | `(context: { value: TimeRangeValue; e?: FocusEvent; position?: TimeRangePickerPartial }) ` | 当输入框失去焦点时触发。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts)。<br/>`type TimeRangePickerPartial = 'start' \| 'end'`<br/>
 change | `(value: TimeRangeValue)` | 选中值发生变化时触发
 focus | `(context?: { value: TimeRangeValue; e?: FocusEvent; position?: TimeRangePickerPartial }) ` | 范围输入框获得焦点时触发。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts)。<br/>`type TimeRangePickerPartial = 'start' \| 'end'`<br/>
-input | `(context: { value: TimeRangeValue; e?: InputEvent; position?: TimeRangePickerPartial  }) ` | 当输入框内容发生变化时触发，参数 input 表示输入内容，value 表示组件当前有效值。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts)。<br/>`type TimeRangePickerPartial = 'start' \| 'end'`<br/>
+input | `(context: { value: TimeRangeValue; e?: InputEvent; position?: TimeRangePickerPartial }) ` | 当输入框内容发生变化时触发，参数 input 表示输入内容，value 表示组件当前有效值。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/time-picker/type.ts)。<br/>`type TimeRangePickerPartial = 'start' \| 'end'`<br/>
 pick | `(value: TimeRangeValue, context: { e: MouseEvent, position?: TimeRangePickerPartial })` | 面板选中值后触发

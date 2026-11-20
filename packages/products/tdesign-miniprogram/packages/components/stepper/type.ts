@@ -8,17 +8,17 @@ import type { SizeEnum } from '../common/common';
 
 export interface TdStepperProps {
   /**
-   * 禁用输入框
-   * @default false
+   * 禁用全部操作
    */
-  disableInput?: {
+  disabled?: {
     type: BooleanConstructor;
     value?: boolean;
   };
   /**
-   * 禁用全部操作
+   * 禁用输入框
+   * @default false
    */
-  disabled?: {
+  disableInput?: {
     type: BooleanConstructor;
     value?: boolean;
   };

@@ -4,21 +4,22 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { LoadingProps } from '../loading';
-import { TableConfig } from '../config-provider';
-import { PaginationProps, PageInfo } from '../pagination';
-import { TooltipProps } from '../tooltip';
-import { CheckboxGroupValue } from '../checkbox';
-import { SortableEvent, SortableOptions } from 'sortablejs';
-import { CheckboxProps } from '../checkbox';
-import { RadioProps } from '../radio';
-import { PopupProps } from '../popup';
-import { InputProps } from '../input';
-import { ButtonProps } from '../button';
-import { CheckboxGroupProps } from '../checkbox';
-import { DialogProps } from '../dialog';
-import { FormRule, AllValidateResult } from '../form';
-import {
+import type { MouseEvent, KeyboardEvent, WheelEvent, ChangeEvent } from 'react';
+import type { LoadingProps } from '../loading';
+import type { TableConfig } from '../config-provider';
+import type { PaginationProps, PageInfo } from '../pagination';
+import type { TooltipProps } from '../tooltip';
+import type { CheckboxGroupValue } from '../checkbox';
+import type { SortableEvent, SortableOptions } from 'sortablejs';
+import type { CheckboxProps } from '../checkbox';
+import type { RadioProps } from '../radio';
+import type { PopupProps } from '../popup';
+import type { InputProps } from '../input';
+import type { ButtonProps } from '../button';
+import type { CheckboxGroupProps } from '../checkbox';
+import type { DialogProps } from '../dialog';
+import type { FormRule, AllValidateResult } from '../form';
+import type {
   TNode,
   TElement,
   OptionData,
@@ -31,7 +32,6 @@ import {
   TScroll,
   ComponentScrollToElementParams,
 } from '../common';
-import { MouseEvent, KeyboardEvent, WheelEvent, ChangeEvent } from 'react';
 
 export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
   /**
@@ -393,8 +393,10 @@ export interface BaseTableCol<T extends TableRowData = TableRowData> {
   width?: string | number;
 }
 
-export interface TdPrimaryTableProps<T extends TableRowData = TableRowData>
-  extends Omit<TdBaseTableProps<T>, 'columns' | 'onCellClick'> {
+export interface TdPrimaryTableProps<T extends TableRowData = TableRowData> extends Omit<
+  TdBaseTableProps<T>,
+  'columns' | 'onCellClick'
+> {
   /**
    * 异步加载状态。值为 `loading` 显示默认文字 “正在加载中，请稍后”，值为 `load-more` 显示“点击加载更多”，值为其他，表示完全自定义异步加载区域内容
    */
@@ -441,15 +443,6 @@ export interface TdPrimaryTableProps<T extends TableRowData = TableRowData>
    */
   editableRowKeys?: Array<string | number>;
   /**
-   * 用于控制是否显示「展开图标列」，值为 `false` 则不会显示。可以精确到某一行是否显示，还可以自定义展开图标内容。`expandedRow` 存在时，该参数有效。支持全局配置 `GlobalConfigProvider`
-   * @default true
-   */
-  expandIcon?: boolean | TNode<ExpandArrowRenderParams<T>>;
-  /**
-   * 是否允许点击行展开
-   */
-  expandOnRowClick?: boolean;
-  /**
    * 展开行内容，泛型 T 指表格数据类型
    */
   expandedRow?: TNode<TableExpandedRowParams<T>>;
@@ -463,6 +456,15 @@ export interface TdPrimaryTableProps<T extends TableRowData = TableRowData>
    * @default []
    */
   defaultExpandedRowKeys?: Array<string | number>;
+  /**
+   * 用于控制是否显示「展开图标列」，值为 `false` 则不会显示。可以精确到某一行是否显示，还可以自定义展开图标内容。`expandedRow` 存在时，该参数有效。支持全局配置 `GlobalConfigProvider`
+   * @default true
+   */
+  expandIcon?: boolean | TNode<ExpandArrowRenderParams<T>>;
+  /**
+   * 是否允许点击行展开
+   */
+  expandOnRowClick?: boolean;
   /**
    * 自定义过滤图标，支持全局配置 `GlobalConfigProvider`
    */
@@ -506,10 +508,6 @@ export interface TdPrimaryTableProps<T extends TableRowData = TableRowData>
    */
   rowSelectionType?: 'single' | 'multiple';
   /**
-   * 是否在点击整行时选中
-   */
-  selectOnRowClick?: boolean;
-  /**
    * 选中行。半选状态行请更为使用 `indeterminateSelectedRowKeys` 控制
    * @default []
    */
@@ -519,6 +517,10 @@ export interface TdPrimaryTableProps<T extends TableRowData = TableRowData>
    * @default []
    */
   defaultSelectedRowKeys?: Array<string | number>;
+  /**
+   * 是否在点击整行时选中
+   */
+  selectOnRowClick?: boolean;
   /**
    * 当前排序列是否显示背景色
    * @default false
@@ -618,8 +620,10 @@ export interface PrimaryTableInstanceFunctions<T extends TableRowData = TableRow
   validateTableData: () => Promise<{ result: TableErrorListMap }>;
 }
 
-export interface PrimaryTableCol<T extends TableRowData = TableRowData>
-  extends Omit<BaseTableCol, 'cell' | 'title' | 'render' | 'children'> {
+export interface PrimaryTableCol<T extends TableRowData = TableRowData> extends Omit<
+  BaseTableCol,
+  'cell' | 'title' | 'render' | 'children'
+> {
   /**
    * 自定义单元格渲染，优先级高于 render。泛型 T 指表格数据类型
    */
@@ -654,15 +658,15 @@ export interface PrimaryTableCol<T extends TableRowData = TableRowData>
    */
   render?: TNode<PrimaryTableRenderParams<T>>;
   /**
-   * 当前列支持排序的方式，desc 表示当前列只能进行降序排列；asc 表示当前列只能进行升序排列；all 表示当前列既可升序排列，又可以降序排列
-   * @default all
-   */
-  sortType?: SortType;
-  /**
    * 该列是否支持排序。值为 true 表示该列支持排序；值类型为函数，表示对本地数据 `data` 进行排序，返回值参考 [MDN Array.sort](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)。泛型 T 指表格数据类型
    * @default false
    */
   sorter?: boolean | SorterFun<T>;
+  /**
+   * 当前列支持排序的方式，desc 表示当前列只能进行降序排列；asc 表示当前列只能进行升序排列；all 表示当前列既可升序排列，又可以降序排列
+   * @default all
+   */
+  sortType?: SortType;
   /**
    * 自定义表头渲染。值类型为 Function 表示以函数形式渲染表头。值类型为 string 表示使用插槽渲染，插槽名称为 title 的值。优先级高于 render
    */
@@ -1008,7 +1012,9 @@ export interface RowClassNameParams<T> {
   type?: 'body' | 'foot';
 }
 
-export type TableRowspanAndColspanFunc<T> = (params: BaseTableCellParams<T>) => RowspanColspan;
+export type TableRowspanAndColspanFunc<T extends TableRowData = TableRowData> = (
+  params: BaseTableCellParams<T>,
+) => RowspanColspan;
 
 export interface RowspanColspan {
   colspan?: number;
@@ -1028,9 +1034,9 @@ export interface ActiveRowActionContext<T> {
 
 export type ActiveRowActionType = 'shift-area-selection' | 'space-one-selection' | 'clear' | 'select-all';
 
-export interface BaseTableCellEventContext<T> {
+export interface BaseTableCellEventContext<T extends TableRowData = TableRowData> {
   row: T;
-  col: BaseTableCol;
+  col: BaseTableCol<T>;
   rowIndex: number;
   colIndex: number;
   e: MouseEvent<HTMLTableCellElement>;
@@ -1056,9 +1062,10 @@ export interface BaseTableCellParams<T> {
   colIndex: number;
 }
 
-export type TableColumnClassName<T> = ClassName | ((context: CellData<T>) => ClassName);
+export type TableColumnClassName<T extends TableRowData = TableRowData> =
+  ClassName | ((context: CellData<T>) => ClassName);
 
-export interface CellData<T> extends BaseTableCellParams<T> {
+export interface CellData<T extends TableRowData = TableRowData> extends BaseTableCellParams<T> {
   type: 'th' | 'td';
 }
 
@@ -1082,15 +1089,15 @@ export type DataType = TableRowData;
 
 export type EditableCellType<T> = (params: PrimaryTableCellParams<T>) => boolean;
 
-export interface ExpandArrowRenderParams<T> {
-  row: T;
-  index: number;
-}
-
 export interface TableExpandedRowParams<T> {
   row: T;
   index: number;
   columns: PrimaryTableCol<T>[] | BaseTableCol<T>[];
+}
+
+export interface ExpandArrowRenderParams<T> {
+  row: T;
+  index: number;
 }
 
 export type FilterValue = { [key: string]: any };
@@ -1192,17 +1199,15 @@ export interface PrimaryTableCellParams<T> {
 }
 
 export type CheckProps<T> =
-  | CheckboxProps
-  | RadioProps
-  | ((options: { row: T; rowIndex: number }) => CheckboxProps | RadioProps);
+  CheckboxProps | RadioProps | ((options: { row: T; rowIndex: number }) => CheckboxProps | RadioProps);
 
 export interface PrimaryTableRenderParams<T> extends PrimaryTableCellParams<T> {
   type: RenderType;
 }
 
-export type SortType = 'desc' | 'asc' | 'all';
-
 export type SorterFun<T> = (a: T, b: T) => number;
+
+export type SortType = 'desc' | 'asc' | 'all';
 
 export interface TableAbnormalDragSortContext<T> {
   code: number;
@@ -1247,8 +1252,7 @@ export interface TableColumnGroup {
 export type PrimaryTableOnEditedContext<T> = PrimaryTableCellParams<T> & { trigger: string; newRowData: T };
 
 export type TableEditableCellProps<T> =
-  | TablePlainObject
-  | ((params: TableEditableCellPropsParams<T>) => TablePlainObject);
+  TablePlainObject | ((params: TableEditableCellPropsParams<T>) => TablePlainObject);
 
 export interface TableEditableCellPropsParams<T> extends PrimaryTableCellParams<T> {
   editedRow: T;
