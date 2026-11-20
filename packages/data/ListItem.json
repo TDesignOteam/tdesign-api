@@ -4,9 +4,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "ListItem",
     "field_category": "Props",
@@ -36,9 +34,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "ListItem",
     "field_category": "Props",
