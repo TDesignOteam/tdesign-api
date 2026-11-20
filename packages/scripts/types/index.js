@@ -693,12 +693,14 @@ async function combineTsFile(componentMap, framework) {
     });
     // 不在列表中的配置也不输出，如通用配置：InfinityScroll/TScroll 等
     // 特殊处理小程序端 Form 组件，确保 FormItem 子组件的 type.ts 单独输出
+    // FormRule / FormErrorMessage 不是独立组件，跟随 Form 合并后不单独输出
+    const MINIPROGRAM_STANDALONE_TYPES = ['FormItem'];
     Object.keys(ts).forEach((key) => {
       if (
         !list.find((item) => item === key) &&
         !['ConfigProvider'].includes(key) &&
         ['Miniprogram', 'UniApp'].includes(framework) &&
-        key !== 'FormItem'
+        !MINIPROGRAM_STANDALONE_TYPES.includes(key)
       ) {
         delete ts[key];
       }
