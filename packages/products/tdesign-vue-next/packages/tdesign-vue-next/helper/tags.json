@@ -572,7 +572,7 @@
       "xs",
       "xxl"
     ],
-    "description": "Col\n\n栅格-纵向\n\n[docs](https://tdesign.tencent.com/vue-next/components/col)"
+    "description": "Col\n\n栅格-纵向\n\n[docs](https://tdesign.tencent.com/vue-next/components/grid)"
   },
   "t-collapse": {
     "attributes": [
@@ -1904,7 +1904,7 @@
       "justify",
       "tag"
     ],
-    "description": "Row\n\n栅格-横向\n\n[docs](https://tdesign.tencent.com/vue-next/components/row)"
+    "description": "Row\n\n栅格-横向\n\n[docs](https://tdesign.tencent.com/vue-next/components/grid)"
   },
   "t-scrollbar": {
     "attributes": [
