@@ -27,7 +27,6 @@ declare module 'vue' {
     TConfigProvider: typeof import('tdesign-uniapp/config-provider/config-provider.vue').default;
     TCountDown: typeof import('tdesign-uniapp/count-down/count-down.vue').default;
     TDateTimePicker: typeof import('tdesign-uniapp/date-time-picker/date-time-picker.vue').default;
-    TDateTimeRangePicker: typeof import('tdesign-uniapp/date-time-range-picker/date-time-range-picker.vue').default;
     TDialog: typeof import('tdesign-uniapp/dialog/dialog.vue').default;
     TDivider: typeof import('tdesign-uniapp/divider/divider.vue').default;
     TDrawer: typeof import('tdesign-uniapp/drawer/drawer.vue').default;
