@@ -48,7 +48,7 @@ function printHelp() {
 
 flags:
   finalProject  写入同级组件库。默认写入本仓库 packages/products
-  onlyDocs      只生成 API 文档。component 为 ALL 时必须带上，且不要带 useDefault
+  onlyDocs      只生成 API 文档，不出 type.ts / props.ts
   useDefault    Vue(PC) 受控组件生成 props 时使用。当前组件：${NEED_USE_DEFAULT_OR_USE_VMODEL.join('、')}
   vitest        同时输出测试用例
   isUseUnitTest 同时输出单元测试
@@ -58,6 +58,8 @@ flags:
   pnpm api:docs -- Button 'VueNext(PC)' finalProject
   pnpm api:docs -- Select 'Vue(PC)' useDefault,finalProject
   pnpm api:docs -- ALL 'Vue(PC)' onlyDocs
+  pnpm api:docs -- ALL 'Vue(PC)'
+  pnpm api:docs -- ALL 'Vue(PC)' finalProject
 `);
 }
 
@@ -77,18 +79,16 @@ const { useDefault, onlyDocs, isUseUnitTest, vitest } = parseParams(allParams);
 
 let selfUseDefault = useDefault;
 
+// 全量生成：一次遍历所有已登记组件，输出文档；未带 onlyDocs 时同时输出 type.ts / props.ts
 if (isAll(component)) {
-  console.warn(chalk.yellow('\nWarn: 全量生成由于改动过大，目前限制为只能生成文档，如需生成TS文件，请单独生成组件\n'));
+  if (onlyDocs) {
+    generateDocuments();
+  } else {
+    generateAllComponentsApi();
+  }
+} else {
+  generateComponentApi();
 }
-
-// 全量组件，改动较大，限制为暂时只能生成文档，不能生成 TS 文件
-if (isAll(component) && onlyDocs) {
-  generateDocuments();
-}
-
-// if (component && !isAll(component)) {
-generateComponentApi();
-// }
 
 /**
  * 解析参数字符串
@@ -177,6 +177,74 @@ async function generateComponentApi() {
 }
 
 /**
+ * 输出全部组件：类型定义、props、API 文档（英文 + 中文）
+ * 与 generateComponentApi 等价，只是把组件循环放在同一进程内，避免上百次 node 启动。
+ * 单个组件失败不影响其他组件，结束后统一退出。
+ */
+async function generateAllComponentsApi() {
+  const components = map.data.components.filter((item) => !['plugin', 'TS'].includes(item.type)).map((item) => item.value);
+  const r = validateParams(components.concat('ALL'));
+  if (!r) return;
+  console.log(chalk.blue(`\n ----- Framework: ${framework} Starting to Generate All Components API ------ \n`));
+  const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
+  const frameworkData = groupByComponent(ALL_API, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
+  const cmpMap = getApiComponentMapByFrameWork(
+    framework === 'Miniprogram' || framework === 'UniApp'
+      ? Object.assign({}, COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, MINIPROGRAM_COMPONENT_API_MD_MAP, getChatComponentMap(framework))
+      : MOBILE_FRAMES.includes(framework)
+        ? Object.assign({}, COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, getChatComponentMap(framework))
+        : Object.assign({}, COMPONENT_API_MD_MAP, getChatComponentMap(framework)),
+    framework,
+  );
+  const globalConfigData = pick(frameworkData, GLOBAL_COMPONENTS_CONFIG);
+
+  // 该框架没有 API 数据的组件直接跳过，避免生成空目录
+  const targets = components.filter((name) =>
+    resolveComponentMergeList(cmpMap, name).some((key) => frameworkData[key]?.length),
+  );
+  console.log(chalk.gray(`  共 ${targets.length} 个组件待生成`));
+
+  const failures = [];
+  for (let i = 0; i < targets.length; i += 1) {
+    const name = targets[i];
+    const baseData = pick(frameworkData, resolveComponentMergeList(cmpMap, name));
+    const currentUseDefault = useDefault || (['VueNext(PC)', 'Vue(Mobile)'].includes(framework) ? true : selfUseDefault);
+    try {
+      if (!onlyDocs) {
+        await generateTypes(baseData, framework);
+        generateVueProps(baseData, framework, currentUseDefault);
+        if (framework.indexOf('React') !== -1) {
+          await generateReactDefaultProps(baseData, framework);
+        }
+        if (isUseUnitTest) {
+          generateUnitTest(baseData, framework);
+        }
+      }
+      generateDocs(baseData, framework, { globalConfigData, component: name });
+      generateDocs(baseData, framework, { language: 'en', globalConfigData, component: name });
+      if (vitest) {
+        await generateVitestUnitCase(baseData, framework, { component: name });
+        const currentComponentData = groupByComponent(ALL_API);
+        const apiData = pick(currentComponentData, resolveComponentMergeList(cmpMap, name));
+        generateTestDescriptionToVitestFile(apiData, { component: name });
+      }
+      console.log(chalk.gray(`  [${i + 1}/${targets.length}] ${name}`));
+    } catch (error) {
+      failures.push({ name, message: error?.stack || String(error) });
+      console.error(chalk.red(`  [${i + 1}/${targets.length}] ${name} failed`));
+    }
+  }
+
+  if (!failures.length) {
+    console.log(chalk.green(`\n All ${targets.length} components generated.\n`));
+    return;
+  }
+  console.error(chalk.red(`\n ${failures.length}/${targets.length} components failed:\n`));
+  failures.forEach((item) => console.error(chalk.red(`x ${item.name}\n${chalk.gray(item.message.split('\n').slice(0, 5).join('\n'))}`)));
+  process.exitCode = 1;
+}
+
+/**
  * 仅输出全部组件的 API 文档（英文 + 中文）
  * 一般用于统一更新文档描述，集体输出
  */
@@ -209,7 +277,7 @@ function validateParams(components) {
   if (!component) {
     console.error(
       chalk.red(
-        '\nError: 请输入单个组件名称（前期需要规范每一个组件）\n 如果想生成全量组件的 API 类型定义，请输入参数 ALL',
+        '\nError: 请输入单个组件名称（前期需要规范每一个组件）\n 如果想生成全量组件的 API，请输入参数 ALL',
       ),
     );
     return false;
