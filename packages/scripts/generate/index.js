@@ -182,8 +182,7 @@ async function generateComponentApi() {
  * 单个组件失败不影响其他组件，结束后统一退出。
  */
 async function generateAllComponentsApi() {
-  const components = map.data.components.filter((item) => !['plugin', 'TS'].includes(item.type)).map((item) => item.value);
-  const r = validateParams(components.concat('ALL'));
+  const r = validateParams(['ALL']);
   if (!r) return;
   console.log(chalk.blue(`\n ----- Framework: ${framework} Starting to Generate All Components API ------ \n`));
   const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
@@ -198,10 +197,17 @@ async function generateAllComponentsApi() {
   );
   const globalConfigData = pick(frameworkData, GLOBAL_COMPONENTS_CONFIG);
 
+  // 只生成父级组件：父组件生成时会把子组件（如 AnchorItem、BaseTable）合并进自己的目录，
+  // 子组件不需也不能单独建目录。
+  // 以全部已登记组件为候选，避免误伤两种情况：
+  // 1. Button 等独立组件不在 cmpMap 里，但它本身就是父级
+  // 2. Table 在 map.json 里标记为 type: TS，但仍然是有子组件的父级
+  const parentKeys = new Set(Object.keys(cmpMap));
+  const childOnly = new Set(Object.values(cmpMap).flat());
+  parentKeys.forEach((key) => childOnly.delete(key));
+  const candidates = map.data.components.map((item) => item.value).filter((name) => !childOnly.has(name));
   // 该框架没有 API 数据的组件直接跳过，避免生成空目录
-  const targets = components.filter((name) =>
-    resolveComponentMergeList(cmpMap, name).some((key) => frameworkData[key]?.length),
-  );
+  const targets = candidates.filter((name) => resolveComponentMergeList(cmpMap, name).some((key) => frameworkData[key]?.length));
   console.log(chalk.gray(`  共 ${targets.length} 个组件待生成`));
 
   const failures = [];
