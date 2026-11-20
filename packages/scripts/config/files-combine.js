@@ -227,6 +227,9 @@ export const MOBILE_COMPONENT_API_MD_MAP = {
   },
   Layout: {
     list: ['Layout', 'Row', 'Col'],
+    // 小程序和 UniApp 没有 Layout 组件（真实仓库无 layout 目录），Row / Col 是独立组件，
+    // 合并关系由 COMPONENT_API_MD_MAP.Col 处理
+    excludes: ['Miniprogram', 'UniApp'],
   },
   Grid: {
     list: ['Grid', 'GridItem'],
