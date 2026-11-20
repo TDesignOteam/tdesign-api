@@ -4,14 +4,13 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdSelectProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdSelectProps } from './type';
 export default {
-  /** 宽度随内容自适应 */
-  autoWidth: Boolean,
   /** 自动聚焦 */
   autofocus: Boolean,
+  /** 宽度随内容自适应 */
+  autoWidth: Boolean,
   /** 无边框模式 */
   borderless: Boolean,
   /** 是否可以清空选项 */

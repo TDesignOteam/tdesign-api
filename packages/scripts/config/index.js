@@ -15,6 +15,7 @@ import {
   CHAT_COMPONENT_MAP,
   CHAT_FRAMEWORKS,
   getChatComponentMap,
+  mergeComponentMaps,
 } from './const.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -253,5 +254,6 @@ export {
   CHAT_COMPONENT_MAP,
   CHAT_FRAMEWORKS,
   getChatComponentMap,
+  mergeComponentMaps,
   getChatConfig,
 };

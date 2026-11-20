@@ -10,6 +10,11 @@ export interface TdPickerItemProps {
    */
   format?: (option: PickerItemOption, columnIndex: number) => PickerItemOption;
   /**
+   * PickerItem的子项高度，单位 rpx
+   * @default 80
+   */
+  itemHeight?: number;
+  /**
    * 数据源
    * @default []
    */

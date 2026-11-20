@@ -24,7 +24,7 @@ trigger | String | hover | 触发浮层出现的方式。可选项：hover/click
 triggerElement | String / Slot / Function | - | 触发元素。值类型为字符串表示元素选择器。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 visible | Boolean | - | 是否显示浮层。支持语法糖 `v-model`。TS 类型：`boolean` | N
 defaultVisible | Boolean | - | 是否显示浮层。非受控属性。TS 类型：`boolean` | N
-zIndex | Number | - | 组件层级，Web 侧样式默认为 5500，移动端和小程序样式默认为 1500 | N
+zIndex | Number | - | 组件层级，Web 侧样式默认为 5500，移动端默认为 1500，小程序端默认 11500 | N
 onOverlayClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>内容面板点击时触发 | N
 onScroll | Function |  | TS 类型：`(context: { e: WheelEvent }) => void`<br/>下拉选项滚动事件 | N
 onScrollToBottom | Function |  | TS 类型：`(context: { e: WheelEvent }) => void`<br/>下拉滚动触底事件，常用于滚动到底执行具体业务逻辑 | N

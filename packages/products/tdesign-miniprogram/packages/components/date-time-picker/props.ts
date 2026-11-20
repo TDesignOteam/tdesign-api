@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdDateTimePickerProps } from './type';
+import type { TdDateTimePickerProps } from './type';
 const props: TdDateTimePickerProps = {
   /** 自动关闭；在确认、取消、点击遮罩层自动关闭，不需要手动设置 visible */
   autoClose: {
@@ -20,6 +20,11 @@ const props: TdDateTimePickerProps = {
   confirmBtn: {
     type: String,
     value: '',
+  },
+  /**  组件国际化语言，目前支持: 简体中文(zh)、(tc)、英文(en)、日语(ja)、韩语(ko)、俄语(ru)等六种语言 */
+  customLocale: {
+    type: String,
+    value: 'zh',
   },
   /** 选择器的最大可选时间，默认为当前时间+10年 */
   end: {

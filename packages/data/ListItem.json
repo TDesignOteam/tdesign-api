@@ -3,10 +3,7 @@
     "id": 990,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "ListItem",
     "field_category": "Props",
@@ -35,10 +32,7 @@
     "id": 913,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "ListItem",
     "field_category": "Props",

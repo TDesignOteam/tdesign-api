@@ -4,9 +4,9 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { PopupProps } from '../popup';
-import { TNode, TElement } from '../common';
-import { MouseEvent } from 'react';
+import type { MouseEvent } from 'react';
+import type { PopupProps } from '../popup';
+import type { TNode, TElement } from '../common';
 
 export interface TdDropdownProps {
   /**

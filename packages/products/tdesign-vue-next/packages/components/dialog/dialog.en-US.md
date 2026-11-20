@@ -83,12 +83,13 @@ draggable | Boolean | false | not effective in `full-screen` mode | N
 focusable | Object | - | Dialog focus control. `defaultFocus` determines the default focus after opening; `focusTrap` determines whether focus is trapped within the current dialog; `focusTriggerAfterClose` determines whether focus is returned to the trigger element after closing. Typescript: `DialogFocusable` `interface DialogFocusable { defaultFocus?: null \| 'confirm-button' \| 'cancel-button' \| (() => HTMLElement \| null); focusTrap?: boolean; focusTriggerAfterClose: boolean }`. [see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/dialog/type.ts) | N
 footer | Boolean / Slot / Function | true | Typescript: `boolean \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 header | String / Boolean / Slot / Function | true | Typescript: `string \| boolean \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
-lazy | Boolean | false | Enable Dialog lazy loading, the contents of the dialog box are not rendered when enable | N
+lazy | Boolean | true | Enable Dialog lazy loading, the contents of the dialog box are not rendered when enable | N
 mode | String | modal | options: modal/modeless/normal/full-screen | N
 placement | String | top | options: top/center | N
 preventScrollThrough | Boolean | true | \- | N
 showInAttachedElement | Boolean | false | \- | N
 showOverlay | Boolean | true | \- | N
+sizeDraggable | Boolean / Object | false | allow resizing dialog width/height, set max or min to limit size. Typescript: `boolean \| DialogSizeDragLimit` `interface DialogSizeDragLimit { maxWidth: number\|undefined, minWidth: number\|undefined, maxHeight: number\|undefined, minHeight: number\|undefined }`. [see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/dialog/type.ts) | N
 theme | String | default | options: default/info/warning/danger/success | N
 top | String / Number | - | \- | N
 visible | Boolean | - | \- | N

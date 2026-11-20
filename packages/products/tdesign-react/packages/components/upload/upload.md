@@ -47,7 +47,7 @@ sizeLimit | Number / Object | - | 图片文件大小限制，默认单位 KB。�
 status | String | - | 文件上传提示文本状态。可选项：default/success/warning/error | N
 theme | String | file | 组件风格。custom 表示完全自定义风格；file 表示默认文件上传风格；file-input 表示输入框形式的文件上传；file-flow 表示文件批量上传；image 表示默认图片上传风格；image-flow 表示图片批量上传。可选项：custom/file/file-input/file-flow/image/image-flow | N
 tips | TNode | - | 组件下方文本提示，可以使用 `status` 定义文本。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
-trigger | TElement | - | 触发上传的元素，`files` 指本次显示的全部文件; `triggerUpload` 用于触发上传文件的选择，在图片上传风格中有效。TS 类型：`TNode<TriggerContext>` `interface TriggerContext { dragActive?: boolean;  files: UploadFile[]; triggerUpload?: (e: MouseEvent) => void }`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/upload/type.ts) | N
+trigger | TElement | - | 触发上传的元素，`files` 指本次显示的全部文件; `triggerUpload` 用于触发上传文件的选择，在图片上传风格中有效。TS 类型：`TNode<TriggerContext>` `interface TriggerContext { dragActive?: boolean; files: UploadFile[]; triggerUpload?: (e: MouseEvent) => void }`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/upload/type.ts) | N
 triggerButtonProps | Object | - | 透传选择按钮全部属性。TS 类型：`ButtonProps`，[Button API Documents](./button?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/upload/type.ts) | N
 uploadAllFilesInOneRequest | Boolean | false | 是否在同一个请求中上传全部文件，默认一个请求上传一个文件。多文件上传时有效 | N
 uploadButton | TNode | - | 批量文件/图片上传，`autoUpload=false` 场景下，透传“点击上传”按钮属性。TS 类型：`null \| ButtonProps \| TNode<{ disabled: boolean; uploading: boolean; uploadFiles: () => void; uploadText: string }>`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
@@ -90,7 +90,7 @@ percent | Number | - | 下载进度 | N
 raw | Object | - | 原始文件对象。TS 类型：`File` | N
 response | Object | - | 上传接口返回的数据。`response.error` 存在时会判断此次上传失败，并显示错误文本信息；`response.url` 会作为文件上传成功后的地址，并使用该地址显示图片。TS 类型：`{ [key: string]: any }` | N
 size | Number | - | 文件大小 | N
-status | String | - | 文件上传状态：上传成功，上传失败，上传中，等待上传。TS 类型：` 'success' \| 'fail' \| 'progress' \| 'waiting'` | N
+status | String | - | 文件上传状态：上传成功，上传失败，上传中，等待上传。TS 类型：`'success' \| 'fail' \| 'progress' \| 'waiting'` | N
 type | String | - | 文件类型 | N
 uploadTime | String | - | 上传时间 | N
 url | String | - | 文件上传成功后的下载/访问地址 | N

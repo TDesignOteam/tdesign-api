@@ -1,0 +1,60 @@
+name: autofix.ci
+
+on:
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  autofix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6.1.1
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+
+      - name: Install Dependencies
+        run: pnpm ci
+
+      - name: Generate API for Vue(PC)
+        run: pnpm api:docs -- ALL 'Vue(PC)'
+
+      - name: Generate API for VueNext(PC)
+        run: pnpm api:docs -- ALL 'VueNext(PC)'
+
+      - name: Generate API for React(PC)
+        run: pnpm api:docs -- ALL 'React(PC)'
+
+      - name: Generate API for Vue(Mobile)
+        run: pnpm api:docs -- ALL 'Vue(Mobile)'
+
+      - name: Generate API for React(Mobile)
+        run: pnpm api:docs -- ALL 'React(Mobile)'
+
+      - name: Generate API for Miniprogram
+        run: pnpm api:docs -- ALL 'Miniprogram'
+
+      - name: Generate API for UniApp
+        run: pnpm api:docs -- ALL 'UniApp'
+
+      - name: Generate helper for Vue(PC)
+        run: pnpm api:completion -- 'Vue(PC)'
+
+      - name: Generate helper for VueNext(PC)
+        run: pnpm api:completion -- 'VueNext(PC)'
+
+      - name: Generate helper for Vue(Mobile)
+        run: pnpm api:completion -- 'Vue(Mobile)'
+
+      - name: Generate helper for UniApp
+        run: pnpm api:completion -- 'UniApp'
+
+      - uses: autofix-ci/action@7a166d7532b277f34e16238930461bf77f9d7ed8 # v1.3.3

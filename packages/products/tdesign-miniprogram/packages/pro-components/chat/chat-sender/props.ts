@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdChatSenderProps } from './type';
+import type { TdChatSenderProps } from './type';
 const props: TdChatSenderProps = {
   /** 默认键盘弹起不会把页面顶起来 */
   adjustPosition: {

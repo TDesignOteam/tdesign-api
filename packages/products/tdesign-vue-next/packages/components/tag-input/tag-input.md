@@ -9,7 +9,7 @@
 autoWidth | Boolean | false | 宽度随内容自适应 | N
 borderless | Boolean | false | 无边框模式 | N
 clearable | Boolean | false | 是否可清空 | N
-collapsedItems | Slot / Function | - | 标签过多的情况下，折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedSelectedItems` 表示折叠的标签，`count` 表示折叠的数量，`onClose` 表示移除标签的事件回调。TS 类型：`TNode<{ value: TagInputValue; collapsedSelectedItems: TagInputValue; count: number; onClose: (context: { index: number,  e?: MouseEvent }) => void }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
+collapsedItems | Slot / Function | - | 标签过多的情况下，折叠项内容，默认为 `+N`。如果需要悬浮就显示其他内容，可以使用 collapsedItems 自定义。`value` 表示当前存在的所有标签，`collapsedSelectedItems` 表示折叠的标签，`count` 表示折叠的数量，`onClose` 表示移除标签的事件回调。TS 类型：`TNode<{ value: TagInputValue; collapsedSelectedItems: TagInputValue; count: number; onClose: (context: { index: number, e?: MouseEvent }) => void }>`。[通用类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 disabled | Boolean | undefined | 是否禁用标签输入框 | N
 dragSort | Boolean | false | 拖拽调整标签顺序 | N
 excessTagsDisplayType | String | break-line | 标签超出时的呈现方式，有两种：横向滚动显示 和 换行显示。可选项：scroll/break-line | N
@@ -40,7 +40,7 @@ onClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>�
 onDragSort | Function |  | TS 类型：`(context: TagInputDragSortContext) => void`<br/>【开发中】拖拽排序时触发。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/tag-input/type.ts)。<br/>`interface TagInputDragSortContext { newTags: TagInputValue; currentIndex: number; current: string \| number; targetIndex: number; target: string \| number }`<br/> | N
 onEnter | Function |  | TS 类型：`(value: TagInputValue, context: { e: KeyboardEvent; inputValue: string }) => void`<br/>按键按下 Enter 时触发 | N
 onFocus | Function |  | TS 类型：`(value: TagInputValue, context: { inputValue: string; e: FocusEvent }) => void`<br/>聚焦时触发 | N
-onInputChange | Function |  | TS 类型：`(value: string, context?: InputValueChangeContext) => void`<br/>输入框值发生变化时触发，`context.trigger` 表示触发输入框值变化的来源：文本输入触发、清除按钮触发、回车键触发等。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/tag-input/type.ts)。<br/>`interface InputValueChangeContext { e?: InputEvent \| MouseEvent \| CompositionEvent \| KeyboardEvent; trigger: 'input' \| 'clear' \| 'enter' \| 'blur'   }`<br/> | N
+onInputChange | Function |  | TS 类型：`(value: string, context?: InputValueChangeContext) => void`<br/>输入框值发生变化时触发，`context.trigger` 表示触发输入框值变化的来源：文本输入触发、清除按钮触发、回车键触发等。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/tag-input/type.ts)。<br/>`interface InputValueChangeContext { e?: InputEvent \| MouseEvent \| CompositionEvent \| KeyboardEvent; trigger: 'input' \| 'clear' \| 'enter' \| 'blur' }`<br/> | N
 onMouseenter | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>进入输入框时触发 | N
 onMouseleave | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<br/>离开输入框时触发 | N
 onPaste | Function |  | TS 类型：`(context: { e: ClipboardEvent; pasteValue: string }) => void`<br/>粘贴事件，`pasteValue` 表示粘贴板的内容 | N
@@ -57,7 +57,7 @@ click | `(context: { e: MouseEvent })` | 点击组件时触发
 drag-sort | `(context: TagInputDragSortContext)` | 【开发中】拖拽排序时触发。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/tag-input/type.ts)。<br/>`interface TagInputDragSortContext { newTags: TagInputValue; currentIndex: number; current: string \| number; targetIndex: number; target: string \| number }`<br/>
 enter | `(value: TagInputValue, context: { e: KeyboardEvent; inputValue: string })` | 按键按下 Enter 时触发
 focus | `(value: TagInputValue, context: { inputValue: string; e: FocusEvent })` | 聚焦时触发
-input-change | `(value: string, context?: InputValueChangeContext)` | 输入框值发生变化时触发，`context.trigger` 表示触发输入框值变化的来源：文本输入触发、清除按钮触发、回车键触发等。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/tag-input/type.ts)。<br/>`interface InputValueChangeContext { e?: InputEvent \| MouseEvent \| CompositionEvent \| KeyboardEvent; trigger: 'input' \| 'clear' \| 'enter' \| 'blur'   }`<br/>
+input-change | `(value: string, context?: InputValueChangeContext)` | 输入框值发生变化时触发，`context.trigger` 表示触发输入框值变化的来源：文本输入触发、清除按钮触发、回车键触发等。[详细类型定义](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/tag-input/type.ts)。<br/>`interface InputValueChangeContext { e?: InputEvent \| MouseEvent \| CompositionEvent \| KeyboardEvent; trigger: 'input' \| 'clear' \| 'enter' \| 'blur' }`<br/>
 mouseenter | `(context: { e: MouseEvent })` | 进入输入框时触发
 mouseleave | `(context: { e: MouseEvent })` | 离开输入框时触发
 paste | `(context: { e: ClipboardEvent; pasteValue: string })` | 粘贴事件，`pasteValue` 表示粘贴板的内容

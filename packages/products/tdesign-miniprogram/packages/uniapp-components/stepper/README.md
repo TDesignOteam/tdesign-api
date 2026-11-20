@@ -7,8 +7,8 @@
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 custom-style | Object | - | 自定义样式 | N
-disable-input | Boolean | false | 禁用输入框 | N
 disabled | Boolean | undefined | 禁用全部操作 | N
+disable-input | Boolean | false | 禁用输入框 | N
 input-width | Number | - | 输入框宽度，默认单位 `px` | N
 integer | Boolean | true | 是否整型 | N
 max | Number | 100 | 最大值 | N

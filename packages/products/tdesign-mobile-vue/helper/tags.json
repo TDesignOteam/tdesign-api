@@ -94,6 +94,7 @@
       "table-layout",
       "vertical-align",
       "cell-click",
+      "page-change",
       "row-click",
       "scroll",
       "scroll-to-bottom"
@@ -1137,6 +1138,7 @@
       "content",
       "default",
       "disabled",
+      "full-swipe",
       "left",
       "opened",
       "right",
@@ -1322,6 +1324,7 @@
   "t-tree-select": {
     "attributes": [
       "custom-style",
+      "custom-value",
       "height",
       "keys",
       "multiple",

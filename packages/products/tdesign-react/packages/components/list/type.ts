@@ -4,8 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, TScroll, ScrollToElementParams } from '../common';
-import { MouseEvent, WheelEvent } from 'react';
+import type { MouseEvent, WheelEvent } from 'react';
+import type { TNode, TScroll, ScrollToElementParams } from '../common';
 
 export interface TdListProps {
   /**

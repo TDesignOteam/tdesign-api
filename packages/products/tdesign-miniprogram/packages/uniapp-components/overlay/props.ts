@@ -24,10 +24,9 @@ export default {
   usingCustomNavbar: Boolean,
   /** 是否展示 */
   visible: Boolean,
-  /** 遮罩层级 */
+  /** 遮罩层级，默认为 11000 */
   zIndex: {
     type: Number,
-    default: 11000,
   },
   /** 点击遮罩时触发 */
   onClick: {

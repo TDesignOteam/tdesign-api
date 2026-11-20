@@ -17,13 +17,13 @@ export default {
   filter: {
     type: Function,
   },
+  /** 是否可搜索，开启后顶部会展示一个搜索框  */
+  filterable: Boolean,
   /** 搜索框占位符描述文本 */
   filterPlaceholder: {
     type: String,
     default: '',
   },
-  /** 是否可搜索，开启后顶部会展示一个搜索框  */
-  filterable: Boolean,
   /** 用来定义 value / label / children / disabled 在 `options` 中对应的字段别名 */
   keys: {
     type: Object,

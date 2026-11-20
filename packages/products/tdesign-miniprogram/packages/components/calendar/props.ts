@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdCalendarProps } from './type';
+import type { TdCalendarProps } from './type';
 const props: TdCalendarProps = {
   /** 是否允许区间选择日历的起止时间相同，仅当 `type='range'` 时有效 */
   allowSameDay: {

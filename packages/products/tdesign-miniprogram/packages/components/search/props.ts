@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdSearchProps } from './type';
+import type { TdSearchProps } from './type';
 const props: TdSearchProps = {
   /** 自定义右侧操作按钮文字 */
   action: {
@@ -26,15 +26,15 @@ const props: TdSearchProps = {
     type: Boolean,
     value: false,
   },
-  /** 清空图标触发方式，仅在输入框有值时有效 */
-  clearTrigger: {
-    type: String,
-    value: 'always',
-  },
   /** 是否启用清除控件 */
   clearable: {
     type: Boolean,
     value: true,
+  },
+  /** 清空图标触发方式，仅在输入框有值时有效 */
+  clearTrigger: {
+    type: String,
+    value: 'always',
   },
   /** 点击键盘右下角按钮时是否保持键盘不收起 */
   confirmHold: {

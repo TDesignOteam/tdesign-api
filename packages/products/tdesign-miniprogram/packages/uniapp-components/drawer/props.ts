@@ -44,10 +44,9 @@ export default {
   usingCustomNavbar: Boolean,
   /** 组件是否可见 */
   visible: Boolean,
-  /** 抽屉层级，样式默认为 11500 */
+  /** 抽屉层级，Web 侧样式默认为 1500，移动端样式默认 1500，小程序样式默认为 11500 */
   zIndex: {
     type: Number,
-    default: 11500,
   },
   /** 关闭时触发。 */
   onClose: {

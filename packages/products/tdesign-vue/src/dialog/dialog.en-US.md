@@ -83,7 +83,7 @@ draggable | Boolean | false | not effective in `full-screen` mode | N
 focusable | Object | - | Dialog focus control. `defaultFocus` determines the default focus after opening; `focusTrap` determines whether focus is trapped within the current dialog; `focusTriggerAfterClose` determines whether focus is returned to the trigger element after closing. Typescript: `DialogFocusable` `interface DialogFocusable { defaultFocus?: null \| 'confirm-button' \| 'cancel-button' \| (() => HTMLElement \| null); focusTrap?: boolean; focusTriggerAfterClose: boolean }`. [see more ts definition](https://github.com/Tencent/tdesign-vue/tree/develop/src/dialog/type.ts) | N
 footer | Boolean / Slot / Function | true | Typescript: `boolean \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 header | String / Boolean / Slot / Function | true | Typescript: `string \| boolean \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
-lazy | Boolean | false | Enable Dialog lazy loading, the contents of the dialog box are not rendered when enable | N
+lazy | Boolean | true | Enable Dialog lazy loading, the contents of the dialog box are not rendered when enable | N
 mode | String | modal | options: modal/modeless/normal/full-screen | N
 placement | String | top | options: top/center | N
 preventScrollThrough | Boolean | true | \- | N

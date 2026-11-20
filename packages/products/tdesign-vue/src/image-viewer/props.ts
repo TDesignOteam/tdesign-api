@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdImageViewerProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdImageViewerProps } from './type';
 export default {
   /** 指定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body */
   attach: {
@@ -38,14 +37,14 @@ export default {
       return ['no-referrer', 'no-referrer-when-downgrade', 'origin', 'origin-when-cross-origin', 'same-origin', 'strict-origin', 'strict-origin-when-cross-origin', 'unsafe-url'].includes(val);
     },
   },
-  /**  图片缩放相关配置。`imageScale.max` 缩放的最大比例；`imageScale.min` 缩放的最小比例；`imageScale.step` 缩放的步长速度; `imageScale.defaultScale` 默认的缩放比例 */
-  imageScale: {
-    type: Object as PropType<TdImageViewerProps['imageScale']>,
-  },
   /** 图片数组。`mainImage` 表示主图，必传；`thumbnail` 表示缩略图，如果不存在，则使用主图显示；`download` 是否允许下载图片，默认允许下载。示例: `['img_url_1', 'img_url_2']`，`[{ thumbnail: 'small_image_url', mainImage: 'big_image_url', download: false }]` */
   images: {
     type: Array as PropType<TdImageViewerProps['images']>,
     default: (): TdImageViewerProps['images'] => [],
+  },
+  /**  图片缩放相关配置。`imageScale.max` 缩放的最大比例；`imageScale.min` 缩放的最小比例；`imageScale.step` 缩放的步长速度; `imageScale.defaultScale` 默认的缩放比例 */
+  imageScale: {
+    type: Object as PropType<TdImageViewerProps['imageScale']>,
   },
   /** 当前预览图片所在的下标 */
   index: {

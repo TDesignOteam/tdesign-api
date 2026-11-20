@@ -4,13 +4,13 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { InputProps } from '../input';
-import { PopupProps } from '../popup';
-import { SelectInputProps } from '../select-input';
-import { SelectInputBlurContext } from '../select-input';
-import { RangeInputProps } from '../range-input';
-import type { TNode, TElement } from '../common';
 import type { MouseEvent, FocusEvent, FormEvent } from 'react';
+import type { InputProps } from '../input';
+import type { PopupProps } from '../popup';
+import type { SelectInputProps } from '../select-input';
+import type { SelectInputBlurContext } from '../select-input';
+import type { RangeInputProps } from '../range-input';
+import type { TNode, TElement } from '../common';
 
 export interface TdTimePickerProps {
   /**
@@ -29,6 +29,10 @@ export interface TdTimePickerProps {
    */
   clearable?: boolean;
   /**
+   * 是否禁用组件
+   */
+  disabled?: boolean;
+  /**
    * 禁用时间项的配置函数
    */
   disableTime?: (
@@ -37,10 +41,6 @@ export interface TdTimePickerProps {
     s: number,
     ms: number,
   ) => Partial<{ hour: Array<number>; minute: Array<number>; second: Array<number>; millisecond: Array<number> }>;
-  /**
-   * 是否禁用组件
-   */
-  disabled?: boolean;
   /**
    * 用于格式化时间，[详细文档](https://day.js.org/docs/en/display/format)
    * @default HH:mm:ss
@@ -180,6 +180,10 @@ export interface TdTimeRangePickerProps {
    */
   clearable?: boolean;
   /**
+   * 是否禁用组件，值为数组表示可分别控制开始日期和结束日期是否禁用
+   */
+  disabled?: boolean | Array<boolean>;
+  /**
    * 禁用时间项
    */
   disableTime?: (
@@ -189,10 +193,6 @@ export interface TdTimeRangePickerProps {
     ms: number,
     context: { partial: TimeRangePickerPartial },
   ) => Partial<{ hour: Array<number>; minute: Array<number>; second: Array<number> }>;
-  /**
-   * 是否禁用组件，值为数组表示可分别控制开始日期和结束日期是否禁用
-   */
-  disabled?: boolean | Array<boolean>;
   /**
    * 用于格式化时间，[详细文档](https://day.js.org/docs/en/display/format)
    * @default HH:mm:ss

@@ -324,6 +324,10 @@
     "type": "event",
     "description": "trigger on cell clicked\n\n单元格点击时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-events)"
   },
+  "t-table/page-change": {
+    "type": "event",
+    "description": "trigger on pagination changing\n\n分页发生变化时触发。参数 newDataSource 表示分页后的数据。本地数据进行分页时，newDataSource 和源数据 data 会不一样。泛型 T 指表格数据类型\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-events)"
+  },
   "t-table/row-click": {
     "type": "event",
     "description": "trigger on row click\n\n行点击时触发，泛型 T 指表格数据类型\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-events)"
@@ -3570,6 +3574,10 @@
     "type": "Boolean",
     "description": "是否禁用滑动\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/swipe-cell?tab=api#swipecell-props)"
   },
+  "t-swipe-cell/full-swipe": {
+    "type": "Boolean",
+    "description": " 是否启用滑动到底自动执行操作。\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/swipe-cell?tab=api#swipecell-props)"
+  },
   "t-swipe-cell/left": {
     "type": "Array|TNode",
     "description": "左侧滑动操作项。所有行为同 `right`\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/swipe-cell?tab=api#swipecell-props)"
@@ -4161,6 +4169,10 @@
   "t-tree-select/custom-style": {
     "type": "String",
     "description": "自定义组件样式\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tree-select?tab=api#treeselect-props)"
+  },
+  "t-tree-select/custom-value": {
+    "type": "String|Number|Array",
+    "description": "自定义选中值，优先级高于 `value`\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tree-select?tab=api#treeselect-props)"
   },
   "t-tree-select/height": {
     "type": "String|Number",

@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdBaseTableProps } from './type';
+import type { TdBaseTableProps } from './type';
 const props: TdBaseTableProps = {
   /** 是否显示表格边框 */
   bordered: {

@@ -16,7 +16,7 @@ reverse | Boolean | true | 是否表现为倒序 | N
 
 名称 | 参数 | 描述
 -- | -- | --
-scroll | `(context: TdChatScrollContext)` | 滚动事件的回调。[详细类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/chat-list/type.ts)。<br/>` interface TdChatScrollContext { scrollLeft: number;   scrollTop: number;   scrollHeight: number;   scrollWidth: number;   deltaX: number;   deltaY: number}`<br/>
+scroll | `(context: TdChatScrollContext)` | 滚动事件的回调。[详细类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-pro-components/chat/chat-list/type.ts)。<br/>` interface TdChatScrollContext { scrollLeft: number; scrollTop: number; scrollHeight: number; scrollWidth: number; deltaX: number; deltaY: number}`<br/>
 
 ### ChatList Slots
 

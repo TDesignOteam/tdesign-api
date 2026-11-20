@@ -159,7 +159,7 @@ export interface TdCheckTagGroupProps {
    */
   modelValue?: CheckTagGroupValue;
   /**
-   * null
+   * undefined
    */
   onChange?: (value: CheckTagGroupValue, context: CheckTagGroupChangeContext) => void;
 }

@@ -28,11 +28,11 @@ z-index | Number | 999999 | 提示框的层级 | N
 
 名称 | 参数 | 描述
 -- | -- | --
-back | `(context: { e: MouseEvent, current: number, total: number  })` | 点击返回按钮时触发
-change | `(current: number, context?: { e: MouseEvent,  total: number })` | 当前步骤发生变化时触发
-finish | `(context: { e: MouseEvent, current: number, total: number  })` | 点击完成按钮时触发
-next-step-click | `(context: { e: MouseEvent, next: number, current: number, total: number  })` | 点击下一步时触发
-skip | `(context: { e: MouseEvent, current: number, total: number  })` | 点击跳过按钮时触发
+back | `(context: { e: MouseEvent, current: number, total: number })` | 点击返回按钮时触发
+change | `(current: number, context?: { e: MouseEvent, total: number })` | 当前步骤发生变化时触发
+finish | `(context: { e: MouseEvent, current: number, total: number })` | 点击完成按钮时触发
+next-step-click | `(context: { e: MouseEvent, next: number, current: number, total: number })` | 点击下一步时触发
+skip | `(context: { e: MouseEvent, current: number, total: number })` | 点击跳过按钮时触发
 
 ### Guide External Classes
 

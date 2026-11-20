@@ -4,11 +4,10 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdCollapseProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdCollapseProps } from './type';
 export default {
-  /** 是否为无边框模式 */
+  /** 无边框模式 */
   borderless: Boolean,
   /** 默认是否展开全部 */
   defaultExpandAll: Boolean,
@@ -38,11 +37,11 @@ export default {
   /** 展开的面板集合 */
   value: {
     type: Array as PropType<TdCollapseProps['value']>,
-    default: undefined,
+    default: undefined as TdCollapseProps['value'],
   },
   modelValue: {
     type: Array as PropType<TdCollapseProps['value']>,
-    default: undefined,
+    default: undefined as TdCollapseProps['value'],
   },
   /** 展开的面板集合，非受控属性 */
   defaultValue: {

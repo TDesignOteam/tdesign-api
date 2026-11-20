@@ -9,10 +9,10 @@ name | type | default | description | required
 style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 animation | Boolean | true | \- | N
-background | String | - | `deprecated`。background | N
+background | String | - | `deprecated`. background | N
 delta | Number | 1 | \- | N
 fixed | Boolean | true | \- | N
-home-icon | String | - | `deprecated`。homeIcon | N
+home-icon | String | - | `deprecated`. homeIcon | N
 is-hidden-in-special-scene | Boolean | false | `1.15.2` | N
 left-arrow | Boolean | false | `0.26.0` | N
 left-icon | String | - | `deprecated` | N

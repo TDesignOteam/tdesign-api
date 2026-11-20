@@ -9,10 +9,10 @@
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
 collapsed | Boolean | false | 是否收起菜单 | N
-expandMutex | Boolean | false | 同级别互斥展开 | N
-expandType | String | normal | 二级菜单展开方式，平铺展开和浮层展开。可选项：normal/popup | N
 expanded | Array | [] | 子菜单展开的导航集合。TS 类型：`Array<MenuValue>` | N
 defaultExpanded | Array | [] | 子菜单展开的导航集合。非受控属性。TS 类型：`Array<MenuValue>` | N
+expandMutex | Boolean | false | 同级别互斥展开 | N
+expandType | String | normal | 二级菜单展开方式，平铺展开和浮层展开。可选项：normal/popup | N
 logo | TElement | - | 站点 LOGO。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 operations | TElement | - | 导航操作区域。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 theme | String | light | 菜单风格，有亮色模式和暗色模式两种。当 `theme = global` 时，模式随整个组件库；当 `theme = system` 时，模式跟随系统。⚠️ `global/system` 正在开发中，暂勿使用。可选项：light/dark/global/system | N
@@ -29,8 +29,8 @@ onExpand | Function |  | TS 类型：`(value: Array<MenuValue>) => void`<br/>展
 -- | -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
-expandType | String | normal | 二级菜单展开方式，平铺展开和浮层展开。可选项：normal/popup | N
 expanded | Array | [] | 展开的子菜单集合。TS 类型：`Array<MenuValue>` | N
+expandType | String | normal | 二级菜单展开方式，平铺展开和浮层展开。可选项：normal/popup | N
 logo | TElement | - | 站点 LOGO。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 operations | TElement | - | 导航操作区域。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 theme | String | light | 可选项：light/dark | N

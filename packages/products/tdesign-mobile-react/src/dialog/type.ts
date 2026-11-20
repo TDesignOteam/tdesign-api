@@ -4,10 +4,10 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { ButtonProps } from '../button';
-import { OverlayProps } from '../overlay';
-import type { TNode, TElement, Styles } from '../common';
 import type { MouseEvent } from 'react';
+import type { ButtonProps } from '../button';
+import type { OverlayProps } from '../overlay';
+import type { TNode, TElement, Styles } from '../common';
 
 export interface TdDialogProps {
   /**

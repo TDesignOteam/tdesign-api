@@ -4,15 +4,18 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdButtonProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdButtonProps } from './type';
 export default {
   /** 是否为块级元素 */
   block: Boolean,
   /** 按钮内容 */
   content: {
     type: [String, Function] as PropType<TdButtonProps['content']>,
+  },
+  /** 分割面板的内容节点，必须意思SplitPanel */
+  content: {
+    type: Function as PropType<TdButtonProps['content']>,
   },
   /** 按钮内容 */
   default: {

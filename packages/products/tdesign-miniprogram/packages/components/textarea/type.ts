@@ -86,17 +86,17 @@ export interface TdTextareaProps {
     value?: number;
   };
   /**
-   * 是否去掉 iOS 下的默认内边距
-   * @default false
+   * 是否禁用文本框
    */
-  disableDefaultPadding?: {
+  disabled?: {
     type: BooleanConstructor;
     value?: boolean;
   };
   /**
-   * 是否禁用文本框
+   * 是否去掉 iOS 下的默认内边距
+   * @default false
    */
-  disabled?: {
+  disableDefaultPadding?: {
     type: BooleanConstructor;
     value?: boolean;
   };

@@ -17,7 +17,7 @@ reverse | Boolean | true | 是否表现为倒序 | N
 
 名称 | 参数 | 描述
 -- | -- | --
-scroll | `(detail: {scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY})` | 滚动事件的回调
+scroll | `(detail: TdChatScrollContext)` | 滚动事件的回调。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/pro-components/chat/chat-list/type.ts)。<br/>` interface TdChatScrollContext { scrollLeft: number; scrollTop: number; scrollHeight: number; scrollWidth: number; deltaX: number; deltaY: number}`<br/>
 
 ### ChatList Slots
 

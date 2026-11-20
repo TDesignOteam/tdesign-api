@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdChatListProps } from './type';
+import type { TdChatListProps } from './type';
 const props: TdChatListProps = {
   /** 动画效果，支持「渐变加载动画」,「闪烁加载动画」, 「骨架屏」三种 */
   animation: {

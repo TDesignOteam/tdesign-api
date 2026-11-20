@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdInputNumberProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdInputNumberProps } from './type';
 export default {
   /** 文本内容位置，居左/居中/居右 */
   align: {
@@ -21,10 +20,10 @@ export default {
     type: Boolean,
     default: true,
   },
-  /** 宽度随内容自适应 */
-  autoWidth: Boolean,
   /** 自动聚焦 */
   autofocus: Boolean,
+  /** 宽度随内容自适应 */
+  autoWidth: Boolean,
   /** [小数位数](https://en.wiktionary.org/wiki/decimal_place) */
   decimalPlaces: {
     type: [Number, Object] as PropType<TdInputNumberProps['decimalPlaces']>,

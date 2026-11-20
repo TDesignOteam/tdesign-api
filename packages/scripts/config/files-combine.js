@@ -177,7 +177,12 @@ export const COMPONENT_API_MD_MAP = {
     list: ['Indexes', 'IndexesAnchor'],
   },
   Popup: ['Popup', '$Popup'],
-  Typography: ['Typography', 'Text', 'Title', 'Paragraph', 'TypographyEllipsis', 'TypographyCopyable'],
+  // 小程序和 UniApp 的源码里没有 typography 目录（typography 只是官网 typography.md 的展示页，
+  // 与 paragraph.md 内容完全相同），paragraph 才是真实组件，text / title 属于 paragraph
+  Typography: {
+    list: ['Typography', 'Text', 'Title', 'Paragraph', 'TypographyEllipsis', 'TypographyCopyable'],
+    excludes: ['Miniprogram', 'UniApp'],
+  },
   Toast: {
     list: ['Toast', 'ToastOptions'],
     includes: ['Vue(Mobile)', 'React(Mobile)'],
@@ -223,9 +228,14 @@ export const MOBILE_COMPONENT_API_MD_MAP = {
   },
   Layout: {
     list: ['Layout', 'Row', 'Col'],
+    // 小程序和 UniApp 的源码里没有 layout 目录（layout 只是官网 layout.md 的展示页，
+    // 与 col.md 内容完全相同），col / row 才是真实组件，合并关系由 COMPONENT_API_MD_MAP.Col 处理
+    excludes: ['Miniprogram', 'UniApp'],
   },
+  // 与 COMPONENT_API_MD_MAP.Grid 的同名配置会合并：Web 端用 Row / Col，其余框架用 GridItem
   Grid: {
     list: ['Grid', 'GridItem'],
+    excludes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
   },
   List: ['List'],
 };
@@ -277,7 +287,7 @@ export const TYPES_COMBINE_MAP = {
     list: ['Tabs', 'TabPanel'],
     excludes: ['Miniprogram', 'UniApp'],
   },
-  Split:{
+  Split: {
     list: ['Split', 'SplitPanel'],
   },
   ColorPicker: {
@@ -449,6 +459,35 @@ export const MINIPROGRAM_TYPES_COMBINE_MAP = {
 // 根据框架返回 Chat 组件拆分映射：仅支持拆分框架返回 CHAT_COMPONENT_MAP，其余返回空对象
 export function getChatComponentMap(framework) {
   return CHAT_FRAMEWORKS.includes(framework) ? CHAT_COMPONENT_MAP : {};
+}
+
+// 合并多个「父子关系」配置表。
+// 对象形式保持 Object.assign 的覆盖语义（如小程序端 Swiper 对象会覆盖 Web 的 Swiper 对象）。
+// 数组形式表示「同一父组件在不同框架下的多套配置」（如 Grid 在 Web 用 Row/Col、在 H5 用 GridItem），
+// 需要拼接后由 getApiComponentMapByFrameWork 按框架逐条筛选，否则后一个表会把前一个表的配置覆盖掉。
+const isConfigList = (value) => Array.isArray(value) && value.some((v) => v && typeof v === 'object');
+
+export function mergeComponentMaps(...maps) {
+  const merged = {};
+  maps.forEach((map) => {
+    Object.keys(map || {}).forEach((key) => {
+      const incoming = map[key];
+      const existing = merged[key];
+      if (existing === undefined) {
+        merged[key] = incoming;
+        return;
+      }
+      if (isConfigList(existing) || isConfigList(incoming)) {
+        merged[key] = [].concat(
+          isConfigList(existing) ? existing : [existing],
+          isConfigList(incoming) ? incoming : [incoming],
+        );
+        return;
+      }
+      merged[key] = incoming;
+    });
+  });
+  return merged;
 }
 
 export default {

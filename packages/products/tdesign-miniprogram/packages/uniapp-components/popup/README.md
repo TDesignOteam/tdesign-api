@@ -18,7 +18,7 @@ show-overlay | Boolean | true | 是否显示遮罩层 | N
 using-custom-navbar | Boolean | false | 是否使用了自定义导航栏 | N
 visible | Boolean | - | 是否显示浮层。支持语法糖 `v-model:visible`。TS 类型：`boolean` | N
 default-visible | Boolean | - | 是否显示浮层。非受控属性。TS 类型：`boolean` | N
-z-index | Number | 11500 | 组件层级，Web 侧样式默认为 5500，移动端样式默认为 1500，小程序样式默认为11500 | N
+z-index | Number | - | 组件层级，Web 侧样式默认为 5500，移动端默认为 1500，小程序端默认 11500 | N
 
 ### Popup Events
 

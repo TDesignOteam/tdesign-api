@@ -5,9 +5,7 @@
       "Vue(PC)",
       "React(PC)",
       "Vue(Mobile)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "List",
     "field_category": "Props",
@@ -24,9 +22,7 @@
       "Vue(PC)",
       "React(PC)",
       "Vue(Mobile)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "List",
     "field_category": "Props",
@@ -43,9 +39,7 @@
       "Vue(PC)",
       "React(PC)",
       "Vue(Mobile)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "List",
     "field_category": "Props",

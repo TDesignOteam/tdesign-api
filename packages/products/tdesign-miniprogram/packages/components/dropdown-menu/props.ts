@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdDropdownMenuProps } from './type';
+import type { TdDropdownMenuProps } from './type';
 const props: TdDropdownMenuProps = {
   /** 自定义箭头图标 */
   arrowIcon: {

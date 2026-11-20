@@ -8,7 +8,7 @@
 -- | -- | -- | -- | --
 style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
-custom-value | String / Number / Array | - | 自定义选中值，优先级高于 `value`。TS 类型：`TreeSelectValue` | N
+custom-value | String / Number / Array | - | `1.8.5`。自定义选中值，优先级高于 `value`。TS 类型：`TreeSelectValue` | N
 height | String / Number | 336 | 高度，默认单位为 px | N
 keys | Object | - | 用来定义 `value / label / disabled / children` 在 `options` 数据中对应的字段别名，示例：`{ value: 'key', label: 'name', children: 'list' }`。TS 类型：`TreeKeysType`。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
 multiple | Boolean | false | 是否允许多选 | N

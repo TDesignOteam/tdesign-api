@@ -1,6 +1,6 @@
 import chalk from 'chalk';
 import { pick } from 'lodash-es';
-import { COMPONENT_API_MD_MAP, getChatComponentMap } from '../config/index.js';
+import { COMPONENT_API_MD_MAP, getChatComponentMap, mergeComponentMaps } from '../config/index.js';
 import { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork, resolveComponentMergeList } from '../core/context.js';
 import apiJson from '../core/data.js';
 import { scriptArgs } from '../core/utils.js';
@@ -22,7 +22,7 @@ function start() {
   console.log(chalk.blue(`\n ----- 组件 configurable props json 文件自动生成开始（框架：${framework}） ------ \n`));
   const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
   const frameworkData = groupByComponent(ALL_API, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
-  const mergedMap = Object.assign({}, COMPONENT_API_MD_MAP, getChatComponentMap(framework));
+  const mergedMap = mergeComponentMaps(COMPONENT_API_MD_MAP, getChatComponentMap(framework));
   const cmpMap = getApiComponentMapByFrameWork(mergedMap, framework);
   const baseData = isAll(r) ? frameworkData : pick(frameworkData, resolveComponentMergeList(cmpMap, component));
   // 生成info-json文件

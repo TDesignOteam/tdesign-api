@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdSwiperNavProps } from './type';
+import type { TdSwiperNavProps } from './type';
 const props: TdSwiperNavProps = {
   /** 当前轮播在哪一项（下标） */
   current: {

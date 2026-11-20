@@ -4,9 +4,9 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { ImageProps } from '../image';
-import { PopupProps } from '../popup';
-import { TNode, ShapeEnum } from '../common';
+import type { ImageProps } from '../image';
+import type { PopupProps } from '../popup';
+import type { TNode, ShapeEnum } from '../common';
 
 export interface TdAvatarProps {
   /**

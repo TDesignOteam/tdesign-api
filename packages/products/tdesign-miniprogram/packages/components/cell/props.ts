@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdCellProps } from './type';
+import type { TdCellProps } from './type';
 const props: TdCellProps = {
   /** 右侧内容的对齐方式，默认居中对齐 */
   align: {

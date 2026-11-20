@@ -6,14 +6,14 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-direction | String | horizontal | Dividing direction. Horizontal: arranged horizontally; Vertical: arranged vertically.。options: horizontal/vertical | N
-draggerIcon | String / Slot / Function | - | Drag icons。Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+direction | String | horizontal | Dividing direction. Horizontal: arranged horizontally; Vertical: arranged vertically. options: horizontal/vertical | N
+draggerIcon | String / Slot / Function | - | Drag icons. Typescript: `string \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 gap | Number | 0 | The spacing (px) between panels will be reflected in the visual appearance of the divider. | N
 lazy | Boolean | false | Deferred rendering mode | N
-panelSize | Object | - | Define the maximum and minimum scale for each panel.。Typescript: `{min?: number; max?: number }` | N
+panelSize | Object | - | Define the maximum and minimum scale for each panel. Typescript: `{min?: number; max?: number }` | N
 splitClassName | String | - | Custom divider style class name | N
 splitSize | Number | 6 | Width/height (px) of the interactive area of ​​the divider bar | N
-splitStyle | Object | - | Customize the inline style of the splitter。Typescript: `Styles`。[see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
+splitStyle | Object | - | Customize the inline style of the splitter. Typescript: `Styles`. [see more ts definition](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts) | N
 onResize | Function |  | Typescript: `(sizes: number[]) => void`<br/>Callback (array of pixel values) for size changes during dragging. | N
 onResizeEnd | Function |  | Typescript: `(sizes: number[]) => void`<br/>Callback when drag ends | N
 onResizeStart | Function |  | Typescript: `(sizes: number[]) => void`<br/>Callback when drag starts | N
@@ -32,7 +32,7 @@ name | params | return | description
 -- | -- | -- | --
 getSizes | \- | `number[]` | Get the current pixel size of each panel
 reset | \- | \- | Reset to initial size
-setSizes | `(sizes: (number \| string \| 'auto')[]) ` | \- | Programmatically set size
+setSizes | `(sizes: (number \| string \| 'auto')[])` | \- | Programmatically set size
 
 
 ### SplitPanel Props

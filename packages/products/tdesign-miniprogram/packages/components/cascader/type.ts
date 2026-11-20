@@ -31,20 +31,20 @@ export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOpt
     value?: CascaderFilterFunction;
   };
   /**
-   * 搜索框占位符描述文本
-   * @default ''
-   */
-  filterPlaceholder?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
    * 是否可搜索，开启后顶部会展示一个搜索框
    * @default false
    */
   filterable?: {
     type: BooleanConstructor;
     value?: boolean;
+  };
+  /**
+   * 搜索框占位符描述文本
+   * @default ''
+   */
+  filterPlaceholder?: {
+    type: StringConstructor;
+    value?: string;
   };
   /**
    * 用来定义 value / label / children / disabled 在 `options` 中对应的字段别名

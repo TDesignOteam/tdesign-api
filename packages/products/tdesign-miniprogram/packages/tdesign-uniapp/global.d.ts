@@ -23,10 +23,10 @@ declare module 'vue' {
     TCollapse: typeof import('tdesign-uniapp/collapse/collapse.vue').default;
     TCollapsePanel: typeof import('tdesign-uniapp/collapse-panel/collapse-panel.vue').default;
     TColorPicker: typeof import('tdesign-uniapp/color-picker/color-picker.vue').default;
+    TComment: typeof import('tdesign-uniapp/comment/comment.vue').default;
     TConfigProvider: typeof import('tdesign-uniapp/config-provider/config-provider.vue').default;
     TCountDown: typeof import('tdesign-uniapp/count-down/count-down.vue').default;
     TDateTimePicker: typeof import('tdesign-uniapp/date-time-picker/date-time-picker.vue').default;
-    TDateTimeRangePicker: typeof import('tdesign-uniapp/date-time-range-picker/date-time-range-picker.vue').default;
     TDialog: typeof import('tdesign-uniapp/dialog/dialog.vue').default;
     TDivider: typeof import('tdesign-uniapp/divider/divider.vue').default;
     TDrawer: typeof import('tdesign-uniapp/drawer/drawer.vue').default;
@@ -47,8 +47,6 @@ declare module 'vue' {
     TIndexesAnchor: typeof import('tdesign-uniapp/indexes-anchor/indexes-anchor.vue').default;
     TInput: typeof import('tdesign-uniapp/input/input.vue').default;
     TLink: typeof import('tdesign-uniapp/link/link.vue').default;
-    TList: typeof import('tdesign-uniapp/list/list.vue').default;
-    TListItem: typeof import('tdesign-uniapp/list-item/list-item.vue').default;
     TLoading: typeof import('tdesign-uniapp/loading/loading.vue').default;
     TMessage: typeof import('tdesign-uniapp/message/message.vue').default;
     TNavbar: typeof import('tdesign-uniapp/navbar/navbar.vue').default;
@@ -92,9 +90,7 @@ declare module 'vue' {
     TTextarea: typeof import('tdesign-uniapp/textarea/textarea.vue').default;
     TTypographyTitle: (typeof import('tdesign-uniapp'))['Title'];
     TToast: typeof import('tdesign-uniapp/toast/toast.vue').default;
-    TTransfer: typeof import('tdesign-uniapp/transfer/transfer.vue').default;
     TTransition: typeof import('tdesign-uniapp/transition/transition.vue').default;
-    TTree: typeof import('tdesign-uniapp/tree/tree.vue').default;
     TTreeSelect: typeof import('tdesign-uniapp/tree-select/tree-select.vue').default;
     TUpload: typeof import('tdesign-uniapp/upload/upload.vue').default;
     TWatermark: typeof import('tdesign-uniapp/watermark/watermark.vue').default;

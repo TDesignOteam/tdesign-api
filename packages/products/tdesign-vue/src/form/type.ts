@@ -4,8 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { IsEmailOptions } from 'validator/es/lib/isEmail';
-import { IsURLOptions } from 'validator/es/lib/isURL';
+import type { IsEmailOptions } from 'validator/es/lib/isEmail';
+import type { IsURLOptions } from 'validator/es/lib/isURL';
 import type { TNode, FormResetEvent, FormSubmitEvent } from '../common';
 
 export interface TdFormProps<FormData extends Data = Data> {

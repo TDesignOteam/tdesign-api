@@ -100,14 +100,14 @@ export interface CalendarConfig {
    */
   confirm?: string;
   /**
+   * 月文本描述，默认值：['1 月', '2 月', '3 月', '4 月', '5 月', '6 月', '7 月', '8 月', '9 月', '10 月', '11 月', '12 月']
+   */
+  months?: string[];
+  /**
    * 语言配置，日期月面板标题描述文本。示例：“{year} / {month}”
    * @default ''
    */
   monthTitle?: string;
-  /**
-   * 月文本描述，默认值：['1 月', '2 月', '3 月', '4 月', '5 月', '6 月', '7 月', '8 月', '9 月', '10 月', '11 月', '12 月']
-   */
-  months?: string[];
   /**
    * 语言配置，组件标题“请选择日期”描述文本
    * @default ''
@@ -120,6 +120,16 @@ export interface CalendarConfig {
 }
 
 export interface CascaderConfig {
+  /**
+   * 语言配置，“暂无数据”描述文本
+   * @default ''
+   */
+  empty?: string;
+  /**
+   * 语言配置，“搜索框”占位描述文本
+   * @default ''
+   */
+  filterPlaceholder?: string;
   /**
    * 语言配置，未选中时的提示文案“选择选项”描述文本
    * @default ''
@@ -166,15 +176,15 @@ export interface ChatThinkingConfig {
 
 export interface CommentConfig {
   /**
-   * 语言配置，“收起”描述文本
-   * @default ''
-   */
-  collapseText?: string;
-  /**
    * 语言配置，折叠状态下“展开回复”描述文本
    * @default ''
    */
   collapsedText?: string;
+  /**
+   * 语言配置，“收起”描述文本
+   * @default ''
+   */
+  collapseText?: string;
   /**
    * 语言配置，半展开状态下“展开更多回复”描述文本
    * @default ''

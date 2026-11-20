@@ -44,7 +44,7 @@ zIndex | Number | 6000 | 消息层级 | N
 theme | String | - | 必需。消息类型。TS 类型：`MessageThemeList`
 message | String / Object | - | 必需。消息内容。TS 类型：`string \| TNode \| MessageOptions`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表示永久显示
-context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
+context | \- | - | 要继承的应用的上下文。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
 ### MessagePlugin.info
 
@@ -54,7 +54,7 @@ context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`�
 -- | -- | -- | --
 message | String / Object | - | 必需。消息内容。TS 类型：`string \| TNode \| MessageInfoOptions` `type MessageInfoOptions = Omit<MessageOptions, 'theme'>`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-vue/tree/develop/src/message/type.ts)
 duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表示永久显示
-context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
+context | \- | - | 要继承的应用的上下文。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
 ### MessagePlugin.error
 
@@ -64,7 +64,7 @@ context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`�
 -- | -- | -- | --
 message | String / Object | - | 必需。消息内容。TS 类型：`string \| TNode \| MessageInfoOptions`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表示永久显示
-context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
+context | \- | - | 要继承的应用的上下文。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
 ### MessagePlugin.warning
 
@@ -74,7 +74,7 @@ context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`�
 -- | -- | -- | --
 message | String / Object | - | 必需。消息内容。TS 类型：`string \| TNode \| MessageInfoOptions`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表示永久显示
-context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
+context | \- | - | 要继承的应用的上下文。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
 ### MessagePlugin.success
 
@@ -84,7 +84,7 @@ context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`�
 -- | -- | -- | --
 message | String / Object | - | 必需。消息内容。TS 类型：`string \| TNode \| MessageInfoOptions`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表示永久显示
-context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
+context | \- | - | 要继承的应用的上下文。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
 ### MessagePlugin.loading
 
@@ -94,7 +94,7 @@ context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`�
 -- | -- | -- | --
 message | String / Object | - | 必需。消息提醒内容。TS 类型：`string \| TNode \| MessageInfoOptions`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表示永久显示
-context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
+context | \- | - | 要继承的应用的上下文。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
 ### MessagePlugin.question
 
@@ -104,7 +104,7 @@ context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`�
 -- | -- | -- | --
 message | String / Object | - | 必需。消息内容。TS 类型：`string \| TNode \| MessageInfoOptions`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 duration | Number | 3000 | 消息显示时长，单位：毫秒。值为 0 表示永久显示
-context | \- | - | 要继承的应用的上下文。。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
+context | \- | - | 要继承的应用的上下文。TS 类型：`AppContext`。[通用类型定义](https://github.com/Tencent/tdesign-vue/blob/develop/src/common.ts)
 
 ### MessagePlugin.close
 

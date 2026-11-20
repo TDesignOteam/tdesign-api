@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdButtonProps } from './type';
+import type { TdButtonProps } from './type';
 const props: TdButtonProps = {
   /** 卡片id。 `open-type` 的值设置为 `liveActivity` ，设置 `activity-type` 参数为 [notify_type](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/subscribe-message-2.html)。当用户点击 `button` 后，可以通过 `bindcreateliveactivity` 事件回调获取到 `code` */
   activityType: {
@@ -129,15 +129,15 @@ const props: TdButtonProps = {
     type: String,
     value: 'medium',
   },
-  /** 按钮标签id */
-  tId: {
-    type: String,
-    value: '',
-  },
   /** 组件风格，依次为品牌色、危险色 */
   theme: {
     type: String,
     value: 'default',
+  },
+  /** 按钮标签id */
+  tId: {
+    type: String,
+    value: '',
   },
   /** 同小程序的 formType */
   type: {

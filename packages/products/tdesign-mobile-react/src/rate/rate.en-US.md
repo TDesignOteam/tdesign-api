@@ -13,7 +13,7 @@ color | String / Array | '#ED7B2F' | Typescript: `string \| Array<string>` | N
 count | Number | 5 | \- | N
 disabled | Boolean | undefined | \- | N
 gap | String / Number | 8 | \- | N
-icon | TNode | - | Typescript: `Array<TNode \| Function>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
+icon | TNode | - | Typescript: `Array<TNode \| Function>`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 placement | String | top | options: top / bottom / '' | N
 showText | Boolean | false | \- | N
 size | String | 24px | \- | N

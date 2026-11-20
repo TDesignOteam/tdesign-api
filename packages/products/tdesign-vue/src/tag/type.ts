@@ -150,7 +150,7 @@ export interface TdCheckTagGroupProps {
    */
   defaultValue?: CheckTagGroupValue;
   /**
-   * null
+   * undefined
    */
   onChange?: (value: CheckTagGroupValue, context: CheckTagGroupChangeContext) => void;
 }

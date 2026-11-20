@@ -47,8 +47,8 @@ status | Object | - | 语言配置，附件上传状态描述文本。TS 类型�
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 confirm | String | - | 语言配置，“确定” 按钮描述文本 | N
-month-title | String | - | 语言配置，日期月面板标题描述文本。示例：“{year} / {month}” | N
 months | Array | - | 月文本描述，默认值：['1 月', '2 月', '3 月', '4 月', '5 月', '6 月', '7 月', '8 月', '9 月', '10 月', '11 月', '12 月']。TS 类型：`string[]` | N
+month-title | String | - | 语言配置，日期月面板标题描述文本。示例：“{year} / {month}” | N
 title | String | - | 语言配置，组件标题“请选择日期”描述文本 | N
 weekdays | Array | - | 星期文本描述，默认值：['日', '一', '二', '三', '四', '五', '六']。TS 类型：`string[]` | N
 
@@ -56,6 +56,8 @@ weekdays | Array | - | 星期文本描述，默认值：['日', '一', '二', '�
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
+empty | String | - | 语言配置，“暂无数据”描述文本 | N
+filter-placeholder | String | - | 语言配置，“搜索框”占位描述文本 | N
 placeholder | String | - | 语言配置，未选中时的提示文案“选择选项”描述文本 | N
 title | String | - | 语言配置，组件标题“选择地址”描述文本 | N
 
@@ -83,8 +85,8 @@ status | Object | - | 语言配置，思考状态描述文本。TS 类型：`{ p
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-collapse-text | String | - | 语言配置，“收起”描述文本 | N
 collapsed-text | String | - | 语言配置，折叠状态下“展开回复”描述文本 | N
+collapse-text | String | - | 语言配置，“收起”描述文本 | N
 expand-more-text | String | - | 语言配置，半展开状态下“展开更多回复”描述文本 | N
 
 ### DateTimePickerConfig

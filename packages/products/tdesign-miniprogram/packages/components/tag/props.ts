@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdTagProps } from './type';
+import type { TdTagProps } from './type';
 const props: TdTagProps = {
   /** 标签是否可关闭 */
   closable: {

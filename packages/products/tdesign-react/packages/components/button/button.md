@@ -11,6 +11,7 @@ style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
 block | Boolean | false | 是否为块级元素 | N
 children | TNode | - | 按钮内容，同 content。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 content | TNode | - | 按钮内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
+content | TElement | - | 分割面板的内容节点，必须意思SplitPanel。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 disabled | Boolean | undefined | 禁用状态。优先级：Button.disabled > Form.disabled | N
 form | String | undefined | 原生的form属性，支持用于通过 form 属性触发对应 id 的 form 的表单事件 | N
 ghost | Boolean | false | 是否为幽灵按钮（镂空按钮） | N

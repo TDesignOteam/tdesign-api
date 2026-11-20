@@ -4,8 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { Instance } from '@popperjs/core';
-import { TNode, ClassName, Styles, AttachNode } from '../common';
+import type { Instance } from '@popperjs/core';
+import type { TNode, ClassName, Styles, AttachNode } from '../common';
 
 export interface TdPopupProps {
   /**
@@ -87,7 +87,7 @@ export interface TdPopupProps {
    */
   defaultVisible?: boolean;
   /**
-   * 组件层级，Web 侧样式默认为 5500，移动端和小程序样式默认为 1500
+   * 组件层级，Web 侧样式默认为 5500，移动端默认为 1500，小程序端默认 11500
    */
   zIndex?: number;
   /**

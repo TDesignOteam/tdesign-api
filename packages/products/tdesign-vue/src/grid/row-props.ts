@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdRowProps } from '../grid/type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdRowProps } from './type';
 export default {
   /** 纵向对齐方式，CSS 属性 `align-items` 值。其中 `top` 和 `start` 等效；`middle` 和 `center` 等效；`bottom` 和 `end` 等效 */
   align: {

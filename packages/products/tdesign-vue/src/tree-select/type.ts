@@ -4,12 +4,12 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { InputProps } from '../input';
-import { PopupProps } from '../popup';
-import { SelectInputProps, SelectInputBlurContext, SelectInputValueChangeContext } from '../select-input';
-import { TagProps } from '../tag';
-import { TreeProps, TreeNodeModel } from '../tree';
-import { PopupVisibleChangeContext, PopupTriggerEvent, PopupTriggerSource } from '../popup';
+import type { InputProps } from '../input';
+import type { PopupProps } from '../popup';
+import type { SelectInputProps, SelectInputBlurContext, SelectInputValueChangeContext } from '../select-input';
+import type { TagProps } from '../tag';
+import type { TreeProps, TreeNodeModel } from '../tree';
+import type { PopupVisibleChangeContext, PopupTriggerEvent, PopupTriggerSource } from '../popup';
 import type { TNode, TreeOptionData, TreeKeysType } from '../common';
 
 export interface TdTreeSelectProps<
@@ -17,15 +17,15 @@ export interface TdTreeSelectProps<
   TreeValueType extends TreeSelectValue = TreeSelectValue,
 > {
   /**
-   * 宽度随内容自适应
-   * @default false
-   */
-  autoWidth?: boolean;
-  /**
    * 自动聚焦
    * @default false
    */
   autofocus?: boolean;
+  /**
+   * 宽度随内容自适应
+   * @default false
+   */
+  autoWidth?: boolean;
   /**
    * 无边框模式
    * @default false
