@@ -2,9 +2,7 @@
   {
     "id": 1526,
     "platform_framework": [
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "DateTimeRangePicker",
     "field_category": "Props",
@@ -18,9 +16,7 @@
   {
     "id": 1528,
     "platform_framework": [
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "DateTimeRangePicker",
     "field_category": "Props",
@@ -33,9 +29,7 @@
   {
     "id": 1576,
     "platform_framework": [
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "DateTimeRangePicker",
     "field_category": "Props",
@@ -51,9 +45,7 @@
   {
     "id": 1577,
     "platform_framework": [
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "DateTimeRangePicker",
     "field_category": "Props",
@@ -67,9 +59,7 @@
   {
     "id": 1586,
     "platform_framework": [
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "DateTimeRangePicker",
     "field_category": "Props",
@@ -91,9 +81,7 @@
   {
     "id": 1585,
     "platform_framework": [
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "DateTimeRangePicker",
     "field_category": "Props",
@@ -107,9 +95,7 @@
   {
     "id": 1735,
     "platform_framework": [
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "DateTimeRangePicker",
     "field_category": "Props",
@@ -123,9 +109,7 @@
   {
     "id": 1533,
     "platform_framework": [
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "DateTimeRangePicker",
     "field_category": "Props",
@@ -140,9 +124,7 @@
   {
     "id": 1523,
     "platform_framework": [
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "DateTimeRangePicker",
     "field_category": "Props",
@@ -156,9 +138,7 @@
   {
     "id": 1535,
     "platform_framework": [
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "DateTimeRangePicker",
     "field_category": "Events",
@@ -170,9 +150,7 @@
   {
     "id": 1580,
     "platform_framework": [
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "DateTimeRangePicker",
     "field_category": "Events",
@@ -184,9 +162,7 @@
   {
     "id": 1536,
     "platform_framework": [
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "DateTimeRangePicker",
     "field_category": "Events",
@@ -198,9 +174,7 @@
   {
     "id": 1534,
     "platform_framework": [
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "DateTimeRangePicker",
     "field_category": "Events",
