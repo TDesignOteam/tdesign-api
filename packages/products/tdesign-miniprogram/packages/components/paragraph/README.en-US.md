@@ -2,6 +2,22 @@
 
 ## API
 
+### Paragraph Props
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+style | Object | - | CSS(Cascading Style Sheets) | N
+custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
+content | String | - | content of paragraph | N
+ellipsis | Boolean / Object | false | add ellipsis style. Typescript: `boolean \| TypographyEllipsis `，[Text API Documents](./text?tab=api). [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/paragraph/type.ts) | N
+
+### Paragraph Slots
+
+name | Description
+-- | --
+content | content of paragraph
+
+
 ### Text Props
 
 name | type | default | description | required
@@ -43,19 +59,3 @@ level | String | h1 | level of title. options: h1/h2/h3/h4/h5/h6 | N
 name | Description
 -- | --
 content | content of title
-
-
-### Paragraph Props
-
-name | type | default | description | required
--- | -- | -- | -- | --
-style | Object | - | CSS(Cascading Style Sheets) | N
-custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
-content | String | - | content of paragraph | N
-ellipsis | Boolean / Object | false | add ellipsis style. Typescript: `boolean \| TypographyEllipsis `，[Text API Documents](./text?tab=api). [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/paragraph/type.ts) | N
-
-### Paragraph Slots
-
-name | Description
--- | --
-content | content of paragraph

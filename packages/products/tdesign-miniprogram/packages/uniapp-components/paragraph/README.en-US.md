@@ -2,6 +2,21 @@
 
 ## API
 
+### Paragraph Props
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+custom-style | Object | - | CSS(Cascading Style Sheets) | N
+content | String | - | content of paragraph | N
+ellipsis | Boolean / Object | false | add ellipsis style. Typescript: `boolean \| TypographyEllipsis `，[Text API Documents](./text?tab=api). [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/paragraph/type.ts) | N
+
+### Paragraph Slots
+
+name | Description
+-- | --
+content | content of paragraph
+
+
 ### Text Props
 
 name | type | default | description | required
@@ -41,18 +56,3 @@ level | String | h1 | level of title. options: h1/h2/h3/h4/h5/h6 | N
 name | Description
 -- | --
 content | content of title
-
-
-### Paragraph Props
-
-name | type | default | description | required
--- | -- | -- | -- | --
-custom-style | Object | - | CSS(Cascading Style Sheets) | N
-content | String | - | content of paragraph | N
-ellipsis | Boolean / Object | false | add ellipsis style. Typescript: `boolean \| TypographyEllipsis `，[Text API Documents](./text?tab=api). [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/paragraph/type.ts) | N
-
-### Paragraph Slots
-
-name | Description
--- | --
-content | content of paragraph

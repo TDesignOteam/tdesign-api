@@ -177,7 +177,11 @@ export const COMPONENT_API_MD_MAP = {
     list: ['Indexes', 'IndexesAnchor'],
   },
   Popup: ['Popup', '$Popup'],
-  Typography: ['Typography', 'Text', 'Title', 'Paragraph', 'TypographyEllipsis', 'TypographyCopyable'],
+  // 移动端和小程序没有 Typography 组件，Paragraph 才是独立组件，Text / Title 属于 Paragraph
+  Typography: {
+    list: ['Typography', 'Text', 'Title', 'Paragraph', 'TypographyEllipsis', 'TypographyCopyable'],
+    excludes: ['Miniprogram', 'UniApp'],
+  },
   Toast: {
     list: ['Toast', 'ToastOptions'],
     includes: ['Vue(Mobile)', 'React(Mobile)'],
@@ -277,7 +281,7 @@ export const TYPES_COMBINE_MAP = {
     list: ['Tabs', 'TabPanel'],
     excludes: ['Miniprogram', 'UniApp'],
   },
-  Split:{
+  Split: {
     list: ['Split', 'SplitPanel'],
   },
   ColorPicker: {
