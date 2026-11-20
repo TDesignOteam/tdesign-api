@@ -1,4 +1,4 @@
-name: autofix
+name: autofix.ci
 
 on:
   pull_request:
@@ -44,5 +44,17 @@ jobs:
 
       - name: Generate API for UniApp
         run: pnpm api:docs -- ALL 'UniApp'
+
+      - name: Generate helper for Vue(PC)
+        run: pnpm api:completion -- 'Vue(PC)'
+
+      - name: Generate helper for VueNext(PC)
+        run: pnpm api:completion -- 'VueNext(PC)'
+
+      - name: Generate helper for Vue(Mobile)
+        run: pnpm api:completion -- 'Vue(Mobile)'
+
+      - name: Generate helper for UniApp
+        run: pnpm api:completion -- 'UniApp'
 
       - uses: autofix-ci/action@7a166d7532b277f34e16238930461bf77f9d7ed8 # v1.3.3
