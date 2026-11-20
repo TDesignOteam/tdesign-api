@@ -9,7 +9,13 @@ import {
   MOBILE_FRAMES,
   getChatComponentMap,
 } from '../config/index.js';
-import { groupByComponent, formatArrayToMap, getApiComponentMapByFrameWork, resolveComponentMergeList } from '../core/context.js';
+import {
+  groupByComponent,
+  formatArrayToMap,
+  getApiComponentMapByFrameWork,
+  getParentComponentNames,
+  resolveComponentMergeList,
+} from '../core/context.js';
 import apiJson from '../core/data.js';
 import { scriptArgs } from '../core/utils.js';
 import { generateDocs } from '../docs/index.js';
@@ -185,29 +191,7 @@ async function generateAllComponentsApi() {
   const r = validateParams(['ALL']);
   if (!r) return;
   console.log(chalk.blue(`\n ----- Framework: ${framework} Starting to Generate All Components API ------ \n`));
-  const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
-  const frameworkData = groupByComponent(ALL_API, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
-  const cmpMap = getApiComponentMapByFrameWork(
-    framework === 'Miniprogram' || framework === 'UniApp'
-      ? Object.assign({}, COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, MINIPROGRAM_COMPONENT_API_MD_MAP, getChatComponentMap(framework))
-      : MOBILE_FRAMES.includes(framework)
-        ? Object.assign({}, COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, getChatComponentMap(framework))
-        : Object.assign({}, COMPONENT_API_MD_MAP, getChatComponentMap(framework)),
-    framework,
-  );
-  const globalConfigData = pick(frameworkData, GLOBAL_COMPONENTS_CONFIG);
-
-  // 只生成父级组件：父组件生成时会把子组件（如 AnchorItem、BaseTable）合并进自己的目录，
-  // 子组件不需也不能单独建目录。
-  // 以全部已登记组件为候选，避免误伤两种情况：
-  // 1. Button 等独立组件不在 cmpMap 里，但它本身就是父级
-  // 2. Table 在 map.json 里标记为 type: TS，但仍然是有子组件的父级
-  const parentKeys = new Set(Object.keys(cmpMap));
-  const childOnly = new Set(Object.values(cmpMap).flat());
-  parentKeys.forEach((key) => childOnly.delete(key));
-  const candidates = map.data.components.map((item) => item.value).filter((name) => !childOnly.has(name));
-  // 该框架没有 API 数据的组件直接跳过，避免生成空目录
-  const targets = candidates.filter((name) => resolveComponentMergeList(cmpMap, name).some((key) => frameworkData[key]?.length));
+  const { frameworkData, cmpMap, globalConfigData, targets } = getParentTargets();
   console.log(chalk.gray(`  共 ${targets.length} 个组件待生成`));
 
   const failures = [];
@@ -261,22 +245,51 @@ function generateDocuments() {
   console.log(
     chalk.blue(`\n ----- Framework: ${framework} Starting to Generate All Components API Documents ------ \n`),
   );
-  const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
-  const frameworkData = groupByComponent(ALL_API, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
+  const { frameworkData, globalConfigData, targets } = getParentTargets();
+  console.log(chalk.gray(`  共 ${targets.length} 个组件待生成`));
+  // 合并父组件需要子组件数据参与，baseData 仍需完整；只把输出范围限定为父组件，避免子组件单独建目录
   const baseData = pick(frameworkData, components);
-  const globalConfigData = pick(frameworkData, GLOBAL_COMPONENTS_CONFIG);
   const currentComponent = isAll(component) ? undefined : component;
   // 生成 API 中文文档
   generateDocs(baseData, framework, {
     globalConfigData,
     component: currentComponent,
+    components: targets,
   });
   // generate API English documents
   generateDocs(baseData, framework, {
     language: 'en',
     globalConfigData,
     component: currentComponent,
+    components: targets,
   });
+}
+
+/**
+ * 计算全量生成需要的数据与目标组件（默认生成与 onlyDocs 共用）
+ * 只取父级组件：父组件会把子组件（如 AnchorItem、BaseTable）合并进自己的目录，子组件不需也不能单独建目录。
+ * 该框架没有 API 数据的组件直接跳过，避免生成空目录。
+ */
+function getParentTargets() {
+  const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
+  const frameworkData = groupByComponent(ALL_API, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
+  const cmpMap = getApiComponentMapByFrameWork(
+    framework === 'Miniprogram' || framework === 'UniApp'
+      ? Object.assign({}, COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, MINIPROGRAM_COMPONENT_API_MD_MAP, getChatComponentMap(framework))
+      : MOBILE_FRAMES.includes(framework)
+        ? Object.assign({}, COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, getChatComponentMap(framework))
+        : Object.assign({}, COMPONENT_API_MD_MAP, getChatComponentMap(framework)),
+    framework,
+  );
+  const globalConfigData = pick(frameworkData, GLOBAL_COMPONENTS_CONFIG);
+  const candidates = getParentComponentNames(
+    map.data.components.map((item) => item.value),
+    cmpMap,
+  );
+  const targets = candidates.filter((name) =>
+    resolveComponentMergeList(cmpMap, name).some((key) => frameworkData[key]?.length),
+  );
+  return { frameworkData, cmpMap, globalConfigData, targets };
 }
 
 function validateParams(components) {
@@ -288,6 +301,11 @@ function validateParams(components) {
     );
     return false;
   }
+  if (!FRAMEWORKS.includes(framework)) {
+    console.error(chalk.red(`\n请输入正确的组件库框架名称，可选值有：${FRAMEWORKS.join('、')}\n`));
+    printHelp();
+    return false;
+  }
   if (isAll(component)) {
     return true;
   }
@@ -296,12 +314,6 @@ function validateParams(components) {
     console.error(
       chalk.red(`\nError: 组件 ${component} 不存在。如果在上述组件中没有找到想要的组件，需要新增组件，请联系 PMC\n`),
     );
-    return false;
-  }
-
-  if (!FRAMEWORKS.includes(framework)) {
-    console.error(chalk.red(`\n请输入正确的组件库框架名称，可选值有：${FRAMEWORKS.join('、')}\n`));
-    printHelp();
     return false;
   }
   return true;

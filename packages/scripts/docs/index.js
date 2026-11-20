@@ -148,10 +148,11 @@ function getDocsByComponent(baseData, framework, component) {
   return api[component];
 }
 
-// 输出内容到文件 extra.isVscode, extra.language
+// 输出内容到文件 extra.isVscode, extra.language, extra.components
+// extra.components：限定输出哪些组件（如全量生成时只输出父组件），合并父组件仍需完整 baseData 提供子组件数据
 function generateDocs(baseData, framework, extra) {
   currentFramework = framework;
-  const { isVscode, globalConfigData } = extra || {};
+  const { isVscode, globalConfigData, components } = extra || {};
   const current = FRAMEWORK_MAP[framework];
   const options = Object.keys(FRAMEWORK_MAP);
   if (!options.includes(framework)) {
@@ -160,6 +161,12 @@ function generateDocs(baseData, framework, extra) {
   }
   let api = current.getDocs(baseData, current, framework, globalConfigData, extra && extra.language);
   api = combineApi(api, extra.component);
+  if (components) {
+    const allowed = new Set(components);
+    Object.keys(api).forEach((cmp) => {
+      if (!allowed.has(cmp)) delete api[cmp];
+    });
+  }
   removeChildComponentDocs(api, framework, current, isVscode);
   Object.keys(api).forEach((cmp) => {
     // 未注册组件、未合并的独立 TS 类型不输出文档目录（合并父组件除外）

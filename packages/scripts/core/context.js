@@ -139,6 +139,19 @@ function resolveComponentMergeList(mergeMap, component) {
   return [component];
 }
 
+/**
+ * 根据框架的父子组件关系，取「父级组件」名称列表。
+ * 父组件生成时会把子组件（如 AnchorItem、BaseTable）合并进自己的目录，子组件不需也不能单独建目录。
+ * 以全部已登记组件为候选，避免误伤两种情况：
+ * 1. Button 等独立组件不在 mergeMap 里，但它本身就是父级
+ * 2. Table 在 map.json 里标记为 type: TS，但仍然是有子组件的父级
+ */
+function getParentComponentNames(components, mergeMap) {
+  const childOnly = new Set(Object.values(mergeMap).flat());
+  Object.keys(mergeMap).forEach((key) => childOnly.delete(key));
+  return components.filter((name) => !childOnly.has(name));
+}
+
 export {
   API_ORIGIN,
   getLabelByKey,
@@ -163,4 +176,5 @@ export {
   getComponentsMap,
   getGlobalConfigName,
   resolveComponentMergeList,
+  getParentComponentNames,
 };
