@@ -32,15 +32,20 @@ function combineApi(allApi, component) {
   const r = { ...allApi };
   // 所有技术栈的 md 文档父子组件都合并输出（小程序和 UniApp 仅 type.ts 和 props.ts 独立输出）
   const map = getComponentApiMdMap();
+  // 同一份 API 只能被一个父组件消费一次。
+  // 例如小程序端 Layout 与 Col 都会合并 Row、Typography 与 Paragraph 都会合并 Text / Title，
+  // 若不记录已消费的子项，后处理的父组件会把同样的内容再拼一遍，导致文档中段落重复。
+  const consumed = new Set();
   Object.keys(map).forEach((cmp) => {
     if (!map[cmp]) return;
     const cmpApi = map[cmp]
-      .map((item) => r[item])
+      .map((item) => (consumed.has(item) ? undefined : r[item]))
       .filter((v) => !!v)
       .join('\n\n');
     // component 为父组件或任意子组件时，都需要合并输出
     if (cmpApi && (!component || (component && map[cmp].includes(component)))) {
       map[cmp].forEach((item) => {
+        if (r[item]) consumed.add(item);
         delete r[item];
       });
       r[cmp] = cmpApi;
@@ -124,10 +129,14 @@ function removeChildComponentDocs(api, framework, current, isVscode) {
           const parentFile = path.resolve(parentFolder, fileName.replace(getDocFileName(childCmp, framework), getDocFileName(parentCmp, framework)));
           if (path.resolve(file) === path.resolve(parentFile)) return;
           if (fs.existsSync(file)) {
-            fs.unlink(file, (err) => {
-              if (err) return console.error(err);
+            // 必须同步删除：后面的 mkdir / writeFile 都是异步的，
+            // 用异步 unlink 可能与随后对同一目录的写入交错，导致子组件文档被删后又被写回
+            try {
+              fs.unlinkSync(file);
               console.log(chalk.yellow(`remove useless docs: ${file} has been removed.`));
-            });
+            } catch (err) {
+              console.error(err);
+            }
           }
         },
       );
@@ -169,51 +178,48 @@ function generateDocs(baseData, framework, extra) {
     const folder = isVscode
       ? current.vscodePath
       : path.resolve(getComponentBasePath(cmp, current.apiBasePath, framework), kebabCaseComponent(cmp));
-    fs.mkdir(folder, { recursive: true }, (err) => {
-      if (err) {
-        return console.error(err);
-      }
-      // vscode 插件文档
-      let apiData = `${isVscode ? getApiData(api[cmp]) : api[cmp]}\n`;
-      if (isVscode) {
-        apiData = apiData.replace(/\${/g, '\\${');
-      }
-      // 输出到组件文件中
-      const langMap = { zh: '', en: '.en-US' };
-      const language = extra && extra.language && langMap[extra.language];
-      // const basePath = `${folder}/${getDocFileName(cmp, framework)}`;
-      const apiDocsFilePath = `${folder}/${getDocFileName(cmp, framework)}${language || ''}.md`;
-      const mdfile = isVscode ? path.resolve(folder, `t-${kebabCaseComponent(cmp)}.js`) : apiDocsFilePath;
+    try {
+      // 同步写入：中英文文档由两次 generateDocs 调用输出，
+      // 异步写入会让下一次调用读到还没写完的文件，导致 README 内容重复
+      fs.mkdirSync(folder, { recursive: true });
+    } catch (err) {
+      return console.error(err);
+    }
+    // vscode 插件文档
+    let apiData = `${isVscode ? getApiData(api[cmp]) : api[cmp]}\n`;
+    if (isVscode) {
+      apiData = apiData.replace(/\${/g, '\\${');
+    }
+    // 输出到组件文件中
+    const langMap = { zh: '', en: '.en-US' };
+    const language = extra && extra.language && langMap[extra.language];
+    const apiDocsFilePath = `${folder}/${getDocFileName(cmp, framework)}${language || ''}.md`;
+    const mdfile = isVscode ? path.resolve(folder, `t-${kebabCaseComponent(cmp)}.js`) : apiDocsFilePath;
 
+    try {
       if (isVscode) {
-        fs.writeFile(mdfile, apiData, 'utf8', (err) => {
-          if (err) return console.error(err);
-          console.log(chalk.green(`generate docs: ${mdfile} has been created.`));
-        });
+        fs.writeFileSync(mdfile, apiData, 'utf8');
+        console.log(chalk.green(`generate docs: ${mdfile} has been created.`));
       } else {
-        if (fs.existsSync(mdfile)) {
-          outputComponentMD(mdfile, apiData, isVscode);
-        } else {
-          const text = isVscode ? '' : ':: BASE_DOC ::\n';
-          fs.writeFile(mdfile, text, 'utf8', (err) => {
-            if (err) return console.error(err);
-            outputComponentMD(mdfile, apiData, isVscode);
-          });
+        if (!fs.existsSync(mdfile)) {
+          fs.writeFileSync(mdfile, ':: BASE_DOC ::\n', 'utf8');
         }
+        outputComponentMD(mdfile, apiData, isVscode);
       }
-      // :: BASE_DOC ::
-      // 如果旧文件 api.md 存在，就删除
-      const oldApiFile = `${folder}/api.md`;
-      if (fs.existsSync(oldApiFile)) {
-        fs.unlink(oldApiFile, (err) => {
-          if (err) {
-            return console.error(err);
-          }
-          const msg = `remove useless docs: ${oldApiFile} has been removed. see docs in ${apiDocsFilePath}`;
-          console.log(chalk.yellow(msg));
-        });
+    } catch (err) {
+      return console.error(err);
+    }
+    // 如果旧文件 api.md 存在，就删除
+    const oldApiFile = `${folder}/api.md`;
+    if (fs.existsSync(oldApiFile)) {
+      try {
+        fs.unlinkSync(oldApiFile);
+        const msg = `remove useless docs: ${oldApiFile} has been removed. see docs in ${apiDocsFilePath}`;
+        console.log(chalk.yellow(msg));
+      } catch (err) {
+        console.error(err);
       }
-    });
+    }
   });
 }
 

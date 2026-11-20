@@ -426,8 +426,7 @@
     "id": 449,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)"
+      "React(PC)"
     ],
     "component": "Notification",
     "field_category": "Props",

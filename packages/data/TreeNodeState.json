@@ -3,8 +3,7 @@
     "id": 511,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)"
+      "React(PC)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -19,8 +18,7 @@
     "id": 510,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)"
+      "React(PC)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -35,8 +33,7 @@
     "id": 513,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)"
+      "React(PC)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -51,8 +48,7 @@
     "id": 514,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)"
+      "React(PC)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -67,8 +63,7 @@
     "id": 516,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)"
+      "React(PC)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -84,8 +79,7 @@
     "id": 3487,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)"
+      "React(PC)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -100,8 +94,7 @@
     "id": 508,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)"
+      "React(PC)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -116,8 +109,7 @@
     "id": 509,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)"
+      "React(PC)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -132,8 +124,7 @@
     "id": 515,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)"
+      "React(PC)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -148,8 +139,7 @@
     "id": 506,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)"
+      "React(PC)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -163,8 +153,7 @@
     "id": 518,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)"
+      "React(PC)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -210,8 +199,7 @@
     "id": 517,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)"
+      "React(PC)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",

@@ -177,11 +177,7 @@ export const COMPONENT_API_MD_MAP = {
     list: ['Indexes', 'IndexesAnchor'],
   },
   Popup: ['Popup', '$Popup'],
-  // 移动端和小程序没有 Typography 组件，Paragraph 才是独立组件，Text / Title 属于 Paragraph
-  Typography: {
-    list: ['Typography', 'Text', 'Title', 'Paragraph', 'TypographyEllipsis', 'TypographyCopyable'],
-    excludes: ['Miniprogram', 'UniApp'],
-  },
+  Typography: ['Typography', 'Text', 'Title', 'Paragraph', 'TypographyEllipsis', 'TypographyCopyable'],
   Toast: {
     list: ['Toast', 'ToastOptions'],
     includes: ['Vue(Mobile)', 'React(Mobile)'],
@@ -227,9 +223,6 @@ export const MOBILE_COMPONENT_API_MD_MAP = {
   },
   Layout: {
     list: ['Layout', 'Row', 'Col'],
-    // 小程序和 UniApp 没有 Layout 组件（真实仓库无 layout 目录），Row / Col 是独立组件，
-    // 合并关系由 COMPONENT_API_MD_MAP.Col 处理
-    excludes: ['Miniprogram', 'UniApp'],
   },
   // 与 COMPONENT_API_MD_MAP.Grid 的同名配置会合并：Web 端用 Row / Col，其余框架用 GridItem
   Grid: {

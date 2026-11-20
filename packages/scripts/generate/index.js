@@ -7,6 +7,8 @@ import {
   MOBILE_COMPONENT_API_MD_MAP,
   MINIPROGRAM_COMPONENT_API_MD_MAP,
   MOBILE_FRAMES,
+  CHAT_FRAMEWORKS,
+  CHAT_COMPONENT_MAP,
   getChatComponentMap,
   mergeComponentMaps,
 } from '../config/index.js';
@@ -130,7 +132,12 @@ async function generateComponentApi() {
   const frameworkData = groupByComponent(ALL_API, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
   const cmpMap = getApiComponentMapByFrameWork(
     framework === 'Miniprogram' || framework === 'UniApp'
-      ? mergeComponentMaps(COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, MINIPROGRAM_COMPONENT_API_MD_MAP, getChatComponentMap(framework))
+      ? mergeComponentMaps(
+          COMPONENT_API_MD_MAP,
+          MOBILE_COMPONENT_API_MD_MAP,
+          MINIPROGRAM_COMPONENT_API_MD_MAP,
+          getChatComponentMap(framework),
+        )
       : MOBILE_FRAMES.includes(framework)
         ? mergeComponentMaps(COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, getChatComponentMap(framework))
         : mergeComponentMaps(COMPONENT_API_MD_MAP, getChatComponentMap(framework)),
@@ -199,7 +206,8 @@ async function generateAllComponentsApi() {
   for (let i = 0; i < targets.length; i += 1) {
     const name = targets[i];
     const baseData = pick(frameworkData, resolveComponentMergeList(cmpMap, name));
-    const currentUseDefault = useDefault || (['VueNext(PC)', 'Vue(Mobile)'].includes(framework) ? true : selfUseDefault);
+    const currentUseDefault =
+      useDefault || (['VueNext(PC)', 'Vue(Mobile)'].includes(framework) ? true : selfUseDefault);
     try {
       if (!onlyDocs) {
         await generateTypes(baseData, framework);
@@ -231,7 +239,9 @@ async function generateAllComponentsApi() {
     return;
   }
   console.error(chalk.red(`\n ${failures.length}/${targets.length} components failed:\n`));
-  failures.forEach((item) => console.error(chalk.red(`x ${item.name}\n${chalk.gray(item.message.split('\n').slice(0, 5).join('\n'))}`)));
+  failures.forEach((item) =>
+    console.error(chalk.red(`x ${item.name}\n${chalk.gray(item.message.split('\n').slice(0, 5).join('\n'))}`)),
+  );
   process.exitCode = 1;
 }
 
@@ -276,7 +286,12 @@ function getParentTargets() {
   const frameworkData = groupByComponent(ALL_API, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
   const cmpMap = getApiComponentMapByFrameWork(
     framework === 'Miniprogram' || framework === 'UniApp'
-      ? mergeComponentMaps(COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, MINIPROGRAM_COMPONENT_API_MD_MAP, getChatComponentMap(framework))
+      ? mergeComponentMaps(
+          COMPONENT_API_MD_MAP,
+          MOBILE_COMPONENT_API_MD_MAP,
+          MINIPROGRAM_COMPONENT_API_MD_MAP,
+          getChatComponentMap(framework),
+        )
       : MOBILE_FRAMES.includes(framework)
         ? mergeComponentMaps(COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, getChatComponentMap(framework))
         : mergeComponentMaps(COMPONENT_API_MD_MAP, getChatComponentMap(framework)),
@@ -287,18 +302,28 @@ function getParentTargets() {
     map.data.components.map((item) => item.value),
     cmpMap,
   );
-  const targets = candidates.filter((name) =>
-    resolveComponentMergeList(cmpMap, name).some((key) => frameworkData[key]?.length),
-  );
+  // 该框架有、但组件库中并未实现的组件，需要单独排除
+  const excluded = [];
+  // VueNext(PC) 复用 Vue(PC) 的 API 数据，但个别组件在 Vue 侧有、VueNext 侧并未实现
+  // Search：tdesign-vue 有 src/search，tdesign-vue-next 没有该组件
+  if (framework === 'VueNext(PC)') excluded.push('Search');
+  // tdesign-mobile-react 没有 Tree / DateTimeRangePicker，数据里只是误挂了 React(Mobile) 标记
+  if (framework === 'React(Mobile)') excluded.push('Tree', 'DateTimeRangePicker');
+  // Chat 系列只属于独立的 AI Chat 组件库（@tdesign-vue-next/chat、@tdesign-react/chat）
+  // Vue(PC) 没有 chat 独立包，数据里的 Vue(PC) 只是共用标记，不能在 tdesign-vue/src 下建目录
+  if (!CHAT_FRAMEWORKS.includes(framework)) {
+    excluded.push(...Object.keys(CHAT_COMPONENT_MAP), ...Object.values(CHAT_COMPONENT_MAP).flat());
+  }
+  const targets = candidates
+    .filter((name) => !excluded.includes(name))
+    .filter((name) => resolveComponentMergeList(cmpMap, name).some((key) => frameworkData[key]?.length));
   return { frameworkData, cmpMap, globalConfigData, targets };
 }
 
 function validateParams(components) {
   if (!component) {
     console.error(
-      chalk.red(
-        '\nError: 请输入单个组件名称（前期需要规范每一个组件）\n 如果想生成全量组件的 API，请输入参数 ALL',
-      ),
+      chalk.red('\nError: 请输入单个组件名称（前期需要规范每一个组件）\n 如果想生成全量组件的 API，请输入参数 ALL'),
     );
     return false;
   }
