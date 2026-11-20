@@ -95,7 +95,9 @@
     "id": 1745217452,
     "platform_framework": [
       "Miniprogram",
-      "UniApp"
+      "React(Mobile)",
+      "UniApp",
+      "Vue(Mobile)"
     ],
     "component": "TreeSelect",
     "field_category": "Props",
@@ -106,7 +108,12 @@
       "Array"
     ],
     "field_desc_zh": "自定义选中值，优先级高于 `value`",
-    "custom_field_type": "TreeSelectValue"
+    "custom_field_type": "TreeSelectValue",
+    "version": {
+      "Miniprogram": "1.8.5",
+      "Vue(Mobile)": "1.17.2",
+      "React(Mobile)": "1.0.1"
+    }
   },
   {
     "id": 1149,
