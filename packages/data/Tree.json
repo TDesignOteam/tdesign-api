@@ -16,6 +16,24 @@
     "field_desc_en": "make nodes can be highlight"
   },
   {
+    "id": 538,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "actived",
+    "field_type": [
+      "Array"
+    ],
+    "field_desc_zh": "高亮的节点值",
+    "custom_field_type": "Array<TreeNodeValue>",
+    "syntactic_sugar": "sync",
+    "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"event\":[{\"props\":{\"activable\":true,\"actived\":[1]},\"trigger\":\"delay(300)\",\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true,\"exist\":{\".t-tree__item\":2}},{\"trigger\":\"click(.t-tree__item:nth-child(2))\",\"delay\":300,\"exist\":{\".t-tree__item.t-is-active\":1},\"event\":{\"active\":[[2]]}}]}]}}"
+  },
+  {
     "id": 537,
     "platform_framework": [
       "Vue(PC)",
@@ -32,33 +50,11 @@
     "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"event\":[{\"props\":{\"activable\":true,\"defaultActived\":[1],\"activeMultiple\":true},\"trigger\":\"delay(300)\",\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true,\"exist\":{\".t-tree__item\":2}},{\"trigger\":\"click(.t-tree__item:nth-child(2))\",\"delay\":300,\"exist\":{\".t-tree__item.t-is-active\":2},\"event\":{\"active\":[[1,2]]}}]}]}}"
   },
   {
-    "id": 538,
-    "platform_framework": [
-      "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
-    ],
-    "component": "Tree",
-    "field_category": "Props",
-    "field_name": "actived",
-    "field_type": [
-      "Array"
-    ],
-    "field_desc_zh": "高亮的节点值",
-    "custom_field_type": "Array<TreeNodeValue>",
-    "syntactic_sugar": "sync",
-    "test_description": "{\"PC\":{\"wrapper\":\"getTreeDefaultMount\",\"event\":[{\"props\":{\"activable\":true,\"actived\":[1]},\"trigger\":\"delay(300)\",\"expect\":[{\"trigger\":\"delay(300)\",\"delay\":true,\"exist\":{\".t-tree__item\":2}},{\"trigger\":\"click(.t-tree__item:nth-child(2))\",\"delay\":300,\"exist\":{\".t-tree__item.t-is-active\":1},\"event\":{\"active\":[[2]]}}]}]}}"
-  },
-  {
     "id": 1718771238,
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Props",
@@ -75,9 +71,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Props",
@@ -87,6 +81,22 @@
     ],
     "field_default_value": "false",
     "field_desc_zh": "是否允许在过滤时节点折叠节点"
+  },
+  {
+    "id": 525,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "checkable",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "隐藏节点复选框"
   },
   {
     "id": 526,
@@ -109,9 +119,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Props",
@@ -123,31 +131,11 @@
     "field_desc_zh": "父子节点选中状态不再关联，可各自选中或取消"
   },
   {
-    "id": 525,
-    "platform_framework": [
-      "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
-    ],
-    "component": "Tree",
-    "field_category": "Props",
-    "field_name": "checkable",
-    "field_type": [
-      "Boolean"
-    ],
-    "field_default_value": "false",
-    "field_desc_zh": "隐藏节点复选框"
-  },
-  {
     "id": 519,
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Props",
@@ -182,9 +170,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Props",
@@ -214,9 +200,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Props",
@@ -233,9 +217,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Props",
@@ -247,13 +229,29 @@
     "field_desc_zh": "是否展开全部节点"
   },
   {
+    "id": 532,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "Tree",
+    "field_category": "Props",
+    "field_name": "expanded",
+    "field_type": [
+      "Array"
+    ],
+    "field_default_value": "[]",
+    "field_desc_zh": "展开的节点值",
+    "custom_field_type": "Array<TreeNodeValue>",
+    "syntactic_sugar": "sync"
+  },
+  {
     "id": 533,
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Props",
@@ -269,9 +267,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Props",
@@ -287,9 +283,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Props",
@@ -305,9 +299,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Props",
@@ -319,33 +311,11 @@
     "field_desc_zh": "展开子节点时是否自动展开父节点"
   },
   {
-    "id": 532,
-    "platform_framework": [
-      "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
-    ],
-    "component": "Tree",
-    "field_category": "Props",
-    "field_name": "expanded",
-    "field_type": [
-      "Array"
-    ],
-    "field_default_value": "[]",
-    "field_desc_zh": "展开的节点值",
-    "custom_field_type": "Array<TreeNodeValue>",
-    "syntactic_sugar": "sync"
-  },
-  {
     "id": 545,
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Props",
@@ -377,9 +347,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Props",
@@ -394,9 +362,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Props",
@@ -415,9 +381,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Props",
@@ -434,9 +398,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Props",
@@ -455,9 +417,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Props",
@@ -473,9 +433,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Props",
@@ -493,9 +451,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Props",
@@ -527,9 +483,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Props",
@@ -561,9 +515,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Props",
@@ -577,9 +529,7 @@
   {
     "id": 524,
     "platform_framework": [
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Props",
@@ -616,9 +566,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Props",
@@ -639,9 +587,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Events",
@@ -656,9 +602,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Events",
@@ -672,9 +616,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Events",
@@ -753,9 +695,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Events",
@@ -770,9 +710,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Events",
@@ -800,9 +738,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Functions",
@@ -817,9 +753,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Functions",
@@ -835,9 +769,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Functions",
@@ -853,9 +785,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Functions",
@@ -871,9 +801,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Functions",
@@ -889,9 +817,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Functions",
@@ -907,9 +833,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Functions",
@@ -925,9 +849,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Functions",
@@ -944,9 +866,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Functions",
@@ -961,9 +881,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Functions",
@@ -992,9 +910,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Functions",
@@ -1023,9 +939,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "Functions",
@@ -1040,9 +954,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "Tree",
     "field_category": "<T>",

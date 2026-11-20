@@ -4,9 +4,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -22,9 +20,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -40,9 +36,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -58,9 +52,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -76,9 +68,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -95,9 +85,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -109,31 +97,11 @@
     "field_desc_zh": "该节点是否允许被拖动，当树本身开启时，默认允许"
   },
   {
-    "id": 509,
-    "platform_framework": [
-      "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
-    ],
-    "component": "TreeNodeState",
-    "field_category": "Props",
-    "field_name": "expandMutex",
-    "field_type": [
-      "Boolean"
-    ],
-    "field_default_value": "false",
-    "field_desc_zh": "子节点是否互斥展开"
-  },
-  {
     "id": 508,
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -145,13 +113,27 @@
     "field_desc_zh": "节点是否已展开"
   },
   {
+    "id": 509,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "React(Mobile)"
+    ],
+    "component": "TreeNodeState",
+    "field_category": "Props",
+    "field_name": "expandMutex",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "子节点是否互斥展开"
+  },
+  {
     "id": 515,
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -167,9 +149,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -184,9 +164,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -200,9 +178,7 @@
   {
     "id": 505,
     "platform_framework": [
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -235,9 +211,7 @@
     "platform_framework": [
       "Vue(PC)",
       "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(Mobile)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
