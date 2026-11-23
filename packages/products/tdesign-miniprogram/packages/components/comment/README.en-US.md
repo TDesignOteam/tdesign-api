@@ -22,6 +22,7 @@ name | params | description
 -- | -- | --
 actions | `(detail: { action: CommentActionItem;})` | \-
 folds | `(detail: { fold: CommentFold;})` | \-
+long-press | \- | `1.18.1`
 
 ### Comment Slots
 

@@ -276,5 +276,20 @@
       "Vue(Mobile)": "1.17.2",
       "React(Mobile)": "1.0.1"
     }
+  },
+  {
+    "id": 1795402930,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Comment",
+    "field_category": "Events",
+    "field_name": "longPress",
+    "field_type": [],
+    "field_desc_zh": "长按整个评论时触发",
+    "version": {
+      "Miniprogram": "1.18.1"
+    }
   }
 ]
