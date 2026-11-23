@@ -6,7 +6,6 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-children | Slot / Function | - | Masonry content. Each child element with a `key` is an item, suitable for static content. (Mutually exclusive with `items` + `renderItem`). Typescript: `TNode`. [see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N
 gap | Number / Object | 0 | Gap. Can be a fixed number or configured by container width breakpoints (e.g. `{ 0: 8, 640: 12, 1024: 16 }`). Typescript: `number \| Record<number, number>` | N
 items | Array | - | Data source array of the Masonry, used together with `renderItem`. Except for `key`, the fields and content of each item are not restricted. Typescript: `MasonryItem[]` `interface MasonryItem { key: string \| number; [prop: string]: any }`. [see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/masonry/type.ts) | N
 renderItem | Function | - | Custom render function for each Masonry item. Receives the data item and its index, and returns the node to display. Used together with `items`. Typescript: `(item: MasonryItem, index: number) => TNode`. [see more ts definition](https://github.com/Tencent/tdesign-vue-next/blob/develop/packages/components/common.ts) | N

@@ -6,7 +6,6 @@
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-children | Slot / Function | - | 瀑布流内容，每个带 key 的子元素为一项，适用于静态内容。（与 `items` + `renderItem` 为两种互斥的使用方式）。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 column | Number / Object | 2 | 列数，可传入固定数值或按容器宽度断点配置（如 `{ 0: 2, 640: 3, 1024: 4 }`）。TS 类型：`number \| Record<number, number>` | N
 gap | Number / Object | 0 | 间距，可传入固定数值或按容器宽度断点配置（如 `{ 0: 8, 640: 12, 1024: 16 }`）。TS 类型：`number \| Record<number, number>` | N
 items | Array | - | 瀑布流数据源数组，配合 `renderItem` 使用，除 `key` 外不限制数据项的字段和内容。TS 类型：`MasonryItem[]` `interface MasonryItem { key: string \| number; [prop: string]: any }`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/masonry/type.ts) | N

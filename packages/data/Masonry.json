@@ -2,12 +2,8 @@
   {
     "id": 1795090544,
     "platform_framework": [
-      "Vue(PC)",
-      "React(PC)",
-      "Vue(Mobile)",
       "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "Masonry",
     "field_category": "Props",

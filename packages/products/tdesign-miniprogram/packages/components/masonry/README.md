@@ -20,9 +20,3 @@ type | String | fixed-width | 瀑布流类型，可选值 `fixed-width`（固定
 名称 | 参数 | 描述
 -- | -- | --
 layout-change | `(items: MasonryItemLayout[])` | 布局发生变化时触发。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/masonry/type.ts)。<br/>`interface MasonryItemLayout { key: string \| number; index: number; column: number; x: number; y: number; width: number; height: number }`<br/>
-
-### Masonry Slots
-
-名称 | 描述
--- | --
-children | 瀑布流内容，每个带 key 的子元素为一项，适用于静态内容。（与 `items` + `renderItem` 为两种互斥的使用方式）

@@ -7,10 +7,6 @@
 import type { PropType } from 'vue';
 import type { TdMasonryProps } from './type';
 export default {
-  /** 瀑布流内容，每个带 key 的子元素为一项，适用于静态内容。（与 `items` + `renderItem` 为两种互斥的使用方式） */
-  children: {
-    type: Function as PropType<TdMasonryProps['children']>,
-  },
   /** 间距，可传入固定数值或按容器宽度断点配置（如 `{ 0: 8, 640: 12, 1024: 16 }`） */
   gap: {
     type: [Number, Object] as PropType<TdMasonryProps['gap']>,

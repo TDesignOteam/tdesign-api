@@ -19,9 +19,3 @@ type | String | fixed-width | Masonry grouping type. Options: `fixed-width` (fix
 name | params | description
 -- | -- | --
 layout-change | `(items: MasonryItemLayout[])` | Triggered when the layout changes. [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/masonry/type.ts). <br/>`interface MasonryItemLayout { key: string \| number; index: number; column: number; x: number; y: number; width: number; height: number }`<br/>
-
-### Masonry Slots
-
-name | Description
--- | --
-children | Masonry content. Each child element with a `key` is an item, suitable for static content. (Mutually exclusive with `items` + `renderItem`)
