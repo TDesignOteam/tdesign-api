@@ -310,7 +310,8 @@
       "folds",
       "reply",
       "actions",
-      "folds"
+      "folds",
+      "long-press"
     ],
     "description": "Comment\n\n评论\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/comment)"
   },

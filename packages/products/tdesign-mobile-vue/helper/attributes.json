@@ -1029,6 +1029,10 @@
     "type": "String|TNode",
     "description": "回复\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/comment?tab=api#comment-props)"
   },
+  "t-comment/long-press": {
+    "type": "event",
+    "description": "长按整个评论时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/comment?tab=api#comment-events)"
+  },
   "t-config-provider/global-config": {
     "type": "Object",
     "description": "global config\n\n全局配置\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/config-provider?tab=api#configprovider-props)"
