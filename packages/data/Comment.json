@@ -271,7 +271,7 @@
     "field_name": "longPress",
     "field_type": [],
     "field_desc_zh": "长按整个评论时触发",
-    "event_input": " (context: { e: LongPressEvent })【type LongPressEvent = PointerEvent | TouchEvent;】",
+    "event_input": "(context: { e: LongPressEvent })【type LongPressEvent = PointerEvent | TouchEvent;】",
     "version": {
       "Vue(Mobile)": "1.17.2",
       "React(Mobile)": "1.0.1"
