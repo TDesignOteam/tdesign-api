@@ -1,30 +1,16 @@
 import fs from 'fs';
 import path from 'path';
 import chalk from 'chalk';
-import {
-  FRAMEWORK_MAP,
-  COMPONENT_API_MD_MAP,
-  MOBILE_COMPONENT_API_MD_MAP,
-  MINIPROGRAM_COMPONENT_API_MD_MAP,
-  MOBILE_FRAMES,
-  getChatComponentMap,
-  mergeComponentMaps,
-} from '../config/index.js';
-import { getApiComponentMapByFrameWork, componentsMap, isTypeApi, isPlugin } from '../core/context.js';
+import { FRAMEWORK_MAP, getDocsComponentMaps } from '../config/index.js';
+import { componentsMap, isTypeApi, isPlugin } from '../core/context.js';
 import { kebabCaseComponent, getComponentBasePath } from '../core/utils.js';
 
 let currentFramework = '';
 
 // 获取当前框架下 md 文档需要合并输出的父子组件关系
+// 各框架该叠加哪几张配置表统一在 config/files-combine.js 中定义
 function getComponentApiMdMap() {
-  return getApiComponentMapByFrameWork(
-    currentFramework === 'Miniprogram' || currentFramework === 'UniApp'
-      ? mergeComponentMaps(COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, MINIPROGRAM_COMPONENT_API_MD_MAP, getChatComponentMap(currentFramework))
-      : MOBILE_FRAMES.includes(currentFramework)
-        ? mergeComponentMaps(COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, getChatComponentMap(currentFramework))
-        : mergeComponentMaps(COMPONENT_API_MD_MAP, getChatComponentMap(currentFramework)),
-    currentFramework,
-  );
+  return getDocsComponentMaps(currentFramework);
 }
 
 // 组件 Form 的 API 为 Form 和 FormItem 的组合

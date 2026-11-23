@@ -2,20 +2,10 @@
 import chalk from 'chalk';
 import { pick, has } from 'lodash-es';
 import { GLOBAL_COMPONENTS_CONFIG } from '../config/const.js';
-import {
-  COMPONENT_API_MD_MAP,
-  MOBILE_COMPONENT_API_MD_MAP,
-  MINIPROGRAM_COMPONENT_API_MD_MAP,
-  MOBILE_FRAMES,
-  CHAT_FRAMEWORKS,
-  CHAT_COMPONENT_MAP,
-  getChatComponentMap,
-  mergeComponentMaps,
-} from '../config/index.js';
+import { CHAT_FRAMEWORKS, CHAT_COMPONENT_MAP, getDocsComponentMaps } from '../config/index.js';
 import {
   groupByComponent,
   formatArrayToMap,
-  getApiComponentMapByFrameWork,
   getParentComponentNames,
   resolveComponentMergeList,
 } from '../core/context.js';
@@ -31,17 +21,7 @@ import { NEED_USE_DEFAULT_OR_USE_VMODEL } from '../vitest/const/vue2-use-default
 import { generateVitestUnitCase } from '../vitest/generate-vitest-unit-case.js';
 import { generateTestDescriptionToVitestFile } from '../vitest/tests/core/utils.js';
 
-const FRAMEWORKS = [
-  'Vue(PC)',
-  'VueNext(PC)',
-  'React(PC)',
-  'Angular(PC)',
-  'Vue(Mobile)',
-  'React(Mobile)',
-  'Angular(Mobile)',
-  'Miniprogram',
-  'UniApp',
-];
+const FRAMEWORKS = ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Vue(Mobile)', 'React(Mobile)', 'Miniprogram', 'UniApp'];
 
 const { data: ALL_API } = apiJson;
 
@@ -130,19 +110,7 @@ async function generateComponentApi() {
   console.log(chalk.blue(`\n ----- Framework: ${framework} Starting to Generate Component API ------ \n`));
   const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
   const frameworkData = groupByComponent(ALL_API, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
-  const cmpMap = getApiComponentMapByFrameWork(
-    framework === 'Miniprogram' || framework === 'UniApp'
-      ? mergeComponentMaps(
-          COMPONENT_API_MD_MAP,
-          MOBILE_COMPONENT_API_MD_MAP,
-          MINIPROGRAM_COMPONENT_API_MD_MAP,
-          getChatComponentMap(framework),
-        )
-      : MOBILE_FRAMES.includes(framework)
-        ? mergeComponentMaps(COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, getChatComponentMap(framework))
-        : mergeComponentMaps(COMPONENT_API_MD_MAP, getChatComponentMap(framework)),
-    framework,
-  );
+  const cmpMap = getDocsComponentMaps(framework);
   const mergeList = resolveComponentMergeList(cmpMap, component);
   const baseData = pick(frameworkData, mergeList);
   const globalConfigData = pick(frameworkData, GLOBAL_COMPONENTS_CONFIG);
@@ -284,19 +252,7 @@ function generateDocuments() {
 function getParentTargets() {
   const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
   const frameworkData = groupByComponent(ALL_API, frameworkMap[framework === 'VueNext(PC)' ? 'Vue(PC)' : framework]);
-  const cmpMap = getApiComponentMapByFrameWork(
-    framework === 'Miniprogram' || framework === 'UniApp'
-      ? mergeComponentMaps(
-          COMPONENT_API_MD_MAP,
-          MOBILE_COMPONENT_API_MD_MAP,
-          MINIPROGRAM_COMPONENT_API_MD_MAP,
-          getChatComponentMap(framework),
-        )
-      : MOBILE_FRAMES.includes(framework)
-        ? mergeComponentMaps(COMPONENT_API_MD_MAP, MOBILE_COMPONENT_API_MD_MAP, getChatComponentMap(framework))
-        : mergeComponentMaps(COMPONENT_API_MD_MAP, getChatComponentMap(framework)),
-    framework,
-  );
+  const cmpMap = getDocsComponentMaps(framework);
   const globalConfigData = pick(frameworkData, GLOBAL_COMPONENTS_CONFIG);
   const candidates = getParentComponentNames(
     map.data.components.map((item) => item.value),

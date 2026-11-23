@@ -7,14 +7,7 @@ import chalk from 'chalk';
 import { upperFirst, camelCase as camelcase, uniq } from 'lodash-es';
 import prettier from 'prettier';
 import { FILE_RIGHTS_DESC, GLOBAL_TYPES, REACT_EVENTS, REACT_TYPES } from '../config/const.js';
-import {
-  FRAMEWORK_MAP,
-  TYPES_COMBINE_MAP,
-  MOBILE_TYPES_COMBINE_MAP,
-  MINIPROGRAM_TYPES_COMBINE_MAP,
-  MOBILE_FRAMES,
-  getChatComponentMap,
-} from '../config/index.js';
+import { FRAMEWORK_MAP, getTypesComponentMaps } from '../config/index.js';
 import prettierConfig from '../config/prettier.js';
 import {
   isPlugin,
@@ -658,14 +651,7 @@ function getTypeScriptDesc(componentMap, framework) {
 
 async function combineTsFile(componentMap, framework) {
   const ts = getTypeScriptDesc(componentMap, framework);
-  const rMap = getApiComponentMapByFrameWork(
-    ['Miniprogram', 'UniApp'].includes(framework)
-      ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP, getChatComponentMap(framework))
-      : MOBILE_FRAMES.includes(framework)
-        ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, getChatComponentMap(framework))
-        : Object.assign({}, TYPES_COMBINE_MAP, getChatComponentMap(framework)),
-    framework,
-  );
+  const rMap = getTypesComponentMaps(framework);
   Object.keys(rMap).forEach((cmp) => {
     let current = ts[cmp];
     const list = rMap[cmp];
@@ -750,14 +736,7 @@ async function generateTypes(baseData, framework) {
 
   // 输出 TS 类型定义文件
   const apiTypes = await combineTsFile(baseData, framework);
-  const typeCombineMap = getApiComponentMapByFrameWork(
-    ['Miniprogram', 'UniApp'].includes(framework)
-      ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP, getChatComponentMap(framework))
-      : MOBILE_FRAMES.includes(framework)
-        ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, getChatComponentMap(framework))
-        : Object.assign({}, TYPES_COMBINE_MAP, getChatComponentMap(framework)),
-    framework,
-  );
+  const typeCombineMap = getTypesComponentMaps(framework);
   for (const cmp of Object.keys(apiTypes)) {
     // 未注册名称、以及未作为合并父级的独立 TS 类型（TScroll / InfinityScroll 等）不单独建目录
     if (!COMPONENTS_MAP[cmp]) continue;
