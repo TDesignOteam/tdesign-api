@@ -192,7 +192,7 @@
     "field_name": "change",
     "field_type": [],
     "field_desc_zh": "当前步骤发生变化时触发",
-    "event_input": "({current: string | number, previous: string | number})"
+    "event_input": "(detail: { current: string | number; previous: string | number })"
   },
   {
     "id": 1712547366,

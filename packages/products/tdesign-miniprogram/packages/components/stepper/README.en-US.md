@@ -24,10 +24,10 @@ default-value | String / Number | undefined | uncontrolled property | N
 
 name | params | description
 -- | -- | --
-blur | `({ type: string \| number })` | \-
-change | `({ value: string \| number })` | \-
-focus | `({ value: string \| number }))` | \-
-overlimit | `({type: 'minus' \| 'plus'})` | \-
+blur | `(detail: { type: string \| number })` | \-
+change | `(detail: { value: string \| number })` | \-
+focus | `(detail: { value: string \| number })` | \-
+overlimit | `(detail: { type: 'minus' \| 'plus' })` | \-
 
 ### Stepper External Classes
 

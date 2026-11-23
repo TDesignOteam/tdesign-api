@@ -19,7 +19,7 @@ z-index | Number | - | \- | N
 
 name | params | description
 -- | -- | --
-click | `({ visible: boolean })` | \-
+click | `(detail: { visible: boolean })` | \-
 
 ### Overlay Slots
 

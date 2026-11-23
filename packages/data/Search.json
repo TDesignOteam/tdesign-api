@@ -946,8 +946,7 @@
     "field_category": "Events",
     "field_name": "actionClick",
     "field_type": [],
-    "field_desc_zh": "点击右侧操作按钮文字时触发",
-    "event_input": "({})"
+    "field_desc_zh": "点击右侧操作按钮文字时触发"
   },
   {
     "id": 1769008745,
@@ -987,7 +986,7 @@
     "field_name": "blur",
     "field_type": [],
     "field_desc_zh": "失去焦点时触发",
-    "event_input": "({ value: string })"
+    "event_input": "(detail: { value: string })"
   },
   {
     "id": 1769008763,
@@ -1026,7 +1025,7 @@
     "field_name": "change",
     "field_type": [],
     "field_desc_zh": "值发生变化时触发",
-    "event_input": "({ value: string, trigger: 'input-change' | 'option-click' | 'clear' })"
+    "event_input": "(detail: { value: string; trigger: 'input-change' | 'option-click' | 'clear' })"
   },
   {
     "id": 1769597322,
@@ -1070,7 +1069,7 @@
     "field_name": "clear",
     "field_type": [],
     "field_desc_zh": "点击清除时触发",
-    "event_input": "({ value: string })"
+    "event_input": "(detail: { value: string })"
   },
   {
     "id": 1769008797,
@@ -1125,7 +1124,7 @@
     "field_name": "focus",
     "field_type": [],
     "field_desc_zh": "聚焦时触发",
-    "event_input": "({ value: string })"
+    "event_input": "(detail: { value: string })"
   },
   {
     "id": 1769008812,
@@ -1206,7 +1205,7 @@
     "field_name": "submit",
     "field_type": [],
     "field_desc_zh": "提交时触发",
-    "event_input": "({ value: string })"
+    "event_input": "(detail: { value: string })"
   },
   {
     "id": 1769008829,

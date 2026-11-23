@@ -41,12 +41,12 @@ value | String | '' | 值 | N
 
 名称 | 参数 | 描述
 -- | -- | --
-action-click | `({})` | 点击右侧操作按钮文字时触发
-blur | `({ value: string })` | 失去焦点时触发
-change | `({ value: string, trigger: 'input-change' \| 'option-click' \| 'clear' })` | 值发生变化时触发
-clear | `({ value: string })` | 点击清除时触发
-focus | `({ value: string })` | 聚焦时触发
-submit | `({ value: string })` | 提交时触发
+action-click | \- | 点击右侧操作按钮文字时触发
+blur | `(detail: { value: string })` | 失去焦点时触发
+change | `(detail: { value: string; trigger: 'input-change' \| 'option-click' \| 'clear' })` | 值发生变化时触发
+clear | `(detail: { value: string })` | 点击清除时触发
+focus | `(detail: { value: string })` | 聚焦时触发
+submit | `(detail: { value: string })` | 提交时触发
 
 ### Search Slots
 

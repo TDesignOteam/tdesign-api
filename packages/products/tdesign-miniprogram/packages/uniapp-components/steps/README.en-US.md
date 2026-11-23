@@ -19,7 +19,7 @@ theme | String | default | options: default/dot | N
 
 name | params | description
 -- | -- | --
-change | `({current: string \| number, previous: string \| number})` | \-
+change | `(detail: { current: string \| number; previous: string \| number })` | \-
 
 ### Steps Slots
 

@@ -75,7 +75,7 @@ export interface TdScrollbarProps {
   /**
    * 滚动时触发
    */
-  onScroll?: ({ scrollTop: number, scrollLeft: number }) => void;
+  onScroll?: (context: { scrollTop: number; scrollLeft: number }) => void;
 }
 
 /** 组件实例方法 */

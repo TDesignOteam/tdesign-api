@@ -26,7 +26,7 @@ shape | String | 'square' | options: square/round | N
 suffixIcon | TElement | - | `deprecated`. Typescript: `TNode`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 value | String | - | \- | N
 defaultValue | String | - | uncontrolled property | N
-onActionClick | Function |  | Typescript: `({}) => void`<br/> | N
+onActionClick | Function |  | Typescript: `() => void`<br/> | N
 onBlur | Function |  | Typescript: `(context: { value: string; e: FocusEvent }) => void`<br/> | N
 onChange | Function |  | Typescript: `(value: string, context: { trigger: 'input-change' \| 'option-click' \| 'clear'; e?: InputEvent \| MouseEvent }) => void`<br/> | N
 onClear | Function |  | Typescript: `(context: { e: MouseEvent }) => void`<br/> | N

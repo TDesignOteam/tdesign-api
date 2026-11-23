@@ -92,7 +92,7 @@ export interface TdSearchProps {
   /**
    * 点击右侧操作按钮文字时触发
    */
-  onActionClick?: ({}) => void;
+  onActionClick?: () => void;
   /**
    * 失去焦点时触发
    * @default ''

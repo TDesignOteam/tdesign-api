@@ -21,7 +21,7 @@ thumbMinSize | Number | 20 | 滚动条滑块的最小尺寸（px） | N
 viewClassName | String | - | 视图（内容区）的自定义类名 | N
 visibility | String | hover | 滚动条的显示形式。可选项：always/hover/hide | N
 wrapClassName | String | - | 包裹容器的自定义类名 | N
-onScroll | Function |  | TS 类型：`({ scrollTop: number, scrollLeft: number }) => void`<br/>滚动时触发 | N
+onScroll | Function |  | TS 类型：`(context: { scrollTop: number; scrollLeft: number }) => void`<br/>滚动时触发 | N
 
 ### ScrollbarInstanceFunctions 组件实例方法
 

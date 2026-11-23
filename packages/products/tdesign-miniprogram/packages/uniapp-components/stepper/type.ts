@@ -63,17 +63,17 @@ export interface TdStepperProps {
   /**
    * 输入框失去焦点时触发
    */
-  onBlur?: ({ type: string | number }) => void;
+  onBlur?: (detail: { type: string | number }) => void;
   /**
    * 数值发生变更时触发
    */
-  onChange?: ({ value: string | number }) => void;
+  onChange?: (detail: { value: string | number }) => void;
   /**
    * 输入框聚焦时触发
    */
-  onFocus?: ({ value: string | number })) => void;
+  onFocus?: (detail: { value: string | number }) => void;
   /**
    * 数值超出限制时触发
    */
-  onOverlimit?: ({type: 'minus' | 'plus'}) => void;
+  onOverlimit?: (detail: { type: 'minus' | 'plus' }) => void;
 }

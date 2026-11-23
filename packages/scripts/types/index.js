@@ -88,9 +88,7 @@ function formatOneType(api, oneType) {
   const type = oneType.toLocaleLowerCase();
   let r = type;
   if (type === 'string' && api.field_enum) {
-    r = api.field_enum
-      .map((val) => `'${val.trim()}'`.replace(/''/g, "'"))
-      .join(' | ');
+    r = api.field_enum.map((val) => `'${val.trim()}'`.replace(/''/g, "'")).join(' | ');
   }
   return r;
 }
@@ -710,9 +708,13 @@ async function combineTsFile(componentMap, framework) {
     try {
       ts[cmp] = await prettier.format(str, prettierConfig);
     } catch (e) {
-      console.log(chalk.red('格式化失败，请检查生成的文件是否存在语法错误\n'));
+      // 格式化失败说明生成的代码语法有问题，必须让调用方感知：
+      // 只打印日志会随进度输出一起被淹没，CI 拿到退出码 0 后会把非法文件直接提交
+      console.error(chalk.red(`格式化失败：${cmp}（${framework}），请检查生成的类型是否存在语法错误\n`));
       console.warn(e);
-      // 格式化失败时，使用原始字符串作为 fallback，避免输出 [object Object]
+      process.exitCode = 1;
+      // 仍用原始字符串兜底，避免后续写入 [object Object]；
+      // 但已标记退出码非 0，产物不应再被当作有效结果使用
       ts[cmp] = str;
     }
   }

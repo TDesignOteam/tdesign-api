@@ -21,7 +21,7 @@ thumbMinSize | Number | 20 | Minimum size (px) of the scroll bar slider. | N
 viewClassName | String | - | Custom class name for the view (content area) | N
 visibility | String | hover | Scroll bar display format. options: always/hover/hide | N
 wrapClassName | String | - | Custom class name of the wrapper container | N
-onScroll | Function |  | Typescript: `({ scrollTop: number, scrollLeft: number }) => void`<br/>Triggered while scrolling | N
+onScroll | Function |  | Typescript: `(context: { scrollTop: number; scrollLeft: number }) => void`<br/>Triggered while scrolling | N
 
 ### ScrollbarInstanceFunctions 组件实例方法
 

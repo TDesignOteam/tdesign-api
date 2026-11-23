@@ -172,7 +172,7 @@
     "field_name": "click",
     "field_type": [],
     "field_desc_zh": "点击遮罩时触发",
-    "event_input": "({ visible: boolean })"
+    "event_input": "(context: { visible: boolean })"
   },
   {
     "id": 1712719233,

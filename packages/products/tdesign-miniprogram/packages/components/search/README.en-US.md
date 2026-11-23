@@ -41,12 +41,12 @@ value | String | '' | \- | N
 
 name | params | description
 -- | -- | --
-action-click | `({})` | \-
-blur | `({ value: string })` | \-
-change | `({ value: string, trigger: 'input-change' \| 'option-click' \| 'clear' })` | \-
-clear | `({ value: string })` | \-
-focus | `({ value: string })` | \-
-submit | `({ value: string })` | \-
+action-click | \- | \-
+blur | `(detail: { value: string })` | \-
+change | `(detail: { value: string; trigger: 'input-change' \| 'option-click' \| 'clear' })` | \-
+clear | `(detail: { value: string })` | \-
+focus | `(detail: { value: string })` | \-
+submit | `(detail: { value: string })` | \-
 
 ### Search Slots
 
