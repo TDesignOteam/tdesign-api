@@ -259,5 +259,37 @@
     "field_type": [],
     "field_desc_zh": "用户点击“展开回复/收起”时触发，并返回点击后的 fold 配置",
     "event_input": "(context: { fold: CommentFold; e: Event })"
+  },
+  {
+    "id": 1795074888,
+    "platform_framework": [
+      "React(Mobile)",
+      "Vue(Mobile)"
+    ],
+    "component": "Comment",
+    "field_category": "Events",
+    "field_name": "longPress",
+    "field_type": [],
+    "field_desc_zh": "长按整个评论时触发",
+    "event_input": " (context: { e: LongPressEvent })【type LongPressEvent = PointerEvent | TouchEvent;】",
+    "version": {
+      "Vue(Mobile)": "1.17.2",
+      "React(Mobile)": "1.0.1"
+    }
+  },
+  {
+    "id": 1795402930,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Comment",
+    "field_category": "Events",
+    "field_name": "longPress",
+    "field_type": [],
+    "field_desc_zh": "长按整个评论时触发",
+    "version": {
+      "Miniprogram": "1.18.1"
+    }
   }
 ]

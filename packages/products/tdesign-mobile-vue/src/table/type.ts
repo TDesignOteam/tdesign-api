@@ -4,13 +4,14 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { LoadingProps } from '../loading';
-import { PopupProps } from '../popup';
-import { CheckboxGroupValue } from '../checkbox';
-import { SortableEvent, SortableOptions } from 'sortablejs';
-import { CheckboxProps } from '../checkbox';
-import { RadioProps } from '../radio';
-import type { TNode, ClassName, HTMLElementAttributes } from '../common';
+import type { LoadingProps } from '../loading';
+import type { PopupProps } from '../popup';
+import type { CheckboxGroupValue } from '../checkbox';
+import type { SortableEvent, SortableOptions } from 'sortablejs';
+import type { CheckboxProps } from '../checkbox';
+import type { RadioProps } from '../radio';
+import type { InputProps } from '../input';
+import type { TNode, OptionData, ClassName, Styles, HTMLElementAttributes, ComponentType } from '../common';
 
 export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
   /**
@@ -117,6 +118,10 @@ export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
    */
   onCellClick?: (context: BaseTableCellEventContext<T>) => void;
   /**
+   * 分页发生变化时触发。参数 newDataSource 表示分页后的数据。本地数据进行分页时，newDataSource 和源数据 data 会不一样。泛型 T 指表格数据类型
+   */
+  onPageChange?: (pageInfo: PageInfo, newDataSource: Array<T>) => void;
+  /**
    * 行点击时触发，泛型 T 指表格数据类型
    */
   onRowClick?: (context: RowEventContext<T>) => void;
@@ -221,15 +226,6 @@ export interface TdPrimaryTableProps<T extends TableRowData = TableRowData> exte
    */
   dragSortOptions?: SortableOptions;
   /**
-   * 用于控制是否显示「展开图标列」，值为 `false` 则不会显示。可以精确到某一行是否显示，还可以自定义展开图标内容。`expandedRow` 存在时，该参数有效。支持全局配置 `GlobalConfigProvider`
-   * @default true
-   */
-  expandIcon?: boolean | TNode<ExpandArrowRenderParams<T>>;
-  /**
-   * 是否允许点击行展开
-   */
-  expandOnRowClick?: boolean;
-  /**
    * 展开行内容，泛型 T 指表格数据类型
    */
   expandedRow?: TNode<TableExpandedRowParams<T>>;
@@ -243,6 +239,15 @@ export interface TdPrimaryTableProps<T extends TableRowData = TableRowData> exte
    * @default []
    */
   defaultExpandedRowKeys?: Array<string | number>;
+  /**
+   * 用于控制是否显示「展开图标列」，值为 `false` 则不会显示。可以精确到某一行是否显示，还可以自定义展开图标内容。`expandedRow` 存在时，该参数有效。支持全局配置 `GlobalConfigProvider`
+   * @default true
+   */
+  expandIcon?: boolean | TNode<ExpandArrowRenderParams<T>>;
+  /**
+   * 是否允许点击行展开
+   */
+  expandOnRowClick?: boolean;
   /**
    * 自定义过滤图标，支持全局配置 `GlobalConfigProvider`
    */
@@ -278,10 +283,6 @@ export interface TdPrimaryTableProps<T extends TableRowData = TableRowData> exte
    */
   reserveSelectedRowOnPaginate?: boolean;
   /**
-   * 是否在点击整行时选中
-   */
-  selectOnRowClick?: boolean;
-  /**
    * 选中行。半选状态行请更为使用 `indeterminateSelectedRowKeys` 控制
    * @default []
    */
@@ -291,6 +292,10 @@ export interface TdPrimaryTableProps<T extends TableRowData = TableRowData> exte
    * @default []
    */
   defaultSelectedRowKeys?: Array<string | number>;
+  /**
+   * 是否在点击整行时选中
+   */
+  selectOnRowClick?: boolean;
   /**
    * 当前排序列是否显示背景色
    * @default false
@@ -384,15 +389,15 @@ export interface PrimaryTableCol<T extends TableRowData = TableRowData> extends 
    */
   render?: TNode<PrimaryTableRenderParams<T>>;
   /**
-   * 当前列支持排序的方式，desc 表示当前列只能进行降序排列；asc 表示当前列只能进行升序排列；all 表示当前列既可升序排列，又可以降序排列
-   * @default all
-   */
-  sortType?: SortType;
-  /**
    * 该列是否支持排序。值为 true 表示该列支持排序；值类型为函数，表示对本地数据 `data` 进行排序，返回值参考 [MDN Array.sort](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)。泛型 T 指表格数据类型
    * @default false
    */
   sorter?: boolean | SorterFun<T>;
+  /**
+   * 当前列支持排序的方式，desc 表示当前列只能进行降序排列；asc 表示当前列只能进行升序排列；all 表示当前列既可升序排列，又可以降序排列
+   * @default all
+   */
+  sortType?: SortType;
   /**
    * 自定义表头渲染。值类型为 Function 表示以函数形式渲染表头。值类型为 string 表示使用插槽渲染，插槽名称为 title 的值。优先级高于 render
    */
@@ -402,6 +407,60 @@ export interface PrimaryTableCol<T extends TableRowData = TableRowData> extends 
    * @default single
    */
   type?: 'single' | 'multiple';
+}
+
+export interface TableColumnFilter {
+  /**
+   * 用于透传筛选器属性到自定义组件 `component`，HTML 原生属性
+   */
+  attrs?: HTMLElementAttributes;
+  /**
+   * 透传类名到自定义组件 `component`
+   * @default ''
+   */
+  classNames?: ClassName;
+  /**
+   * 用于自定义筛选器，只要保证自定义筛选器包含 value 属性 和 change 事件，即可像内置筛选器一样正常使用。示例：`component: DatePicker`
+   */
+  component?: ComponentType;
+  /**
+   * 哪些事件触发后会进行过滤搜索（确认按钮无需配置，会默认触发搜索）。输入框组件示例：`confirmEvents: ['onEnter']`
+   */
+  confirmEvents?: string[];
+  /**
+   * 过滤项标题文本，显示在“过滤结果行”中的列标题描述。一般用于表头标题和过滤文本行中的列标题不一样的场景
+   */
+  label?: string | TNode;
+  /**
+   * 用于配置当前筛选器可选值有哪些，仅当 `filter.type` 等于 `single` 或 `multiple` 时有效
+   */
+  list?: Array<OptionData>;
+  /**
+   * 透传 Popup 组件全部属性到筛选器浮层
+   */
+  popupProps?: PopupProps;
+  /**
+   * 用于透传筛选器属性到自定义组件 `component`，可以对筛选器进行任何原组件支持的属性配置
+   */
+  props?: FilterProps;
+  /**
+   * 重置时设置的值，示例：'' 或 []
+   */
+  resetValue?: any;
+  /**
+   * 是否显示重置和确认。值为真，过滤事件（filter-change）会在确定时触发；值为假，则数据变化时会立即触发过滤事件
+   * @default false
+   */
+  showConfirmAndReset?: boolean;
+  /**
+   * 透传内联样式到自定义组件 `component`
+   */
+  style?: Styles;
+  /**
+   * 用于设置筛选器类型：单选按钮筛选器、复选框筛选器、输入框筛选器。更多复杂组件，请更为使用 `component` 自定义任意组件
+   * @default ''
+   */
+  type?: FilterType;
 }
 
 export interface PaginationProps {
@@ -501,15 +560,15 @@ export type RenderType = 'cell' | 'title';
 
 export type DataType = TableRowData;
 
-export interface ExpandArrowRenderParams<T> {
-  row: T;
-  index: number;
-}
-
 export interface TableExpandedRowParams<T> {
   row: T;
   index: number;
   columns: PrimaryTableCol<T>[] | BaseTableCol<T>[];
+}
+
+export interface ExpandArrowRenderParams<T> {
+  row: T;
+  index: number;
 }
 
 export type FilterValue = { [key: string]: any };
@@ -546,7 +605,7 @@ export interface PrimaryTableColumnChange<T> {
   columns?: CheckboxGroupValue;
   currentColumn?: PrimaryTableCol<T>;
   type?: 'check' | 'uncheck';
-  e?: ChangeEvent;
+  e?: Event;
 }
 
 export interface TableDataChangeContext {
@@ -601,6 +660,10 @@ export interface PrimaryTableRenderParams<T> extends PrimaryTableCellParams<T> {
   type: RenderType;
 }
 
+export type SorterFun<T> = (a: T, b: T) => number;
+
 export type SortType = 'desc' | 'asc' | 'all';
 
-export type SorterFun<T> = (a: T, b: T) => number;
+export type FilterProps = RadioProps | CheckboxProps | InputProps | { [key: string]: any };
+
+export type FilterType = 'input' | 'single' | 'multiple';

@@ -8,6 +8,11 @@ import type { TreeOptionData, TreeKeysType } from '../common';
 
 export interface TdTreeSelectProps<DataOption extends TreeOptionData = TreeOptionData> {
   /**
+   * 自定义组件样式
+   * @default ''
+   */
+  customStyle?: string;
+  /**
    * 自定义选中值，优先级高于 `value`
    */
   customValue?: TreeSelectValue;

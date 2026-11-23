@@ -47,4 +47,9 @@ export default {
     type: Function,
     default: () => ({}),
   },
+  /** 长按整个评论时触发 */
+  onLongPress: {
+    type: Function,
+    default: () => ({}),
+  },
 };

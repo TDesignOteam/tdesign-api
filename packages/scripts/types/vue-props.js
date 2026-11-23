@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import chalk from 'chalk';
-import { FILE_RIGHTS_DESC } from '../config/const.js';
+import { FILE_RIGHTS_DESC, BASE_PATH_URL, BASE_PATH_URL_LOCAL } from '../config/const.js';
 import { FRAMEWORK_MAP, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, getChatComponentMap } from '../config/index.js';
 import {
   getTdCmpName,
@@ -28,10 +28,11 @@ function getPropType(cmp, name) {
   return `${getTdCmpName(cmp)}['${name}']`;
 }
 
-function isNeedPropType(typeName, api) {
+function isNeedPropType(typeNames, api) {
   if (['Miniprogram', 'UniApp'].includes(currentFramework)) return false;
+  const typeName = typeNames.length <= 1 ? typeNames[0] : `[${typeNames.join(', ')}]`;
   const multipleTypeStr = !!(typeName === 'String' && (api.field_enum || api.custom_field_type));
-  const complicatedApi = ['Function', 'Object', 'Array'].includes(typeName) || api.field_type.length > 1;
+  const complicatedApi = ['Function', 'Object', 'Array'].includes(typeName) || typeNames.length > 1;
   return multipleTypeStr || complicatedApi;
 }
 
@@ -52,6 +53,7 @@ function getType(cmp, api, name) {
       return t === 'TNode' ? nodeType : t;
     })
     .filter((v) => !!v);
+  const needPropType = isNeedPropType(type, api);
   // custom_field_type 顶级 `| null` 写入 Vue runtime type，对应可显式传 null 的 API
   if (
     !['Miniprogram', 'UniApp'].includes(currentFramework) &&
@@ -61,7 +63,7 @@ function getType(cmp, api, name) {
     type.push('null');
   }
   const typeName = type.length <= 1 ? type[0] : `[${type.join(', ')}]`;
-  return isNeedPropType(typeName, api) ? `${typeName} as PropType<${getPropType(cmp, name)}>` : typeName;
+  return needPropType ? `${typeName} as PropType<${getPropType(cmp, name)}>` : typeName;
 }
 
 function getDefaultValue(cmp, api, name, isUncontrolApi, useDefault) {
@@ -82,7 +84,7 @@ function getDefaultValue(cmp, api, name, isUncontrolApi, useDefault) {
         const tmp = JSON.parse(dl);
         if (tmp instanceof Array) {
           isArray = true;
-        } else if (['object', 'function'].includes(typeof tmp)) {
+        } else if (tmp !== null && ['object', 'function'].includes(typeof tmp)) {
           isObject = true;
         }
       } catch (e) {
@@ -444,8 +446,11 @@ function generateVueProps(baseData, framework, isUseDefault) {
     const folder = getFolderPath(basePath, cmp);
     const outputPath = getPropsFileName(folder, cmp);
     const parentCmp = FRAMEWORK_TYPES_COMPONENT_RELATION[cmp];
-    // 子组件没有实现文件时不写独立 props，避免 Vue2 误出 dialog-card-props.ts
-    if (parentCmp && parentCmp !== cmp && !hasChildComponentImpl(folder, cmp)) return;
+    // 子组件实现文件以真实组件库目录（LOCAL）为准，避免 products 输出目录无实现文件导致误判
+    const localFolder = getFolderPath(basePath.replace(BASE_PATH_URL, BASE_PATH_URL_LOCAL), cmp);
+    // 仅当父组件自身已生成 props，且子组件在真实组件库中无实现文件时才跳过
+    // 例：Vue2 跳过 dialog-card-props.ts；Vue3 有 dialog-card.tsx 则生成；Icon 父组件无 props 不跳过
+    if (parentCmp && parentCmp !== cmp && vueProps[parentCmp] && !hasChildComponentImpl(localFolder, cmp)) return;
     const data = [FILE_RIGHTS_DESC, vueProps[cmp]].join('\n\n');
     fs.mkdirSync(folder, { recursive: true });
     fs.writeFileSync(outputPath, `/* eslint-disable */\n\n${data}`);

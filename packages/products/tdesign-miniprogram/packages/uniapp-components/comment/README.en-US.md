@@ -21,6 +21,7 @@ name | params | description
 -- | -- | --
 actions | `(context: { action: CommentActionItem; e: Event })` | \-
 folds | `(context: { fold: CommentFold; e: Event })` | \-
+long-press | \- | \-
 
 ### Comment Slots
 
