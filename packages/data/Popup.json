@@ -220,7 +220,9 @@
     "id": 1794841867,
     "platform_framework": [
       "Vue(Mobile)",
-      "React(Mobile)"
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
     ],
     "component": "Popup",
     "field_category": "Props",
@@ -229,8 +231,8 @@
       "String",
       "Number"
     ],
-    "field_desc_zh": "顶部和底部弹出层的最大宽度，设置后水平居中。数字单位为 px，支持 CSS 长度字符串。不设置时保持原有布局",
-    "field_desc_en": "Maximum width of top and bottom popups. When set, the popup is horizontally centered. Numbers are interpreted as pixels; CSS length strings are supported. The existing layout is preserved when omitted"
+    "field_desc_zh": "弹出层最大宽度，仅顶部和底部弹出场景有效。",
+    "field_desc_en": "Maximum width of the popup. Only applies to top and bottom placements."
   },
   {
     "id": 131,
