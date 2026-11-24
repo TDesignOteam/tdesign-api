@@ -126,8 +126,7 @@ const MOBILE_MAP_TAG = 'mobile';
 const MINIPROGRAM_MAP_TAG = 'miniprogram';
 const CHAT_MAP_TAG = 'chat';
 
-// 只叠加通用表 + Chat 表。单元测试、代码提示、configurable、在线预览属于按单个组件取数，
-// 一直只用这两张表，不带 H5 / 小程序侧的父子覆盖
+// 只叠加通用表 + Chat 表，供单测 / 代码提示 / configurable / 在线预览使用
 export const BASE_MAP_TAGS = [COMMON_MAP_TAG, CHAT_MAP_TAG];
 
 // 各端叠加哪几张表，顺序即叠加顺序。带独立 chat 包的框架才真正叠加 Chat 表
@@ -142,8 +141,8 @@ const FRAMEWORK_MAP_TAGS = {
   UniApp: [COMMON_MAP_TAG, MINIPROGRAM_MAP_TAG, CHAT_MAP_TAG],
 };
 
-// 输出 API 文档时，哪些文件需要合并输出，数组内容为组件 / 插件名称。
-// 通用表对所有框架生效，个别端不适用时用 excludes 排除
+// 输出 API 文档时，哪些文件需要合并输出，数组内容为组件 / 插件名称
+// 通用表对所有框架生效，端差异用 includes / excludes 收窄
 export const COMPONENT_API_MD_MAP = {
   Avatar: ['Avatar', 'AvatarGroup'],
   Checkbox: ['Checkbox', 'CheckboxGroup'],
@@ -163,8 +162,7 @@ export const COMPONENT_API_MD_MAP = {
     list: ['Layout', 'Header', 'Aside', 'Content', 'Footer'],
     includes: WEB_FRAMES,
   },
-  // 小程序没有 layout 目录，col / row 才是真实组件。BASE_MAP_TAGS 流程（单测 / 代码提示等）
-  // 不叠加小程序表，靠这里的 includes 才能拿到 Col
+  // 小程序没有 layout 目录，col / row 才是真实组件
   Col: {
     list: ['Col', 'Row'],
     includes: MINIPROGRAM_FRAMES,
@@ -189,7 +187,6 @@ export const COMPONENT_API_MD_MAP = {
   // 只有文档需要 TScroll，类型定义不需要
   Table: TABLE_LIST.concat('TScroll'),
   Tree: ['Tree', 'TreeNodeState', 'TreeNodeModel', 'TScroll'],
-  Breadcrumb: ['Breadcrumb', 'BreadcrumbItem'],
   Steps: ['Steps', 'StepItem'],
   Calendar: ['Calendar', 'CalendarController', 'CalendarCell'],
   Menu: ['Menu', 'HeadMenu', 'Submenu', 'MenuItem', 'MenuGroup'],
@@ -222,11 +219,14 @@ export const COMPONENT_API_MD_MAP = {
     list: ['Indexes', 'IndexesAnchor'],
   },
   Popup: ['Popup', '$Popup'],
-  // 小程序和 UniApp 的源码里没有 typography 目录（typography 只是官网 typography.md 的展示页，
-  // 与 paragraph.md 内容完全相同），paragraph 才是真实组件，text / title 属于 paragraph
+  // 小程序没有 typography 目录，paragraph 才是真实组件，text / title 属于 paragraph
   Typography: {
     list: ['Typography', 'Text', 'Title', 'Paragraph', 'TypographyEllipsis', 'TypographyCopyable'],
     excludes: MINIPROGRAM_FRAMES,
+  },
+  Paragraph: {
+    list: ['Paragraph', 'Text', 'Title'],
+    includes: MINIPROGRAM_FRAMES,
   },
   Toast: {
     list: ['Toast', 'ToastOptions'],
@@ -266,40 +266,23 @@ export const CHAT_COMPONENT_MAP = {
   ChatRecord: ['ChatRecord'],
 };
 
-// H5 特殊组件：只叠加给 Vue(Mobile) / React(Mobile)，同名项会覆盖通用表，因此不需要 excludes
+// H5 特殊组件，同名项会覆盖通用表
 export const MOBILE_COMPONENT_API_MD_MAP = {
-  DropdownMenu: {
-    list: ['DropdownMenu', 'DropdownItem'],
-  },
-  Layout: {
-    list: ['Layout', 'Row', 'Col'],
-  },
+  DropdownMenu: ['DropdownMenu', 'DropdownItem'],
+  Layout: ['Layout', 'Row', 'Col'],
   // 与通用表的 Grid 拼接：Web 端用 Row / Col，H5 端用 GridItem
-  Grid: {
-    list: ['Grid', 'GridItem'],
-  },
+  Grid: ['Grid', 'GridItem'],
   // H5 的 List 没有 ListItem / ListItemMeta
   List: ['List'],
 };
 
-// 小程序特殊组件（文档侧）。本表只叠加给 Miniprogram / UniApp，因此不需要再写 includes
+// 小程序特殊组件，只叠加给 Miniprogram / UniApp，不需要写 includes
 export const MINIPROGRAM_COMPONENT_API_MD_MAP = {
   // 小程序的 Swiper 用 SwiperNav，没有 SwiperItem / SwiperNavigation
-  Swiper: {
-    list: ['Swiper', 'SwiperNav'],
-  },
-  // 小程序没有 typography 目录（typography 只是官网 typography.md 的展示页，与 paragraph.md 内容相同），
-  // paragraph 才是真实组件，text / title 属于 paragraph
-  Paragraph: {
-    list: ['Paragraph', 'Text', 'Title'],
-  },
+  Swiper: ['Swiper', 'SwiperNav'],
   // 小程序是 Grid + GridItem
-  Grid: {
-    list: ['Grid', 'GridItem'],
-  },
-  DropdownMenu: {
-    list: ['DropdownMenu', 'DropdownItem'],
-  },
+  Grid: ['Grid', 'GridItem'],
+  DropdownMenu: ['DropdownMenu', 'DropdownItem'],
   // 小程序的 List 没有 ListItem / ListItemMeta
   List: ['List'],
 };
@@ -582,7 +565,8 @@ export function isMergeConfigApplied(config, framework) {
 export function normalizeMergeConfigs(item, parentComponent) {
   if (item instanceof Array) {
     if (item.every((v) => typeof v === 'string')) return [{ list: item }];
-    return item.filter((v) => v && typeof v === 'object').map((config) => ({ ...config }));
+    // 多套配置：逐项归一化，兼容混写的 ['A', { list: ['B'] }]
+    return item.flatMap((config) => normalizeMergeConfigs(config, parentComponent));
   }
   if (item && typeof item === 'object') return [{ ...item }];
   console.warn(`组件 ${parentComponent} 的父子关系配置结构不对，只能是 Array 或者 Object 类型`);
@@ -629,9 +613,10 @@ export function getTypesComponentMaps(framework, tags) {
 }
 
 // 合并多张配置表：
-// 对象写法沿用 Object.assign 的覆盖语义（如小程序表里的 Swiper 覆盖通用表的 Swiper）；
+// 对象写法沿用覆盖语义（如小程序表里的 Swiper 覆盖通用表的 Swiper）；
 // 数组写法表示同一父组件在不同端的多套配置（如 Grid 在 Web 用 Row/Col、在 H5 用 GridItem），
 // 需要拼接起来交给 resolveComponentMaps 逐条筛选，否则后一张表会整体覆盖前一张的配置。
+// 合并结果统一是「配置对象数组」，与 normalizeMergeConfigs 的产物同构，避免出现嵌套数组导致配置被丢弃。
 const isConfigList = (value) => Array.isArray(value) && value.some((v) => v && typeof v === 'object');
 
 export function mergeComponentMaps(...maps) {
@@ -645,10 +630,8 @@ export function mergeComponentMaps(...maps) {
         return;
       }
       if (isConfigList(existing) || isConfigList(incoming)) {
-        merged[key] = [].concat(
-          isConfigList(existing) ? existing : [existing],
-          isConfigList(incoming) ? incoming : [incoming],
-        );
+        // 两端都先归一化再拼接，简写（['A']）、对象（{ list }) 和多套配置可以任意混用
+        merged[key] = normalizeMergeConfigs(existing, key).concat(normalizeMergeConfigs(incoming, key));
         return;
       }
       merged[key] = incoming;
