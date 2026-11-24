@@ -503,23 +503,6 @@
     "field_desc_zh": "节点展开折叠时是否使用过渡动画"
   },
   {
-    "id": 524,
-    "platform_framework": [
-      "React(Mobile)"
-    ],
-    "component": "Tree",
-    "field_category": "Props",
-    "field_name": "value",
-    "field_type": [
-      "Array"
-    ],
-    "field_default_value": "[]",
-    "field_desc_zh": "选中值，组件为可选状态时有效",
-    "custom_field_type": "Array<TreeNodeValue>【type TreeNodeValue = string | number】",
-    "syntactic_sugar": "v-model",
-    "support_default_value": true
-  },
-  {
     "id": 1792401068,
     "platform_framework": [
       "Vue(PC)",

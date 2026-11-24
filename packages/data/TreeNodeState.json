@@ -165,20 +165,6 @@
     "field_desc_zh": "子节点数据是否在加载中"
   },
   {
-    "id": 505,
-    "platform_framework": [
-      "React(Mobile)"
-    ],
-    "component": "TreeNodeState",
-    "field_category": "Props",
-    "field_name": "value",
-    "field_type": [
-      "String",
-      "Number"
-    ],
-    "field_desc_zh": "节点值"
-  },
-  {
     "id": 1792401069,
     "platform_framework": [
       "Vue(PC)",
