@@ -195,7 +195,11 @@ export const COMPONENT_API_MD_MAP = {
     list: ['Upload', 'UploadFile'],
     excludes: MINIPROGRAM_FRAMES,
   },
-  List: ['List', 'ListItem', 'ListItemMeta'],
+  // List + ListItem + ListItemMeta 只有 Web 端有，H5 只有 List（见 H5 表）
+  List: {
+    list: ['List', 'ListItem', 'ListItemMeta'],
+    includes: WEB_FRAMES,
+  },
   Picker: {
     list: ['Picker', 'PickerItem'],
     includes: MINIPROGRAM_FRAMES,
@@ -283,8 +287,6 @@ export const MINIPROGRAM_COMPONENT_API_MD_MAP = {
   // 小程序是 Grid + GridItem
   Grid: ['Grid', 'GridItem'],
   DropdownMenu: ['DropdownMenu', 'DropdownItem'],
-  // 小程序的 List 没有 ListItem / ListItemMeta
-  List: ['List'],
 };
 
 // 输出 TS 类型文件时，哪些文件需要合并输出，数组内容为组件 / 插件名称。
@@ -393,8 +395,10 @@ export const TYPES_COMBINE_MAP = {
     list: ['Upload', 'UploadFile'],
     excludes: MINIPROGRAM_FRAMES,
   },
+  // List + ListItem + ListItemMeta 只有 Web 端有，H5 只有 List（见 H5 类型表），小程序没有 list 组件
   List: {
     list: ['List', 'ListItem', 'ListItemMeta'],
+    includes: WEB_FRAMES,
   },
   Picker: {
     list: ['Picker', 'PickerItem'],
@@ -483,8 +487,6 @@ export const MOBILE_TYPES_COMBINE_MAP = {
 
 // 小程序类型表：Miniprogram / UniApp 专用
 export const MINIPROGRAM_TYPES_COMBINE_MAP = {
-  // 小程序的 List 没有 ListItem / ListItemMeta，覆盖掉通用表的三件套
-  List: ['List'],
   // 小程序 / UniApp 的 FormItem 是独立组件，FormRule / FormErrorMessage 不是独立组件，
   // 跟 Form 合并后不单独输出（FormItem 的独立输出在 types/index.js 里单独处理）
   Form: {
