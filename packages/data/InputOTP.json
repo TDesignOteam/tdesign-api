@@ -1,0 +1,331 @@
+[
+  {
+    "id": 1795507020,
+    "platform_framework": [
+      "Miniprogram",
+      "React(Mobile)",
+      "React(PC)",
+      "UniApp",
+      "Vue(Mobile)",
+      "Vue(PC)"
+    ],
+    "component": "InputOTP",
+    "field_category": "Props",
+    "field_name": "autofocus",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否自动聚焦",
+    "field_desc_en": "Whether to auto focus the first input cell"
+  },
+  {
+    "id": 1795507021,
+    "platform_framework": [
+      "Miniprogram",
+      "React(Mobile)",
+      "React(PC)",
+      "UniApp",
+      "Vue(Mobile)",
+      "Vue(PC)"
+    ],
+    "component": "InputOTP",
+    "field_category": "Props",
+    "field_name": "disabled",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否禁用",
+    "field_desc_en": "Whether to disable all input cells"
+  },
+  {
+    "id": 1795507022,
+    "platform_framework": [
+      "Miniprogram",
+      "React(Mobile)",
+      "UniApp",
+      "Vue(Mobile)"
+    ],
+    "component": "InputOTP",
+    "field_category": "Props",
+    "field_name": "inputMode",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "numeric",
+    "field_enum": [
+      "numeric",
+      "text",
+      "decimal",
+      "tel",
+      "search",
+      "email",
+      "url"
+    ],
+    "field_desc_zh": "对应原生 `inputMode`，控制移动端弹出的键盘类型",
+    "field_desc_en": "Corresponds to the native `inputMode`, controlling the keyboard type popped up on mobile devices"
+  },
+  {
+    "id": 1795507023,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "InputOTP",
+    "field_category": "Props",
+    "field_name": "length",
+    "field_type": [
+      "Number"
+    ],
+    "field_default_value": "6",
+    "field_desc_zh": "验证码总位数，即输入格数量",
+    "field_desc_en": "Total number of digits of the verification code, i.e., the number of input cells"
+  },
+  {
+    "id": 1795507024,
+    "platform_framework": [
+      "Miniprogram",
+      "React(Mobile)",
+      "React(PC)",
+      "UniApp",
+      "Vue(Mobile)",
+      "Vue(PC)"
+    ],
+    "component": "InputOTP",
+    "field_category": "Props",
+    "field_name": "mask",
+    "field_type": [
+      "Boolean",
+      "String"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否遮掩显示真实字符，不会修改原始值",
+    "field_desc_en": "Whether to mask the real characters on display; the original value is not modified",
+    "custom_field_type": "boolean | string"
+  },
+  {
+    "id": 1795507025,
+    "platform_framework": [
+      "Miniprogram",
+      "React(Mobile)",
+      "React(PC)",
+      "UniApp",
+      "Vue(Mobile)",
+      "Vue(PC)"
+    ],
+    "component": "InputOTP",
+    "field_category": "Props",
+    "field_name": "name",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "元素的 name 属性，通常用于表单提交",
+    "field_desc_en": "The name attribute for the element, typically used in form submissions"
+  },
+  {
+    "id": 1795507026,
+    "platform_framework": [
+      "Miniprogram",
+      "React(Mobile)",
+      "React(PC)",
+      "UniApp",
+      "Vue(Mobile)",
+      "Vue(PC)"
+    ],
+    "component": "InputOTP",
+    "field_category": "Props",
+    "field_name": "pattern",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "输入校验正则",
+    "field_desc_en": "Validation pattern for the input",
+    "custom_field_type": "string | RegExp"
+  },
+  {
+    "id": 1795507027,
+    "platform_framework": [
+      "Miniprogram",
+      "React(Mobile)",
+      "React(PC)",
+      "UniApp",
+      "Vue(Mobile)",
+      "Vue(PC)"
+    ],
+    "component": "InputOTP",
+    "field_category": "Props",
+    "field_name": "placeholder",
+    "field_type": [
+      "String",
+      "Array"
+    ],
+    "field_desc_zh": "输入格的占位符，可传入数组为每个格子单独设置",
+    "field_desc_en": "Placeholder of the input cell; pass an array to set each cell individually",
+    "custom_field_type": "string | string[]"
+  },
+  {
+    "id": 1795507028,
+    "platform_framework": [
+      "Miniprogram",
+      "React(Mobile)",
+      "React(PC)",
+      "UniApp",
+      "Vue(Mobile)",
+      "Vue(PC)"
+    ],
+    "component": "InputOTP",
+    "field_category": "Props",
+    "field_name": "readonly",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "是否只读",
+    "field_desc_en": "Whether it is read-only"
+  },
+  {
+    "id": 1795507029,
+    "platform_framework": [
+      "React(Mobile)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "Vue(PC)"
+    ],
+    "component": "InputOTP",
+    "field_category": "Props",
+    "field_name": "separator",
+    "field_type": [
+      "TNode"
+    ],
+    "field_desc_zh": "分隔符，在指定索引的输入框后渲染分隔符",
+    "field_desc_en": "Separator, rendered after the input cell at the specified index",
+    "custom_field_type": "TNode | ((index: number) => TNode)"
+  },
+  {
+    "id": 1795508982,
+    "platform_framework": [
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "InputOTP",
+    "field_category": "Props",
+    "field_name": "separator",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "分隔符",
+    "field_desc_en": "Separator"
+  },
+  {
+    "id": 1795507030,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "InputOTP",
+    "field_category": "Props",
+    "field_name": "size",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "medium",
+    "field_enum": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "field_desc_zh": "尺寸",
+    "field_desc_en": "Size",
+    "custom_field_type": "SizeEnum"
+  },
+  {
+    "id": 1795507031,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)",
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "InputOTP",
+    "field_category": "Props",
+    "field_name": "status",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "default",
+    "field_enum": [
+      "default",
+      "error"
+    ],
+    "field_desc_zh": "校验状态",
+    "field_desc_en": "Validation status"
+  },
+  {
+    "id": 1795507032,
+    "platform_framework": [
+      "Miniprogram",
+      "React(Mobile)",
+      "React(PC)",
+      "UniApp",
+      "Vue(Mobile)",
+      "Vue(PC)"
+    ],
+    "component": "InputOTP",
+    "field_category": "Props",
+    "field_name": "value",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "验证码的值",
+    "field_desc_en": "The value of the verification code",
+    "syntactic_sugar": "v-model",
+    "support_default_value": true
+  },
+  {
+    "id": 1795507033,
+    "platform_framework": [
+      "Miniprogram",
+      "React(Mobile)",
+      "React(PC)",
+      "UniApp",
+      "Vue(Mobile)",
+      "Vue(PC)"
+    ],
+    "component": "InputOTP",
+    "field_category": "Events",
+    "field_name": "change",
+    "field_type": [],
+    "field_desc_zh": "在输入、粘贴、剪切、删除时均会触发，返回变化后的新值",
+    "field_desc_en": "Triggered on typing, pasting, cutting, and deleting; returns the new value after the change",
+    "event_input": "(value: string)"
+  },
+  {
+    "id": 1795507034,
+    "platform_framework": [
+      "Miniprogram",
+      "React(Mobile)",
+      "React(PC)",
+      "UniApp",
+      "Vue(Mobile)",
+      "Vue(PC)"
+    ],
+    "component": "InputOTP",
+    "field_category": "Events",
+    "field_name": "complete",
+    "field_type": [],
+    "field_desc_zh": "当输入框内容全部填充时触发回调",
+    "field_desc_en": "Triggered when all input cells are filled",
+    "event_input": "(value: string)"
+  }
+]
