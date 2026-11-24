@@ -258,13 +258,8 @@ function getParentTargets() {
     map.data.components.map((item) => item.value),
     cmpMap,
   );
-  // 该框架有、但组件库中并未实现的组件，需要单独排除
+  // 该框架有、但组件库中并未实现的组件，由数据里的 platform_framework 标记决定，不在这里写死
   const excluded = [];
-  // VueNext(PC) 复用 Vue(PC) 的 API 数据，但个别组件在 Vue 侧有、VueNext 侧并未实现
-  // Search：tdesign-vue 有 src/search，tdesign-vue-next 没有该组件
-  if (framework === 'VueNext(PC)') excluded.push('Search');
-  // tdesign-mobile-react 没有 Tree / DateTimeRangePicker，数据里只是误挂了 React(Mobile) 标记
-  if (framework === 'React(Mobile)') excluded.push('Tree', 'DateTimeRangePicker');
   // Chat 系列只属于独立的 AI Chat 组件库（@tdesign-vue-next/chat、@tdesign-react/chat）
   // Vue(PC) 没有 chat 独立包，数据里的 Vue(PC) 只是共用标记，不能在 tdesign-vue/src 下建目录
   if (!CHAT_FRAMEWORKS.includes(framework)) {
