@@ -102,7 +102,6 @@ declare module '@vue/runtime-core' {
     TRate: (typeof import('tdesign-vue'))['Rate'];
     TRow: (typeof import('tdesign-vue'))['Row'];
     TScrollbar: (typeof import('tdesign-vue'))['Scrollbar'];
-    TSearch: (typeof import('tdesign-vue'))['Search'];
     TSelect: (typeof import('tdesign-vue'))['Select'];
     TSelectInput: (typeof import('tdesign-vue'))['SelectInput'];
     TSkeleton: (typeof import('tdesign-vue'))['Skeleton'];

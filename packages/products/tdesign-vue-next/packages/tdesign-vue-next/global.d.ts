@@ -94,7 +94,6 @@ declare module 'vue' {
     TRate: (typeof import('tdesign-vue-next'))['Rate'];
     TRow: (typeof import('tdesign-vue-next'))['Row'];
     TScrollbar: (typeof import('tdesign-vue-next'))['Scrollbar'];
-    TSearch: (typeof import('tdesign-vue-next'))['Search'];
     TSelect: (typeof import('tdesign-vue-next'))['Select'];
     TSelectInput: (typeof import('tdesign-vue-next'))['SelectInput'];
     TSkeleton: (typeof import('tdesign-vue-next'))['Skeleton'];

@@ -1925,36 +1925,6 @@
     ],
     "description": "Scrollbar\n\n滚动条\n\n[docs](https://tdesign.tencent.com/vue-next/components/scrollbar)"
   },
-  "t-search": {
-    "attributes": [
-      "autocomplete-options",
-      "autofocus",
-      "auto-width",
-      "borderless",
-      "clearable",
-      "disabled",
-      "filter",
-      "input-props",
-      "label",
-      "multiline",
-      "placeholder",
-      "popup-props",
-      "prefix-icon",
-      "readonly",
-      "select-input-props",
-      "suffix",
-      "suffix-icon",
-      "textarea-props",
-      "value",
-      "blur",
-      "change",
-      "clear",
-      "enter",
-      "focus",
-      "search"
-    ],
-    "description": "Search\n\n搜索\n\n[docs](https://tdesign.tencent.com/vue-next/components/search)"
-  },
   "t-select": {
     "attributes": [
       "autofocus",
