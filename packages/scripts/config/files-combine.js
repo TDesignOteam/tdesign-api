@@ -144,29 +144,33 @@ const FRAMEWORK_MAP_TAGS = {
 // 输出 API 文档时，哪些文件需要合并输出，数组内容为组件 / 插件名称
 // 通用表对所有框架生效，端差异用 includes / excludes 收窄
 export const COMPONENT_API_MD_MAP = {
-  Avatar: ['Avatar', 'AvatarGroup'],
-  Checkbox: ['Checkbox', 'CheckboxGroup'],
-  Cell: ['Cell', 'CellGroup'],
-  Radio: ['Radio', 'RadioGroup'],
   Anchor: ['Anchor', 'AnchorItem', 'AnchorTarget'],
-  Descriptions: ['Descriptions', 'DescriptionsItem'],
-  Tabs: ['Tabs', 'TabPanel'],
-  TabBar: ['TabBar', 'TabBarItem'],
-  Pagination: ['Pagination', 'PaginationMini'],
-  Form: ['Form', 'FormItem', 'FormList', 'FormRule', 'FormErrorMessage'],
+  Avatar: ['Avatar', 'AvatarGroup'],
   Breadcrumb: ['Breadcrumb', 'BreadcrumbItem'],
-  Message: MESSAGE_LIST,
-  Notification: NOTIFICATION_LIST,
-  // 只有 Web 端满足这组父子关系，合并输出到 layout 目录
-  Layout: {
-    list: ['Layout', 'Header', 'Aside', 'Content', 'Footer'],
-    includes: WEB_FRAMES,
-  },
+  Calendar: ['Calendar', 'CalendarController', 'CalendarCell'],
+  Cell: ['Cell', 'CellGroup'],
+  Checkbox: ['Checkbox', 'CheckboxGroup'],
   // 小程序没有 layout 目录，col / row 才是真实组件
   Col: {
     list: ['Col', 'Row'],
     includes: MINIPROGRAM_FRAMES,
   },
+  Collapse: ['Collapse', 'CollapsePanel'],
+  ColorPicker: {
+    list: ['ColorPicker', 'ColorPickerPanel'],
+    includes: WEB_FRAMES,
+  },
+  ConfigProvider: GLOBAL_CONFIG_PROVIDER,
+  DatePicker: ['DatePicker', 'DateRangePicker', 'DatePickerPanel', 'DateRangePickerPanel'],
+  DateTimePicker: ['DateTimePicker'],
+  Descriptions: ['Descriptions', 'DescriptionsItem'],
+  Dialog: ['DialogCard', 'Dialog', 'DialogOptions', 'DialogInstance', '$Dialog', '$Dialog.confirm', '$Dialog.alert'],
+  Drawer: ['Drawer', 'DrawerOptions', 'DrawerInstance', '$Drawer'],
+  Dropdown: {
+    list: ['Dropdown', 'DropdownItem', 'DropdownMenu'],
+    includes: WEB_FRAMES,
+  },
+  Form: ['Form', 'FormItem', 'FormList', 'FormRule', 'FormErrorMessage'],
   // Web 侧是 Grid + Row + Col；H5 和小程序侧是 Grid + GridItem，分别写在各自的表里
   Grid: [
     {
@@ -174,76 +178,72 @@ export const COMPONENT_API_MD_MAP = {
       includes: WEB_FRAMES,
     },
   ],
+  Guide: ['Guide', 'GuideStep'],
   Icon: ['Icon', 'IconSVG', 'IconFont'],
-  Select: ['Select', 'Option', 'OptionGroup', 'TScroll'],
-  Tag: ['Tag', 'CheckTag', 'CheckTagGroup'],
-  Collapse: ['Collapse', 'CollapsePanel'],
-  Dropdown: {
-    list: ['Dropdown', 'DropdownItem', 'DropdownMenu'],
-    includes: WEB_FRAMES,
+  Indexes: {
+    list: ['Indexes', 'IndexesAnchor'],
   },
-  Dialog: ['DialogCard', 'Dialog', 'DialogOptions', 'DialogInstance', '$Dialog', '$Dialog.confirm', '$Dialog.alert'],
-  Drawer: ['Drawer', 'DrawerOptions', 'DrawerInstance', '$Drawer'],
-  // 只有文档需要 TScroll，类型定义不需要
-  Table: TABLE_LIST.concat('TScroll'),
-  Tree: ['Tree', 'TreeNodeState', 'TreeNodeModel', 'TScroll'],
-  Steps: ['Steps', 'StepItem'],
-  Calendar: ['Calendar', 'CalendarController', 'CalendarCell'],
-  Menu: ['Menu', 'HeadMenu', 'Submenu', 'MenuItem', 'MenuGroup'],
-  Loading: ['Loading', '$Loading'],
-  Upload: {
-    list: ['Upload', 'UploadFile'],
-    excludes: MINIPROGRAM_FRAMES,
+  Input: ['Input', 'InputGroup'],
+  // 只有 Web 端满足这组父子关系，合并输出到 layout 目录
+  Layout: {
+    list: ['Layout', 'Header', 'Aside', 'Content', 'Footer'],
+    includes: WEB_FRAMES,
   },
   // List + ListItem + ListItemMeta 只有 Web 端有，H5 只有 List（见 H5 表）
   List: {
     list: ['List', 'ListItem', 'ListItemMeta'],
     includes: WEB_FRAMES,
   },
+  Loading: ['Loading', '$Loading'],
+  Menu: ['Menu', 'HeadMenu', 'Submenu', 'MenuItem', 'MenuGroup'],
+  Message: MESSAGE_LIST,
+  Notification: NOTIFICATION_LIST,
+  Pagination: ['Pagination', 'PaginationMini'],
+  Paragraph: {
+    list: ['Paragraph', 'Text', 'Title'],
+    includes: MINIPROGRAM_FRAMES,
+  },
   Picker: {
     list: ['Picker', 'PickerItem'],
     includes: MINIPROGRAM_FRAMES,
   },
-  TimePicker: ['TimePicker', 'TimeRangePicker', 'TimePickerPanel', 'TimeRangePickerPanel'],
-  DateTimePicker: ['DateTimePicker'],
-  DatePicker: ['DatePicker', 'DateRangePicker', 'DatePickerPanel', 'DateRangePickerPanel'],
+  Popup: ['Popup', '$Popup'],
+  Radio: ['Radio', 'RadioGroup'],
+  RangeInput: ['RangeInput', 'RangeInputPopup'],
+  Scrollbar: ['Scrollbar', 'ScrollbarValues'],
+  Select: ['Select', 'Option', 'OptionGroup', 'TScroll'],
+  SideBar: ['SideBar', 'SideBarItem'],
+  Split: {
+    list: ['Split', 'SplitPanel'],
+  },
+  Steps: ['Steps', 'StepItem'],
+  StickyTool: ['StickyTool', 'StickyItem'],
   Swiper: {
     list: ['Swiper', 'SwiperItem', 'SwiperNavigation'],
   },
-  StickyTool: ['StickyTool', 'StickyItem'],
-  ConfigProvider: GLOBAL_CONFIG_PROVIDER,
-  RangeInput: ['RangeInput', 'RangeInputPopup'],
-  Input: ['Input', 'InputGroup'],
-  Watermark: ['Watermark', 'WatermarkText', 'WatermarkImage'],
+  TabBar: ['TabBar', 'TabBarItem'],
+  // 只有文档需要 TScroll，类型定义不需要
+  Table: TABLE_LIST.concat('TScroll'),
+  Tabs: ['Tabs', 'TabPanel'],
+  Tag: ['Tag', 'CheckTag', 'CheckTagGroup'],
   Timeline: ['Timeline', 'TimelineItem'],
-  Guide: ['Guide', 'GuideStep'],
-  Tooltip: ['Tooltip', 'TooltipLite'],
-  SideBar: ['SideBar', 'SideBarItem'],
-  Indexes: {
-    list: ['Indexes', 'IndexesAnchor'],
+  TimePicker: ['TimePicker', 'TimeRangePicker', 'TimePickerPanel', 'TimeRangePickerPanel'],
+  Toast: {
+    list: ['Toast', 'ToastOptions'],
+    includes: H5_FRAMES,
   },
-  Popup: ['Popup', '$Popup'],
+  Tooltip: ['Tooltip', 'TooltipLite'],
+  Tree: ['Tree', 'TreeNodeState', 'TreeNodeModel', 'TScroll'],
   // 小程序没有 typography 目录，paragraph 才是真实组件，text / title 属于 paragraph
   Typography: {
     list: ['Typography', 'Text', 'Title', 'Paragraph', 'TypographyEllipsis', 'TypographyCopyable'],
     excludes: MINIPROGRAM_FRAMES,
   },
-  Paragraph: {
-    list: ['Paragraph', 'Text', 'Title'],
-    includes: MINIPROGRAM_FRAMES,
+  Upload: {
+    list: ['Upload', 'UploadFile'],
+    excludes: MINIPROGRAM_FRAMES,
   },
-  Toast: {
-    list: ['Toast', 'ToastOptions'],
-    includes: H5_FRAMES,
-  },
-  ColorPicker: {
-    list: ['ColorPicker', 'ColorPickerPanel'],
-    includes: WEB_FRAMES,
-  },
-  Split: {
-    list: ['Split', 'SplitPanel'],
-  },
-  Scrollbar: ['Scrollbar', 'ScrollbarValues'],
+  Watermark: ['Watermark', 'WatermarkText', 'WatermarkImage'],
 };
 
 // 支持 Chat 独立拆分（独立包 pro-components/chat）的框架。
