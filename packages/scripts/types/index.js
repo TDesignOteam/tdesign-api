@@ -110,9 +110,6 @@ function getPropsApiType(api, framework) {
       type = baseType.map((item) => formatOneType(api, item, framework)).join(' | ');
     }
   }
-  if (csType && csType.includes('ListFilterConfig')) {
-    console.log(exports);
-  }
   return {
     type,
     exports,
