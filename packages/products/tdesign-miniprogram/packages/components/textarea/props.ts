@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdTextareaProps } from './type';
+import type { TdTextareaProps } from './type';
 const props: TdTextareaProps = {
   /** 键盘弹起时，是否自动上推页面 */
   adjustPosition: {
@@ -56,15 +56,15 @@ const props: TdTextareaProps = {
     type: Number,
     value: 0,
   },
-  /** 是否去掉 iOS 下的默认内边距 */
-  disableDefaultPadding: {
-    type: Boolean,
-    value: false,
-  },
   /** 是否禁用文本框 */
   disabled: {
     type: null,
     value: undefined,
+  },
+  /** 是否去掉 iOS 下的默认内边距 */
+  disableDefaultPadding: {
+    type: Boolean,
+    value: false,
   },
   /** 如果 textarea 是在一个 `position:fixed` 的区域，需要显式指定属性 fixed 为 true */
   fixed: {

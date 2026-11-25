@@ -3,10 +3,7 @@
     "id": 794,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "Transfer",
     "field_category": "Props",
@@ -21,10 +18,7 @@
     "id": 773,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "Transfer",
     "field_category": "Props",
@@ -41,10 +35,7 @@
     "id": 771,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "Transfer",
     "field_category": "Props",
@@ -60,10 +51,7 @@
     "id": 778,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "Transfer",
     "field_category": "Props",
@@ -83,10 +71,7 @@
     "id": 775,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "Transfer",
     "field_category": "Props",
@@ -102,10 +87,7 @@
     "id": 783,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "Transfer",
     "field_category": "Props",
@@ -123,10 +105,7 @@
     "id": 782,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "Transfer",
     "field_category": "Props",
@@ -158,10 +137,7 @@
     "id": 779,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "Transfer",
     "field_category": "Props",
@@ -177,10 +153,7 @@
     "id": 780,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "Transfer",
     "field_category": "Props",
@@ -196,10 +169,7 @@
     "id": 776,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "Transfer",
     "field_category": "Props",
@@ -217,10 +187,7 @@
     "id": 781,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "Transfer",
     "field_category": "Props",
@@ -253,10 +220,7 @@
     "id": 785,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "Transfer",
     "field_category": "Props",
@@ -276,10 +240,7 @@
     "id": 777,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "Transfer",
     "field_category": "Props",
@@ -296,10 +257,7 @@
     "id": 786,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "Transfer",
     "field_category": "Props",
@@ -329,10 +287,7 @@
     "id": 772,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "Transfer",
     "field_category": "Props",
@@ -350,10 +305,7 @@
     "id": 788,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "Transfer",
     "field_category": "Events",
@@ -368,10 +320,7 @@
     "id": 789,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "Transfer",
     "field_category": "Events",
@@ -386,10 +335,7 @@
     "id": 1112,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "Transfer",
     "field_category": "Events",
@@ -402,10 +348,7 @@
     "id": 790,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "Transfer",
     "field_category": "Events",
@@ -420,10 +363,7 @@
     "id": 791,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "Transfer",
     "field_category": "Events",

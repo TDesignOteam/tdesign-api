@@ -1,3 +1,5 @@
+import { resolveComponentMaps } from '../config/files-combine.js';
+
 function parseJSON(json, error = '') {
   if (!json || json.indexOf('preSkip') !== -1) return {};
   try {
@@ -21,7 +23,17 @@ function getSkipCode(skip) {
 }
 
 function groupByComponent(allApi, framework) {
-  const categoryOrder = ['Props', 'Events', 'Functions', 'Extends', 'Return', '<T>', 'External Classes', 'CSS Variables', 'Slots'];
+  const categoryOrder = [
+    'Props',
+    'Events',
+    'Functions',
+    'Extends',
+    'Return',
+    '<T>',
+    'External Classes',
+    'CSS Variables',
+    'Slots',
+  ];
   const result = {};
   allApi.forEach((api) => {
     if (framework && !api.platform_framework.includes(framework)) return;
@@ -48,29 +60,9 @@ function groupByComponent(allApi, framework) {
 }
 
 // 根据框架获取 API 文档输出路径关系（不同的框架，父子组件关系不一样）
+// 配置的筛选规则（includes / excludes）统一由 config/files-combine.js 的 resolveComponentMaps 实现
 function getApiComponentMapByFrameWork(map, framework) {
-  const rMap = {};
-  Object.keys(map).forEach((parentComponent) => {
-    if (!parentComponent) return;
-    const item = map[parentComponent];
-    if (item instanceof Array) {
-      rMap[parentComponent] = item;
-    } else if (typeof item === 'object') {
-      // 没有 includes，并且没有 excludes，则认为适用所有框架。
-      // 存在 includes，则表示仅在 includes 里面的框架才生效
-      // 存在 excludes，则表示在 excludes 中的框架，父子关系不生效
-      if (
-        (!item.includes && !item.excludes) ||
-        (item.includes && item.includes.includes(framework)) ||
-        (item.excludes && !item.excludes.includes(framework))
-      ) {
-        rMap[parentComponent] = item.list;
-      }
-    } else {
-      console.warn('COMPONENT_API_MD_MAP 数据结构不对，只能是 Array 或者 Object 类型');
-    }
-  });
-  return rMap;
+  return resolveComponentMaps(map, framework);
 }
 
 // 根据子组件或子类型获取父组件

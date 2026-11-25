@@ -4,9 +4,9 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { ChatContentProps } from '../chat-content/index';
-import { ChatThinkingProps } from '../chat-thinking/index';
-import { FileItem } from '../attachments/index';
+import type { ChatContentProps } from '../chat-content/index';
+import type { ChatThinkingProps } from '../chat-thinking/index';
+import type { FileItem } from '../attachments/index';
 
 export interface TdChatMessageProps {
   /**

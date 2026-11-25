@@ -3,10 +3,7 @@
     "id": 511,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -21,10 +18,7 @@
     "id": 510,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -39,10 +33,7 @@
     "id": 513,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -57,10 +48,7 @@
     "id": 514,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -75,10 +63,7 @@
     "id": 516,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -94,10 +79,7 @@
     "id": 3487,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -109,31 +91,10 @@
     "field_desc_zh": "该节点是否允许被拖动，当树本身开启时，默认允许"
   },
   {
-    "id": 509,
-    "platform_framework": [
-      "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
-    ],
-    "component": "TreeNodeState",
-    "field_category": "Props",
-    "field_name": "expandMutex",
-    "field_type": [
-      "Boolean"
-    ],
-    "field_default_value": "false",
-    "field_desc_zh": "子节点是否互斥展开"
-  },
-  {
     "id": 508,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -145,13 +106,25 @@
     "field_desc_zh": "节点是否已展开"
   },
   {
+    "id": 509,
+    "platform_framework": [
+      "Vue(PC)",
+      "React(PC)"
+    ],
+    "component": "TreeNodeState",
+    "field_category": "Props",
+    "field_name": "expandMutex",
+    "field_type": [
+      "Boolean"
+    ],
+    "field_default_value": "false",
+    "field_desc_zh": "子节点是否互斥展开"
+  },
+  {
     "id": 515,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -166,10 +139,7 @@
     "id": 506,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -183,10 +153,7 @@
     "id": 518,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",
@@ -196,22 +163,6 @@
     ],
     "field_default_value": "false",
     "field_desc_zh": "子节点数据是否在加载中"
-  },
-  {
-    "id": 505,
-    "platform_framework": [
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
-    ],
-    "component": "TreeNodeState",
-    "field_category": "Props",
-    "field_name": "value",
-    "field_type": [
-      "String",
-      "Number"
-    ],
-    "field_desc_zh": "节点值"
   },
   {
     "id": 1792401069,
@@ -234,10 +185,7 @@
     "id": 517,
     "platform_framework": [
       "Vue(PC)",
-      "React(PC)",
-      "React(Mobile)",
-      "Miniprogram",
-      "UniApp"
+      "React(PC)"
     ],
     "component": "TreeNodeState",
     "field_category": "Props",

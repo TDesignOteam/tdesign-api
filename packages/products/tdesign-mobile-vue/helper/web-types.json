@@ -704,6 +704,11 @@
                 "doc-url": "https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-events"
               },
               {
+                "name": "page-change",
+                "description": "trigger on pagination changing\n\n分页发生变化时触发。参数 newDataSource 表示分页后的数据。本地数据进行分页时，newDataSource 和源数据 data 会不一样。泛型 T 指表格数据类型",
+                "doc-url": "https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-events"
+              },
+              {
                 "name": "row-click",
                 "description": "trigger on row click\n\n行点击时触发，泛型 T 指表格数据类型",
                 "doc-url": "https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-events"
@@ -2353,6 +2358,11 @@
               {
                 "name": "folds",
                 "description": "用户点击“展开回复/收起”时触发，并返回点击后的 fold 配置",
+                "doc-url": "https://tdesign.tencent.com/mobile-vue/components/comment?tab=api#comment-events"
+              },
+              {
+                "name": "long-press",
+                "description": "长按整个评论时触发",
                 "doc-url": "https://tdesign.tencent.com/mobile-vue/components/comment?tab=api#comment-events"
               }
             ]
@@ -8117,6 +8127,13 @@
               "type": "boolean"
             },
             {
+              "name": "full-swipe",
+              "description": " 是否启用滑动到底自动执行操作。",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/swipe-cell?tab=api#swipecell-props",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
               "name": "left",
               "description": "左侧滑动操作项。所有行为同 `right`",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/swipe-cell?tab=api#swipecell-props",
@@ -9454,6 +9471,12 @@
               "description": "自定义组件样式",
               "doc-url": "https://tdesign.tencent.com/mobile-vue/components/tree-select?tab=api#treeselect-props",
               "type": "string"
+            },
+            {
+              "name": "custom-value",
+              "description": "自定义选中值，优先级高于 `value`",
+              "doc-url": "https://tdesign.tencent.com/mobile-vue/components/tree-select?tab=api#treeselect-props",
+              "type": "TreeSelectValue"
             },
             {
               "name": "height",

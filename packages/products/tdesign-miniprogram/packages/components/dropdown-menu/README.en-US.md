@@ -45,15 +45,15 @@ style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
 disabled | Boolean | false | \- | N
 keep-label-active | Boolean | false | `1.18.0` | N
-keys | Object | - | Typescript: `KeysType`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+keys | Object | - | Typescript: `KeysType`. [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
 label | String | - | \- | N
 multiple | Boolean | false | \- | N
-options | Array | [] | Typescript: `Array<DropdownOption>` `interface DropdownOption { label: string; disabled?: boolean; value: DropdownValue; }`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/dropdown-item/type.ts) | N
+options | Array | [] | Typescript: `Array<DropdownOption>` `interface DropdownOption { label: string; disabled?: boolean; value: DropdownValue; }`. [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/dropdown-item/type.ts) | N
 options-columns | String / Number | 1 | \- | N
 options-layout | String | columns | `deprecated` | N
 placement | String | left | options: left/right | N
-value | String / Number / Array | undefined | Typescript: `DropdownValue ` `type DropdownValue = string \| number \| Array<DropdownValue>;`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/dropdown-item/type.ts) | N
-default-value | String / Number / Array | undefined | uncontrolled property。Typescript: `DropdownValue ` `type DropdownValue = string \| number \| Array<DropdownValue>;`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/dropdown-item/type.ts) | N
+value | String / Number / Array | undefined | Typescript: `DropdownValue ` `type DropdownValue = string \| number \| Array<DropdownValue>;`. [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/dropdown-item/type.ts) | N
+default-value | String / Number / Array | undefined | uncontrolled property. Typescript: `DropdownValue ` `type DropdownValue = string \| number \| Array<DropdownValue>;`. [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/dropdown-item/type.ts) | N
 
 ### DropdownItem Events
 

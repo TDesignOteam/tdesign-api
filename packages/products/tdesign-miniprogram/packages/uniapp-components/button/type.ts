@@ -27,7 +27,7 @@ export interface TdButtonProps {
   /**
    * 禁用状态。优先级：Button.disabled > Form.disabled
    */
-  disabled?: boolean;
+  disabled?: boolean | null;
   /**
    * 是否为幽灵按钮（镂空按钮）
    * @default false
@@ -123,15 +123,15 @@ export interface TdButtonProps {
    */
   size?: 'extra-small' | 'small' | 'medium' | 'large';
   /**
-   * 按钮标签id
-   * @default ''
-   */
-  tId?: string;
-  /**
    * 组件风格，依次为品牌色、危险色
    * @default default
    */
   theme?: 'default' | 'primary' | 'danger' | 'light';
+  /**
+   * 按钮标签id
+   * @default ''
+   */
+  tId?: string;
   /**
    * 同小程序的 formType
    */

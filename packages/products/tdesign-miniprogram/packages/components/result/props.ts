@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdResultProps } from './type';
+import type { TdResultProps } from './type';
 const props: TdResultProps = {
   /** 描述文字 */
   description: {

@@ -27,7 +27,7 @@ default-visible | Boolean | undefined | 显示与隐藏。非受控属性 | N
 -- | -- | --
 cancel | \- | 点击取消按钮时触发
 close | `(trigger: ActionSheetTriggerSource)` | 关闭时触发。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/action-sheet/type.ts)。<br/>`type ActionSheetTriggerSource = 'overlay' \| 'command' \| 'select' `<br/>
-selected | `(detail: {  selected: ActionSheetItem \| string, index: number })` | 选择菜单项时触发
+selected | `(detail: { selected: ActionSheetItem \| string, index: number })` | 选择菜单项时触发
 
 ### ActionSheet Slots
 

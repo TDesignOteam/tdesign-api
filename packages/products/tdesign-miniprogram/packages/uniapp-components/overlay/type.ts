@@ -31,12 +31,11 @@ export interface TdOverlayProps {
    */
   visible?: boolean;
   /**
-   * 遮罩层级
-   * @default 11000
+   * 遮罩层级，默认为 11000
    */
   zIndex?: number;
   /**
    * 点击遮罩时触发
    */
-  onClick?: ({ visible: boolean }) => void;
+  onClick?: (context: { visible: boolean }) => void;
 }

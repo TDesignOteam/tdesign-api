@@ -7,15 +7,15 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 custom-style | Object | - | CSS(Cascading Style Sheets) | N
-disable-input | Boolean | false | \- | N
 disabled | Boolean | undefined | \- | N
+disable-input | Boolean | false | \- | N
 input-width | Number | - | \- | N
 integer | Boolean | true | \- | N
 max | Number | 100 | \- | N
 min | Number | 0 | \- | N
-size | String | medium | options: small/medium/large。Typescript: `SizeEnum`。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/common/common.ts) | N
+size | String | medium | options: small/medium/large. Typescript: `SizeEnum`. [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/common/common.ts) | N
 step | Number | 1 | \- | N
-theme | String | normal | stylish。options: normal/filled/outline | N
+theme | String | normal | stylish. options: normal/filled/outline | N
 value | String / Number | 0 | `v-model:value` is supported | N
 default-value | String / Number | 0 | uncontrolled property | N
 
@@ -23,10 +23,10 @@ default-value | String / Number | 0 | uncontrolled property | N
 
 name | params | description
 -- | -- | --
-blur | `({ type: string \| number })` | `v-model:blur` is supported
-change | `({ value: string \| number })` | `v-model:change` is supported
-focus | `({ value: string \| number }))` | \-
-overlimit | `({type: 'minus' \| 'plus'})` | \-
+blur | `(detail: { type: string \| number })` | `v-model:blur` is supported
+change | `(detail: { value: string \| number })` | `v-model:change` is supported
+focus | `(detail: { value: string \| number })` | \-
+overlimit | `(detail: { type: 'minus' \| 'plus' })` | \-
 
 ### Stepper External Classes
 

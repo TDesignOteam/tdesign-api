@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
+import type { TNode } from '../common';
 
 export interface TdBreadcrumbProps {
   /**
@@ -20,13 +20,13 @@ export interface TdBreadcrumbProps {
    */
   itemsBeforeCollapse?: number;
   /**
-   * 单项最大宽度，超出后会以省略号形式呈现
-   */
-  maxItemWidth?: string;
-  /**
    * 显示的面包屑的最大数量，超出该值后中间的面包屑内容将会显示为省略号。值`<= 0`代表不限制
    */
   maxItems?: number;
+  /**
+   * 单项最大宽度，超出后会以省略号形式呈现
+   */
+  maxItemWidth?: string;
   /**
    * 面包屑项，功能同 BreadcrumbItem
    */

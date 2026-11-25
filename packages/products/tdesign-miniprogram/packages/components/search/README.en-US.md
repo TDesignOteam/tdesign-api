@@ -12,8 +12,8 @@ action | String | '' | \- | N
 adjust-position | Boolean | true | \- | N
 always-embed | Boolean | false | \- | N
 center | Boolean | false | \- | N
-clear-trigger | String | always | show clear icon, clicked to clear input value。options: always / focus | N
 clearable | Boolean | true | \- | N
+clear-trigger | String | always | show clear icon, clicked to clear input value. options: always / focus | N
 confirm-hold | Boolean | false | \- | N
 confirm-type | String | search | options: send/search/next/go/done | N
 cursor | Number | -1 | required | Y
@@ -41,12 +41,12 @@ value | String | '' | \- | N
 
 name | params | description
 -- | -- | --
-action-click | `({})` | \-
-blur | `({ value: string })` | \-
-change | `({ value: string, trigger: 'input-change' \| 'option-click' \| 'clear' })` | \-
-clear | `({ value: string })` | \-
-focus | `({ value: string })` | \-
-submit | `({ value: string })` | \-
+action-click | \- | \-
+blur | `(detail: { value: string })` | \-
+change | `(detail: { value: string; trigger: 'input-change' \| 'option-click' \| 'clear' })` | \-
+clear | `(detail: { value: string })` | \-
+focus | `(detail: { value: string })` | \-
+submit | `(detail: { value: string })` | \-
 
 ### Search Slots
 

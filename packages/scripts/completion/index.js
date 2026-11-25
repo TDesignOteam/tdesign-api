@@ -15,21 +15,9 @@ import path from 'path';
 import chalk from 'chalk';
 import { uniq } from 'lodash-es';
 import prettier from 'prettier';
-import {
-  FRAMEWORK_MAP,
-  COMPONENT_API_MD_MAP,
-  MOBILE_FRAMES,
-  getChatComponentMap,
-  getChatConfig,
-} from '../config/index.js';
+import { BASE_MAP_TAGS, FRAMEWORK_MAP, MOBILE_FRAMES, getChatConfig, getDocsComponentMaps } from '../config/index.js';
 import prettierConfig from '../config/prettier.js';
-import {
-  groupByComponent,
-  formatArrayToMap,
-  isComponent,
-  componentsMap,
-  getApiComponentMapByFrameWork,
-} from '../core/context.js';
+import { groupByComponent, formatArrayToMap, isComponent, componentsMap } from '../core/context.js';
 import apiJson from '../core/data.js';
 import { kebabCaseComponent, isChatComponentPath, scriptArgs } from '../core/utils.js';
 import map from '../map.json' with { type: 'json' };
@@ -133,10 +121,8 @@ async function generateCompletion(baseData, framework) {
 
 function getHelperData(baseData, framework) {
   const current = FRAMEWORK_MAP[framework];
-  const cmpMap = getApiComponentMapByFrameWork(
-    Object.assign({}, COMPONENT_API_MD_MAP, getChatComponentMap(framework)),
-    framework,
-  );
+  // 代码提示只按通用表 + Chat 表取父子关系，不叠加 H5 / 小程序侧配置
+  const cmpMap = getDocsComponentMaps(framework, BASE_MAP_TAGS);
   const tags = {};
   const attributes = {};
   const vueComponents = [];
@@ -146,7 +132,7 @@ function getHelperData(baseData, framework) {
     if (!isComponent(key)) {
       continue;
     }
-    // 移动端框架不导出 PrimaryTable 组件，跳过相关内容生成
+    // 移动端不导出 PrimaryTable，跳过相关内容生成
     if (MOBILE_FRAMES.includes(framework) && key === 'PrimaryTable') {
       continue;
     }

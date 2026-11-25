@@ -20,7 +20,7 @@ time | Number | 0 | required | Y
 
 name | params | description
 -- | -- | --
-change | `(time: TimeData)` | [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/count-down/type.ts)。<br/>`interface TimeData {  days: number; hours: number; minutes: number; seconds: number; milliseconds: number }`<br/>
+change | `(time: TimeData)` | [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/count-down/type.ts). <br/>`interface TimeData { days: number; hours: number; minutes: number; seconds: number; milliseconds: number }`<br/>
 finish | \- | \-
 
 ### CountDown Slots

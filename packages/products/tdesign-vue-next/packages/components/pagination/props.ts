@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdPaginationProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdPaginationProps } from './type';
 export default {
   /** 当前页 */
   current: {
@@ -107,7 +106,7 @@ export default {
   /** 用于自定义总条数呈现内容。默认显示总条数，值为 false 则不显示 */
   totalContent: {
     type: [Boolean, Function] as PropType<TdPaginationProps['totalContent']>,
-    default: true,
+    default: true as TdPaginationProps['totalContent'],
   },
   /** 当前页或分页大小发生变化时触发 */
   onChange: Function as PropType<TdPaginationProps['onChange']>,

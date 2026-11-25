@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdAffixProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdAffixProps } from './type';
 export default {
   /** 指定滚动的容器。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body */
   container: {
@@ -21,12 +20,12 @@ export default {
   default: {
     type: [String, Function] as PropType<TdAffixProps['default']>,
   },
-  /**  距离容器顶部达到指定距离后触发固定 */
+  /**  距离容器底部达到指定距离后触发固定 */
   offsetBottom: {
     type: Number,
     default: 0,
   },
-  /**  距离容器底部达到指定距离后触发固定 */
+  /**  距离容器顶部达到指定距离后触发固定 */
   offsetTop: {
     type: Number,
     default: 0,

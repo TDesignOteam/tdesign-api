@@ -18,11 +18,6 @@ export interface TdInputProps<T = InputValue> {
    */
   allowInputOverMax?: boolean;
   /**
-   * 宽度随内容自适应
-   * @default false
-   */
-  autoWidth?: boolean;
-  /**
    * 是否开启自动填充功能，HTML5 原生属性，[点击查看详情](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete)
    */
   autocomplete?: string;
@@ -31,6 +26,11 @@ export interface TdInputProps<T = InputValue> {
    * @default false
    */
   autofocus?: boolean;
+  /**
+   * 宽度随内容自适应
+   * @default false
+   */
+  autoWidth?: boolean;
   /**
    * 是否开启无边框模式
    * @default false

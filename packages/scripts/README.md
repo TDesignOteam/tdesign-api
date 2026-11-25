@@ -85,10 +85,26 @@ pnpm api:docs -- ALL 'UniApp' onlyDocs
 
 ## 产物规则
 
-父子关系统一由 `config/files-combine.js` 决定：
+父子关系统一由 `config/files-combine.js` 决定。该文件把各端关系拆成四张表，按框架叠加：
 
-- `COMPONENT_API_MD_MAP`（及 Mobile / Mini 覆盖）：文档合并到父组件目录
-- `TYPES_COMBINE_MAP`：`type.ts` 合并到父组件目录
+| 表                                 | 适用端               | 用途                                |
+| ---------------------------------- | -------------------- | ----------------------------------- |
+| `COMPONENT_API_MD_MAP`             | 所有端               | 文档合并到父组件目录（通用）        |
+| `MOBILE_COMPONENT_API_MD_MAP`      | H5 端                | 文档合并，覆盖与 Web 异构的组件     |
+| `MINIPROGRAM_COMPONENT_API_MD_MAP` | 小程序 / UniApp      | 文档合并（小程序专有）              |
+| `CHAT_COMPONENT_MAP`               | 带独立 chat 包的框架 | Chat 系列拆分到 `@tdesign-xxx/chat` |
+
+`TYPES_COMBINE_MAP` / `MOBILE_TYPES_COMBINE_MAP` / `MINIPROGRAM_TYPES_COMBINE_MAP` 与之对应，决定 `type.ts` 落哪个组件目录。
+
+H5 表只叠加给 H5，小程序表只叠加给小程序，两张表互不叠加，因此它们内部不需要 `excludes`；只有通用表需要标注哪些端不适用。
+
+各端叠加哪几张表写在 `FRAMEWORK_MAP_TAGS`，脚本侧只用这几个方法，不要再写 `if (framework === ...)`：
+
+- `getDocsComponentMaps(framework)` / `getTypesComponentMaps(framework)`：取当前框架「父组件 -> 子组件列表」
+- `getDocsCombineMap(framework)` / `getTypesCombineMap(framework)`：取当前框架已叠加、未筛选的配置表
+
+单条配置支持三种写法：`['A', 'B']`（全端生效）、`{ list, includes }` / `{ list, excludes }`（限定端）、`[{ list, includes }]`（同一父组件在不同端的多套关系）。
+
 - 仅文档需要、类型已在 `common.ts` 或父组件内联的 TS（如 `TScroll`、`ScrollbarValues`）不要再单独建目录
 
 `map.json` 里 `type: "TS"` 的是类型，`type: "plugin"` 的是插件，二者都不出 `props.ts`。未在 map 登记的名称不出独立目录。

@@ -223,7 +223,7 @@
     "field_name": "blur",
     "field_type": [],
     "field_desc_zh": "输入框失去焦点时触发",
-    "event_input": "({ type: string | number })",
+    "event_input": "(detail: { type: string | number })",
     "syntactic_sugar": "v-model"
   },
   {
@@ -254,7 +254,7 @@
     "field_name": "change",
     "field_type": [],
     "field_desc_zh": "数值发生变更时触发",
-    "event_input": "({ value: string | number })",
+    "event_input": "(detail: { value: string | number })",
     "syntactic_sugar": "v-model"
   },
   {
@@ -285,7 +285,7 @@
     "field_name": "focus",
     "field_type": [],
     "field_desc_zh": "输入框聚焦时触发",
-    "event_input": "({ value: string | number }))"
+    "event_input": "(detail: { value: string | number })"
   },
   {
     "id": 2328,
@@ -315,7 +315,7 @@
     "field_name": "overlimit",
     "field_type": [],
     "field_desc_zh": "数值超出限制时触发",
-    "event_input": "({type: 'minus' | 'plus'})"
+    "event_input": "(detail: { type: 'minus' | 'plus' })"
   },
   {
     "id": 1712043997,

@@ -4,10 +4,10 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { InputProps } from '../input';
-import { TagProps } from '../tag';
-import type { TNode, TElement, SizeEnum } from '../common';
 import type { MouseEvent, KeyboardEvent, ClipboardEvent, FocusEvent, FormEvent, CompositionEvent } from 'react';
+import type { InputProps } from '../input';
+import type { TagProps } from '../tag';
+import type { TNode, TElement, SizeEnum } from '../common';
 
 export interface TdTagInputProps {
   /**

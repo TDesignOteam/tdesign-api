@@ -3,7 +3,7 @@
  */
 
 import { pick } from 'lodash-es';
-import { COMPONENT_API_MD_MAP, getChatComponentMap } from '../config/index.js';
+import { BASE_MAP_TAGS, getDocsCombineMap } from '../config/index.js';
 import {
   groupByComponent,
   formatArrayToMap,
@@ -15,15 +15,15 @@ import { getTypesByComponent } from '../types/index.js';
 import { getPropsByComponent } from '../types/vue-props.js';
 
 /**
- * framework 参数可选值：Vue(PC)/React(PC)/Angular(PC)/Vue(Mobile)/React(Mobile)/Angular(Mobile)/Miniprogram
+ * framework 参数可选值：Vue(PC)/VueNext(PC)/React(PC)/Vue(Mobile)/React(Mobile)/Miniprogram/UniApp
  */
 
 async function getApiPreviewData(apiData, map, framework, component, isUseDefault) {
   // [ labe, value ] => { label: value }
   const frameworkMap = formatArrayToMap(map.data, 'platform_framework');
   const frameworkData = groupByComponent(apiData, frameworkMap[framework]);
-  const mergedMap = Object.assign({}, COMPONENT_API_MD_MAP, getChatComponentMap(framework));
-  const cmpMap = getApiComponentMapByFrameWork(mergedMap, framework);
+  // 预览只按通用表 + Chat 表取父子关系，与在线预览一直以来的取数范围保持一致
+  const cmpMap = getApiComponentMapByFrameWork(getDocsCombineMap(framework, BASE_MAP_TAGS), framework);
   const baseData = pick(frameworkData, resolveComponentMergeList(cmpMap, component));
   // 生成 API 类型定义
   const apiTypes = await getTypesByComponent(baseData, framework, component);

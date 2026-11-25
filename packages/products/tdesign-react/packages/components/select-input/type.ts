@@ -4,13 +4,13 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { InputProps } from '../input';
-import { PopupProps } from '../popup';
-import { TagInputProps, TagInputValue, TagInputChangeContext } from '../tag-input';
-import { TagProps } from '../tag';
-import { PopupVisibleChangeContext } from '../popup';
-import { TNode, TElement, SizeEnum } from '../common';
-import { MouseEvent, KeyboardEvent, ClipboardEvent, FocusEvent, FormEvent, CompositionEvent } from 'react';
+import type { MouseEvent, KeyboardEvent, ClipboardEvent, FocusEvent, FormEvent, CompositionEvent } from 'react';
+import type { InputProps } from '../input';
+import type { PopupProps } from '../popup';
+import type { TagInputProps, TagInputValue, TagInputChangeContext } from '../tag-input';
+import type { TagProps } from '../tag';
+import type { PopupVisibleChangeContext } from '../popup';
+import type { TNode, TElement, SizeEnum } from '../common';
 
 export interface TdSelectInputProps {
   /**
@@ -19,15 +19,15 @@ export interface TdSelectInputProps {
    */
   allowInput?: boolean;
   /**
-   * 宽度随内容自适应
-   * @default false
-   */
-  autoWidth?: boolean;
-  /**
    * 自动聚焦
    * @default false
    */
   autofocus?: boolean;
+  /**
+   * 宽度随内容自适应
+   * @default false
+   */
+  autoWidth?: boolean;
   /**
    * 无边框模式
    * @default false

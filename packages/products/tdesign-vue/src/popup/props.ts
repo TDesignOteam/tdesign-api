@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdPopupProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdPopupProps } from './type';
 export default {
   /** 指定挂载节点。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body */
   attach: {
@@ -75,7 +74,7 @@ export default {
   visible: Boolean,
   /** 是否显示浮层，非受控属性 */
   defaultVisible: Boolean,
-  /** 组件层级，Web 侧样式默认为 5500，移动端和小程序样式默认为 1500 */
+  /** 组件层级，Web 侧样式默认为 5500，移动端默认为 1500，小程序端默认 11500 */
   zIndex: {
     type: Number,
   },

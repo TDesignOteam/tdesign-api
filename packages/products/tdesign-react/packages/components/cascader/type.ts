@@ -4,16 +4,16 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { CheckboxProps } from '../checkbox';
-import { InputProps } from '../input';
-import { PopupProps } from '../popup';
-import { SelectInputProps, SelectInputBlurContext } from '../select-input';
-import { TagInputProps } from '../tag-input';
-import { TagProps } from '../tag';
-import { TreeNodeModel } from '../tree';
-import { PopupVisibleChangeContext } from '../popup';
-import type { TNode, TElement, TreeOptionData, SizeEnum, TreeKeysType, TScroll } from '../common';
 import type { MouseEvent, FocusEvent } from 'react';
+import type { CheckboxProps } from '../checkbox';
+import type { InputProps } from '../input';
+import type { PopupProps } from '../popup';
+import type { SelectInputProps, SelectInputBlurContext } from '../select-input';
+import type { TagInputProps } from '../tag-input';
+import type { TagProps } from '../tag';
+import type { TreeNodeModel } from '../tree';
+import type { PopupVisibleChangeContext } from '../popup';
+import type { TNode, TElement, TreeOptionData, SizeEnum, TreeKeysType, TScroll } from '../common';
 
 export interface TdCascaderProps<CascaderOption extends TreeOptionData = TreeOptionData> {
   /**

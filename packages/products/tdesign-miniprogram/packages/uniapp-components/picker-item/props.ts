@@ -10,6 +10,11 @@ export default {
   format: {
     type: Function,
   },
+  /** PickerItem的子项高度，单位 rpx */
+  itemHeight: {
+    type: Number,
+    default: 80,
+  },
   /** 数据源 */
   options: {
     type: Array,

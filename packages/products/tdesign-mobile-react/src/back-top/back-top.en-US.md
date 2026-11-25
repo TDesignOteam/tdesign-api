@@ -10,7 +10,7 @@ className | String | - | className of component | N
 style | Object | - | CSS(Cascading Style Sheets)，Typescript: `React.CSSProperties` | N
 container | Function | - | Typescript: `() => HTMLElement` | N
 fixed | Boolean | true | \- | N
-icon | TNode | true | Typescript: `boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
+icon | TNode | true | Typescript: `boolean \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-react/blob/develop/src/common.ts) | N
 target | Function | - | Typescript: `() => HTMLElement` | N
 text | String | '' | \- | N
 theme | String | round | options: round/half-round/round-dark/half-round-dark | N

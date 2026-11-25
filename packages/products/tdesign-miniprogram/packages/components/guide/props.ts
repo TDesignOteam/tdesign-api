@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdGuideProps } from './type';
+import type { TdGuideProps } from './type';
 const props: TdGuideProps = {
   /** 透传 返回按钮 的全部属性，示例：`{ content: '返回', theme: 'default' }` */
   backButtonProps: {

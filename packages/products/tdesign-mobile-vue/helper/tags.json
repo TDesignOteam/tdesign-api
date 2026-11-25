@@ -94,6 +94,7 @@
       "table-layout",
       "vertical-align",
       "cell-click",
+      "page-change",
       "row-click",
       "scroll",
       "scroll-to-bottom"
@@ -309,7 +310,8 @@
       "folds",
       "reply",
       "actions",
-      "folds"
+      "folds",
+      "long-press"
     ],
     "description": "Comment\n\n评论\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/comment)"
   },
@@ -1137,6 +1139,7 @@
       "content",
       "default",
       "disabled",
+      "full-swipe",
       "left",
       "opened",
       "right",
@@ -1322,6 +1325,7 @@
   "t-tree-select": {
     "attributes": [
       "custom-style",
+      "custom-value",
       "height",
       "keys",
       "multiple",

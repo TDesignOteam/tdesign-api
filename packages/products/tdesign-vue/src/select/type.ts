@@ -4,26 +4,26 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { InputProps } from '../input';
-import { PopupProps } from '../popup';
-import { SelectInputProps } from '../select-input';
-import { TagInputProps } from '../tag-input';
-import { TagProps } from '../tag';
-import { SelectInputValueChangeContext } from '../select-input';
-import { PopupVisibleChangeContext } from '../popup';
-import { PlainObject, TNode, SizeEnum, TScroll } from '../common';
+import type { InputProps } from '../input';
+import type { PopupProps } from '../popup';
+import type { SelectInputProps } from '../select-input';
+import type { TagInputProps } from '../tag-input';
+import type { TagProps } from '../tag';
+import type { SelectInputValueChangeContext } from '../select-input';
+import type { PopupVisibleChangeContext } from '../popup';
+import type { PlainObject, TNode, SizeEnum, TScroll } from '../common';
 
 export interface TdSelectProps<T extends SelectOption = SelectOption> {
-  /**
-   * 宽度随内容自适应
-   * @default false
-   */
-  autoWidth?: boolean;
   /**
    * 自动聚焦
    * @default false
    */
   autofocus?: boolean;
+  /**
+   * 宽度随内容自适应
+   * @default false
+   */
+  autoWidth?: boolean;
   /**
    * 无边框模式
    * @default false
@@ -316,12 +316,7 @@ export interface SelectKeysType {
 }
 
 export type SelectValue<T extends SelectOption = SelectOption> =
-  | string
-  | number
-  | bigint
-  | boolean
-  | T
-  | Array<SelectValue<T>>;
+  string | number | bigint | boolean | T | Array<SelectValue<T>>;
 
 export type SelectValueChangeTrigger = 'clear' | 'tag-remove' | 'backspace' | 'check' | 'uncheck' | 'default';
 

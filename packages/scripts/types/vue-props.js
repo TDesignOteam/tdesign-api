@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import chalk from 'chalk';
 import { FILE_RIGHTS_DESC, BASE_PATH_URL, BASE_PATH_URL_LOCAL } from '../config/const.js';
-import { FRAMEWORK_MAP, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, getChatComponentMap } from '../config/index.js';
+import { FRAMEWORK_MAP, getTypesCombineMap } from '../config/index.js';
 import {
   getTdCmpName,
   getEventName,
@@ -13,8 +13,6 @@ import {
   getDefaultValueName,
   getCmpTypeCombineMap,
 } from '../core/context.js';
-// 移动端 H5 父子组件的 props 需要合并输出到父组件目录；小程序和 UniApp 父子组件保持独立输出
-const MOBILE_PROPS_MERGE_FRAMES = ['Vue(Mobile)', 'React(Mobile)'];
 import { kebabCaseComponent } from '../core/utils.js';
 import { getComponentBasePath } from '../core/utils.js';
 import { formatTypeImport } from './import.js';
@@ -433,12 +431,9 @@ function generateVueProps(baseData, framework, isUseDefault) {
   if (!['Vue(PC)', 'VueNext(PC)', 'Vue(Mobile)', 'Miniprogram', 'UniApp'].includes(framework)) return;
   currentFramework = framework;
   useDefault = isUseDefault;
-  FRAMEWORK_TYPES_COMPONENT_RELATION = getCmpTypeCombineMap(
-    MOBILE_PROPS_MERGE_FRAMES.includes(framework)
-      ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, getChatComponentMap(framework))
-      : Object.assign({}, TYPES_COMBINE_MAP, getChatComponentMap(framework)),
-    framework,
-  );
+  // 父子关系决定 props 文件落在父组件目录（H5）还是子组件独立目录（小程序 / UniApp），
+  // 各框架该叠加哪几张配置表统一由 getTypesCombineMap 决定
+  FRAMEWORK_TYPES_COMPONENT_RELATION = getCmpTypeCombineMap(getTypesCombineMap(framework), framework);
   const vueProps = formatApiToProps(baseData, framework, isUseDefault);
   Object.keys(vueProps).forEach((cmp) => {
     if (!vueProps[cmp] || !componentsMap[cmp] || isPlugin(cmp) || isTypeApi(cmp)) return;

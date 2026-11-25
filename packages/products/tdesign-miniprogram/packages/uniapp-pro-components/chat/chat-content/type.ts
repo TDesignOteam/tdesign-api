@@ -5,7 +5,7 @@
  * */
 
 import type { TdChatMarkdownProps as ChatMarkdownProps } from '../chat-markdown/type';
-import type { TdMarkdownClickContext as MarkdownClickContext } from '../chat-markdown/type';
+import type { MarkdownClickContext } from '../chat-markdown/type';
 
 export interface TdChatContentProps {
   /**

@@ -4,9 +4,9 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { CheckboxProps } from '../checkbox';
-import type { TNode, TreeOptionData, TreeKeysType, TScroll, ComponentScrollToElementParams } from '../common';
 import type { MouseEvent, WheelEvent, DragEvent } from 'react';
+import type { CheckboxProps } from '../checkbox';
+import type { TNode, TreeOptionData, TreeKeysType, TScroll, ComponentScrollToElementParams } from '../common';
 
 export interface TdTreeProps<T extends TreeOptionData = TreeOptionData> {
   /**
@@ -15,11 +15,6 @@ export interface TdTreeProps<T extends TreeOptionData = TreeOptionData> {
    */
   activable?: boolean;
   /**
-   * 是否允许多个节点同时高亮
-   * @default false
-   */
-  activeMultiple?: boolean;
-  /**
    * 高亮的节点值
    */
   actived?: Array<TreeNodeValue>;
@@ -27,6 +22,11 @@ export interface TdTreeProps<T extends TreeOptionData = TreeOptionData> {
    * 高亮的节点值，非受控属性
    */
   defaultActived?: Array<TreeNodeValue>;
+  /**
+   * 是否允许多个节点同时高亮
+   * @default false
+   */
+  activeMultiple?: boolean;
   /**
    * 判断节点是否可以执行 drop 操作，泛型 `T` 表示树节点 TS 类型
    */
@@ -42,10 +42,10 @@ export interface TdTreeProps<T extends TreeOptionData = TreeOptionData> {
    */
   allowFoldNodeOnFilter?: boolean;
   /**
-   * 参与父节点全选、半选状态判定的子节点范围。all 表示所有子节点参与判断，包括禁用子节点；onlyEnabled 表示仅未禁用的子节点参与判断，没有可用子节点时，不由子节点推导出全选或半选状态。仅影响父节点状态的判定，不改变禁用子节点自身的选中状态。checkStrictly 为 true 时不生效
-   * @default all
+   * 隐藏节点复选框
+   * @default false
    */
-  checkAllAffectedBy?: 'all' | 'onlyEnabled';
+  checkable?: boolean;
   /**
    * 透传属性到 checkbox 组件。参考 checkbox 组件 API
    */
@@ -55,11 +55,6 @@ export interface TdTreeProps<T extends TreeOptionData = TreeOptionData> {
    * @default false
    */
   checkStrictly?: boolean;
-  /**
-   * 隐藏节点复选框
-   * @default false
-   */
-  checkable?: boolean;
   /**
    * 树数据，泛型 `T` 表示树节点 TS 类型
    * @default []
@@ -89,6 +84,16 @@ export interface TdTreeProps<T extends TreeOptionData = TreeOptionData> {
    */
   expandAll?: boolean;
   /**
+   * 展开的节点值
+   * @default []
+   */
+  expanded?: Array<TreeNodeValue>;
+  /**
+   * 展开的节点值，非受控属性
+   * @default []
+   */
+  defaultExpanded?: Array<TreeNodeValue>;
+  /**
    * 默认展开的级别，第一层为 0
    * @default 0
    */
@@ -108,16 +113,6 @@ export interface TdTreeProps<T extends TreeOptionData = TreeOptionData> {
    * @default false
    */
   expandParent?: boolean;
-  /**
-   * 展开的节点值
-   * @default []
-   */
-  expanded?: Array<TreeNodeValue>;
-  /**
-   * 展开的节点值，非受控属性
-   * @default []
-   */
-  defaultExpanded?: Array<TreeNodeValue>;
   /**
    * 节点过滤方法，只呈现返回值为 true 的节点，泛型 `T` 表示树节点 TS 类型
    */
@@ -356,15 +351,15 @@ export interface TreeNodeState {
    */
   draggable?: boolean;
   /**
-   * 子节点是否互斥展开
-   * @default false
-   */
-  expandMutex?: boolean;
-  /**
    * 节点是否已展开
    * @default false
    */
   expanded?: boolean;
+  /**
+   * 子节点是否互斥展开
+   * @default false
+   */
+  expandMutex?: boolean;
   /**
    * 节点是否为半选中状态
    * @default false

@@ -1,9 +1,10 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Loading Props
 
-名称 | 类型 | 默认值 | 说明 | 必传
+名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
@@ -23,8 +24,6 @@ zIndex | Number | - | 消息通知层级，样式默认为 3500 | N
 
 ### loading 或 LoadingPlugin
 
-参数名称 | 参数类型 | 参数默认值 | 参数说明
+参数名称 | 参数类型 | 参数默认值 | 参数描述
 -- | -- | -- | --
 options | Function | - | 必需。TS 类型：`boolean \| TdLoadingProps`
-
-插件返回值：`LoadingInstance【interface LoadingInstance { hide: () => void }】`

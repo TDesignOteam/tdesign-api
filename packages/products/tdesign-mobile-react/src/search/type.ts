@@ -4,8 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import type { TNode } from '../common';
 import type { MouseEvent, KeyboardEvent, FocusEvent, FormEvent } from 'react';
+import type { TNode } from '../common';
 
 export interface TdSearchProps {
   /**
@@ -23,15 +23,15 @@ export interface TdSearchProps {
    */
   center?: boolean;
   /**
-   * 清空图标触发方式，仅在输入框有值时有效
-   * @default always
-   */
-  clearTrigger?: 'always' | 'focus';
-  /**
    * 是否启用清除控件
    * @default true
    */
   clearable?: boolean;
+  /**
+   * 清空图标触发方式，仅在输入框有值时有效
+   * @default always
+   */
+  clearTrigger?: 'always' | 'focus';
   /**
    * 光标颜色
    * @default #0052d9
@@ -92,7 +92,7 @@ export interface TdSearchProps {
   /**
    * 点击右侧操作按钮文字时触发
    */
-  onActionClick?: ({}) => void;
+  onActionClick?: () => void;
   /**
    * 失去焦点时触发
    * @default ''

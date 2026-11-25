@@ -8,8 +8,8 @@
 -- | -- | -- | -- | --
 style | Object | - | 样式 | N
 custom-style | Object | - | 样式，一般用于开启虚拟化组件节点场景 | N
-disable-input | Boolean | false | 禁用输入框 | N
 disabled | Boolean | undefined | 禁用全部操作 | N
+disable-input | Boolean | false | 禁用输入框 | N
 input-width | Number | - | 输入框宽度，默认单位 `px` | N
 integer | Boolean | true | 是否整型 | N
 max | Number | 100 | 最大值 | N
@@ -24,10 +24,10 @@ default-value | String / Number | undefined | 值。非受控属性 | N
 
 名称 | 参数 | 描述
 -- | -- | --
-blur | `({ type: string \| number })` | 输入框失去焦点时触发
-change | `({ value: string \| number })` | 数值发生变更时触发
-focus | `({ value: string \| number }))` | 输入框聚焦时触发
-overlimit | `({type: 'minus' \| 'plus'})` | 数值超出限制时触发
+blur | `(detail: { type: string \| number })` | 输入框失去焦点时触发
+change | `(detail: { value: string \| number })` | 数值发生变更时触发
+focus | `(detail: { value: string \| number })` | 输入框聚焦时触发
+overlimit | `(detail: { type: 'minus' \| 'plus' })` | 数值超出限制时触发
 
 ### Stepper External Classes
 

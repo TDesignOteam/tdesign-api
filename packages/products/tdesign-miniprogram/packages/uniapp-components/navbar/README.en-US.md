@@ -8,10 +8,10 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 custom-style | Object | - | CSS(Cascading Style Sheets) | N
 animation | Boolean | true | \- | N
-background | String | - | `deprecated`。background | N
+background | String | - | `deprecated`. background | N
 delta | Number | 1 | \- | N
 fixed | Boolean | true | \- | N
-home-icon | String | - | `deprecated`。homeIcon | N
+home-icon | String | - | `deprecated`. homeIcon | N
 is-hidden-in-special-scene | Boolean | false | \- | N
 left-arrow | Boolean | false | \- | N
 left-icon | String | - | `deprecated` | N

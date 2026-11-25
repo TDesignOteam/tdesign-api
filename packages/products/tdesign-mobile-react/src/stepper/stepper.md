@@ -8,8 +8,8 @@
 -- | -- | -- | -- | --
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
-disableInput | Boolean | false | 禁用输入框 | N
 disabled | Boolean | undefined | 禁用全部操作 | N
+disableInput | Boolean | false | 禁用输入框 | N
 inputWidth | Number | - | 输入框宽度 | N
 integer | Boolean | true | 是否整型 | N
 max | Number | 100 | 最大值 | N

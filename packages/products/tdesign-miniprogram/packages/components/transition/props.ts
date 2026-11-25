@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdTransitionProps } from './type';
+import type { TdTransitionProps } from './type';
 const props: TdTransitionProps = {
   /** 首次出现是否展示动画 */
   appear: {

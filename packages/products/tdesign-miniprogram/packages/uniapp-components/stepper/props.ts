@@ -6,13 +6,13 @@
 
 import type { TdStepperProps } from './type';
 export default {
-  /** 禁用输入框 */
-  disableInput: Boolean,
   /** 禁用全部操作 */
   disabled: {
-    type: Boolean,
-    default: undefined,
+    type: [Boolean, null],
+    default: null as TdStepperProps['disabled'],
   },
+  /** 禁用输入框 */
+  disableInput: Boolean,
   /** 输入框宽度，默认单位 `px` */
   inputWidth: {
     type: Number,

@@ -7,8 +7,8 @@
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 custom-style | Object | - | 自定义样式 | N
-disable-input | Boolean | false | 禁用输入框 | N
 disabled | Boolean | undefined | 禁用全部操作 | N
+disable-input | Boolean | false | 禁用输入框 | N
 input-width | Number | - | 输入框宽度，默认单位 `px` | N
 integer | Boolean | true | 是否整型 | N
 max | Number | 100 | 最大值 | N
@@ -23,10 +23,10 @@ default-value | String / Number | 0 | 值。非受控属性 | N
 
 名称 | 参数 | 描述
 -- | -- | --
-blur | `({ type: string \| number })` | 输入框失去焦点时触发。支持语法糖 `v-model:blur`
-change | `({ value: string \| number })` | 数值发生变更时触发。支持语法糖 `v-model:change`
-focus | `({ value: string \| number }))` | 输入框聚焦时触发
-overlimit | `({type: 'minus' \| 'plus'})` | 数值超出限制时触发
+blur | `(detail: { type: string \| number })` | 输入框失去焦点时触发。支持语法糖 `v-model:blur`
+change | `(detail: { value: string \| number })` | 数值发生变更时触发。支持语法糖 `v-model:change`
+focus | `(detail: { value: string \| number })` | 输入框聚焦时触发
+overlimit | `(detail: { type: 'minus' \| 'plus' })` | 数值超出限制时触发
 
 ### Stepper External Classes
 

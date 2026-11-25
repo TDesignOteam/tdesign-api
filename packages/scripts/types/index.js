@@ -7,14 +7,7 @@ import chalk from 'chalk';
 import { upperFirst, camelCase as camelcase, uniq } from 'lodash-es';
 import prettier from 'prettier';
 import { FILE_RIGHTS_DESC, GLOBAL_TYPES, REACT_EVENTS, REACT_TYPES } from '../config/const.js';
-import {
-  FRAMEWORK_MAP,
-  TYPES_COMBINE_MAP,
-  MOBILE_TYPES_COMBINE_MAP,
-  MINIPROGRAM_TYPES_COMBINE_MAP,
-  MOBILE_FRAMES,
-  getChatComponentMap,
-} from '../config/index.js';
+import { FRAMEWORK_MAP, getTypesComponentMaps } from '../config/index.js';
 import prettierConfig from '../config/prettier.js';
 import {
   isPlugin,
@@ -95,9 +88,7 @@ function formatOneType(api, oneType) {
   const type = oneType.toLocaleLowerCase();
   let r = type;
   if (type === 'string' && api.field_enum) {
-    r = api.field_enum
-      .map((val) => `'${val.trim()}'`.replace(/''/g, "'"))
-      .join(' | ');
+    r = api.field_enum.map((val) => `'${val.trim()}'`.replace(/''/g, "'")).join(' | ');
   }
   return r;
 }
@@ -118,9 +109,6 @@ function getPropsApiType(api, framework) {
     } else {
       type = baseType.map((item) => formatOneType(api, item, framework)).join(' | ');
     }
-  }
-  if (csType && csType.includes('ListFilterConfig')) {
-    console.log(exports);
   }
   return {
     type,
@@ -658,14 +646,7 @@ function getTypeScriptDesc(componentMap, framework) {
 
 async function combineTsFile(componentMap, framework) {
   const ts = getTypeScriptDesc(componentMap, framework);
-  const rMap = getApiComponentMapByFrameWork(
-    ['Miniprogram', 'UniApp'].includes(framework)
-      ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP, getChatComponentMap(framework))
-      : MOBILE_FRAMES.includes(framework)
-        ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, getChatComponentMap(framework))
-        : Object.assign({}, TYPES_COMBINE_MAP, getChatComponentMap(framework)),
-    framework,
-  );
+  const rMap = getTypesComponentMaps(framework);
   Object.keys(rMap).forEach((cmp) => {
     let current = ts[cmp];
     const list = rMap[cmp];
@@ -693,12 +674,14 @@ async function combineTsFile(componentMap, framework) {
     });
     // 不在列表中的配置也不输出，如通用配置：InfinityScroll/TScroll 等
     // 特殊处理小程序端 Form 组件，确保 FormItem 子组件的 type.ts 单独输出
+    // FormRule / FormErrorMessage 不是独立组件，跟随 Form 合并后不单独输出
+    const MINIPROGRAM_STANDALONE_TYPES = ['FormItem'];
     Object.keys(ts).forEach((key) => {
       if (
         !list.find((item) => item === key) &&
         !['ConfigProvider'].includes(key) &&
         ['Miniprogram', 'UniApp'].includes(framework) &&
-        key !== 'FormItem'
+        !MINIPROGRAM_STANDALONE_TYPES.includes(key)
       ) {
         delete ts[key];
       }
@@ -722,9 +705,13 @@ async function combineTsFile(componentMap, framework) {
     try {
       ts[cmp] = await prettier.format(str, prettierConfig);
     } catch (e) {
-      console.log(chalk.red('格式化失败，请检查生成的文件是否存在语法错误\n'));
+      // 格式化失败说明生成的代码语法有问题，必须让调用方感知：
+      // 只打印日志会随进度输出一起被淹没，CI 拿到退出码 0 后会把非法文件直接提交
+      console.error(chalk.red(`格式化失败：${cmp}（${framework}），请检查生成的类型是否存在语法错误\n`));
       console.warn(e);
-      // 格式化失败时，使用原始字符串作为 fallback，避免输出 [object Object]
+      process.exitCode = 1;
+      // 仍用原始字符串兜底，避免后续写入 [object Object]；
+      // 但已标记退出码非 0，产物不应再被当作有效结果使用
       ts[cmp] = str;
     }
   }
@@ -748,14 +735,7 @@ async function generateTypes(baseData, framework) {
 
   // 输出 TS 类型定义文件
   const apiTypes = await combineTsFile(baseData, framework);
-  const typeCombineMap = getApiComponentMapByFrameWork(
-    ['Miniprogram', 'UniApp'].includes(framework)
-      ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP, getChatComponentMap(framework))
-      : MOBILE_FRAMES.includes(framework)
-        ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, getChatComponentMap(framework))
-        : Object.assign({}, TYPES_COMBINE_MAP, getChatComponentMap(framework)),
-    framework,
-  );
+  const typeCombineMap = getTypesComponentMaps(framework);
   for (const cmp of Object.keys(apiTypes)) {
     // 未注册名称、以及未作为合并父级的独立 TS 类型（TScroll / InfinityScroll 等）不单独建目录
     if (!COMPONENTS_MAP[cmp]) continue;

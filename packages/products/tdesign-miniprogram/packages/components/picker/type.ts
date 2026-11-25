@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { PopupProps } from '../popup/index';
+import type { PopupProps } from '../popup/index';
 import type { KeysType } from '../common/common';
 
 export interface TdPickerProps {

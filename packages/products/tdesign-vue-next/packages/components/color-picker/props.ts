@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdColorPickerProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdColorPickerProps } from './type';
 export default {
   /** 无边框模式 */
   borderless: Boolean,
@@ -48,12 +47,12 @@ export default {
   },
   /** 最近使用的颜色。值为 [] 表示以组件内部的“最近使用颜色”为准，值长度大于 0 则以该值为准显示“最近使用颜色”。值为 false 或 null 则完全不显示“最近使用颜色” */
   recentColors: {
-    type: [Boolean, Array] as PropType<TdColorPickerProps['recentColors']>,
+    type: [Boolean, Array, null] as PropType<TdColorPickerProps['recentColors']>,
     default: undefined as TdColorPickerProps['recentColors'],
   },
   /** 最近使用的颜色。值为 [] 表示以组件内部的“最近使用颜色”为准，值长度大于 0 则以该值为准显示“最近使用颜色”。值为 false 或 null 则完全不显示“最近使用颜色”，非受控属性 */
   defaultRecentColors: {
-    type: [Boolean, Array] as PropType<TdColorPickerProps['defaultRecentColors']>,
+    type: [Boolean, Array, null] as PropType<TdColorPickerProps['defaultRecentColors']>,
     default: (): TdColorPickerProps['defaultRecentColors'] => [] as TdColorPickerProps['defaultRecentColors'],
   },
   /** 透传 SelectInputProps 筛选器输入框组件全部属性 */
@@ -76,7 +75,7 @@ export default {
   },
   /** 系统预设的颜色样例，值为 `null` 或 `[]` 则不显示系统色，值为 `undefined` 会显示组件内置的系统默认色 */
   swatchColors: {
-    type: Array as PropType<TdColorPickerProps['swatchColors']>,
+    type: [Array, null] as PropType<TdColorPickerProps['swatchColors']>,
     default: undefined as TdColorPickerProps['swatchColors'],
   },
   /** 色值 */

@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { LoadingProps } from '../loading/index';
+import type { LoadingProps } from '../loading/index';
 
 export interface TdButtonProps {
   /**
@@ -220,20 +220,20 @@ export interface TdButtonProps {
     value?: 'extra-small' | 'small' | 'medium' | 'large';
   };
   /**
-   * 按钮标签id
-   * @default ''
-   */
-  tId?: {
-    type: StringConstructor;
-    value?: string;
-  };
-  /**
    * 组件风格，依次为品牌色、危险色
    * @default default
    */
   theme?: {
     type: StringConstructor;
     value?: 'default' | 'primary' | 'danger' | 'light';
+  };
+  /**
+   * 按钮标签id
+   * @default ''
+   */
+  tId?: {
+    type: StringConstructor;
+    value?: string;
   };
   /**
    * 同小程序的 formType

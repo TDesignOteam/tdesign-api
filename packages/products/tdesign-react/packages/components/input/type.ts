@@ -4,7 +4,6 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import type { TNode, TElement, SizeEnum, ClassName } from '../common';
 import type {
   MouseEvent,
   KeyboardEvent,
@@ -14,6 +13,7 @@ import type {
   FormEvent,
   CompositionEvent,
 } from 'react';
+import type { TNode, TElement, SizeEnum, ClassName } from '../common';
 
 export interface TdInputProps<T = InputValue> {
   /**
@@ -27,11 +27,6 @@ export interface TdInputProps<T = InputValue> {
    */
   allowInputOverMax?: boolean;
   /**
-   * 宽度随内容自适应
-   * @default false
-   */
-  autoWidth?: boolean;
-  /**
    * 是否开启自动填充功能，HTML5 原生属性，[点击查看详情](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete)
    */
   autocomplete?: string;
@@ -40,6 +35,11 @@ export interface TdInputProps<T = InputValue> {
    * @default false
    */
   autofocus?: boolean;
+  /**
+   * 宽度随内容自适应
+   * @default false
+   */
+  autoWidth?: boolean;
   /**
    * 是否开启无边框模式
    * @default false

@@ -61,10 +61,9 @@ export default {
   usingCustomNavbar: Boolean,
   /** 控制对话框是否显示 */
   visible: Boolean,
-  /** 对话框层级，Web 侧样式默认为 2500，移动端样式默认 2500，小程序样式默认为 11500 */
+  /** 对话框层级，Web 侧样式默认为 2500，移动端样式默认 1500，小程序样式默认为 11500 */
   zIndex: {
     type: Number,
-    default: 11500,
   },
   /** 如果“取消”按钮存在，则点击“取消”按钮时触发，同时触发关闭事件 */
   onCancel: {

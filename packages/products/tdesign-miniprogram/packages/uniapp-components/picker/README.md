@@ -48,6 +48,7 @@ header | 自定义 `header` 显示内容
 -- | -- | -- | -- | --
 custom-style | Object | - | 自定义样式 | N
 format | Function | - | 格式化标签。TS 类型：`(option: PickerItemOption, columnIndex: number) => PickerItemOption` | N
+item-height | Number | 80 | PickerItem的子项高度，单位 rpx | N
 options | Array | [] | 数据源。TS 类型：`PickerItemOption[]` `interface PickerItemOption { label: string; value: string \| number; icon?: string }`。[详细类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/picker-item/type.ts) | N
 
 ### PickerItem Slots

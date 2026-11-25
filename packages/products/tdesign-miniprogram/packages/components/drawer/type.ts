@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { OverlayProps } from '../overlay/index';
+import type { OverlayProps } from '../overlay/index';
 
 export interface TdDrawerProps {
   /**
@@ -78,8 +78,7 @@ export interface TdDrawerProps {
     value?: boolean;
   };
   /**
-   * 抽屉层级，样式默认为 11500
-   * @default 11500
+   * 抽屉层级，Web 侧样式默认为 1500，移动端样式默认 1500，小程序样式默认为 11500
    */
   zIndex?: {
     type: NumberConstructor;

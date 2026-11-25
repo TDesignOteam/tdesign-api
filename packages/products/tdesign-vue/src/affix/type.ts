@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, ScrollContainer } from '../common';
+import type { TNode, ScrollContainer } from '../common';
 
 export interface TdAffixProps {
   /**
@@ -21,12 +21,12 @@ export interface TdAffixProps {
    */
   default?: string | TNode;
   /**
-   *  距离容器顶部达到指定距离后触发固定
+   *  距离容器底部达到指定距离后触发固定
    * @default 0
    */
   offsetBottom?: number;
   /**
-   *  距离容器底部达到指定距离后触发固定
+   *  距离容器顶部达到指定距离后触发固定
    * @default 0
    */
   offsetTop?: number;

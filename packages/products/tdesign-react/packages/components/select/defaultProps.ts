@@ -2,11 +2,11 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdSelectProps, TdOptionProps, TdOptionGroupProps } from './type';
+import type { TdSelectProps, TdOptionProps, TdOptionGroupProps } from './type';
 
 export const selectDefaultProps: TdSelectProps = {
-  autoWidth: false,
   autofocus: false,
+  autoWidth: false,
   borderless: false,
   clearable: false,
   creatable: false,

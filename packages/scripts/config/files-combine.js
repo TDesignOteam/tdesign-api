@@ -1,5 +1,21 @@
 /**
  * 由于配置会被应用在 Web 环境，故而代码中不能包含 Node 环境特有的依赖和代码
+ *
+ * 本文件是各端父子组件关系的唯一数据源：
+ * - 文档（README.md / xxx.md）用 COMPONENT_API_MD_MAP 系列表
+ * - 类型（type.ts / props.ts）用 TYPES_COMBINE_MAP 系列表
+ *
+ * 各端叠加哪些表，见下方 FRAMEWORK_MAP_TAGS：
+ * - Web 端（Vue(PC) / React(PC) / VueNext(PC)）：通用表，VueNext / React 再加 Chat 表
+ * - H5 端（Vue(Mobile) / React(Mobile)）：通用表 + H5 表
+ * - 小程序 / UniApp：通用表 + 小程序表 + Chat 表
+ *
+ * 叠加顺序即优先级。后面的表遇到同名的父组件时（规则见 mergeComponentMaps）：
+ * - 任一侧是多套配置写法（数组里带配置对象，如 Grid）：追加，各条配置再分别按端筛选；
+ * - 其余写法（对象，或 ['A', 'B'] 简写）：覆盖，前面的同名配置连同它的 includes / excludes 一起被替换。
+ *   所以覆盖只应该用在只叠加给对应端的表里（H5 表、小程序表），见 FRAMEWORK_MAP_TAGS。
+ * 最终由 resolveComponentMaps 按框架用 includes / excludes 过滤。
+ * 各端差异只写在配置表里，调用方不要再写 if (framework === 'xxx') 分支。
  */
 
 export const GLOBAL_COMPONENTS_CONFIG = [
@@ -96,106 +112,155 @@ const TABLE_LIST = [
   'TableTreeConfig',
 ];
 const GLOBAL_CONFIG_PROVIDER = ['ConfigProvider', 'GlobalConfigProvider'].concat(GLOBAL_COMPONENTS_CONFIG);
-export const MOBILE_FRAMES = ['Vue(Mobile)', 'React(Mobile)', 'Miniprogram', 'UniApp'];
 
-// 输出 API 文档时，哪些需要文件需要合并输出，数据内容为组件/插件名称
-export const COMPONENT_API_MD_MAP = {
-  Avatar: ['Avatar', 'AvatarGroup'],
-  Checkbox: ['Checkbox', 'CheckboxGroup'],
-  Cell: ['Cell', 'CellGroup'],
-  Radio: ['Radio', 'RadioGroup'],
-  Anchor: ['Anchor', 'AnchorItem', 'AnchorTarget'],
-  Descriptions: ['Descriptions', 'DescriptionsItem'],
-  Tabs: ['Tabs', 'TabPanel'],
-  TabBar: ['TabBar', 'TabBarItem'],
-  Pagination: ['Pagination', 'PaginationMini'],
-  Form: ['Form', 'FormItem', 'FormList', 'FormRule', 'FormErrorMessage'],
-  Breadcrumb: ['Breadcrumb', 'BreadcrumbItem'],
-  Message: MESSAGE_LIST,
-  Notification: NOTIFICATION_LIST,
-  Layout: {
-    list: ['Layout', 'Header', 'Aside', 'Content', 'Footer'],
-    // includes 以下框架满足此组件父子关系，其他的框架则不使用此关系
-    // includes 以下框架将 'Layout', 'Header', 'Aside', 'Content', 'Footer' 等组件的 API 文档，合并输出到目录 layout
-    // 也可以使用 excludes 用于排除某些框架使用该父子组件关系
-    includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
-  },
-  Col: {
-    list: ['Col', 'Row'],
-    includes: ['Miniprogram', 'UniApp'],
-  },
-  // Web 侧是 Grid + Row + Col，移动端和小程序是 Grid + GridItem
-  Grid: [
-    {
-      list: ['Grid', 'Row', 'Col'],
-      includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
-    },
-  ],
-  Icon: ['Icon', 'IconSVG', 'IconFont'],
-  Select: ['Select', 'Option', 'OptionGroup', 'TScroll'],
-  Tag: ['Tag', 'CheckTag', 'CheckTagGroup'],
-  Collapse: ['Collapse', 'CollapsePanel'],
-  Dropdown: {
-    list: ['Dropdown', 'DropdownItem', 'DropdownMenu'],
-    includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
-  },
-  Dialog: ['DialogCard', 'Dialog', 'DialogOptions', 'DialogInstance', '$Dialog', '$Dialog.confirm', '$Dialog.alert'],
-  Drawer: ['Drawer', 'DrawerOptions', 'DrawerInstance', '$Drawer'],
-  // 只有文档需要 TScroll，类型定义不需要
-  Table: TABLE_LIST.concat('TScroll'),
-  Tree: ['Tree', 'TreeNodeState', 'TreeNodeModel', 'TScroll'],
-  Breadcrumb: ['Breadcrumb', 'BreadcrumbItem'],
-  Steps: ['Steps', 'StepItem'],
-  Calendar: ['Calendar', 'CalendarController', 'CalendarCell'],
-  Menu: ['Menu', 'HeadMenu', 'Submenu', 'MenuItem', 'MenuGroup'],
-  Loading: ['Loading', '$Loading'],
-  Upload: {
-    list: ['Upload', 'UploadFile'],
-    excludes: ['Miniprogram', 'UniApp'],
-  },
-  List: ['List', 'ListItem', 'ListItemMeta'],
-  Picker: {
-    list: ['Picker', 'PickerItem'],
-    includes: ['Miniprogram', 'UniApp'],
-  },
-  TimePicker: ['TimePicker', 'TimeRangePicker', 'TimePickerPanel', 'TimeRangePickerPanel'],
-  DateTimePicker: ['DateTimePicker'],
-  DatePicker: ['DatePicker', 'DateRangePicker', 'DatePickerPanel', 'DateRangePickerPanel'],
-  Swiper: {
-    list: ['Swiper', 'SwiperItem', 'SwiperNavigation'],
-  },
-  StickyTool: ['StickyTool', 'StickyItem'],
-  ConfigProvider: GLOBAL_CONFIG_PROVIDER,
-  RangeInput: ['RangeInput', 'RangeInputPopup'],
-  Input: ['Input', 'InputGroup'],
-  Watermark: ['Watermark', 'WatermarkText', 'WatermarkImage'],
-  Timeline: ['Timeline', 'TimelineItem'],
-  Guide: ['Guide', 'GuideStep'],
-  Tooltip: ['Tooltip', 'TooltipLite'],
-  SideBar: ['SideBar', 'SideBarItem'],
-  Indexes: {
-    list: ['Indexes', 'IndexesAnchor'],
-  },
-  Popup: ['Popup', '$Popup'],
-  Typography: ['Typography', 'Text', 'Title', 'Paragraph', 'TypographyEllipsis', 'TypographyCopyable'],
-  Toast: {
-    list: ['Toast', 'ToastOptions'],
-    includes: ['Vue(Mobile)', 'React(Mobile)'],
-  },
-  ColorPicker: {
-    list: ['ColorPicker', 'ColorPickerPanel'],
-    includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
-  },
-  Split: {
-    list: ['Split', 'SplitPanel'],
-  },
-  Scrollbar: ['Scrollbar', 'ScrollbarValues'],
-};
+// 框架分组：配置表用这些分组写 includes / excludes，业务代码按分组判断端的差异
+// Web 端：Vue(PC)、VueNext(PC)、React(PC)
+const WEB_FRAMES = ['Vue(PC)', 'VueNext(PC)', 'React(PC)'];
+// H5 端：Vue(Mobile)、React(Mobile)
+const H5_FRAMES = ['Vue(Mobile)', 'React(Mobile)'];
+// 小程序端：Miniprogram、UniApp
+export const MINIPROGRAM_FRAMES = ['Miniprogram', 'UniApp'];
+// 移动端：Vue(Mobile)、React(Mobile)、Miniprogram、UniApp
+export const MOBILE_FRAMES = H5_FRAMES.concat(MINIPROGRAM_FRAMES);
 
 // 支持 Chat 独立拆分（独立包 pro-components/chat）的框架。
 // 仅这些框架的 Chat 组件走 CHAT_COMPONENT_MAP 拆分逻辑；
 // 其余框架（如 Vue(PC)、Vue(Mobile)）没有独立 chat 包，仍按常规组件在各自框架目录中输出。
 export const CHAT_FRAMEWORKS = ['VueNext(PC)', 'React(PC)', 'Miniprogram', 'UniApp'];
+
+// 配置表分层：文档和类型各有通用 / H5 / 小程序三张表，Chat 表两边共用
+const COMMON_MAP_TAG = 'common';
+const MOBILE_MAP_TAG = 'mobile';
+const MINIPROGRAM_MAP_TAG = 'miniprogram';
+const CHAT_MAP_TAG = 'chat';
+
+// 只叠加通用表 + Chat 表，供单测 / 代码提示 / configurable / 在线预览使用
+export const BASE_MAP_TAGS = [COMMON_MAP_TAG, CHAT_MAP_TAG];
+
+// 各端叠加哪几张表，顺序即叠加顺序。
+// H5 表只归 H5，小程序表只归小程序，两张表互不叠加，因此表内几乎不需要 excludes。
+const LAYER_MAP_TAGS = {
+  'Vue(PC)': [COMMON_MAP_TAG],
+  'VueNext(PC)': [COMMON_MAP_TAG],
+  'React(PC)': [COMMON_MAP_TAG],
+  'Vue(Mobile)': [COMMON_MAP_TAG, MOBILE_MAP_TAG],
+  'React(Mobile)': [COMMON_MAP_TAG, MOBILE_MAP_TAG],
+  Miniprogram: [COMMON_MAP_TAG, MINIPROGRAM_MAP_TAG],
+  UniApp: [COMMON_MAP_TAG, MINIPROGRAM_MAP_TAG],
+};
+// Chat 表不在上面逐个写，统一按 CHAT_FRAMEWORKS 追加到末尾，
+// 「哪些端有独立 chat 包」只维护 CHAT_FRAMEWORKS 这一份
+const FRAMEWORK_MAP_TAGS = Object.fromEntries(
+  Object.entries(LAYER_MAP_TAGS).map(([framework, tags]) => [
+    framework,
+    CHAT_FRAMEWORKS.includes(framework) ? tags.concat(CHAT_MAP_TAG) : tags,
+  ]),
+);
+
+// 输出 API 文档时，哪些文件需要合并输出，数组内容为组件 / 插件名称
+// 通用表对所有框架生效，端差异用 includes / excludes 收窄
+export const COMPONENT_API_MD_MAP = {
+  Anchor: ['Anchor', 'AnchorItem', 'AnchorTarget'],
+  Avatar: ['Avatar', 'AvatarGroup'],
+  Breadcrumb: ['Breadcrumb', 'BreadcrumbItem'],
+  Calendar: ['Calendar', 'CalendarController', 'CalendarCell'],
+  Cell: ['Cell', 'CellGroup'],
+  Checkbox: ['Checkbox', 'CheckboxGroup'],
+  // 小程序没有 layout 目录，col / row 才是真实组件
+  Col: {
+    list: ['Col', 'Row'],
+    includes: MINIPROGRAM_FRAMES,
+  },
+  Collapse: ['Collapse', 'CollapsePanel'],
+  ColorPicker: {
+    list: ['ColorPicker', 'ColorPickerPanel'],
+    includes: WEB_FRAMES,
+  },
+  ConfigProvider: GLOBAL_CONFIG_PROVIDER,
+  DatePicker: ['DatePicker', 'DateRangePicker', 'DatePickerPanel', 'DateRangePickerPanel'],
+  DateTimePicker: ['DateTimePicker'],
+  Descriptions: ['Descriptions', 'DescriptionsItem'],
+  Dialog: ['DialogCard', 'Dialog', 'DialogOptions', 'DialogInstance', '$Dialog', '$Dialog.confirm', '$Dialog.alert'],
+  Drawer: ['Drawer', 'DrawerOptions', 'DrawerInstance', '$Drawer'],
+  Dropdown: {
+    list: ['Dropdown', 'DropdownItem', 'DropdownMenu'],
+    includes: WEB_FRAMES,
+  },
+  Form: ['Form', 'FormItem', 'FormList', 'FormRule', 'FormErrorMessage'],
+  // Web 侧是 Grid + Row + Col；H5 和小程序侧是 Grid + GridItem，分别写在各自的表里
+  Grid: [
+    {
+      list: ['Grid', 'Row', 'Col'],
+      includes: WEB_FRAMES,
+    },
+  ],
+  Guide: ['Guide', 'GuideStep'],
+  Icon: ['Icon', 'IconSVG', 'IconFont'],
+  Indexes: {
+    list: ['Indexes', 'IndexesAnchor'],
+  },
+  Input: ['Input', 'InputGroup'],
+  // 只有 Web 端满足这组父子关系，合并输出到 layout 目录
+  Layout: {
+    list: ['Layout', 'Header', 'Aside', 'Content', 'Footer'],
+    includes: WEB_FRAMES,
+  },
+  // List + ListItem + ListItemMeta 只有 Web 端有，H5 只有 List（见 H5 表）
+  List: {
+    list: ['List', 'ListItem', 'ListItemMeta'],
+    includes: WEB_FRAMES,
+  },
+  Loading: ['Loading', '$Loading'],
+  Menu: ['Menu', 'HeadMenu', 'Submenu', 'MenuItem', 'MenuGroup'],
+  Message: MESSAGE_LIST,
+  Notification: NOTIFICATION_LIST,
+  Pagination: ['Pagination', 'PaginationMini'],
+  Paragraph: {
+    list: ['Paragraph', 'Text', 'Title'],
+    includes: MINIPROGRAM_FRAMES,
+  },
+  Picker: {
+    list: ['Picker', 'PickerItem'],
+    includes: MINIPROGRAM_FRAMES,
+  },
+  Popup: ['Popup', '$Popup'],
+  Radio: ['Radio', 'RadioGroup'],
+  RangeInput: ['RangeInput', 'RangeInputPopup'],
+  Scrollbar: ['Scrollbar', 'ScrollbarValues'],
+  Select: ['Select', 'Option', 'OptionGroup', 'TScroll'],
+  SideBar: ['SideBar', 'SideBarItem'],
+  Split: {
+    list: ['Split', 'SplitPanel'],
+  },
+  Steps: ['Steps', 'StepItem'],
+  StickyTool: ['StickyTool', 'StickyItem'],
+  Swiper: {
+    list: ['Swiper', 'SwiperItem', 'SwiperNavigation'],
+  },
+  TabBar: ['TabBar', 'TabBarItem'],
+  // 只有文档需要 TScroll，类型定义不需要
+  Table: TABLE_LIST.concat('TScroll'),
+  Tabs: ['Tabs', 'TabPanel'],
+  Tag: ['Tag', 'CheckTag', 'CheckTagGroup'],
+  Timeline: ['Timeline', 'TimelineItem'],
+  TimePicker: ['TimePicker', 'TimeRangePicker', 'TimePickerPanel', 'TimeRangePickerPanel'],
+  Toast: {
+    list: ['Toast', 'ToastOptions'],
+    includes: H5_FRAMES,
+  },
+  Tooltip: ['Tooltip', 'TooltipLite'],
+  Tree: ['Tree', 'TreeNodeState', 'TreeNodeModel', 'TScroll'],
+  // 小程序没有 typography 目录，paragraph 才是真实组件，text / title 属于 paragraph
+  Typography: {
+    list: ['Typography', 'Text', 'Title', 'Paragraph', 'TypographyEllipsis', 'TypographyCopyable'],
+    excludes: MINIPROGRAM_FRAMES,
+  },
+  Upload: {
+    list: ['Upload', 'UploadFile'],
+    excludes: MINIPROGRAM_FRAMES,
+  },
+  Watermark: ['Watermark', 'WatermarkText', 'WatermarkImage'],
+};
 
 // 高阶组件 — Chat 系列独立拆分（key 为 PascalCase，经 kebabCase 转为输出目录名）
 export const CHAT_COMPONENT_MAP = {
@@ -216,49 +281,45 @@ export const CHAT_COMPONENT_MAP = {
   ChatRecord: ['ChatRecord'],
 };
 
-// H5 特殊组件
+// H5 特殊组件，只叠加给 Vue(Mobile) / React(Mobile)，因此不需要写 includes / excludes。
+// 同名项默认覆盖通用表的配置（如 Layout）；通用表写了多套配置的（Grid）则是追加，见 mergeComponentMaps
 export const MOBILE_COMPONENT_API_MD_MAP = {
-  DropdownMenu: {
-    list: ['DropdownMenu', 'DropdownItem'],
-  },
-  Layout: {
-    list: ['Layout', 'Row', 'Col'],
-  },
-  Grid: {
-    list: ['Grid', 'GridItem'],
-  },
+  DropdownMenu: ['DropdownMenu', 'DropdownItem'],
+  Layout: ['Layout', 'Row', 'Col'],
+  // 追加到通用表的 Grid 之后：Web 端用 Row / Col，H5 端用 GridItem
+  Grid: ['Grid', 'GridItem'],
+  // H5 的 List 没有 ListItem / ListItemMeta
   List: ['List'],
 };
 
-// 小程序 特殊组件
+// 小程序特殊组件，只叠加给 Miniprogram / UniApp，因此不需要写 includes / excludes。
+// 同名项的覆盖 / 追加规则与 H5 表相同：Swiper 覆盖通用表，Grid 追加
 export const MINIPROGRAM_COMPONENT_API_MD_MAP = {
-  Swiper: {
-    list: ['Swiper', 'SwiperNav'],
-    includes: ['Miniprogram', 'UniApp'],
-  },
-  Paragraph: {
-    list: ['Paragraph', 'Text', 'Title'],
-    includes: ['Miniprogram', 'UniApp'],
-  },
+  // 小程序的 Swiper 用 SwiperNav，没有 SwiperItem / SwiperNavigation
+  Swiper: ['Swiper', 'SwiperNav'],
+  // 小程序是 Grid + GridItem
+  Grid: ['Grid', 'GridItem'],
+  DropdownMenu: ['DropdownMenu', 'DropdownItem'],
 };
 
-// 输出 TS 类型文件时，哪些需要文件需要合并输出，数据内容为组件/插件名称
+// 输出 TS 类型文件时，哪些文件需要合并输出，数组内容为组件 / 插件名称。
+// 与文档表基本对应，只是没有仅文档需要的类型（如 TScroll / ScrollbarValues）
 export const TYPES_COMBINE_MAP = {
   Avatar: {
     list: ['Avatar', 'AvatarGroup'],
-    excludes: ['Miniprogram', 'UniApp'],
+    excludes: MINIPROGRAM_FRAMES,
   },
   Checkbox: {
     list: ['Checkbox', 'CheckboxGroup'],
-    excludes: ['Miniprogram', 'UniApp'],
+    excludes: MINIPROGRAM_FRAMES,
   },
   Cell: {
     list: ['Cell', 'CellGroup'],
-    excludes: ['Miniprogram', 'UniApp'],
+    excludes: MINIPROGRAM_FRAMES,
   },
   Radio: {
     list: ['Radio', 'RadioGroup'],
-    excludes: ['Miniprogram', 'UniApp'],
+    excludes: MINIPROGRAM_FRAMES,
   },
   Message: {
     list: MESSAGE_LIST,
@@ -268,54 +329,53 @@ export const TYPES_COMBINE_MAP = {
   },
   Form: {
     list: ['Form', 'FormItem', 'FormList', 'FormRule', 'FormErrorMessage'],
-    excludes: ['Miniprogram', 'UniApp'],
+    excludes: MINIPROGRAM_FRAMES,
   },
   Select: {
     list: ['Select', 'Option', 'OptionGroup'],
   },
   Tabs: {
     list: ['Tabs', 'TabPanel'],
-    excludes: ['Miniprogram', 'UniApp'],
+    excludes: MINIPROGRAM_FRAMES,
   },
-  Split:{
+  Split: {
     list: ['Split', 'SplitPanel'],
   },
   ColorPicker: {
     list: ['ColorPicker', 'ColorPickerPanel'],
-    excludes: ['Miniprogram', 'UniApp'],
+    excludes: MINIPROGRAM_FRAMES,
   },
   TabBar: {
     list: ['TabBar', 'TabBarItem'],
-    excludes: ['Miniprogram', 'UniApp'],
+    excludes: MINIPROGRAM_FRAMES,
   },
   Pagination: {
     list: ['Pagination', 'PaginationMini'],
   },
   Tag: {
     list: ['Tag', 'CheckTag', 'CheckTagGroup'],
-    excludes: ['Miniprogram', 'UniApp'],
+    excludes: MINIPROGRAM_FRAMES,
   },
   Collapse: {
     list: ['Collapse', 'CollapsePanel'],
-    excludes: ['Miniprogram', 'UniApp'],
+    excludes: MINIPROGRAM_FRAMES,
   },
-  // Web 侧是 Grid + Row + Col，移动端和小程序是 Grid + GridItem
+  // Web 侧是 Grid + Row + Col；H5 侧的 Grid + GridItem 见 H5 类型表；
+  // 小程序 / UniApp 的 GridItem 是独立组件，类型各自输出，不合并（文档仍然合并，见文档表）
   Grid: [
     {
       list: ['Grid', 'Row', 'Col'],
-      includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
+      includes: WEB_FRAMES,
     },
   ],
-  // Web 侧是 Layout + Header + Aside + Content + Footer，移动端 Layout + Row + Col
+  // Web 侧是 Layout + Header + Aside + Content + Footer；H5 侧 Layout + Row + Col 见 H5 类型表
   Layout: {
     list: ['Layout', 'Header', 'Aside', 'Content', 'Footer'],
-    // includes 以下框架满足此组件父子关系
-    // includes 以下框架将 'Layout', 'Header', 'Aside', 'Content', 'Footer' 等组件的 API 文档，合并输出到目录 layout
-    includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
+    includes: WEB_FRAMES,
   },
   Dropdown: {
     list: ['Dropdown', 'DropdownItem', 'DropdownMenu'],
-    includes: ['Vue(PC)', 'VueNext(PC)', 'React(PC)', 'Angular(PC)'],
+    includes: WEB_FRAMES,
   },
   Dialog: {
     list: ['DialogCard', 'Dialog', 'DialogOptions', 'DialogInstance', '$Dialog', '$Dialog.confirm', '$Dialog.alert'],
@@ -331,7 +391,7 @@ export const TYPES_COMBINE_MAP = {
   },
   Steps: {
     list: ['Steps', 'StepItem'],
-    excludes: ['Miniprogram', 'UniApp'],
+    excludes: MINIPROGRAM_FRAMES,
   },
   Calendar: {
     list: ['Calendar', 'CalendarController', 'CalendarCell'],
@@ -347,14 +407,17 @@ export const TYPES_COMBINE_MAP = {
   },
   Upload: {
     list: ['Upload', 'UploadFile'],
-    excludes: ['Miniprogram', 'UniApp'],
+    excludes: MINIPROGRAM_FRAMES,
   },
+  // List + ListItem + ListItemMeta 只有 Web 端有，H5 只有 List（见 H5 类型表），小程序没有 list 组件
   List: {
     list: ['List', 'ListItem', 'ListItemMeta'],
+    includes: WEB_FRAMES,
   },
+  // 小程序 / UniApp 的 PickerItem 是独立组件，类型各自输出，不合并到 Picker；文档仍然合并（见文档表的 Picker）
   Picker: {
     list: ['Picker', 'PickerItem'],
-    excludes: ['Miniprogram', 'UniApp'],
+    excludes: MINIPROGRAM_FRAMES,
   },
   TimePicker: {
     list: ['TimePicker', 'TimeRangePicker', 'TimePickerPanel', 'TimeRangePickerPanel'],
@@ -367,6 +430,9 @@ export const TYPES_COMBINE_MAP = {
   },
   Swiper: {
     list: ['Swiper', 'SwiperItem', 'SwiperNavigation'],
+    // 小程序 / UniApp 用的是 Swiper + SwiperNav 两个独立组件（没有 SwiperItem / SwiperNavigation 类型），
+    // 类型各自输出，不合并到 Swiper
+    excludes: MINIPROGRAM_FRAMES,
   },
   Table: {
     list: TABLE_LIST,
@@ -403,46 +469,44 @@ export const TYPES_COMBINE_MAP = {
   },
   SideBar: {
     list: ['SideBar', 'SideBarItem'],
-    excludes: ['Miniprogram', 'UniApp'],
+    excludes: MINIPROGRAM_FRAMES,
   },
   Indexes: {
     list: ['Indexes', 'IndexesAnchor'],
-    excludes: ['Miniprogram', 'UniApp'],
+    excludes: MINIPROGRAM_FRAMES,
   },
   Typography: {
     list: ['Typography', 'Text', 'Title', 'Paragraph', 'TypographyEllipsis', 'TypographyCopyable'],
-    excludes: ['Miniprogram', 'UniApp'],
+    excludes: MINIPROGRAM_FRAMES,
   },
   Toast: {
     list: ['Toast', 'ToastOptions'],
-    includes: ['Vue(Mobile)', 'React(Mobile)'],
+    includes: H5_FRAMES,
   },
 };
 
+// H5 类型表：只叠加给 Vue(Mobile) / React(Mobile)，因此不需要 excludes。
+// 同名项的覆盖 / 追加规则与 H5 文档表相同：Layout / List 覆盖通用表，Grid 追加
 export const MOBILE_TYPES_COMBINE_MAP = {
   DropdownMenu: {
     list: ['DropdownMenu', 'DropdownItem'],
-    excludes: ['Miniprogram', 'UniApp'],
   },
   Layout: {
     list: ['Layout', 'Row', 'Col'],
-    excludes: ['Miniprogram', 'UniApp'],
   },
   Grid: {
     list: ['Grid', 'GridItem'],
-    excludes: ['Miniprogram', 'UniApp'],
   },
+  // H5 的 List 没有 ListItem / ListItemMeta
   List: ['List'],
 };
 
+// 小程序类型表：Miniprogram / UniApp 专用
 export const MINIPROGRAM_TYPES_COMBINE_MAP = {
-  Swiper: {
-    list: ['Swiper', 'SwiperNav'],
-    excludes: ['Miniprogram', 'UniApp'],
-  },
+  // 小程序 / UniApp 的 FormItem 是独立组件，FormRule / FormErrorMessage 不是独立组件，
+  // 跟 Form 合并后不单独输出（FormItem 的独立输出在 types/index.js 里单独处理）
   Form: {
     list: ['Form', 'FormList', 'FormRule', 'FormErrorMessage'],
-    includes: ['Miniprogram', 'UniApp'],
   },
 };
 
@@ -451,16 +515,206 @@ export function getChatComponentMap(framework) {
   return CHAT_FRAMEWORKS.includes(framework) ? CHAT_COMPONENT_MAP : {};
 }
 
+// tag 到具体配置表的映射：文档和类型各取各的，Chat 表两边共用同一份
+// 下面这些方法是对外唯一入口，调用方不要再自己拼 if (framework === ...)
+const MERGE_CONFIG_KINDS = ['docs', 'types'];
+const MERGE_CONFIG_SOURCES = {
+  [COMMON_MAP_TAG]: { docs: COMPONENT_API_MD_MAP, types: TYPES_COMBINE_MAP },
+  [MOBILE_MAP_TAG]: { docs: MOBILE_COMPONENT_API_MD_MAP, types: MOBILE_TYPES_COMBINE_MAP },
+  [MINIPROGRAM_MAP_TAG]: { docs: MINIPROGRAM_COMPONENT_API_MD_MAP, types: MINIPROGRAM_TYPES_COMBINE_MAP },
+  [CHAT_MAP_TAG]: { docs: CHAT_COMPONENT_MAP, types: CHAT_COMPONENT_MAP },
+};
+
+/**
+ * 取某个框架需要叠加的配置表列表
+ * @param {string} framework 框架名称
+ * @param {'docs'|'types'} kind 输出文档（md）还是类型（type.ts）
+ * @param {string[]} [tags] 指定叠加哪几张表，默认取该框架的完整组合（FRAMEWORK_MAP_TAGS）。
+ *   显式传入时只能用该框架会叠加的表，BASE_MAP_TAGS 对所有框架都合法
+ * @returns {object[]} 配置表列表
+ */
+export function getMergeConfigSources(framework, kind = 'docs', tags) {
+  // kind / tag 写错时如果只是返回空数组，会得到「没有任何父子关系」的结果，
+  // 所有子组件各自建目录却不报错，所以这里直接抛错
+  if (!MERGE_CONFIG_KINDS.includes(kind)) {
+    throw new Error(`未知的配置类型 "${kind}"，只能是 ${MERGE_CONFIG_KINDS.join(' / ')}`);
+  }
+  const frameworkTags = FRAMEWORK_MAP_TAGS[framework];
+  const finalTags = tags && tags.length ? tags : frameworkTags || [COMMON_MAP_TAG];
+  finalTags.forEach((tag) => {
+    if (!MERGE_CONFIG_SOURCES[tag]) {
+      throw new Error(`未知的配置表 "${tag}"，只能是 ${Object.keys(MERGE_CONFIG_SOURCES).join(' / ')}`);
+    }
+    // H5 表 / 小程序表里的同名配置会覆盖通用表，只能叠加给对应的端，
+    // 否则覆盖会把通用表的 includes / excludes 一起丢掉，把别的端的父子关系写进产物
+    if (frameworkTags && tag !== CHAT_MAP_TAG && !frameworkTags.includes(tag)) {
+      throw new Error(`配置表 "${tag}" 不适用于 ${framework}，该端只叠加 ${frameworkTags.join(' / ')}`);
+    }
+  });
+  return (
+    finalTags
+      // Chat 表只对带独立 chat 包的框架生效（Vue(PC) / H5 没有 chat 包）
+      .filter((tag) => tag !== CHAT_MAP_TAG || !framework || CHAT_FRAMEWORKS.includes(framework))
+      .map((tag) => MERGE_CONFIG_SOURCES[tag][kind])
+      .filter((map) => map && Object.keys(map).length)
+  );
+}
+
+/**
+ * 输出文档时，当前框架的完整父子关系配置表（已叠加、未按框架筛选）
+ * @param {string} framework 框架名称
+ * @param {string[]} [tags] 指定叠加哪几张表，默认取该框架的完整组合
+ * @returns {object} 父子关系配置表
+ */
+export function getDocsCombineMap(framework, tags) {
+  return mergeComponentMaps(...getMergeConfigSources(framework, 'docs', tags));
+}
+
+/**
+ * 输出类型时，当前框架的完整父子关系配置表（已叠加、未按框架筛选）
+ * @param {string} framework 框架名称
+ * @param {string[]} [tags] 指定叠加哪几张表，默认取该框架的完整组合
+ * @returns {object} 父子关系配置表
+ */
+export function getTypesCombineMap(framework, tags) {
+  return mergeComponentMaps(...getMergeConfigSources(framework, 'types', tags));
+}
+
+// 判断某条父子关系配置是否在当前框架生效：
+// 没有 includes 也没有 excludes，则所有框架生效；
+// 有 includes，仅 includes 内的框架生效；
+// 有 excludes，excludes 内的框架不生效；
+// 两个都写了时要同时满足；
+// 未传 framework（如前端页面不区分框架）时视为全部生效。
+export function isMergeConfigApplied(config, framework) {
+  if (!framework) return true;
+  const { includes, excludes } = config;
+  if (includes && !includes.includes(framework)) return false;
+  if (excludes && excludes.includes(framework)) return false;
+  return true;
+}
+
+// 把一条配置统一成带 list / includes / excludes 的对象数组，支持三种写法：
+// 1. ['List', 'ListItem']         所有框架生效
+// 2. { list: [], includes: [] }   单条配置
+// 3. [{ list: [], includes: [] }] 同一父组件在不同端的多套配置（如 Grid 在 Web 用 Row/Col、在 H5 用 GridItem）
+export function normalizeMergeConfigs(item, parentComponent) {
+  if (Array.isArray(item)) {
+    if (item.every((v) => typeof v === 'string')) return [{ list: item }];
+    // 多套配置，允许混入简写：['A', { list: ['B'] }] 等价于 [{ list: ['A'] }, { list: ['B'] }]。
+    // 非法元素只丢弃自身，不影响同一条配置里的其它内容
+    const configs = [];
+    let names = [];
+    const pushNames = () => {
+      if (!names.length) return;
+      configs.push({ list: names });
+      names = [];
+    };
+    item.forEach((config) => {
+      if (typeof config === 'string') {
+        names.push(config);
+        return;
+      }
+      pushNames();
+      configs.push(...normalizeMergeConfigs(config, parentComponent));
+    });
+    pushNames();
+    return configs;
+  }
+  if (item && typeof item === 'object') return [{ ...item }];
+  console.warn(`组件 ${parentComponent} 的父子关系配置结构不对，只能是 Array 或者 Object 类型`);
+  return [];
+}
+
+/**
+ * 按框架把配置表筛选成「父组件 -> 子组件列表」
+ * @param {object} map 父子关系配置表
+ * @param {string} [framework] 框架名称，不传则不做框架筛选
+ * @returns {Record<string, string[]>}
+ */
+export function resolveComponentMaps(map, framework) {
+  const rMap = {};
+  Object.keys(map || {}).forEach((parentComponent) => {
+    if (!parentComponent) return;
+    const configs = normalizeMergeConfigs(map[parentComponent], parentComponent);
+    const merged = [
+      ...new Set(
+        configs.filter((config) => isMergeConfigApplied(config, framework)).flatMap((config) => config.list || []),
+      ),
+    ];
+    if (merged.length) rMap[parentComponent] = merged;
+  });
+  return rMap;
+}
+
+/**
+ * 输出文档用：当前框架的「父组件 -> 子组件列表」
+ * @param {string} framework 框架名称
+ * @param {string[]} [tags] 指定叠加哪几张表，默认取该框架的完整组合
+ */
+export function getDocsComponentMaps(framework, tags) {
+  return resolveComponentMaps(getDocsCombineMap(framework, tags), framework);
+}
+
+/**
+ * 输出类型用：当前框架的「父组件 -> 子组件列表」
+ * @param {string} framework 框架名称
+ * @param {string[]} [tags] 指定叠加哪几张表，默认取该框架的完整组合
+ */
+export function getTypesComponentMaps(framework, tags) {
+  return resolveComponentMaps(getTypesCombineMap(framework, tags), framework);
+}
+
+// 合并多张配置表。后面的表遇到同名的父组件时：
+// - 追加：任一侧是多套配置写法（数组里带配置对象，见 isConfigList）。两端先归一化再拼接，
+//   交给 resolveComponentMaps 按端逐条筛选（如通用表的 Grid 只对 Web 生效，H5 表的 Grid 追加 GridItem）；
+// - 覆盖：其余写法（对象、['A', 'B'] 简写）。前面的同名配置连同 includes / excludes 一起被替换
+//   （如小程序表里的 Swiper 覆盖通用表的 Swiper），所以覆盖只能用在只叠加给对应端的表里。
+// 追加的结果仍是「配置对象数组」，再被后面的表追加时不会出现嵌套数组导致配置被丢弃。
+const isConfigList = (value) => Array.isArray(value) && value.some((v) => v && typeof v === 'object');
+
+export function mergeComponentMaps(...maps) {
+  const merged = {};
+  maps.forEach((map) => {
+    Object.keys(map || {}).forEach((key) => {
+      const incoming = map[key];
+      const existing = merged[key];
+      if (existing === undefined) {
+        merged[key] = incoming;
+        return;
+      }
+      if (isConfigList(existing) || isConfigList(incoming)) {
+        // 两端都先归一化再拼接，简写（['A']）、对象（{ list }）和多套配置可以任意组合
+        merged[key] = normalizeMergeConfigs(existing, key).concat(normalizeMergeConfigs(incoming, key));
+        return;
+      }
+      merged[key] = incoming;
+    });
+  });
+  return merged;
+}
+
 export default {
   COMPONENT_API_MD_MAP,
   MOBILE_COMPONENT_API_MD_MAP,
+  MINIPROGRAM_COMPONENT_API_MD_MAP,
   CHAT_COMPONENT_MAP,
   CHAT_FRAMEWORKS,
-  getChatComponentMap,
   TYPES_COMBINE_MAP,
   MOBILE_TYPES_COMBINE_MAP,
-  GLOBAL_COMPONENTS_CONFIG,
-  MINIPROGRAM_COMPONENT_API_MD_MAP,
   MINIPROGRAM_TYPES_COMBINE_MAP,
+  GLOBAL_COMPONENTS_CONFIG,
   MOBILE_FRAMES,
+  MINIPROGRAM_FRAMES,
+  BASE_MAP_TAGS,
+  getChatComponentMap,
+  getMergeConfigSources,
+  getDocsCombineMap,
+  getTypesCombineMap,
+  getDocsComponentMaps,
+  getTypesComponentMaps,
+  isMergeConfigApplied,
+  normalizeMergeConfigs,
+  resolveComponentMaps,
+  mergeComponentMaps,
 };

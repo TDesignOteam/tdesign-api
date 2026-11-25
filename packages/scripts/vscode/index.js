@@ -9,8 +9,6 @@
  * 命名行示例：npm run api-docs Button 'Vue(Mobile)'
  * 命名行示例：npm run api-docs Button 'React(PC)'
  * 命名行示例：npm run api-docs Button 'React(Mobile)'
- * 命名行示例：npm run api-docs Button 'Angular(PC)'
- * 命名行示例：npm run api-docs Button 'Angular(Mobile)'
  * 命名行示例：npm run api-docs Button 'Miniprogram'
  *
  */
@@ -23,7 +21,7 @@ import map from '../map.json' with { type: 'json' };
 
 const { data: ALL_API } = apiJson;
 /**
- * framework 参数可选值：Vue(PC)/VueNext(PC)/React(PC)/Angular(PC)/Vue(Mobile)/React(Mobile)/Angular(Mobile)/Miniprogram
+ * framework 参数可选值：Vue(PC)/VueNext(PC)/React(PC)/Vue(Mobile)/React(Mobile)/Miniprogram/UniApp
  * component 参数为大驼峰
  */
 const [framework] = scriptArgs();

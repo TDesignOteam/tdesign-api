@@ -16,4 +16,4 @@ status | String | - | 正文状态。可选项：error / '' | N
 
 名称 | 参数 | 描述
 -- | -- | --
-click | `(context: MarkdownClickContext)` | 点击链接时触发。[详细类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/chat-content/type.ts)。<br/>`import { MarkdownClickContext } from '@ChatMarkdown'`<br/>
+click | `(context: MarkdownClickContext)` | 点击链接时触发。[详细类型定义](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-pro-components/chat/chat-content/type.ts)。<br/>`import { MarkdownClickContext } from '@ChatMarkdown'`<br/>

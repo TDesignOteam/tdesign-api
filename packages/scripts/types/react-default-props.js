@@ -7,14 +7,7 @@ import chalk from 'chalk';
 import { lowerFirst, upperFirst } from 'lodash-es';
 import prettier from 'prettier';
 import { FILE_RIGHTS_DESC } from '../config/const.js';
-import {
-  FRAMEWORK_MAP,
-  MINIPROGRAM_TYPES_COMBINE_MAP,
-  MOBILE_FRAMES,
-  MOBILE_TYPES_COMBINE_MAP,
-  TYPES_COMBINE_MAP,
-  getChatComponentMap,
-} from '../config/index.js';
+import { FRAMEWORK_MAP, getTypesCombineMap } from '../config/index.js';
 import prettierConfig from '../config/prettier.js';
 import { getCmpTypeCombineMap, getFolderName } from '../core/context.js';
 import { getComponentBasePath } from '../core/utils.js';
@@ -99,14 +92,7 @@ function getTsTypeName(cmp) {
 }
 
 async function generateReactDefaultProps(baseData, framework) {
-  const relationMap = getCmpTypeCombineMap(
-    framework === 'Miniprogram'
-      ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, MINIPROGRAM_TYPES_COMBINE_MAP, getChatComponentMap(framework))
-      : MOBILE_FRAMES.includes(framework)
-        ? Object.assign({}, TYPES_COMBINE_MAP, MOBILE_TYPES_COMBINE_MAP, getChatComponentMap(framework))
-        : Object.assign({}, TYPES_COMBINE_MAP, getChatComponentMap(framework)),
-    framework,
-  );
+  const relationMap = getCmpTypeCombineMap(getTypesCombineMap(framework), framework);
 
   // checkbox 和 checkboxGroup 等组件，组合输出
   const finalApiDefaultProps = {};

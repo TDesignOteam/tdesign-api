@@ -12,8 +12,8 @@ action | String | '' | 自定义右侧操作按钮文字 | N
 adjust-position | Boolean | true | 键盘弹起时，是否自动上推页面 | N
 always-embed | Boolean | false | 强制 input 处于同层状态，默认 focus 时 input 会切到非同层状态 (仅在 iOS 下生效) | N
 center | Boolean | false | 是否居中 | N
-clear-trigger | String | always | 清空图标触发方式，仅在输入框有值时有效。可选项：always / focus | N
 clearable | Boolean | true | 是否启用清除控件 | N
+clear-trigger | String | always | 清空图标触发方式，仅在输入框有值时有效。可选项：always / focus | N
 confirm-hold | Boolean | false | 点击键盘右下角按钮时是否保持键盘不收起 | N
 confirm-type | String | search | 设置键盘右下角按钮的文字，仅在type='text'时生效。<br />具体释义：<br />`send` 右下角按钮为“发送”；<br />`search` 右下角按钮为“搜索”；<br />`next` 右下角按钮为“下一个”；<br />`go` 右下角按钮为“前往”；<br />`done` 右下角按钮为“完成”。<br />[小程序官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/input.html)。可选项：send/search/next/go/done | N
 cursor | Number | -1 | 必需。指定 focus 时的光标位置 | Y
@@ -41,12 +41,12 @@ value | String | '' | 值 | N
 
 名称 | 参数 | 描述
 -- | -- | --
-action-click | `({})` | 点击右侧操作按钮文字时触发
-blur | `({ value: string })` | 失去焦点时触发
-change | `({ value: string, trigger: 'input-change' \| 'option-click' \| 'clear' })` | 值发生变化时触发
-clear | `({ value: string })` | 点击清除时触发
-focus | `({ value: string })` | 聚焦时触发
-submit | `({ value: string })` | 提交时触发
+action-click | \- | 点击右侧操作按钮文字时触发
+blur | `(detail: { value: string })` | 失去焦点时触发
+change | `(detail: { value: string; trigger: 'input-change' \| 'option-click' \| 'clear' })` | 值发生变化时触发
+clear | `(detail: { value: string })` | 点击清除时触发
+focus | `(detail: { value: string })` | 聚焦时触发
+submit | `(detail: { value: string })` | 提交时触发
 
 ### Search Slots
 

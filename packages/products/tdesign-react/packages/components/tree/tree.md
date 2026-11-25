@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Tree Props
 
 名称 | 类型 | 默认值 | 描述 | 必传
@@ -8,25 +9,24 @@
 className | String | - | 类名 | N
 style | Object | - | 样式，TS 类型：`React.CSSProperties` | N
 activable | Boolean | false | 节点是否可高亮 | N
-activeMultiple | Boolean | false | 是否允许多个节点同时高亮 | N
 actived | Array | - | 高亮的节点值。TS 类型：`Array<TreeNodeValue>` | N
+activeMultiple | Boolean | false | 是否允许多个节点同时高亮 | N
 allowDrop | Function | - | 判断节点是否可以执行 drop 操作，泛型 `T` 表示树节点 TS 类型。TS 类型：`(context: { e: DragEvent; dragNode: TreeNodeModel<T>; dropNode: TreeNodeModel<T>; dropPosition: number; }) => boolean` | N
 allowFoldNodeOnFilter | Boolean | false | 是否允许在过滤时节点折叠节点 | N
-checkAllAffectedBy | String | all | 参与父节点全选、半选状态判定的子节点范围。all 表示所有子节点参与判断，包括禁用子节点；onlyEnabled 表示仅未禁用的子节点参与判断，没有可用子节点时，不由子节点推导出全选或半选状态。仅影响父节点状态的判定，不改变禁用子节点自身的选中状态。checkStrictly 为 true 时不生效。可选项：all/onlyEnabled | N
+checkable | Boolean | false | 隐藏节点复选框 | N
 checkProps | Object / Function | - | 透传属性到 checkbox 组件。参考 checkbox 组件 API。TS 类型：`CheckboxProps \| ((node: TreeNodeModel<T>) => CheckboxProps)`，[Checkbox API Documents](./checkbox?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/tree/type.ts) | N
 checkStrictly | Boolean | false | 父子节点选中状态不再关联，可各自选中或取消 | N
-checkable | Boolean | false | 隐藏节点复选框 | N
 data | Array | [] | 树数据，泛型 `T` 表示树节点 TS 类型。TS 类型：`Array<T>` | N
 disableCheck | Boolean / Function | false | 禁用复选框，可支持禁用不同的行。TS 类型：`boolean \| ((node: TreeNodeModel<T>) => boolean)` | N
 disabled | Boolean | - | 是否禁用树操作 | N
 draggable | Boolean | - | 节点是否可拖拽 | N
 empty | TNode | '' | 数据为空时展示的文本。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-react/blob/develop/packages/components/common.ts) | N
 expandAll | Boolean | false | 是否展开全部节点 | N
+expanded | Array | [] | 展开的节点值。TS 类型：`Array<TreeNodeValue>` | N
 expandLevel | Number | 0 | 默认展开的级别，第一层为 0 | N
 expandMutex | Boolean | false | 同级别展开互斥，手风琴效果 | N
 expandOnClickNode | Boolean | false | 是否支持点击节点也能展开收起 | N
 expandParent | Boolean | false | 展开子节点时是否自动展开父节点 | N
-expanded | Array | [] | 展开的节点值。TS 类型：`Array<TreeNodeValue>` | N
 filter | Function | - | 节点过滤方法，只呈现返回值为 true 的节点，泛型 `T` 表示树节点 TS 类型。TS 类型：`(node: TreeNodeModel<T>) => boolean` | N
 height | String / Number | - | 树的高度，超出后会出现滚动条。示例：100,  '30%',  '300'。值为数字类型，会自动加上单位 px。如果不是绝对固定树的高度，建议使用 `maxHeight` | N
 hover | Boolean | - | 节点是否有悬浮状态 | N
@@ -50,7 +50,7 @@ onDragEnd | Function |  | TS 类型：`(context: { e: DragEvent; node: TreeNodeM
 onDragLeave | Function |  | TS 类型：`(context: { e: DragEvent; node: TreeNodeModel<T>; dragNode: TreeNodeModel<T>; dropPosition: number; }) => void`<br/>节点拖拽时离开目标元素时触发，泛型 `T` 表示树节点 TS 类型 | N
 onDragOver | Function |  | TS 类型：`(context: { e: DragEvent; node: TreeNodeModel<T>; dragNode: TreeNodeModel<T>; dropPosition: number; }) => void`<br/>节点拖拽到目标元素时触发，泛型 `T` 表示树节点 TS 类型 | N
 onDragStart | Function |  | TS 类型：`(context: { e: DragEvent; node: TreeNodeModel<T> }) => void`<br/>节点开始拖拽时触发，泛型 `T` 表示树节点 TS 类型 | N
-onDrop | Function |  | TS 类型：`(context: {     e: DragEvent;     dragNode: TreeNodeModel<T>;     dropNode: TreeNodeModel<T>;     dropPosition: number;   }) => void`<br/>节点在目标元素上释放时触发，泛型 `T` 表示树节点 TS 类型 | N
+onDrop | Function |  | TS 类型：`(context: { e: DragEvent; dragNode: TreeNodeModel<T>; dropNode: TreeNodeModel<T>; dropPosition: number; }) => void`<br/>节点在目标元素上释放时触发，泛型 `T` 表示树节点 TS 类型 | N
 onExpand | Function |  | TS 类型：`(value: Array<TreeNodeValue>, context: { node: TreeNodeModel<T>; e?: MouseEvent; trigger: 'node-click' \| 'icon-click' \| 'setItem' }) => void`<br/>节点展开或收起时触发，泛型 `T` 表示树节点 TS 类型 | N
 onLoad | Function |  | TS 类型：`(context: { node: TreeNodeModel<T> }) => void`<br/>异步加载后触发，泛型 `T` 表示树节点 TS 类型 | N
 onScroll | Function |  | TS 类型：`(params: { e: WheelEvent }) => void`<br/>滚动事件 | N
@@ -86,8 +86,8 @@ checkable | Boolean | false | 节点是否允许被选中 | N
 checked | Boolean | false | 节点是否被选中 | N
 disabled | Boolean | false | 节点是否被禁用 | N
 draggable | Boolean | true | 该节点是否允许被拖动，当树本身开启时，默认允许 | N
-expandMutex | Boolean | false | 子节点是否互斥展开 | N
 expanded | Boolean | false | 节点是否已展开 | N
+expandMutex | Boolean | false | 子节点是否互斥展开 | N
 indeterminate | Boolean | false | 节点是否为半选中状态 | N
 label | String | - | 节点标签文案 | N
 loading | Boolean | false | 子节点数据是否在加载中 | N

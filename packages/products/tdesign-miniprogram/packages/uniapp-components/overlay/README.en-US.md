@@ -12,13 +12,13 @@ duration | Number | 300 | \- | N
 prevent-scroll-through | Boolean | true | \- | N
 using-custom-navbar | Boolean | false | \- | N
 visible | Boolean | false | \- | N
-z-index | Number | 11000 | \- | N
+z-index | Number | - | \- | N
 
 ### Overlay Events
 
 name | params | description
 -- | -- | --
-click | `({ visible: boolean })` | \-
+click | `(context: { visible: boolean })` | \-
 
 ### Overlay Slots
 

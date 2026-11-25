@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdTabsProps } from './type';
+import type { TdTabsProps } from './type';
 const props: TdTabsProps = {
   /** 动画效果设置。其中 duration 表示动画时长。（单位：秒） */
   animation: {

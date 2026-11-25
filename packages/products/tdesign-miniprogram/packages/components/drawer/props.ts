@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdDrawerProps } from './type';
+import type { TdDrawerProps } from './type';
 const props: TdDrawerProps = {
   /** 点击蒙层时是否触发抽屉关闭事件 */
   closeOnOverlayClick: {
@@ -49,10 +49,9 @@ const props: TdDrawerProps = {
     type: Boolean,
     value: false,
   },
-  /** 抽屉层级，样式默认为 11500 */
+  /** 抽屉层级，Web 侧样式默认为 1500，移动端样式默认 1500，小程序样式默认为 11500 */
   zIndex: {
     type: Number,
-    value: 11500,
   },
 };
 

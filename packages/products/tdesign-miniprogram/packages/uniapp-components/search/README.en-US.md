@@ -11,8 +11,8 @@ action | String | '' | \- | N
 adjust-position | Boolean | true | \- | N
 always-embed | Boolean | false | \- | N
 center | Boolean | false | \- | N
-clear-trigger | String | always | show clear icon, clicked to clear input value。options: always / focus | N
 clearable | Boolean | true | \- | N
+clear-trigger | String | always | show clear icon, clicked to clear input value. options: always / focus | N
 confirm-hold | Boolean | false | \- | N
 confirm-type | String | search | options: send/search/next/go/done | N
 cursor | Number | -1 | \- | N

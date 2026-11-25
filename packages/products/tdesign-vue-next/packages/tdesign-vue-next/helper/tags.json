@@ -176,11 +176,11 @@
       "first-full-row",
       "fixed-rows",
       "foot-data",
-      "footer-affix-props",
       "footer-affixed-bottom",
+      "footer-affix-props",
       "footer-summary",
-      "header-affix-props",
       "header-affixed-top",
+      "header-affix-props",
       "height",
       "horizontal-scroll-affixed-bottom",
       "hover",
@@ -230,8 +230,8 @@
       "ellipsis",
       "items-after-collapse",
       "items-before-collapse",
-      "max-item-width",
       "max-items",
+      "max-item-width",
       "options",
       "separator",
       "theme"
@@ -257,6 +257,7 @@
   "t-button": {
     "attributes": [
       "block",
+      "content",
       "content",
       "default",
       "disabled",
@@ -342,6 +343,8 @@
       "check-strictly",
       "clearable",
       "collapsed-items",
+      "column-footer",
+      "column-header",
       "disabled",
       "empty",
       "filter",
@@ -408,7 +411,7 @@
       "clear",
       "scroll"
     ],
-    "description": "Chat\n\n对话\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat)"
+    "description": "Chat\n\n对话\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat-list)"
   },
   "t-chat-action": {
     "attributes": [
@@ -419,14 +422,14 @@
       "operation-btn",
       "operation"
     ],
-    "description": "ChatAction\n\n对话操作\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat)"
+    "description": "ChatAction\n\n对话操作\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat-actionbar)"
   },
   "t-chat-content": {
     "attributes": [
       "content",
       "role"
     ],
-    "description": "ChatContent\n\n对话正文\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat)"
+    "description": "ChatContent\n\n对话正文\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat-content)"
   },
   "t-chat-input": {
     "attributes": [
@@ -443,7 +446,7 @@
       "send",
       "stop"
     ],
-    "description": "ChatInput\n\n对话输入框\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat)"
+    "description": "ChatInput\n\n对话输入框\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat-input)"
   },
   "t-chat-item": {
     "attributes": [
@@ -458,14 +461,14 @@
       "text-loading",
       "variant"
     ],
-    "description": "ChatItem\n\n对话单元\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat)"
+    "description": "ChatItem\n\n对话单元\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat-item)"
   },
   "t-chat-loading": {
     "attributes": [
       "animation",
       "text"
     ],
-    "description": "ChatLoading\n\n对话加载\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat)"
+    "description": "ChatLoading\n\n对话加载\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat-loading)"
   },
   "t-chat-reasoning": {
     "attributes": [
@@ -476,7 +479,7 @@
       "header-right-content",
       "expand-change"
     ],
-    "description": "ChatReasoning\n\n对话思考过程\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat)"
+    "description": "ChatReasoning\n\n对话思考过程\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat-reasoning)"
   },
   "t-chat-sender": {
     "attributes": [
@@ -494,7 +497,38 @@
       "send",
       "stop"
     ],
-    "description": "ChatSender\n\n对话输入\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat)"
+    "description": "ChatSender\n\n对话输入\n\n[docs](https://tdesign.tencent.com/vue-next/components/chat-sender)"
+  },
+  "t-checkbox": {
+    "attributes": [
+      "check-all",
+      "checked",
+      "default",
+      "disabled",
+      "indeterminate",
+      "label",
+      "lazy-load",
+      "name",
+      "readonly",
+      "title",
+      "tooltip-props",
+      "value",
+      "change"
+    ],
+    "description": "Checkbox\n\n多选框\n\n[docs](https://tdesign.tencent.com/vue-next/components/checkbox)"
+  },
+  "t-checkbox-group": {
+    "attributes": [
+      "disabled",
+      "lazy-load",
+      "max",
+      "name",
+      "options",
+      "readonly",
+      "value",
+      "change"
+    ],
+    "description": "CheckboxGroup\n\n多选框组\n\n[docs](https://tdesign.tencent.com/vue-next/components/checkbox)"
   },
   "t-check-tag": {
     "attributes": [
@@ -522,36 +556,6 @@
     ],
     "description": "CheckTagGroup\n\n可选标签组\n\n[docs](https://tdesign.tencent.com/vue-next/components/tag)"
   },
-  "t-checkbox": {
-    "attributes": [
-      "check-all",
-      "checked",
-      "default",
-      "disabled",
-      "indeterminate",
-      "label",
-      "lazy-load",
-      "name",
-      "readonly",
-      "title",
-      "value",
-      "change"
-    ],
-    "description": "Checkbox\n\n多选框\n\n[docs](https://tdesign.tencent.com/vue-next/components/checkbox)"
-  },
-  "t-checkbox-group": {
-    "attributes": [
-      "disabled",
-      "lazy-load",
-      "max",
-      "name",
-      "options",
-      "readonly",
-      "value",
-      "change"
-    ],
-    "description": "CheckboxGroup\n\n多选框组\n\n[docs](https://tdesign.tencent.com/vue-next/components/checkbox)"
-  },
   "t-col": {
     "attributes": [
       "flex",
@@ -568,7 +572,7 @@
       "xs",
       "xxl"
     ],
-    "description": "Col\n\n栅格-纵向\n\n[docs](https://tdesign.tencent.com/vue-next/components/col)"
+    "description": "Col\n\n栅格-纵向\n\n[docs](https://tdesign.tencent.com/vue-next/components/grid)"
   },
   "t-collapse": {
     "attributes": [
@@ -629,6 +633,7 @@
       "enable-multiple-gradient",
       "format",
       "recent-colors",
+      "select-input-props",
       "show-primary-color-preview",
       "swatch-colors",
       "value",
@@ -667,11 +672,12 @@
     "attributes": [
       "allow-input",
       "borderless",
+      "cell",
       "clearable",
       "default-time",
+      "disabled",
       "disable-date",
       "disable-time",
-      "disabled",
       "enable-time-picker",
       "first-day-of-week",
       "format",
@@ -680,11 +686,13 @@
       "mode",
       "multiple",
       "need-confirm",
+      "panel-active-date",
       "placeholder",
       "popup-props",
       "prefix-icon",
       "presets",
       "presets-placement",
+      "range",
       "readonly",
       "select-input-props",
       "size",
@@ -700,8 +708,10 @@
       "clear",
       "confirm",
       "focus",
+      "month-change",
       "pick",
-      "preset-click"
+      "preset-click",
+      "year-change"
     ],
     "description": "DatePicker\n\n日期选择器\n\n[docs](https://tdesign.tencent.com/vue-next/components/date-picker)"
   },
@@ -735,23 +745,26 @@
       "allow-input",
       "borderless",
       "cancel-range-select-limit",
+      "cell",
       "clearable",
       "default-time",
+      "disabled",
       "disable-date",
       "disable-time",
-      "disabled",
       "enable-time-picker",
       "first-day-of-week",
       "format",
       "label",
       "mode",
       "need-confirm",
+      "panel-active-date",
       "panel-preselection",
       "placeholder",
       "popup-props",
       "prefix-icon",
       "presets",
       "presets-placement",
+      "range",
       "range-input-props",
       "readonly",
       "separator",
@@ -767,8 +780,10 @@
       "confirm",
       "focus",
       "input",
+      "month-change",
       "pick",
-      "preset-click"
+      "preset-click",
+      "year-change"
     ],
     "description": "DateRangePicker\n\n日期范围选择器\n\n[docs](https://tdesign.tencent.com/vue-next/components/date-picker)"
   },
@@ -837,6 +852,7 @@
       "dialog-class-name",
       "dialog-style",
       "draggable",
+      "focusable",
       "footer",
       "header",
       "lazy",
@@ -1075,10 +1091,16 @@
     ],
     "description": "Guide\n\n引导\n\n[docs](https://tdesign.tencent.com/vue-next/components/guide)"
   },
+  "t-header": {
+    "attributes": [
+      "height"
+    ],
+    "description": "Header\n\n布局-头部\n\n[docs](https://tdesign.tencent.com/vue-next/components/layout)"
+  },
   "t-head-menu": {
     "attributes": [
-      "expand-type",
       "expanded",
+      "expand-type",
       "logo",
       "operations",
       "theme",
@@ -1087,12 +1109,6 @@
       "expand"
     ],
     "description": "HeadMenu\n\n顶部导航菜单\n\n[docs](https://tdesign.tencent.com/vue-next/components/menu)"
-  },
-  "t-header": {
-    "attributes": [
-      "height"
-    ],
-    "description": "Header\n\n布局-头部\n\n[docs](https://tdesign.tencent.com/vue-next/components/layout)"
   },
   "icon-font": {
     "attributes": [
@@ -1158,9 +1174,10 @@
       "close-on-overlay",
       "draggable",
       "image-referrerpolicy",
-      "image-scale",
       "images",
+      "image-scale",
       "index",
+      "inner-class-name",
       "mode",
       "navigation-arrow",
       "show-overlay",
@@ -1179,9 +1196,9 @@
     "attributes": [
       "align",
       "allow-input-over-max",
-      "auto-width",
       "autocomplete",
       "autofocus",
+      "auto-width",
       "borderless",
       "clearable",
       "disabled",
@@ -1240,6 +1257,7 @@
     "attributes": [
       "align",
       "allow-input-over-limit",
+      "autofocus",
       "auto-width",
       "decimal-places",
       "disabled",
@@ -1346,9 +1364,9 @@
   "t-menu": {
     "attributes": [
       "collapsed",
+      "expanded",
       "expand-mutex",
       "expand-type",
-      "expanded",
       "logo",
       "operations",
       "theme",
@@ -1532,10 +1550,10 @@
       "drag-sort-options",
       "editable-cell-state",
       "editable-row-keys",
-      "expand-icon",
-      "expand-on-row-click",
       "expanded-row",
       "expanded-row-keys",
+      "expand-icon",
+      "expand-on-row-click",
       "filter-icon",
       "filter-row",
       "filter-value",
@@ -1545,8 +1563,8 @@
       "reserve-selected-row-on-paginate",
       "row-selection-allow-uncheck",
       "row-selection-type",
-      "select-on-row-click",
       "selected-row-keys",
+      "select-on-row-click",
       "show-sort-column-bg-color",
       "sort",
       "sort-icon",
@@ -1580,11 +1598,11 @@
       "first-full-row",
       "fixed-rows",
       "foot-data",
-      "footer-affix-props",
       "footer-affixed-bottom",
+      "footer-affix-props",
       "footer-summary",
-      "header-affix-props",
       "header-affixed-top",
+      "header-affix-props",
       "height",
       "horizontal-scroll-affixed-bottom",
       "hover",
@@ -1640,10 +1658,10 @@
       "drag-sort-options",
       "editable-cell-state",
       "editable-row-keys",
-      "expand-icon",
-      "expand-on-row-click",
       "expanded-row",
       "expanded-row-keys",
+      "expand-icon",
+      "expand-on-row-click",
       "filter-icon",
       "filter-row",
       "filter-value",
@@ -1653,8 +1671,8 @@
       "reserve-selected-row-on-paginate",
       "row-selection-allow-uncheck",
       "row-selection-type",
-      "select-on-row-click",
       "selected-row-keys",
+      "select-on-row-click",
       "show-sort-column-bg-color",
       "sort",
       "sort-icon",
@@ -1688,11 +1706,11 @@
       "first-full-row",
       "fixed-rows",
       "foot-data",
-      "footer-affix-props",
       "footer-affixed-bottom",
+      "footer-affix-props",
       "footer-summary",
-      "header-affix-props",
       "header-affixed-top",
+      "header-affix-props",
       "height",
       "horizontal-scroll-affixed-bottom",
       "hover",
@@ -1800,6 +1818,7 @@
   "t-radio-group": {
     "attributes": [
       "allow-uncheck",
+      "direction",
       "disabled",
       "name",
       "options",
@@ -1885,42 +1904,31 @@
       "justify",
       "tag"
     ],
-    "description": "Row\n\n栅格-横向\n\n[docs](https://tdesign.tencent.com/vue-next/components/row)"
+    "description": "Row\n\n栅格-横向\n\n[docs](https://tdesign.tencent.com/vue-next/components/grid)"
   },
-  "t-search": {
+  "t-scrollbar": {
     "attributes": [
-      "auto-width",
-      "autocomplete-options",
-      "autofocus",
-      "borderless",
-      "clearable",
+      "aria-label",
+      "auto-expand",
+      "autoresize",
+      "container",
       "disabled",
-      "filter",
-      "input-props",
-      "label",
-      "multiline",
-      "placeholder",
-      "popup-props",
-      "prefix-icon",
-      "readonly",
-      "select-input-props",
-      "suffix",
-      "suffix-icon",
-      "textarea-props",
-      "value",
-      "blur",
-      "change",
-      "clear",
-      "enter",
-      "focus",
-      "search"
+      "id",
+      "role",
+      "step",
+      "tabindex",
+      "thumb-min-size",
+      "view-class-name",
+      "visibility",
+      "wrap-class-name",
+      "scroll"
     ],
-    "description": "Search\n\n搜索\n\n[docs](https://tdesign.tencent.com/vue-next/components/search)"
+    "description": "Scrollbar\n\n滚动条\n\n[docs](https://tdesign.tencent.com/vue-next/components/scrollbar)"
   },
   "t-select": {
     "attributes": [
-      "auto-width",
       "autofocus",
+      "auto-width",
       "borderless",
       "clearable",
       "collapsed-items",
@@ -1977,8 +1985,8 @@
   "t-select-input": {
     "attributes": [
       "allow-input",
-      "auto-width",
       "autofocus",
+      "auto-width",
       "borderless",
       "clearable",
       "collapsed-items",
@@ -2060,6 +2068,31 @@
       "size"
     ],
     "description": "Space\n\n间距\n\n[docs](https://tdesign.tencent.com/vue-next/components/space)"
+  },
+  "t-split": {
+    "attributes": [
+      "direction",
+      "dragger-icon",
+      "gap",
+      "lazy",
+      "panel-size",
+      "split-class-name",
+      "split-size",
+      "split-style",
+      "resize",
+      "resize-end",
+      "resize-start"
+    ],
+    "description": "Split\n\n分割面板\n\n[docs](https://tdesign.tencent.com/vue-next/components/split)"
+  },
+  "t-split-panel": {
+    "attributes": [
+      "default-size",
+      "max",
+      "min",
+      "resizable"
+    ],
+    "description": "SplitPanel\n\n分割面板内容\n\n[docs](https://tdesign.tencent.com/vue-next/components/split)"
   },
   "t-statistic": {
     "attributes": [
@@ -2268,6 +2301,7 @@
       "suffix",
       "suffix-icon",
       "tag",
+      "tag-display",
       "tag-props",
       "tips",
       "value",
@@ -2310,6 +2344,7 @@
       "allow-input-over-max",
       "autofocus",
       "autosize",
+      "count",
       "disabled",
       "maxcharacter",
       "maxlength",
@@ -2328,69 +2363,6 @@
       "validate"
     ],
     "description": "Textarea\n\n文本输入框\n\n[docs](https://tdesign.tencent.com/vue-next/components/textarea)"
-  },
-  "t-time-picker": {
-    "attributes": [
-      "allow-input",
-      "borderless",
-      "clearable",
-      "disable-time",
-      "disabled",
-      "format",
-      "hide-disabled-time",
-      "input-props",
-      "label",
-      "placeholder",
-      "popup-props",
-      "presets",
-      "readonly",
-      "select-input-props",
-      "size",
-      "status",
-      "steps",
-      "tips",
-      "value",
-      "value-display",
-      "blur",
-      "change",
-      "clear",
-      "close",
-      "confirm",
-      "focus",
-      "input",
-      "open",
-      "pick"
-    ],
-    "description": "TimePicker\n\n时间选择器\n\n[docs](https://tdesign.tencent.com/vue-next/components/time-picker)"
-  },
-  "t-time-range-picker": {
-    "attributes": [
-      "allow-input",
-      "auto-swap",
-      "borderless",
-      "clearable",
-      "disable-time",
-      "disabled",
-      "format",
-      "hide-disabled-time",
-      "label",
-      "placeholder",
-      "popup-props",
-      "presets",
-      "range-input-props",
-      "readonly",
-      "size",
-      "status",
-      "steps",
-      "tips",
-      "value",
-      "blur",
-      "change",
-      "focus",
-      "input",
-      "pick"
-    ],
-    "description": "TimeRangePicker\n\n时间范围选择器\n\n[docs](https://tdesign.tencent.com/vue-next/components/time-picker)"
   },
   "t-timeline": {
     "attributes": [
@@ -2413,6 +2385,71 @@
       "click"
     ],
     "description": "TimelineItem\n\n时间轴\n\n[docs](https://tdesign.tencent.com/vue-next/components/timeline)"
+  },
+  "t-time-picker": {
+    "attributes": [
+      "allow-input",
+      "borderless",
+      "clearable",
+      "disabled",
+      "disable-time",
+      "format",
+      "hide-disabled-time",
+      "input-props",
+      "label",
+      "placeholder",
+      "popup-props",
+      "prefix-icon",
+      "presets",
+      "readonly",
+      "select-input-props",
+      "size",
+      "status",
+      "steps",
+      "suffix-icon",
+      "tips",
+      "value",
+      "value-display",
+      "blur",
+      "change",
+      "clear",
+      "close",
+      "confirm",
+      "focus",
+      "input",
+      "open",
+      "pick"
+    ],
+    "description": "TimePicker\n\n时间选择器\n\n[docs](https://tdesign.tencent.com/vue-next/components/time-picker)"
+  },
+  "t-time-range-picker": {
+    "attributes": [
+      "allow-input",
+      "auto-swap",
+      "borderless",
+      "clearable",
+      "disabled",
+      "disable-time",
+      "format",
+      "hide-disabled-time",
+      "label",
+      "placeholder",
+      "popup-props",
+      "presets",
+      "range-input-props",
+      "readonly",
+      "size",
+      "status",
+      "steps",
+      "tips",
+      "value",
+      "blur",
+      "change",
+      "focus",
+      "input",
+      "pick"
+    ],
+    "description": "TimeRangePicker\n\n时间范围选择器\n\n[docs](https://tdesign.tencent.com/vue-next/components/time-picker)"
   },
   "t-typography-title": {
     "attributes": [
@@ -2494,24 +2531,24 @@
   "t-tree": {
     "attributes": [
       "activable",
-      "active-multiple",
       "actived",
+      "active-multiple",
       "allow-drop",
       "allow-fold-node-on-filter",
+      "checkable",
       "check-props",
       "check-strictly",
-      "checkable",
       "data",
       "disable-check",
       "disabled",
       "draggable",
       "empty",
       "expand-all",
+      "expanded",
       "expand-level",
       "expand-mutex",
       "expand-on-click-node",
       "expand-parent",
-      "expanded",
       "filter",
       "height",
       "hover",
@@ -2543,8 +2580,8 @@
   },
   "t-tree-select": {
     "attributes": [
-      "auto-width",
       "autofocus",
+      "auto-width",
       "borderless",
       "clearable",
       "collapsed-items",

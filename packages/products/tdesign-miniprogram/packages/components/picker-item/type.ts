@@ -13,6 +13,14 @@ export interface TdPickerItemProps {
     value?: (option: PickerItemOption, columnIndex: number) => PickerItemOption;
   };
   /**
+   * PickerItem的子项高度，单位 rpx
+   * @default 80
+   */
+  itemHeight?: {
+    type: NumberConstructor;
+    value?: number;
+  };
+  /**
    * 数据源
    * @default []
    */

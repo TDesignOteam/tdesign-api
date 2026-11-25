@@ -65,7 +65,7 @@ export interface TdImageViewerProps {
    * 隐藏/显示预览，非受控属性
    * @default false
    */
-  defaultVisible?: boolean;
+  defaultVisible?: boolean | null;
   /**
    * 翻页时回调
    */

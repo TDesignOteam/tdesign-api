@@ -4,8 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { BadgeProps } from '../badge';
-import { ImageProps } from '../image';
+import type { BadgeProps } from '../badge';
+import type { ImageProps } from '../image';
 import type { TNode } from '../common';
 
 export interface TdGridProps {
@@ -48,7 +48,7 @@ export interface TdGridItemProps {
   /**
    * 图片，可以是图片地址，也可以自定义图片节点，如果传入对象则透传至 image 组件
    */
-  image?: String | TNode | ImageProps;
+  image?: TNode | ImageProps;
   /**
    * 内容布局方式
    * @default vertical

@@ -8,15 +8,15 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 style | Object | - | CSS(Cascading Style Sheets) | N
 custom-style | Object | - | CSS(Cascading Style Sheets)，used to set style on virtual component | N
-disable-input | Boolean | false | \- | N
 disabled | Boolean | undefined | \- | N
+disable-input | Boolean | false | \- | N
 input-width | Number | - | \- | N
 integer | Boolean | true | \- | N
 max | Number | 100 | \- | N
 min | Number | 0 | \- | N
-size | String | medium | options: small/medium/large。Typescript: `SizeEnum`。[see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
+size | String | medium | options: small/medium/large. Typescript: `SizeEnum`. [see more ts definition](https://github.com/Tencent/tdesign-miniprogram/blob/develop/packages/components/common/common.ts) | N
 step | Number | 1 | \- | N
-theme | String | normal | stylish。options: normal/filled/outline | N
+theme | String | normal | stylish. options: normal/filled/outline | N
 value | String / Number | 0 | \- | N
 default-value | String / Number | undefined | uncontrolled property | N
 
@@ -24,10 +24,10 @@ default-value | String / Number | undefined | uncontrolled property | N
 
 name | params | description
 -- | -- | --
-blur | `({ type: string \| number })` | \-
-change | `({ value: string \| number })` | \-
-focus | `({ value: string \| number }))` | \-
-overlimit | `({type: 'minus' \| 'plus'})` | \-
+blur | `(detail: { type: string \| number })` | \-
+change | `(detail: { value: string \| number })` | \-
+focus | `(detail: { value: string \| number })` | \-
+overlimit | `(detail: { type: 'minus' \| 'plus' })` | \-
 
 ### Stepper External Classes
 

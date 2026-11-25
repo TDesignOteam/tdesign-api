@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdOverlayProps } from './type';
+import type { TdOverlayProps } from './type';
 const props: TdOverlayProps = {
   /** 遮罩层的背景色 */
   backgroundColor: {

@@ -10,15 +10,15 @@ custom-style | Object | - | CSS(Cascading Style Sheets) | N
 background-color | String | - | \- | N
 close-btn | String / Boolean / Object | false | \- | N
 delete-btn | String / Boolean / Object | false | \- | N
-image-props | Object | - | Typescript: `ImageProps`，[Image API Documents](./image?tab=api)。[see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/image-viewer/type.ts) | N
+image-props | Object | - | Typescript: `ImageProps`，[Image API Documents](./image?tab=api). [see more ts definition](https://github.com/tencent/tdesign-miniprogram/blob/develop/packages/uniapp-components/image-viewer/type.ts) | N
 images | Array | [] | Typescript: `Array<string>` | N
 initial-index | Number | 0 | Typescript: `Number` | N
 lazy | Boolean | true | \- | N
 max-zoom | Number | 3 | \- | N
 show-index | Boolean | false | \- | N
 using-custom-navbar | Boolean | false | \- | N
-visible | Boolean | false | hide or show image viewer。`v-model:visible` is supported | N
-default-visible | Boolean | false | hide or show image viewer。uncontrolled property | N
+visible | Boolean | false | hide or show image viewer. `v-model:visible` is supported. Typescript: `boolean \| null` | N
+default-visible | Boolean | false | hide or show image viewer. uncontrolled property. Typescript: `boolean \| null` | N
 
 ### ImageViewer Events
 
