@@ -725,6 +725,10 @@
         "label": "数字输入框"
       },
       {
+        "value": "InputOTP",
+        "label": "一次性密码输入框"
+      },
+      {
         "value": "Layout",
         "label": "布局"
       },

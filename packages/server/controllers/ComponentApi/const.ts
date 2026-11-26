@@ -57,6 +57,7 @@ export const COMPONENTS_PC: Array<MapItem> = [
   { value: 'Link', label: '链接' },
   { value: 'Input', label: '输入框' },
   { value: 'InputGroup', label: '输入框组' },
+  { value: 'InputOTP', label: '一次性密码输入框' },
   { value: 'RangeInput', label: '范围输入框' },
   { value: 'RangeInputPopup', label: '范围输入框触发器' },
   { value: 'TagInput', label: '标签输入框' },
