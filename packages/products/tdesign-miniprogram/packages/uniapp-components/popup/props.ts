@@ -24,6 +24,10 @@ export default {
     type: Number,
     default: 240,
   },
+  /** 弹出层最大宽度，仅顶部和底部弹出场景有效。 */
+  maxWidth: {
+    type: [String, Number],
+  },
   /** 遮罩层的属性，透传至 overlay */
   overlayProps: {
     type: Object,
@@ -54,10 +58,9 @@ export default {
   visible: Boolean,
   /** 是否显示浮层，非受控属性 */
   defaultVisible: Boolean,
-  /** 组件层级，Web 侧样式默认为 5500，移动端样式默认为 1500，小程序样式默认为11500 */
+  /** 组件层级，Web 侧样式默认为 5500，移动端默认为 1500，小程序端默认 11500 */
   zIndex: {
     type: Number,
-    default: 11500,
   },
   /** 当浮层隐藏或显示时触发，trigger=document 表示点击弹出层元素触发 */
   onVisibleChange: {

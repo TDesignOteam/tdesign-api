@@ -26,6 +26,10 @@ export interface TdPopupProps {
    */
   duration?: number;
   /**
+   * 弹出层最大宽度，仅顶部和底部弹出场景有效。
+   */
+  maxWidth?: string | number;
+  /**
    * 遮罩层的属性，透传至 overlay
    * @default {}
    */
@@ -59,8 +63,7 @@ export interface TdPopupProps {
    */
   defaultVisible?: boolean;
   /**
-   * 组件层级，Web 侧样式默认为 5500，移动端样式默认为 1500，小程序样式默认为11500
-   * @default 11500
+   * 组件层级，Web 侧样式默认为 5500，移动端默认为 1500，小程序端默认 11500
    */
   zIndex?: number;
   /**

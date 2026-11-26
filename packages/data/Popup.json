@@ -217,6 +217,24 @@
     "field_desc_zh": "是否锁定内容滚动"
   },
   {
+    "id": 1794841867,
+    "platform_framework": [
+      "Vue(Mobile)",
+      "React(Mobile)",
+      "Miniprogram",
+      "UniApp"
+    ],
+    "component": "Popup",
+    "field_category": "Props",
+    "field_name": "maxWidth",
+    "field_type": [
+      "String",
+      "Number"
+    ],
+    "field_desc_zh": "弹出层最大宽度，仅顶部和底部弹出场景有效。",
+    "field_desc_en": "Maximum width of the popup. Only applies to top and bottom placements."
+  },
+  {
     "id": 131,
     "platform_framework": [
       "Vue(PC)",
