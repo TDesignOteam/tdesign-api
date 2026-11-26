@@ -1402,6 +1402,11 @@
         "label": "文本输入框"
       },
       {
+        "value": "TextareaConfig",
+        "label": "多行文本框全局配置",
+        "type": "TS"
+      },
+      {
         "value": "Toast",
         "label": "轻提示"
       },

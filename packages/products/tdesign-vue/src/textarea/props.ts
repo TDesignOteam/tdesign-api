@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdTextareaProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdTextareaProps } from './type';
 export default {
   /** 超出 `maxlength` 或 `maxcharacter` 之后是否还允许输入 */
   allowInputOverMax: Boolean,
@@ -15,6 +14,11 @@ export default {
   /** 高度自动撑开。 autosize = true 表示组件高度自动撑开，同时，依旧允许手动拖高度。如果设置了 autosize.maxRows 或者 autosize.minRows 则不允许手动调整高度 */
   autosize: {
     type: [Boolean, Object] as PropType<TdTextareaProps['autosize']>,
+    default: false,
+  },
+  /** 是否显示清空按钮。值为 `true` 时等价于 `{ position: 'top', type: 'icon' }`。`position` 表示清空按钮位置，可选值：top / center / bottom。`type` 表示清空按钮类型，可选值：icon / text */
+  clearable: {
+    type: [Boolean, Object] as PropType<TdTextareaProps['clearable']>,
     default: false,
   },
   /** 文字计数元素。设置 `maxlength` 或 `maxchanacter` 时，默认为 true */

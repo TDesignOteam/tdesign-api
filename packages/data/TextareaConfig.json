@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1794220928,
+    "platform_framework": [
+      "React(PC)"
+    ],
+    "component": "TextareaConfig",
+    "field_category": "Props",
+    "field_name": "clearText",
+    "field_type": [
+      "String"
+    ],
+    "field_desc_zh": "语言配置，清空按钮文案",
+    "field_desc_en": "Clear button text"
+  },
+  {
+    "id": 1794217177,
+    "platform_framework": [
+      "React(PC)"
+    ],
+    "component": "TextareaConfig",
+    "field_category": "Props",
+    "field_name": "clearTrigger",
+    "field_type": [
+      "String"
+    ],
+    "field_default_value": "focus",
+    "field_enum": [
+      "always",
+      "focus"
+    ],
+    "field_desc_zh": "清空按钮触发方式，仅在文本框有值时有效",
+    "field_desc_en": "Trigger to show the clear button, valid when the textarea has a value"
+  }
+]

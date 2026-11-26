@@ -41,6 +41,7 @@ export const GLOBAL_COMPONENTS_CONFIG = [
   'TabBarConfig',
   'TagConfig',
   'TableConfig',
+  'TextareaConfig',
   'TimePickerConfig',
   'TreeConfig',
   'TreeSelectConfig',
