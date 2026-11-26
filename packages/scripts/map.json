@@ -1190,6 +1190,10 @@
         "type": "TS"
       },
       {
+        "value": "Masonry",
+        "label": "瀑布流"
+      },
+      {
         "value": "Watermark",
         "label": "水印"
       },
