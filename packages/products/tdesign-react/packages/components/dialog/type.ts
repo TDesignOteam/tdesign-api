@@ -244,7 +244,7 @@ export interface DialogInstance {
 export interface DialogFocusable {
   defaultFocus?: null | 'confirm-button' | 'cancel-button' | (() => HTMLElement | null);
   focusTrap?: boolean;
-  focusTriggerAfterClose: boolean;
+  focusTriggerAfterClose?: boolean;
 }
 
 export interface DialogSizeDragLimit {

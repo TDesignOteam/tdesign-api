@@ -568,7 +568,7 @@
     ],
     "field_desc_zh": "对话框焦点控制。`defaultFocus` 决定打开后的默认焦点；`focusTrap` 决定是否焦点将被限制在当前对话框内；`focusTriggerAfterClose` 决定关闭后是否将焦点交还给触发元素。",
     "field_desc_en": "Dialog focus control. `defaultFocus` determines the default focus after opening; `focusTrap` determines whether focus is trapped within the current dialog; `focusTriggerAfterClose` determines whether focus is returned to the trigger element after closing.",
-    "custom_field_type": "DialogFocusable【interface DialogFocusable { defaultFocus?: null | 'confirm-button' | 'cancel-button' | (() => HTMLElement | null); focusTrap?: boolean; focusTriggerAfterClose: boolean }】"
+    "custom_field_type": "DialogFocusable【interface DialogFocusable { defaultFocus?: null | 'confirm-button' | 'cancel-button' | (() => HTMLElement | null); focusTrap?: boolean; focusTriggerAfterClose?: boolean }】"
   },
   {
     "id": 54,
